@@ -138,9 +138,9 @@ No. The score for each round starts at zero.
 <div class="card" id="q5">
   <strong> 5. How are ties handled?</strong>
 
-In the event of a tiebreaker, the "Cumulative Time" figure will be used to determine who moves on to the Final Round. The Cumulative Time is the total time spent in challenges successfully solved. This is calculated using a timer specific to each challenge on your game board. When you start a challenge, the timer starts. When you successfully solve a challenge, your score and cumulative time are updated. 
+In the event of a tiebreaker, the "Cumulative Time" figure will be used to determine who moves on to the Final Round. The Cumulative Time is the total time spent in challenges successfully solved. This is calculated using a timer specific to each challenge on your game board. When you start a challenge, the timer starts. When you successfully solve a challenge, your score and cumulative time are updated.
 
-<strong>Please note:</strong> 
+<strong>Please note:</strong>
 
 - Your challenge timer does not stop if you "delete" a challenge space or go work on another challenge. If you start a challenge, then start and work on another challenge, and return to your previous challenge, your challenge timer is still running.
 - Time spent in challenges failed, or challenges started and not finished, does not count towards your cumulative score. You won't be penalized for trying!
@@ -199,7 +199,7 @@ No. You can only be a team member on one team.
 <div class="card" id="q15">
     <strong> 15. What if I can't access my email when I'm out of the office?</strong>
 
-To use multi-factor authentication without access to email, visit your identity profile at <a href="https://id.presidentscup.us/ui/profile">id.presidentscup.us/ui/profile</a> and <em>Configure 2FA</em>. You'll need to be logged in for this, so be sure to do this while you do have access to email.
+To use multi-factor authentication without access to email, visit your identity profile at <a href="https://id-presidentscup.cisa.gov/ui/profile">id-presidentscup.cisa.gov/ui/profile</a> and <em>Configure 2FA</em>. You'll need to be logged in for this, so be sure to do this while you do have access to email.
 
 There you can generate a Time-based One Time Password (TOTP) secret key.  Use this secret key with any totp-enabled authentication app, such as Duo Mobile or Google Authenticator, by simply scanning the barcode.  If you don't have access to your device, copy down the secret key and later input it into the totp app on your device.
 </div>
@@ -253,7 +253,7 @@ The final rounds for the President's Cup team and individual competitions will b
 
 <div class="card" id="q24">
     <strong> 24. I heard there will be multi-part challenges. How will that work?</strong>
-This year, we've implemented multi-part challenges to reward competitiors for their efforts towards solving the challenge. For multi-part challenges, you will be presented with multiple questions and multiple solution submission boxes in the Challenge. These challenges are designed to test your knowledge across the width of a challenge; for instance, you may be asked to provide multiple identifiers from a packet capture file, each as its own solution. Each question will clearly identify what type of solution and the proper format to submit. <strong>PLEASE NOTE:</strong> When you press submit, ALL of your solutions will be sent to the grading server, and you will be limited to THREE (3) submissions per challenge. 
+This year, we've implemented multi-part challenges to reward competitiors for their efforts towards solving the challenge. For multi-part challenges, you will be presented with multiple questions and multiple solution submission boxes in the Challenge. These challenges are designed to test your knowledge across the width of a challenge; for instance, you may be asked to provide multiple identifiers from a packet capture file, each as its own solution. Each question will clearly identify what type of solution and the proper format to submit. <strong>PLEASE NOTE:</strong> When you press submit, ALL of your solutions will be sent to the grading server, and you will be limited to THREE (3) submissions per challenge.
 
 
 <!----- For more information, please see the following video: ------->

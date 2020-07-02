@@ -8,7 +8,7 @@
                         <p class="lead">The <strong>President's Cup Cybersecurity Competition</strong> is a national cyber competition aiming to identify, recognize, and reward the best cybersecurity talent in the federal executive workforce.</p>
                     </div>
                     <div class="col px-0">
-                        <img height="250px" src="https://presidentscup.us/img/pc_eagle_glitch.gif" />
+                        <img height="250px" src="https://files.presidentscup.us/img/pc_eagle_glitch.gif" />
                     </div>
                 </div>
             </div>
@@ -27,18 +27,18 @@
     <div class="col-12 col-lg-6">
       <h5><strong>Videos</strong></h5>
               <div class="embed-responsive embed-responsive-16by9 mb-2">
-            <video class="embed-responsive-item" controls poster="https://presidentscup.us/img/8hour.jpg">
-                <source src="https://presidentscup.us/img/20_0919_PC_8Hour.mp4" type="video/mp4">
+            <video class="embed-responsive-item" controls poster="https://files.presidentscup.us/img/8hour.jpg">
+                <source src="https://files.presidentscup.us/img/20_0919_PC_8Hour.mp4" type="video/mp4">
             </video>
         </div>
         <div class="embed-responsive embed-responsive-16by9 mb-2">
-            <video class="embed-responsive-item" controls poster="https://presidentscup.us/img/login.jpg">
-                <source src="https://presidentscup.us/img/login.mp4" type="video/mp4">
+            <video class="embed-responsive-item" controls poster="https://files.presidentscup.us/img/login.jpg">
+                <source src="https://files.presidentscup.us/img/login.mp4" type="video/mp4">
             </video>
         </div>
                 <div class="embed-responsive embed-responsive-16by9">
-            <video class="embed-responsive-item" controls poster="https://presidentscup.us/img/overview.jpg">
-                <source src="https://presidentscup.us/img/overview.mp4" type="video/mp4">
+            <video class="embed-responsive-item" controls poster="https://files.presidentscup.us/img/overview.jpg">
+                <source src="https://files.presidentscup.us/img/overview.mp4" type="video/mp4">
             </video>
         </div>
     </div>
