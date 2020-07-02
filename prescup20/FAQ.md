@@ -99,6 +99,7 @@
 <a href="home/doc/FAQ#q23">
        23. What happens if I qualify for both the team and individual final rounds?
 </a>
+<br>
 <a href="home/doc/FAQ#q24">
        24. I heard there will be multi-part challenges. How will that work?
 </a>
