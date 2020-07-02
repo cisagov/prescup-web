@@ -76,7 +76,7 @@
 </a>
 <br>
 <a href="home/doc/FAQ#q18">
-       18. Is there a recommended format for flag submissions?
+       18. Is there a recommended format for answer submissions?
 </a>
 
 <br>
@@ -99,11 +99,16 @@
 <a href="home/doc/FAQ#q23">
        23. What happens if I qualify for both the team and individual final rounds?
 </a>
+<br>
+<a href="home/doc/FAQ#q24">
+       24. I heard there will be multi-part challenges. How will that work?
+</a>
+<br>
 </p>
 <div class="card" id="q0">
     <strong> 0. What does "Cumulative Time" mean on the leaderboard?</strong>
 
-    The <strong>Cumulative Time</strong> column is only used for tiebreaking purposes. When a challenge is started, a timer tracks how long it takes to solve that challenge. The sum time of all successfully solved challenges is posted to the leaderboard under Cumulative Time. Again, this is for tiebreaking purposes only.
+The <strong>Cumulative Time</strong> column is only used for tiebreaking purposes. When a challenge is started, a timer tracks how long it takes to solve that challenge. The sum time of all successfully solved challenges is posted to the leaderboard under Cumulative Time. Again, this is for tiebreaking purposes only.
 </div>
 
 <div class="card" id="q1">
@@ -120,6 +125,8 @@ No. All that is needed for the first two qualification rounds is a modern web br
   <strong> 3. How does each round’s continuous eight-hour session work?</strong>
 
 A session timer starts when you launch your first challenge. After launching that challenge, your team will have eight hours to complete as many challenges as you can. The session timer runs continuously and cannot be paused. Your round score is determined by the sum of all successful challenges completed during your session. For more information, watch the 8-hour continuous session video on the <a href="home/doc/Home">Home page</a>.
+
+<strong>PLEASE NOTE:</strong> In 2020, each Individual track will be limited to 4 hours per track.
 </div>
 
 <div class="card" id="q4">
@@ -164,7 +171,7 @@ No. Once a team is established, members cannot be added. You have the option to 
 <div class="card" id="q10">
     <strong> 10. When does registration for the 2020 competition start?</strong>
 
-Registration for President’s Cup 2020 opens on Monday, July 27th and closes on Friday, August 28th.
+Registration for President’s Cup 2020 opens on Monday, July 27th and closes on Friday, August 14th for Teams and Friday, August 28th for Individuals.
 </div>
 
 <div class="card" id="q11">
@@ -211,8 +218,8 @@ When you return to this challenge, you can **RESTART** the gamespace in it's ori
 </div>
 
 <div class="card" id="q18">
-    <strong> 18. Is there a recommended format for flag submissions?</strong>
-You can submit all flags with no wrapper text, and they will be properly graded. If you choose to add the <code>pcupCTF{flag}</code> wrapper text, the challenge will also be properly graded. No other wrappers are permitted.
+    <strong> 18. Is there a recommended format for answer submissions?</strong>
+Correct asnwers will vary based on the challenge format and the questions being asked. Please refer to each challenge description which will clearly articulate the format of the answer.
 </div>
 
 <div class="card" id="q19">
@@ -241,5 +248,13 @@ The top five teams and top 10 individuals will advance to the Final Round based 
 
 <div class="card" id="q23">
     <strong> 23. What happens if I qualify for both the team and individual final rounds?</strong>
-The final rounds for the President's Cup team and individual competitions will be held on different days. Competitors who qualify for both final round events will be able to compete in each one without a conflict.
+The final rounds for the President's Cup team and individual competitions will be held on different days. Competitors who qualify for both final round events will be able to compete in each one without a conflict. Furthermore, each Individual Track final will take place at different times, allowing for someone to paritcipate in both if they should qualify.
+</div>
+
+<div class="card" id="q24">
+    <strong> 24. I heard there will be multi-part challenges. How will that work?</strong>
+This year, we've implemented multi-part challenges to reward competitiors for their efforts towards solving the challenge. For multi-part challenges, you will be presented with multiple questions and multiple solution submission boxes in the Challenge. These challenges are designed to test your knowledge across the width of a challenge; for instance, you may be asked to provide multiple identifiers from a packet capture file, each as its own solution. Each question will clearly identify what type of solution and the proper format to submit. <strong>PLEASE NOTE:</strong> When you press submit, ALL of your solutions will be sent to the grading server, and you will be limited to THREE (3) submissions per challenge. 
+
+
+<!----- For more information, please see the following video: ------->
 </div>
