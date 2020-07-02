@@ -1,7 +1,7 @@
 ﻿
 
 <h2>Frequently Asked Questions (FAQ)</h2>
-<p>Below you will find some commonly asked questions and answers to help you with 2019 President’s Cup. If you can’t find the answer here, please contact us.</p>
+<p>Below you will find some commonly asked questions and answers to help you with 2020 President’s Cup. If you can’t find the answer here, please contact us.</p>
 <p>
 <a href="home/doc/FAQ#q0">
     0. What does "Cumulative Time" mean on the leaderboard?
@@ -103,18 +103,17 @@
 <div class="card" id="q0">
     <strong> 0. What does "Cumulative Time" mean on the leaderboard?</strong>
 
-The <strong>Cumulative Time</strong> column is only used for tiebreaking purposes. When a challenge is started, a timer tracks how long it takes to solve that challenge. The sum time of all successfully solved challenges is posted to the leaderboard under Cumulative Time. Again, this is for tiebreaking purposes only.
+    The <strong>Cumulative Time</strong> column is only used for tiebreaking purposes. When a challenge is started, a timer tracks how long it takes to solve that challenge. The sum time of all successfully solved challenges is posted to the leaderboard under Cumulative Time. Again, this is for tiebreaking purposes only.
 </div>
+
 <div class="card" id="q1">
     <strong> 1. I’m a government contractor and I want to participate. Am I eligible?</strong>
-
-No. Government contractors cannot participate in the inaugural President's Cup.
+No. Government contractors cannot participate in the President's Cup.
 </div>
 
 <div class="card" id="q2">
     <strong> 2. Will I need any special software or applications to participate in the President’s Cup?</strong>
-
-No. All that is needed for the first two qualification rounds is a modern web browser and your registered account. Supported browsers are: Chrome, Firefox, and Edge.
+No. All that is needed for the first two qualification rounds is a modern web browser and your registered account. Supported browsers are: Chrome, Firefox and Edge or later.
 </div>
 
 <div class="card" id="q3">
@@ -134,41 +133,38 @@ No. The score for each round starts at zero.
 
 In the event of a tiebreaker, the "Cumulative Time" figure will be used to determine who moves on to the Final Round. The Cumulative Time is the total time spent in challenges successfully solved. This is calculated using a timer specific to each challenge on your game board. When you start a challenge, the timer starts. When you successfully solve a challenge, your score and cumulative time are updated. 
 
-<strong>Please note: your challenge timer does not stop if you "delete" a challenge space or go work on another challenge.</strong> If you start a challenge, then start and work on another challenge, and return to your previous challenge, your challenge timer is still running.
+<strong>Please note:</strong> 
 
-<strong>Please note: time spent in challenges failed, or challenges started and not finished, do not count towards your cumulative score. You won't be penalized for trying!</strong>
-
-<strong>Please note: your overall competition time is still capped at eight (8) hours from when you launch your first challenge.</strong>
-</div>
+- Your challenge timer does not stop if you "delete" a challenge space or go work on another challenge. If you start a challenge, then start and work on another challenge, and return to your previous challenge, your challenge timer is still running.
+- Time spent in challenges failed, or challenges started and not finished, does not count towards your cumulative score. You won't be penalized for trying!
+- Your overall competition time is still capped at eight (8) hours from when you launch your first challenge.
+  </div>
 
 <div class="card" id="q6">
     <strong> 6. I saw that the Championship Round is an in-person, three-day event. Where is the Championship Round held?</strong>
-
 The final round will be held in the CISA Cybersecurity Division facility in Arlington, VA. Agencies are responsible for travel costs for their personnel.
 </div>
 
 <div class="card" id="q7">
-    <strong> 7. I heard about the President’s Cup too late to sign up. Will there be a President’s Cup in 2020?</strong>
+    <strong> 7. I heard about the President’s Cup too late to sign up. Will there be a President’s Cup in 2021?</strong>
 
-Yes. The President’s Cup will continue to evolve in future years based upon lessons learned before, during, and after the 2019 President’s Cup.
+Yes. The President’s Cup will continue to evolve in future years based upon lessons learned from past competitions.
 </div>
 
 <div class="card" id="q8">
     <strong> 8. My agency wants to enter two teams in Round 1. Is that possible?</strong>
-
 Yes. A department or agency can enter more than one team in the competition.
 </div>
 
 <div class="card" id="q9">
     <strong> 9. One of my team members dropped out after Round 1. Can I replace them with someone else for Round 2?</strong>
-
-No. Once a team is locked in place, members can’t be added.
+No. Once a team is established, members cannot be added. You have the option to compete without that team member.
 </div>
 
 <div class="card" id="q10">
-    <strong> 10. When does registration for the competition start?</strong>
+    <strong> 10. When does registration for the 2020 competition start?</strong>
 
-Registration and platform accessibility testing starts on September 16, 2019.
+Registration for President’s Cup 2020 opens on Monday, July 27th and closes on Friday, August 28th.
 </div>
 
 <div class="card" id="q11">
@@ -180,8 +176,7 @@ This [one-page overview](https://www.nist.gov/sites/default/files/documents/2017
 <div class="card" id="q12">
     <strong> 12. I’m eligible to participate in the President’s Cup, but I don’t have a team. Can I participate as an individual?</strong>
 
-Yes. Participants can compete either as part of a team or as an individual or both. Round 1 is open to any and all
-Federal Executive Branch cybersecurity professionals.
+Yes. Participants can compete either as part of a team or as an individual or both. Round 1 is open to any and all Federal Executive Branch cybersecurity professionals.
 </div>
 
 <div class="card" id="q13">
@@ -201,48 +196,50 @@ To use multi-factor authentication without access to email, visit your identity 
 
 There you can generate a Time-based One Time Password (TOTP) secret key.  Use this secret key with any totp-enabled authentication app, such as Duo Mobile or Google Authenticator, by simply scanning the barcode.  If you don't have access to your device, copy down the secret key and later input it into the totp app on your device.
 </div>
+
 <div class="card" id="q16">
     <strong> 16. Can I copy/paste between my host and the gamespace virtual machines?</strong>
-
 Yes. The cog button in the upper-left corner of the virtual machine console allows you to move text bidirectionally between your host and that virtual machine.
 </div>
+
 <div class="card" id="q17">
     <strong> 17. If I reach my limit of virtual gamespaces (5 for teams, 2 for individuals), can I move on to another challenge?</strong>
 
-Yes. If you start a challenge but would like to move on to another challenge without finishing it, you can <em>DELETE</em> that gamespace. However, the challenge timer will not stop.
+Yes. If you start a challenge but would like to move on to another challenge without finishing it, you can **DELETE** that gamespace. However, the challenge timer will not stop.
 
-When you return to this challenge, you can </em>RESTART</em> the gamespace in it's original state.
+When you return to this challenge, you can **RESTART** the gamespace in it's original state.
 </div>
+
 <div class="card" id="q18">
     <strong> 18. Is there a recommended format for flag submissions?</strong>
-
 You can submit all flags with no wrapper text, and they will be properly graded. If you choose to add the <code>pcupCTF{flag}</code> wrapper text, the challenge will also be properly graded. No other wrappers are permitted.
 </div>
 
 <div class="card" id="q19">
     <strong> 19. President’s Cup Support is asking for my “challenge Support Code”. Where can I find it?</strong>
-
-The challenge Support Code can be found in the lower-right corner of the challenge pane.
+The challenge Support Code can be found in the lower-right corner of the challenge pane. The Support Code looks similar to this: **a347c5c6**.
 </div>
+
 <div class="card" id="q20">
     <strong> 20. How are teams selected to advance to Round 2?</strong>
 
 In the Teams competition, the top-scoring team from each competing Department automatically advances to Round 2. For the purposes of the competition, Departments align with the organizations listed during enrollment.
 
-For those not included as top Department teams, the top 15% of remaining teams based on their final scores advance to Round 2 as well. No time-based tiebreakers are used to calculate the 15% cutoff, so all teams tied at the score cutoff will advance.
+For those not included as top Department teams, the top 20% of remaining teams based on their final scores advance to Round 2 as well. No time-based tiebreakers are used to calculate the 20% cutoff, so all teams tied at the score cutoff will advance.
 </div>
+
 <div class="card" id="q21">
     <strong> 21. How are individuals selected to advance to Round 2?</strong>
-
-In the Individuals competition, the top 15% or top 100 individuals, whichever includes more people, will advance to Round 2. Round 1 leaderboard scores are used to determine the cutoff line, and no time-based tiebreakers are used in this calculation. All teams tied at the score cutoff will advance to Round 2.
+In the Individuals competition, the top 100 scores advance to Round 2. There are no tie-breakers; all tied for 100th place will be invited to continue. Round 1 leaderboard scores are used to determine the cutoff line, and no time-based tiebreakers are used in this calculation.
 </div>
+
+
 <div class="card" id="q22">
     <strong> 22. How are teams and individuals selected to advance to the Final Round?</strong>
-
-The top 5 teams and top 10 individuals will advance to the Final Round based on each respective leaderboard at the end of Round 2.
+The top five teams and top 10 individuals will advance to the Final Round based on each respective leaderboard at the end of Round 2.
 </div>
+
 <div class="card" id="q23">
     <strong> 23. What happens if I qualify for both the team and individual final rounds?</strong>
-
 The final rounds for the President's Cup team and individual competitions will be held on different days. Competitors who qualify for both final round events will be able to compete in each one without a conflict.
 </div>
