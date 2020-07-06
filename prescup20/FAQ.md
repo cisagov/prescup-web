@@ -32,7 +32,7 @@
 </a>
 <br>
 <a href="home/doc/FAQ#q7">
-    7. I heard about the President’s Cup too late to sign up. Will there be a President’s Cup in 2020?
+    7. I heard about the President’s Cup too late to sign up. Will there be a President’s Cup in 2021?
 </a>
 <br>
 <a href="home/doc/FAQ#q8">
