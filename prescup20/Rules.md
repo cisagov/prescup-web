@@ -24,20 +24,16 @@
 
 3. Detailees to an external department can represent their home or detailed department.  For example, a member of the Coast Guard detailed to DoD's US Cyber Command can be on a DoD or a DHS team.
 
-4. Team members must be government civilian employees or military service members.  Government contractors are **NOT** allowed to participate in the 2019 President's Cup.
+4. Team members must be government civilian employees or military service members.  Government contractors are **NOT** allowed to participate in the 2020 President's Cup.
 
 ## Time and Challenge Submission Restrictions
 
-1. During the qualification rounds, individual competitors and teams have **8 hours** to complete as many challenges as they can.
+1. During the qualification rounds, teams have **8 hours** to complete as many challenges as they can. Individuals have **4 hours** per track to solve as many challenges as they can.
 
-2. In the event of a tie, cumulative time within the Gameboard (calculated based on the sum of time used for each challenge) will be used as the tiebreaker. The fastest cumulative time wins the tie.
+2. In the event of a tiebreaker, the "Cumulative Time" figure will be used to determine who moves on to the Final Round. The Cumulative Time is the total time spent in challenges successfully solved. This is calculated using a timer specific to each challenge on your game board. When you start a challenge, the timer starts. When you successfully solve a challenge, your score and cumulative time are updated.
 
-3. Individual competitors and teams are limited to **two** submission attempts for each challenge.  Pass/Fail feedback is provided following each submission.
+3. Correct answers will vary based on the challenge format and the questions being asked. Please refer to each challenge description which will clearly articulate the format of the answer.
 
 ## Registration
 
-1. For teams: Starts at 9:00 AM on September 16 2019 and ends at 5:00 PM EDT on September 27
-
-2. For individuals: Starts at 9:00 AM on September 16 2019 and ends at 5:00 PM EDT on October 11
-
-3. Participation in the President's Cup will be closed after these dates/times.
+For teams and individuals: Starts at 9:00 AM on July 27, 2020 and ends at 5:00 PM EDT on August 28, 2020. Participation in the President's Cup will be closed after these dates/times.
