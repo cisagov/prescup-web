@@ -1,5 +1,4 @@
 ﻿
-
 <h2>Frequently Asked Questions (FAQ)</h2>
 <p>Below you will find some commonly asked questions and answers to help you with 2020 President’s Cup. If you can’t find the answer here, please contact us.</p>
 <p>
@@ -126,7 +125,7 @@ No. All that is needed for the first two qualification rounds is a modern web br
 
 A session timer starts when you launch your first challenge. After launching that challenge, your team will have eight hours to complete as many challenges as you can. The session timer runs continuously and cannot be paused. Your round score is determined by the sum of all successful challenges completed during your session. For more information, watch the 8-hour continuous session video on the <a href="home/doc/Home">Home page</a>.
 
-<strong>PLEASE NOTE:</strong> In 2020, each Individual track will be limited to 4 hours per track.
+<strong>PLEASE NOTE:</strong> In 2020, each Individual track will be limited to four (4) hours per track.
 </div>
 
 <div class="card" id="q4">
@@ -140,7 +139,7 @@ No. The score for each round starts at zero.
 
 In the event of a tiebreaker, the "Cumulative Time" figure will be used to determine who moves on to the Final Round. The Cumulative Time is the total time spent in challenges successfully solved. This is calculated using a timer specific to each challenge on your game board. When you start a challenge, the timer starts. When you successfully solve a challenge, your score and cumulative time are updated.
 
-<strong>Please note:</strong>
+<strong>PLEASE NOTE:</strong>
 
 - Your challenge timer does not stop if you "delete" a challenge space or go work on another challenge. If you start a challenge, then start and work on another challenge, and return to your previous challenge, your challenge timer is still running.
 - Time spent in challenges failed, or challenges started and not finished, does not count towards your cumulative score. You won't be penalized for trying!
@@ -214,12 +213,12 @@ Yes. The cog button in the upper-left corner of the virtual machine console allo
 
 Yes. If you start a challenge but would like to move on to another challenge without finishing it, you can **DELETE** that gamespace. However, the challenge timer will not stop.
 
-When you return to this challenge, you can **RESTART** the gamespace in it's original state.
+When you return to this challenge, you can **RESTART** the gamespace in its original state.
 </div>
 
 <div class="card" id="q18">
     <strong> 18. Is there a recommended format for answer submissions?</strong>
-Correct asnwers will vary based on the challenge format and the questions being asked. Please refer to each challenge description which will clearly articulate the format of the answer.
+Correct answers will vary based on the challenge format and the questions being asked. Please refer to each challenge description which will clearly articulate the format of the answer.
 </div>
 
 <div class="card" id="q19">
@@ -248,13 +247,13 @@ The top five teams and top 10 individuals will advance to the Final Round based 
 
 <div class="card" id="q23">
     <strong> 23. What happens if I qualify for both the team and individual final rounds?</strong>
-The final rounds for the President's Cup team and individual competitions will be held on different days. Competitors who qualify for both final round events will be able to compete in each one without a conflict. Furthermore, each Individual Track final will take place at different times, allowing for someone to paritcipate in both if they should qualify.
+The final rounds for the President's Cup team and individual competitions will be held on different days. Competitors who qualify for both final round events will be able to compete in each one without a conflict. Furthermore, each Individual Track final will take place at different times, allowing for someone to participate in both if they should qualify.
 </div>
 
 <div class="card" id="q24">
     <strong> 24. I heard there will be multi-part challenges. How will that work?</strong>
-This year, we've implemented multi-part challenges to reward competitiors for their efforts towards solving the challenge. For multi-part challenges, you will be presented with multiple questions and multiple solution submission boxes in the Challenge. These challenges are designed to test your knowledge across the width of a challenge; for instance, you may be asked to provide multiple identifiers from a packet capture file, each as its own solution. Each question will clearly identify what type of solution and the proper format to submit. <strong>PLEASE NOTE:</strong> When you press submit, ALL of your solutions will be sent to the grading server, and you will be limited to THREE (3) submissions per challenge.
-
+This year, we've implemented multi-part challenges to reward competitors for their efforts towards solving the challenge. For multi-part challenges, you will be presented with multiple questions and multiple solution submission boxes in the challenge. These challenges are designed to test your knowledge across the width of a challenge; for instance, you may be asked to provide multiple identifiers from a packet capture file, each as its own solution. Each question will clearly identify what type of solution and the proper format to submit. 
+<strong>PLEASE NOTE:</strong> When you press submit, ALL of your solutions will be sent to the grading server, and you will be limited to THREE (3) submissions per challenge.
 
 <!----- For more information, please see the following video: ------->
 </div>
