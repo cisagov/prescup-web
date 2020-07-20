@@ -27,7 +27,7 @@
 4. Click the **Invite** button to generate a new invite URL
 4. Click the **Copy Link** icon. Paste the invite link address into an email or a chat to share with your teammates.
 5. As your teammates join, you should see them in the list.
-7. When all of your teammates have joined, click **Finalize Enrollment** to “lock” the team in place for the competition. Teams must be locked before challenges can be started! 
+7. When all of your teammates have joined, click **Finalize Enrollment** to “lock” the team in place for the competition. Teams must be locked before challenges can be started!
 
 > Note: Once a team is locked it is set in stone! Members, logos, and team names can’t be changed.
 
@@ -46,12 +46,6 @@ Under STATUS, each task should be checked and green meaning you are good to go.
 
 After logging in, under **Competition** , select the appropriate competition.
 
-#### Competing as an Individual
-
-You may want to participate as an individual.
-
-1. After logging in, under **Competition** , select the appropriate competition.
-2. The "trivia-style" board with challenge names and point values for each tile is now visible.
 
 ### Using the Gameboard
 
@@ -64,15 +58,7 @@ You may want to participate as an individual.
 
 #### Finding the Support Code
 
-The challenge Support Code can be found in the lower-right corner of the challenge pane. The Support Code looks similar to this: `a347c5c6`. 
-
-<!-- Completing the Practice round 
-We recommend that you and your team complete the practice round before jumping into the first
-round of the competition.
-After logging in, under **Competition**, select the **Practice** competition.
-Select a category and point value to start a challenge in the demo.
-Follow the challenge instructions presented on the screen to get an idea of how the competition
-works. -->
+The challenge Support Code can be found in the lower-right corner of the challenge pane. The Support Code looks similar to this: `a347c5c6`.
 
 ### Viewing the Leaderboard
 
