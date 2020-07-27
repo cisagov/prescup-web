@@ -12,16 +12,16 @@
  7. Enter the Code and click **Confirm**.
  8. Enter a **Password** and **Confirm Password**.
  9. Click **Register**.
- 10. Click the **Team Competition** or **Individual Competition** link.
+ 10. Click the one of the competition links&mdash;**Team**, **Track A, or **Track B**.
  11. At the President's Cup Welcome Page, click **Login**
- 12. Click the **Choose your organization** link.
- 12. Click **Edit Enrollment**. Create a team by setting an enrollment name or join a team by asking a team leader for an invitation URL.
+ 12. Click **Organization** under _Enrollment Checklist_ and choose your department or agency.
+ 12. Complete the enrollment steps if you're starting a new team. Create a team by setting an enrollment name or join a team by asking a team leader for an invitation URL.
 
 > Note: If you plan to join someone else's team, don't enroll a new team. If you are starting a team, make sure your team name is appropriate for public and professional presentation.
 
 #### Creating a Team
 
-1. Under **Set Enrollment Name** , enter a new display name for the scoreboard.
+1. Under **Enrollment** , enter a new display name for the scoreboard.
 2. Click **Save**.
 3. To invite other members to join your new team, click **Invite teammates**.
 4. Click the **Invite** button to generate a new invite URL
