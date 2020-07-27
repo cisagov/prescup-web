@@ -4,7 +4,7 @@
 ### Registering and Enrolling
 
  1. Go to [presidentscup.cisa.gov](https://presidentscup.cisa.gov).
- 2. Click **Participate as a Team** or **Participate as an Individual**.
+ 2. Click **Individual Track A** or **Individual Track B**.
  3. Click **CREATE ACCOUNT**.
  4. At the Notice screen, click **Continue**.
  5. On the Identity server, enter a .gov or .mil email address.
@@ -12,18 +12,10 @@
  7. Enter the Code and click **Confirm**.
  8. Enter a **Password** and **Confirm Password**.
  9. Click **Register**.
- 10. Click the **Team Competition** or **Individual Competition** link.
+ 10. Click the appropriate competition link&mdash;**Track A** or **Track B**.
  11. At the President's Cup Welcome Page, click **Login**
- 12. Click the **Choose your organization** link.
- 12. Click **Edit Enrollment**. Create a team by setting an enrollment name or join a team by asking a team leader for an invitation URL.
-
-
-#### Competing as an Individual
-
-You may want to participate as an individual.
-
-1. After logging in, under **Competition** , select the appropriate competition.
-2. The "trivia-style" board with challenge names and point values for each tile is now visible.
+ 12. Click **Organization** under _Enrollment Checklist_ and choose your department or agency.
+ 13. Complete the Enrollment Checklist, making sure your leaderboard name is appropriate for public and professional presentation.
 
 ### Using the Gameboard
 
@@ -34,7 +26,7 @@ You may want to participate as an individual.
 5. Click **SUBMIT** when you are sure you want to submit your answers.
 6. Your status (i.e. **FAILED**) , points per token, and date/time stamp of submissions are displayed.
 
-#### Finding the Support Code
+### Finding the Support Code
 
 The challenge Support Code can be found in the lower-right corner of the challenge pane. The Support Code looks similar to this: `a347c5c6`.
 
@@ -53,6 +45,15 @@ In the left pane, the **Leaderboard** shows the top ten teams or individuals and
 ### Logging out
 
 To log out of the Gameboard, under **STATUS**, click **Sign Out**.
+
+### Setup TOTP for 2FA
+
+If you don't have regular access to your .gov/.mil email, you can add a TOTP token to your Identity account.
+
+1. View your [Identity profile](https://presidentscup.cisa.gov/id/ui/profile).
+2. Click **Configure 2FA**
+3. Click **Generate** to create a new TOTP key. This will invalidate any existing keys you have.
+4. Use the provided **QR code** to add the new key to your device, or copy down the **manual input** string (64 characters) if necessary.
 
 ### Getting help
 
