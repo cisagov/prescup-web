@@ -4,7 +4,7 @@
 ### Registering and Enrolling
 
  1. Go to [presidentscup.cisa.gov](https://presidentscup.cisa.gov).
- 2. Click **Participate as a Team** or **Participate as an Individual**.
+ 2. Click **Participate as a Team**.
  3. Click **CREATE ACCOUNT**.
  4. At the Notice screen, click **Continue**.
  5. On the Identity server, enter a .gov or .mil email address.
@@ -12,7 +12,7 @@
  7. Enter the Code and click **Confirm**.
  8. Enter a **Password** and **Confirm Password**.
  9. Click **Register**.
- 10. Click the one of the competition links&mdash;**Team**, **Track A, or **Track B**.
+ 10. Click **Team Gameboard**.
  11. At the President's Cup Welcome Page, click **Login**
  12. Click **Organization** under _Enrollment Checklist_ and choose your department or agency.
  12. Complete the enrollment steps if you're starting a new team. Create a team by setting an enrollment name or join a team by asking a team leader for an invitation URL.
