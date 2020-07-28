@@ -17,6 +17,15 @@
  12. Click **Organization** under _Enrollment Checklist_ and choose your department or agency.
  13. Complete the Enrollment Checklist, making sure your leaderboard name is appropriate for public and professional presentation.
 
+### Setup TOTP for 2FA (optional)
+
+If you don't have regular access to your .gov/.mil email, you can add a TOTP token to your Identity account.
+
+1. View your [Identity profile](https://presidentscup.cisa.gov/id/ui/profile).
+2. Click **Configure 2FA**
+3. Click **Generate** to create a new TOTP key. This will invalidate any existing keys you have.
+4. Use the provided **QR code** to add the new key to your device, or copy down the **manual input** string (64 characters) if necessary.
+
 ### Using the Gameboard
 
 1. Select a tile to start a challenge.
@@ -45,15 +54,6 @@ In the left pane, the **Leaderboard** shows the top ten teams or individuals and
 ### Logging out
 
 To log out of the Gameboard, under **STATUS**, click **Sign Out**.
-
-### Setup TOTP for 2FA
-
-If you don't have regular access to your .gov/.mil email, you can add a TOTP token to your Identity account.
-
-1. View your [Identity profile](https://presidentscup.cisa.gov/id/ui/profile).
-2. Click **Configure 2FA**
-3. Click **Generate** to create a new TOTP key. This will invalidate any existing keys you have.
-4. Use the provided **QR code** to add the new key to your device, or copy down the **manual input** string (64 characters) if necessary.
 
 ### Getting help
 

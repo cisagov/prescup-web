@@ -19,6 +19,15 @@
 
 > Note: If you plan to join someone else's team, don't enroll a new team. If you are starting a team, make sure your team name is appropriate for public and professional presentation.
 
+### Setup TOTP for 2FA (optional)
+
+If you don't have regular access to your .gov/.mil email, you can add a TOTP token to your Identity account.
+
+1. View your [Identity profile](https://presidentscup.cisa.gov/id/ui/profile).
+2. Click **Configure 2FA**
+3. Click **Generate** to create a new TOTP key. This will invalidate any existing keys you have.
+4. Use the provided **QR code** to add the new key to your device, or copy down the **manual input** string (64 characters) if necessary.
+
 ### Creating a Team
 
 1. Under **Enrollment** , enter a new display name for the scoreboard.
@@ -66,15 +75,6 @@ In the left pane, the **Leaderboard** shows the top ten teams or individuals and
 ### Logging out
 
 To log out of the Gameboard, under **STATUS**, click **Sign Out**.
-
-### Setup TOTP for 2FA
-
-If you don't have regular access to your .gov/.mil email, you can add a TOTP token to your Identity account.
-
-1. View your [Identity profile](https://presidentscup.cisa.gov/id/ui/profile).
-2. Click **Configure 2FA**
-3. Click **Generate** to create a new TOTP key. This will invalidate any existing keys you have.
-4. Use the provided **QR code** to add the new key to your device, or copy down the **manual input** string (64 characters) if necessary.
 
 ### Getting help
 
