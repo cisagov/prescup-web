@@ -25,7 +25,7 @@
                     class="btn btn-md btn-success-alt text-uppercase m-2">Account Login</a></li>
             <li class="pb-2">Step 2: Lock your enrollment.</li>
             <li class="pb-2">Step 3: Practice sample challenges in the <a
-                    href="/gb/test/home/board/4ac06330-f12e-4b1d-a7d8-6f54ad9a611f">Practice Board</a>.</li>
+                    href="/gb/test/board/4ac06330-f12e-4b1d-a7d8-6f54ad9a611f">Practice Board</a>.</li>
             <li><strong>Looking to compete as a team? Go <a href="/gb/team">here</a>.</strong></li>
         </ul>
     </div>
