@@ -31,7 +31,9 @@
     </div>
 </div>
 
-### Round 3 Challenge Preview
+----
+
+## Finals Round Challenge Preview
 
 - Who Called the Doc? [1000] [incident response]
 > Your cybersecurity department has been notified that credentials for your employees have recently been found in a repository on a popular file sharing site. Though it does not consist of all user credentials in the environment, the attacker indicates that more credentials will be for sale along with shell access to assets within your network. You will need to determine what payload was used to compromise the network, create them in your lab then analyze the malware to identify and scan assets to find where the attacker has another payload staged.

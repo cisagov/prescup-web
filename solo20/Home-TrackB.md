@@ -32,7 +32,9 @@
     </div>
 </div>
 
-### Round 3 Challenge Preview
+----
+
+## Finals Round Challenge Preview
 
 - Side Quests [1000] []
 > This challenge is a collection of various tasks that take place around the MakeStuff Network.
