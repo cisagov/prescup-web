@@ -31,3 +31,25 @@
         </ul>
     </div>
 </div>
+
+### Round 3 Challenge Preview
+
+- Side Quests [1000] []
+> This challenge is a collection of various tasks that take place around the MakeStuff Network.
+
+- A link? I'll click it! [1000] []
+> You must use existing email infrastructure to gain access to a user's machine.
+
+- Proprietary Information [750] [web exploitation]
+> You must extract proprietary information from a server on the MakeStuff Company's network
+
+- SSH Rotate [1000] [software development, incident response]
+> Determine an attacker's intentions by deliberately granting him access.
+
+- A Terrible Sequel [1000] []
+> Assess and exploit vulnerabilities in software written in Python 3.6.
+
+- Digital Vigilante [1500] []
+> You must analyze traffic, write scripts, and execute attacks to gain access to any files that are on the private web server being hosted inside the organization's network.
+
+![map graphic](https://files-presidentscup.cisa.gov/img/TrackB-302e3934b9.png)
