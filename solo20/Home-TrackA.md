@@ -30,27 +30,3 @@
         </ul>
     </div>
 </div>
-
-----
-
-## Finals Round Challenge Preview
-
-- Who Called the Doc? [1000] [incident response]
-> Your cybersecurity department has been notified that credentials for your employees have recently been found in a repository on a popular file sharing site. Though it does not consist of all user credentials in the environment, the attacker indicates that more credentials will be for sale along with shell access to assets within your network. You will need to determine what payload was used to compromise the network, create them in your lab then analyze the malware to identify and scan assets to find where the attacker has another payload staged.
-
-- Key to Success [1000] []
-> Analyze forensic evidence and find the flag.
-
-- The Menshe Connection [1500] []
-> You will follow a set of network traffic related breadcrumbs in order to find the external system responsible for exfiltrating a set of data, and then connect to this system to discover what data was stolen.
-
-- Hanging About [1000] [network foresics]
-> Locate a hidden machine planted on the network by a malicious insider.
-
-- Email for sale! [1500] [exchange, active directory]
-> You must track down and identify the source of rouge email accounts in your enterprise.
-
-- DBYOD [1500] []
-> Analyze forensic images of a laptop and a USB and answer a few questions.
-
-![map graphic](https://files-presidentscup.cisa.gov/img/TrackA-b02acac8ad.png)
