@@ -24,8 +24,10 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <title>President's Cup</title>
 
@@ -46,15 +48,16 @@
         }
 
         a {
-            color: #EA2C92;
+            color: #5ec7d3;
+            text-decoration: none;
         }
 
         a:hover {
-            color: #8F2476;
+            color: #ff4bab;
         }
 
         .card {
-            background-color: rgba(35, 63, 131, 0.8);
+            background-color: rgba(47, 34, 87, 0.8);
         }
 
         .table-dark {
@@ -75,7 +78,7 @@
         }
 
         .bg-dark {
-            background-color: #2f2257 !important;
+            background-color: #3e2060 !important;
         }
 
         h3.thin {
@@ -102,7 +105,7 @@
 
         ol.questions li::before {
             content: counter(question) ". ";
-            color: #EA2C92;
+            color: #5ec7d3;
         }
 
         hr {
@@ -170,7 +173,7 @@
     </style>
 </head>
 
-<body data-spy="scroll" data-target=".navbar">
+<body data-bs-spy="scroll" data-bs-target=".navbar">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -178,7 +181,7 @@
                     src="21-563_PC21_favicon-256x256.png" />
                 President's Cup
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#prescupNavbar"
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#prescupNavbar"
                 aria-controls="prescupNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -228,9 +231,9 @@
                             require an extensive skill set to succeed.
                         </p>
                         <p> </p>
-                        <h3 class="thin">
-                            Coming soon! Registration for the 2021 President's Cup opens August 30th at 9:00 AM EDT.
-                        </h3>
+                        <div class="alert alert-warning" role="alert">
+                            <strong>Coming soon!</strong> Registration for the 2021 President's Cup opens August 30th at 9:00 AM EDT.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -247,8 +250,8 @@
                             Sep 13-20, 2021
                         </p>
                         <!-- this box will be grayed out up until 9:00 AM EDT 8/30  -->
-                        <div data-toggle="popover" data-content="Registration opens 8/30 at 9:00 AM EDT"
-                            data-trigger="hover" data-placement="bottom">
+                        <div data-bs-toggle="popover" data-bs-content="Registration opens 8/30 at 9:00 AM EDT"
+                            data-bs-trigger="hover" data-bs-placement="bottom">
                             <a class="btn btn-success1 btn-lg col-10 mt-2 disabled" style="pointer-events: none;"
                                 href="https://presidentscup.cisa.gov/gb/team">Participate as a Team
                             </a>
@@ -283,16 +286,16 @@
                         </p>
 
                         <!-- this box will be grayed out up until 9:00 AM EDT 8/30  -->
-                        <div data-toggle="popover" data-content="Registration opens 8/30 at 9:00 AM EDT"
-                            data-trigger="hover" data-placement="bottom">
+                        <div data-bs-toggle="popover" data-bs-content="Registration opens 8/30 at 9:00 AM EDT"
+                            data-bs-trigger="hover" data-bs-placement="bottom">
                             <a class="btn btn-success3 btn-lg col-10 disabled" style="pointer-events: none;"
                                 href="https://presidentscup.cisa.gov/gb/tracka">Individual
                                 Track A<br /><small>Incident Response/Forensics</small></a>
                         </div>
 
                         <!-- this box will be grayed out up until 9:00 AM EDT 8/30  -->
-                        <div data-toggle="popover" data-content="Registration opens 8/30 at 9:00 AM EDT"
-                            data-trigger="hover" data-placement="bottom">
+                        <div data-bs-toggle="popover" data-bs-content="Registration opens 8/30 at 9:00 AM EDT"
+                            data-bs-trigger="hover" data-bs-placement="bottom">
                             <a class="btn btn-success2 btn-lg col-10 mt-2 disabled" style="pointer-events: none;"
                                 href="https://presidentscup.cisa.gov/gb/trackb">Individual
                                 Track B<br /><small>Exploitation/Vuln Assessment</small></a>
@@ -310,8 +313,8 @@
                         </p>
                         <a class="btn btn-success4 btn-lg col-10" href="https://presidentscup.cisa.gov/gb/test">2021
                             Practice</a>
-                        <div data-toggle="popover" data-content="Temporarily offline" data-trigger="hover"
-                            data-placement="bottom">
+                        <div data-bs-toggle="popover" data-bs-content="Temporarily offline" data-bs-trigger="hover"
+                            data-bs-placement="bottom">
                             <a class="btn btn-success4 btn-lg col-10 mt-2 disabled" style="pointer-events: none;"
                                 href="https://presidentscup.cisa.gov/gb/archive">
                                 Challenge Archive<br /><small>Gameboard</small></a>
@@ -449,7 +452,7 @@
             -->
                         <h3>2021 Teaser</h3>
                         <a class="anchor" id="teaser-video"></a>
-                        <div class="embed-responsive embed-responsive-16by9">
+                        <div class="ratio ratio-16x9">
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/z8dqULHM7JI"
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -457,7 +460,7 @@
                         </div>
                         <h3 class="pt-5">Register/Enroll</h3>
                         <a class="anchor" id="register-video"></a>
-                        <div class="embed-responsive embed-responsive-16by9">
+                        <div class="ratio ratio-16x9">
                             <video class="embed-responsive-item" controls>
                                 <source src="https://files-presidentscup.cisa.gov/img/pc20-login-final.mp4"
                                     type="video/mp4">
@@ -1114,7 +1117,7 @@
     </main>
 
     <!-- Bootstrap JS includes -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -1127,6 +1130,15 @@
         // popovers Initialization
         $(function () {
             $('[data-toggle="popover"]').popover()
+        })
+    </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
         })
     </script>
 </body>
