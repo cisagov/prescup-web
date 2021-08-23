@@ -173,8 +173,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img width="30" height="30" class="d-inline-block align-top mr-1"
-                    src="eagle-logo-rounded.png" />
+                <img width="30" height="30" class="d-inline-block align-top mr-1" src="eagle-logo-rounded.png" />
                 President's Cup
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#prescupNavbar"
@@ -228,7 +227,8 @@
                         </p>
                         <p> </p>
                         <div class="alert alert-warning text-center" role="alert">
-                            <strong>Coming soon!</strong> Registration for the 2021 President's Cup opens August 30th at 12:00 PM ET.
+                            <strong>Coming soon!</strong> Registration for the 2021 President's Cup opens August 30th at
+                            12:00 PM ET.
                         </div>
                     </div>
                 </div>
@@ -291,8 +291,12 @@
                         <p class="card-text">
                             Practice demo challenges and content from previous President's Cup competitions
                         </p>
-                        <a class="btn btn-success4 btn-lg col-10" href="https://presidentscup.cisa.gov/gb/test">2021
-                            Practice<br/><small><em>Gameboard</em></small></a>
+                        <div data-bs-toggle="popover" data-bs-content="Registration opens 8/30 at 12:00 PM ET"
+                            data-bs-trigger="hover" data-bs-placement="left" data-bs-offset="0,-20">
+                            <a class="btn btn-success4 btn-lg col-10 disabled"
+                                href="https://presidentscup.cisa.gov/gb/test">2021
+                                Practice<br /><small><em>Gameboard</em></small></a>
+                        </div>
                         <div data-bs-toggle="popover" data-bs-content="Temporarily offline" data-bs-trigger="hover"
                             data-bs-placement="left" data-bs-offset="0,-20">
                             <a class="btn btn-success4 btn-lg col-10 mt-2 disabled" style="pointer-events: none;"
@@ -300,7 +304,8 @@
                                 Challenge Archive<br /><small><em>Gameboard</em></small></a>
                         </div>
                         <a class="btn btn-success4 btn-lg col-10 mt-2"
-                            href="https://github.com/cisagov/prescup19-challenges">Open Source Challenges<br /><small><em>GitHub</em></small></a>
+                            href="https://github.com/cisagov/prescup19-challenges">Open Source
+                            Challenges<br /><small><em>GitHub</em></small></a>
                         <a class="btn btn-success4 btn-lg col-10 mt-2"
                             href="https://www.youtube.com/playlist?list=PLSNlEg26NNpyjtUujhwW16SkJbuE9Pppe">Walkthrough
                             Videos<br />
@@ -342,16 +347,31 @@
                             competing for the first time in 2021&mdash;we're glad you joined us.</p>
                         <p>Here are the updates to this year's competition:</p>
                         <h3>Gameboard Updates</h3>
-                        <p>The Gameboard app has been updated to provide more standardization across challenges. The changes include:</p>
+                        <p>The Gameboard app has been updated to provide more standardization across challenges. The
+                            changes include:</p>
                         <ul>
-                            <li>All challenge tracks (Team, Individual Track A, Individual Track B) are now available under the same Gameboard instance. You no longer need to navigate between separate apps for each track.</li>
-                            <li>The competition map appears next to the challenge doc to make navigating between challenges faster.</li>
+                            <li>All challenge tracks (Team, Individual Track A, Individual Track B) are now available
+                                under the same Gameboard instance. You no longer need to navigate between separate apps
+                                for each track.</li>
+                            <li>The competition map appears next to the challenge doc to make navigating between
+                                challenges faster.</li>
                             <li>Example answers are included alongside each answer submission form field.</li>
                         </ul>
+                        <div class="alert alert-info" role="alert">
+                            <h4 class="alert-heading">Practice Board</h4>
+                            <p class="mb-1">Remember to complete the <strong>2021 Practice
+                                    board</strong> before beginning the competition in earnest! The Practice board
+                                contains
+                                sample challenges that confirm things are working correctly on your system.</p>
+                        </div>
                         <h3>Foundry Appliance</h3>
-                        <p>The platform used to host the President's Cup is <a href="https://github.com/cmu-sei/foundry-appliance">
-                            now available as a virtual appliance</a>. If you're interested in hosting your own competition using the
-                            same software, you can <a href="https://github.com/cmu-sei/foundry-appliance/releases">download an OVA template</a>.</p>
+                        <p>The platform used to host the President's Cup is now available as an <a
+                                href="https://github.com/cmu-sei/foundry-appliance">
+                                open-source virtual appliance</a>. If you're interested in hosting your own competition
+                            using the
+                            same software, you can <a
+                                href="https://github.com/cmu-sei/foundry-appliance/releases">download an OVA
+                                template</a>.</p>
                         <h3>Final Words</h3>
                         <p>Please review <em>all</em> of the <a href="#faq">FAQs</a> and <a href="#videos">videos</a>
                             before starting the competition, but pay particular attention to:</p>
@@ -556,22 +576,18 @@
                                     machines?</a></li>
                             <li><a href="#q17">If I reach my limit of virtual gamespaces (5 for teams, 2 for
                                     individuals), can I move on to another challenge?</a></li>
-                            <li><a href="#q18">What are the three types of challenges used in the 2021 competition and
-                                    how do I know which is which?</a></li>
+                            <li><a href="#q18">Is partial credit available for challenge submissions?</a></li>
                             <li><a href="#q19">Is there a recommended format for answer submissions?</a></li>
-                            <li><a href="#q20">I heard that competitors can receive partial credit for some challenges.
-                                    How does that work?</a></li>
-                            <li><a href="#q21">How does the grading server handle blank submissions?</a></li>
-                            <li><a href="#q22">President’s Cup Support is asking for my “challenge Support Code”. Where
+                            <li><a href="#q20">President’s Cup Support is asking for my “challenge Support Code”. Where
                                     can I find it?</a></li>
-                            <li><a href="#q23">How are teams selected to advance to Qualifying Round 2?</a></li>
-                            <li><a href="#q24">How are individuals selected to advance to Qualifying Round 2?</a></li>
-                            <li><a href="#q25">How are teams and individuals selected to advance to the Finals?</a>
+                            <li><a href="#q21">How are teams selected to advance to Qualifying Round 2?</a></li>
+                            <li><a href="#q22">How are individuals selected to advance to Qualifying Round 2?</a></li>
+                            <li><a href="#q23">How are teams and individuals selected to advance to the Finals?</a>
                             </li>
-                            <li><a href="#q26">What happens if I qualify for both the team and individual Finals</a>
+                            <li><a href="#q24">What happens if I qualify for both the team and individual Finals</a>
                             </li>
-                            <li><a href="#q27">Are Service Academy Cadets eligible to participate?</a></li>
-                            <li><a href="#q28">I participated in President's Cup last year. Should I create a new
+                            <li><a href="#q25">Are Service Academy Cadets eligible to participate?</a></li>
+                            <li><a href="#q26">I participated in President's Cup last year. Should I create a new
                                     account or use my existing one?</a></li>
                         </ol>
 
@@ -622,7 +638,7 @@
                                     round, you/your team will have a limited amount of time complete as many
                                     challenges as you can.</p>
                                 <p>The session time limits for the 2021 competition are:</p>
-                                <table class="table table-primary table-striped">
+                                <table class="table table-info table-striped">
                                     <thead>
                                         <tr>
                                             <th>Competition</th>
@@ -701,7 +717,7 @@
                         <div class="faq mb-4">
                             <div class="mr-4">7.</div>
                             <div>
-                                <p class="question">I heard about the President’s Cup too late to sign up.
+                                <p class="question">I heard about the President’s Cup, but it is too late to register.
                                     Will there be a President’s Cup in 2022?</p>
                                 <p>Yes. The President’s Cup will continue to evolve in future years based upon lessons
                                     learned from past competitions.</p>
@@ -797,10 +813,10 @@
                             <div class="mr-4">15.</div>
                             <div>
                                 <p class="question">What if I can't access my email when I'm out of the office?</p>
-                                <p>To use multi-factor authentication without access to email, visit your identity
-                                    profile at <a
-                                        href="https://presidentscup.cisa.gov/id/ui/profile">presidentscup.cisa.gov/id/ui/profile</a>
-                                    and <em>Configure 2FA</em>. You'll need to be logged in for this, so be sure to do
+                                <p>To use multi-factor authentication without access to email, visit your <a
+                                    href="https://presidentscup.cisa.gov/id/ui/profile">identity
+                                    profile</a>
+                                    and select <em>Configure 2FA</em>. You'll need to be logged in for this, so be sure to do
                                     this while you do have access to email.</p>
                                 <p>There you can generate a Time-based One Time Password (TOTP) secret key. Use this
                                     secret key with any totp-enabled authentication app, such as Duo Mobile or Google
@@ -839,19 +855,11 @@
                         <div class="faq mb-4">
                             <div class="mr-4">18.</div>
                             <div>
-                                <p class="question">What are the three types of challenges used in the 2021 competition
-                                    and how do I know which is which?</p>
-                                <p>In the gameboard:</p>
-                                <ul>
-                                    <li>A single answer challenge shows <strong>(Single Answer)</strong> with a single
-                                        visible submission box.</li>
-                                    <li>A multiple part challenge shows <strong>(Part 1 of x)</strong> with multiple
-                                        visible submission boxes available at all times. Partial credit can be received.
-                                    </li>
-                                    <li>A multiple stage challenge shows <strong>(Stage 1 of x)</strong> with a single
-                                        visible submission box available at a time. A new submission box is visible for
-                                        each stage. Partial credit can be received.</li>
-                                </ul>
+                                <p class="question">Is partial credit available for challenge submissions?</p>
+                                <p><strong>Yes.</strong> All 2021 President's Cup challenges have multiple parts which allow competitors to earn partial credit. Each challenge part includes the number of points awarded for providing the correct answer.</p>
+                                <p><strong>PLEASE NOTE:</strong> When you click the <em>Submit</em> button, ALL of your answer parts will be
+                                    sent to the grading server, and you are limited to <strong>THREE (3)</strong> submissions per
+                                    challenge. This applies whether or not you leave any answer fields empty.</p>
                             </div>
                         </div>
 
@@ -861,86 +869,13 @@
                             <div>
                                 <p class="question">Is there a recommended format for answer submissions?</p>
                                 <p>Correct answers will vary based on the challenge format and the questions being
-                                    asked. Please refer to each challenge description which will clearly articulate the
-                                    format of the answer.</p>
+                                    asked. Please refer to the example answer provided beneath each answer submission form field.</p>
                             </div>
                         </div>
 
                         <a class="anchor" id="q20"></a>
                         <div class="faq mb-4">
                             <div class="mr-4">20.</div>
-                            <div>
-                                <p class="question">I heard that competitors can receive partial credit for some
-                                    challenges. How does that work?</p>
-                                <p>For the 2021 competition, we've implemented partial credit to reward competitor's
-                                    efforts toward solving certain challenges. Partial credit challenges can have
-                                    multiple <em>parts</em> and/or <em>stages</em>.</p>
-                                <h5>Multiple Parts</h5>
-                                <p>For challenges with more than one part, you will be presented
-                                    with multiple submission boxes in the challenge. These
-                                    challenges are designed to test your knowledge across the breadth of a challenge;
-                                    for
-                                    instance, you may be asked to provide multiple identifiers from a packet capture
-                                    file, each as its own solution. The challenge will clearly identify the expected
-                                    format for each submission part.</p>
-                                <p><strong>PLEASE NOTE:</strong> When you press submit, ALL of your solutions will be
-                                    sent to the grading server, and you will be limited to THREE (3) submissions per
-                                    challenge. This applies whether or not you leave any submission boxes empty.</p>
-                                <h5>Multiple Stages</h5>
-                                <p>For challenges with more than one stage, you must correctly submit the answer token
-                                    in each stage before advancing to the next stage.</p>
-                                <p><strong>PLEASE NOTE:</strong> Each stage has its own submission limit, and you will
-                                    be limited to THREE (3) submissions per <em>stage</em>.</p>
-                            </div>
-                        </div>
-
-                        <a class="anchor" id="q21"></a>
-                        <div class="faq mb-4">
-                            <div class="mr-4">21.</div>
-                            <div>
-                                <p class="question">How does the grading server handle blank submissions?</p>
-                                <p>Please review the following rules for how the grading server accepts blank
-                                    submissions:</p>
-                                <p>For a single answer challenge:</p>
-                                <ul>
-                                    <li>An empty submission box is <em>not</em> accepted by the grading server.</li>
-                                    <li>The number of submission attempts is unaffected. You will have three (3)
-                                        submission attempts for a single answer challenge.</li>
-                                    <li><em>The Sum of All Containers</em> in the <a
-                                            href="https://presidentscup.cisa.gov/gb/test/board/4ac06330-f12e-4b1d-a7d8-6f54ad9a611f">Practice
-                                            round</a> is an example of this.</li>
-                                </ul>
-                                <p>For a multiple <em>part</em> challenge (partial credit):</p>
-                                <ul>
-                                    <li>All submission boxes are shown.</li>
-                                    <li>When all submission boxes are empty, the grading server does not accept the
-                                        submission. The number of submission attempts is unaffected.</li>
-                                    <li>When some submission boxes are empty, the grading server <em>does</em> accept an
-                                        empty submission box(es) as incorrect answers. The number of submission attempts
-                                        decreases by one (1). Partial credit is awarded where applicable.</li>
-                                    <li>You have three (3) submission attempts for a multiple part challenge.</li>
-                                    <li><em>Team Effort</em> in the <a
-                                            href="https://presidentscup.cisa.gov/gb/test/board/4ac06330-f12e-4b1d-a7d8-6f54ad9a611f">Practice
-                                            round</a> is an example of this.</li>
-                                </ul>
-                                <p>For a multiple <em>stage</em> challenge (partial credit):</p>
-                                <ul>
-                                    <li>One submission box is shown at a time; an empty submission box is <em>not</em>
-                                        accepted by the grading server.</li>
-                                    <li>The number of submission attempts resets for each stage. You will have three (3)
-                                        submission attempts per stage. If you run out of attempts during a stage, you do
-                                        <em>not</em> advance to the next stage.
-                                    </li>
-                                    <li><em>Hashy Bashy</em> in the <a
-                                            href="https://presidentscup.cisa.gov/gb/test/board/4ac06330-f12e-4b1d-a7d8-6f54ad9a611f">Practice
-                                            round</a> is an example of this.</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <a class="anchor" id="q22"></a>
-                        <div class="faq mb-4">
-                            <div class="mr-4">22.</div>
                             <div>
                                 <p class="question">President’s Cup Support is asking for my “challenge Support Code”.
                                     Where can I find it?</p>
@@ -949,9 +884,9 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q23"></a>
+                        <a class="anchor" id="q21"></a>
                         <div class="faq mb-4">
-                            <div class="mr-4">23.</div>
+                            <div class="mr-4">21.</div>
                             <div>
                                 <p class="question">How are teams selected to advance to Qualifying Round 2?</p>
                                 <p>In the Teams competition, the top-scoring team from each competing Department
@@ -965,9 +900,9 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q24"></a>
+                        <a class="anchor" id="q22"></a>
                         <div class="faq mb-4">
-                            <div class="mr-4">24.</div>
+                            <div class="mr-4">22.</div>
                             <div>
                                 <p class="question">How are individuals selected to advance to Qualifying Round 2?</p>
                                 <p>In the Individuals competition, the top 100 scores in each track advance to
@@ -980,19 +915,19 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q25"></a>
+                        <a class="anchor" id="q23"></a>
                         <div class="faq mb-4">
-                            <div class="mr-4">25.</div>
+                            <div class="mr-4">23.</div>
                             <div>
                                 <p class="question">How are teams and individuals selected to advance to the Finals?</p>
-                                <p>The top five teams and top 10 individuals will advance to the Finals based on
+                                <p>The <strong>top five (5) teams</strong> and <strong>top ten (10) individuals <em>in each track</em></strong> will advance to the Finals based on
                                     each respective leaderboard at the end of Qualifying Round 2.</p>
                             </div>
                         </div>
 
-                        <a class="anchor" id="q26"></a>
+                        <a class="anchor" id="q24"></a>
                         <div class="faq mb-4">
-                            <div class="mr-4">26.</div>
+                            <div class="mr-4">24.</div>
                             <div>
                                 <p class="question">What happens if I qualify for both the team and individual final
                                     rounds?</p>
@@ -1006,9 +941,9 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q27"></a>
+                        <a class="anchor" id="q25"></a>
                         <div class="faq mb-4">
-                            <div class="mr-4">27.</div>
+                            <div class="mr-4">25.</div>
                             <div>
                                 <p class="question">Are Service Academy Cadets eligible to participate?</p>
                                 <p>Service Academy Cadets are eligible and encouraged to participate! Cadets can
@@ -1018,9 +953,9 @@
                                     will work to get you enrolled.</p>
                             </div>
                         </div>
-                        <a class="anchor" id="q28"></a>
+                        <a class="anchor" id="q26"></a>
                         <div class="faq mb-4">
-                            <div class="mr-4">28.</div>
+                            <div class="mr-4">26.</div>
                             <div>
                                 <p class="question">I participated in President's Cup last year. Should I use my
                                     existing account or create a new one?</p>
