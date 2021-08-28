@@ -23,8 +23,6 @@
     <meta name="theme-color" content="#233f83">
 
     <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" /> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -53,6 +51,11 @@
 
         a:hover {
             color: #ff4bab;
+            text-decoration: underline;
+        }
+
+        .btn:hover {
+            text-decoration: none;
         }
 
         .card {
@@ -212,7 +215,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h1 class="thin">President's Cup Cybersecurity Competition</h1>
-                        <p class="mb-0">
+                        <p>
                             Established in response to
                             <a
                                 href="https://www.federalregister.gov/documents/2019/05/09/2019-09750/americas-cybersecurity-workforce">Executive
@@ -224,11 +227,7 @@
                             competitors will face a diverse array of challenges and will
                             require an extensive skill set to succeed.
                         </p>
-                        <p> </p>
-                        <div class="alert alert-warning text-center" role="alert">
-                            <strong>Coming soon!</strong> Registration for the 2021 President's Cup opens August 30th at
-                            12:00 PM ET.
-                        </div>
+                        <p class="lead text-center mb-1">Use the buttons below to enroll in the President's Cup.</p>
                     </div>
                 </div>
             </div>
@@ -244,14 +243,10 @@
                             Registration: Aug 30-Sep 20, 2021<br />Qualifying Round 1:
                             Sep 13-20, 2021
                         </p>
-                        <!-- this box will be grayed out up until 12:00 PM ET 8/30  -->
-                        <div data-bs-toggle="popover" data-bs-content="Registration opens 8/30 at 12:00 PM ET"
-                            data-bs-trigger="hover" data-bs-placement="right" data-bs-offset="0,-20">
-                            <a class="btn btn-success1 btn-lg col-10 disabled" style="pointer-events: none;"
-                                href="https://presidentscup.cisa.gov/gb/team">Team Competition<br/>
-                                <small><em>2-5 Players</em></small>
-                            </a>
-                        </div>
+                        <a class="btn btn-success1 btn-lg col-10"
+                            href="https://presidentscup.cisa.gov/gb/pc/game/b4705ac3eca84c7da45ae76225929f55">Team
+                            Competition<br />
+                            <small><em>2-5 Players</em></small></a>
                     </div>
                 </div>
             </div>
@@ -265,21 +260,13 @@
                             Sep 27-Oct 4, 2021
                         </p>
 
-                        <!-- this box will be grayed out up until 12:00 PM ET 8/30  -->
-                        <div data-bs-toggle="popover" data-bs-content="Registration opens 8/30 at 12:00 PM ET"
-                            data-bs-trigger="hover" data-bs-placement="right" data-bs-offset="0,-20">
-                            <a class="btn btn-success3 btn-lg col-10 disabled" style="pointer-events: none;"
-                                href="https://presidentscup.cisa.gov/gb/tracka">Individual
-                                Track A<br /><small><em>Incident Response/Forensics</em></small></a>
-                        </div>
+                        <a class="btn btn-success3 btn-lg col-10"
+                            href="https://presidentscup.cisa.gov/gb/pc/game/1a70d97a4ef24e42900d84c062fd0ad1">Individual
+                            Track A<br /><small><em>Incident Response/Forensics</em></small></a>
 
-                        <!-- this box will be grayed out up until 12:00 PM ET 8/30  -->
-                        <div data-bs-toggle="popover" data-bs-content="Registration opens 8/30 at 12:00 PM ET"
-                            data-bs-trigger="hover" data-bs-placement="right" data-bs-offset="0,-20">
-                            <a class="btn btn-success2 btn-lg col-10 mt-2 disabled" style="pointer-events: none;"
-                                href="https://presidentscup.cisa.gov/gb/trackb">Individual
-                                Track B<br /><small><em>Exploitation/Vuln Assessment</em></small></a>
-                        </div>
+                        <a class="btn btn-success2 btn-lg col-10 mt-2"
+                            href="https://presidentscup.cisa.gov/gb/pc/game/b3f440238a9640f98bd7d0eb793a0eac">Individual
+                            Track B<br /><small><em>Exploitation/Vuln Assessment</em></small></a>
                     </div>
                 </div>
             </div>
@@ -289,14 +276,11 @@
                         <img src="img/yookie-practice-24.png" alt="logo" height="70" />
                         <h5 class="card-title mt-3">PCCC Practice Area</h5>
                         <p class="card-text">
-                            Practice demo challenges and content from previous President's Cup competitions
+                            Practice demo challenges and content from past President's Cup competitions
                         </p>
-                        <div data-bs-toggle="popover" data-bs-content="Registration opens 8/30 at 12:00 PM ET"
-                            data-bs-trigger="hover" data-bs-placement="left" data-bs-offset="0,-20">
-                            <a class="btn btn-success4 btn-lg col-10 disabled"
-                                href="https://presidentscup.cisa.gov/gb/test">2021
-                                Practice<br /><small><em>Gameboard</em></small></a>
-                        </div>
+                        <a class="btn btn-success4 btn-lg col-10"
+                            href="https://presidentscup.cisa.gov/gb/pc/game/9240b73a6d57439aa24898cd966c8581">2021
+                            Practice<br /><small><em>Gameboard</em></small></a>
                         <div data-bs-toggle="popover" data-bs-content="Temporarily offline" data-bs-trigger="hover"
                             data-bs-placement="left" data-bs-offset="0,-20">
                             <a class="btn btn-success4 btn-lg col-10 mt-2 disabled" style="pointer-events: none;"
@@ -357,10 +341,13 @@
                                 challenges faster.</li>
                             <li>Example answers are included alongside each answer submission form field.</li>
                         </ul>
-                        <div class="alert alert-info" role="alert">
+                        <div class="alert alert-warning" role="alert">
                             <h4 class="alert-heading">Practice Board</h4>
-                            <p class="mb-1">Remember to complete the <strong>2021 Practice
-                                    board</strong> before beginning the competition in earnest! The Practice board
+                            <p class="mb-1">Remember to complete the <a class="alert-link"
+                                    href="https://presidentscup.cisa.gov/gb/pc/game/9240b73a6d57439aa24898cd966c8581"><strong>2021
+                                        Practice
+                                        board</strong></a> before beginning the competition in earnest! The Practice
+                                board
                                 contains
                                 sample challenges that confirm things are working correctly on your system.</p>
                         </div>
@@ -506,9 +493,11 @@
                         </ol>
                         <h3 id="registration">Registration</h3>
                         <ul>
-                            <li><strong>Teams:</strong> Starts at 12:00 PM ET on August 30, 2021 and ends at 4:00 PM ET on
+                            <li><strong>Teams:</strong> Starts at 12:00 PM ET on August 30, 2021 and ends at 4:00 PM ET
+                                on
                                 September 20, 2021</li>
-                            <li><strong>Individuals:</strong> Starts at 12:00 PM ET on August 30, 2021 and ends at 4:00 PM
+                            <li><strong>Individuals:</strong> Starts at 12:00 PM ET on August 30, 2021 and ends at 4:00
+                                PM
                                 ET on October 4, 2021 </li>
                             <li>Participation in the President's Cup will be closed after these dates/times.</li>
                         </ul>
@@ -525,11 +514,13 @@
                             registration and qualifying. Support during registration and qualifying is available:</p>
                         <ul>
                             <li><strong>Registration period</strong> – Monday through Friday, 8:00 AM - 5:00 PM ET</li>
-                            <li><strong>Qualifying rounds</strong> – 24x5 support starting Monday at 8:00 AM ET and ending Friday at 11:59 PM ET; Saturday and Sunday, 8:00 AM - 5:00 PM ET</li>
+                            <li><strong>Qualifying rounds</strong> – 24x5 support starting Monday at 8:00 AM ET and
+                                ending Friday at 11:59 PM ET; Saturday and Sunday, 8:00 AM - 5:00 PM ET</li>
                             <li><strong>Finals</strong> – support throughout Finals</li>
                             <li>Hours are Eastern Time</li>
                         </ul>
-                        <p><strong>PLEASE NOTE:</strong> Support availability is limited on weekends during the competition;
+                        <p><strong>PLEASE NOTE:</strong> Support availability is limited on weekends during the
+                            competition;
                             participants who choose to compete during this time do so at their own risk. Please make use
                             of the demo challenges to ensure access and compatibility before competing.</p>
                     </div>
@@ -814,9 +805,10 @@
                             <div>
                                 <p class="question">What if I can't access my email when I'm out of the office?</p>
                                 <p>To use multi-factor authentication without access to email, visit your <a
-                                    href="https://presidentscup.cisa.gov/id/ui/profile">identity
-                                    profile</a>
-                                    and select <em>Configure 2FA</em>. You'll need to be logged in for this, so be sure to do
+                                        href="https://presidentscup.cisa.gov/id/ui/profile">identity
+                                        profile</a>
+                                    and select <em>Configure 2FA</em>. You'll need to be logged in for this, so be sure
+                                    to do
                                     this while you do have access to email.</p>
                                 <p>There you can generate a Time-based One Time Password (TOTP) secret key. Use this
                                     secret key with any totp-enabled authentication app, such as Duo Mobile or Google
@@ -856,10 +848,15 @@
                             <div class="mr-4">18.</div>
                             <div>
                                 <p class="question">Is partial credit available for challenge submissions?</p>
-                                <p><strong>Yes.</strong> All 2021 President's Cup challenges have multiple parts which allow competitors to earn partial credit. Each challenge part includes the number of points awarded for providing the correct answer.</p>
-                                <p><strong>PLEASE NOTE:</strong> When you click the <em>Submit</em> button, ALL of your answer parts will be
-                                    sent to the grading server, and you are limited to <strong>THREE (3)</strong> submissions <em>per
-                                    challenge</em>. This applies whether or not you leave any answer fields empty.</p>
+                                <p><strong>Yes.</strong> All 2021 President's Cup challenges have multiple parts which
+                                    allow competitors to earn partial credit. Each challenge part includes the number of
+                                    points awarded for providing the correct answer.</p>
+                                <p><strong>PLEASE NOTE:</strong> When you click the <em>Submit</em> button, ALL of your
+                                    answer parts will be
+                                    sent to the grading server, and you are limited to <strong>THREE (3)</strong>
+                                    submissions <em>per
+                                        challenge</em>. This applies whether or not you leave any answer fields empty.
+                                </p>
                             </div>
                         </div>
 
@@ -869,7 +866,8 @@
                             <div>
                                 <p class="question">Is there a recommended format for answer submissions?</p>
                                 <p>Correct answers will vary based on the challenge format and the questions being
-                                    asked. Please refer to the example answer provided beneath each answer submission form field.</p>
+                                    asked. Please refer to the example answer provided beneath each answer submission
+                                    form field.</p>
                             </div>
                         </div>
 
@@ -920,7 +918,8 @@
                             <div class="mr-4">23.</div>
                             <div>
                                 <p class="question">How are teams and individuals selected to advance to the Finals?</p>
-                                <p>The <strong>top five (5) teams</strong> and <strong>top ten (10) individuals <em>in each track</em></strong> will advance to the Finals based on
+                                <p>The <strong>top five (5) teams</strong> and <strong>top ten (10) individuals <em>in
+                                            each track</em></strong> will advance to the Finals based on
                                     each respective leaderboard at the end of Qualifying Round 2.</p>
                             </div>
                         </div>
@@ -971,21 +970,6 @@
     </main>
 
     <!-- Bootstrap JS includes -->
-    <!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script>
-        // popovers Initialization
-        $(function () {
-            $('[data-toggle="popover"]').popover()
-        })
-    </script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
