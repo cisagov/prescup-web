@@ -1,7 +1,11 @@
 
 # Getting Started
 
-## Teams
+- [Teams](#teams)
+- [Individuals (Track A & B)](#individuals)
+- [Gameplay (Both Teams and Individuals)](#gameplay)
+
+<h2 id="teams">Teams</h2>
 
 ### Registering and Enrolling
 
@@ -53,7 +57,7 @@ Under STATUS, each task should be checked and green meaning you are good to go.
 
 After logging in, under **Competition** , select the appropriate competition.
 
-## Individuals
+<h2 id="individuals">Individuals (Track A & B)</h2>
 
 ### Registering and Enrolling
 
@@ -72,7 +76,7 @@ After logging in, under **Competition** , select the appropriate competition.
 
  13. Complete enrollment by requesting a custom display name. Ensure your display name is appropriate for public and professional presentation. All requested display names are subject to approval by competition administrators.
 
-## Gameplay (Both Teams and Individuals)
+<h2 id="gameplay">Gameplay (Both Teams and Individuals)</h2>
 
 ### Using the Gameboard
 
