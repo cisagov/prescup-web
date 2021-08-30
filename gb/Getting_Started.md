@@ -1,9 +1,9 @@
 
 # Getting Started
 
-- [Teams](#teams)
-- [Individuals (Track A & B)](#individuals)
-- [Gameplay (Both Teams and Individuals)](#gameplay)
+- [Teams](doc/getting_started#teams)
+- [Individuals (Track A & B)](doc/getting_started#individuals)
+- [Gameplay (Both Teams and Individuals)](doc/getting_started#gameplay)
 
 <h2 id="teams">Teams</h2>
 
