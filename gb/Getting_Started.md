@@ -37,14 +37,7 @@
 3. To invite other members to join your new team, click **Generate** to generate a new **Invitation Code** and **Convenience URL**.
 4. Click the generated **Invitation Code** text to copy the code or URL to your clipboard. Paste the invite code or URL into an email or a chat to share with your teammates.
 5. As your teammates join, you should see them in the list.
-<!-- Not sure if anything under this line still applies to this section. Need to test inviting team members (Not able to test yet) -->
-7. When all of your teammates have joined, click **Finalize Enrollment** to “lock” the team in place for the competition. Teams must be locked before challenges can be started!
-
-> Note: Once a team is locked it is set in stone! Members, logos, and team names can’t be changed.
-
-8. Click **Complete Enrollment**, then click **Confirm**.
-
-Under STATUS, each task should be checked and green meaning you are good to go.
+6. Your team will be locked upon launching the first round gameboard.
 
 ### Joining a Team
 
