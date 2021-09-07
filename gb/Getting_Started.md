@@ -1,11 +1,5 @@
 
-# Getting Started
-
-- [Teams](doc/getting_started#teams)
-- [Individuals (Track A & B)](doc/getting_started#individuals)
-- [Gameplay (Both Teams and Individuals)](doc/getting_started#gameplay)
-
-<h2 id="teams">Teams</h2>
+## Getting Started
 
 ### Registering and Enrolling
 
@@ -18,58 +12,28 @@
  7. Enter the Code and click **Confirm**.
  8. Enter a **Password** and **Confirm Password**.
  9. Click **Register**.
- 10. Click **Enroll** and **Confirm** on the game home page to enroll in a game.
- <!-- This step is still pending addition of Organization support -->
- 11. Click **Organization** under _Enrollment Checklist_ and choose your department or agency.
-
- 12. Complete the enrollment steps if you're starting a new team. Create a team by requesting a custom display name and generating an invitation link to send to your teammates. *Clicking the **Generate** button more than once will invalidate all previously generated links.*
- If you are joining a team, you can redeem the **Invitation Code** from your manager to join the team.
+ 10. Click **Profile** from the menu bar.
+ 11. Request an updated display name for your user.
+ 12. Choose your Sponsoring Organization.
+ 13. Click **Home** to return to the gameboard home page. 
+ 14. Click the **Team** competition card.
+ 15. Click **Enroll** and **Confirm** on the game home page to enroll in a game.  
+ 16. A) Create a team by requesting a custom display name and generating an invitation link to send to your teammates. *Clicking the **Generate** button more than once will invalidate all previously generated links.*  
+    B) If you are joining a team, you can redeem the **Invitation Code** from your manager to join the team.
 
 > *If you have competed in a previous year's competition, use the same email address and password as before. You can also click **Reset my password** if you don't remember your password.*
 
-> Note: If you plan to join someone else's team, don't enroll a new team. If you are starting a team, make sure your team name is appropriate for public and professional presentation. All requested team names are subject to approval by competition administrators.
+> Note: If you are starting a team, make sure your team name is appropriate for public and professional presentation. All requested team names are subject to approval by competition administrators.
 
+### Setup TOTP for 2FA (optional)
 
-### Creating a Team
+If you don't have regular access to your .gov/.mil email, you can add a TOTP token to your Identity account.
 
-1. Under **Enrollment** , request a new display name for the scoreboard.
-2. Click **Update**.
-3. To invite other members to join your new team, click **Generate** to generate a new **Invitation Code** and **Convenience URL**.
-4. Click the generated **Invitation Code** text to copy the code or URL to your clipboard. Paste the invite code or URL into an email or a chat to share with your teammates.
-5. As your teammates join, you should see them in the list.
-6. Your team will be locked upon launching the first round gameboard.
+1. View your [Identity profile](https://presidentscup.cisa.gov/id/ui/profile).
+2. Click **Configure 2FA**
+3. Click **Generate** to create a new TOTP key. This will invalidate any existing keys you have.
+4. Use the provided **QR code** to add the new key to your device, or copy down the **manual input** string (64 characters) if necessary.
 
-### Joining a Team
-
-1. Click the link provided to you by your team leader.
-2. Click **Login**.
-3. At the Notice screen, click **Continue**.
-4. Enter your Email and Password and click **Continue**.
-5. Enter your authentication code and click **Continue**. You may have to send a new code.
-6. Under STATUS, you should see the name of your team and the members who have already joined.
-
-After logging in, under **Competition** , select the appropriate competition.
-
-<h2 id="individuals">Individuals (Track A & B)</h2>
-
-### Registering and Enrolling
-
- 1. Go to [presidentscup.cisa.gov](https://presidentscup.cisa.gov).
- 2. Click **Individual Track A** or **Individual Track B**.
- 3. Click **Login**.
- 4. At the Notice screen, click **Continue**.
- 5. If you have not participated in a previous year's competition, click **Register for an account**. Enter an email address with one of the approved domains.
- 6. Click **Send Verification Code**. A code is sent to the email address you provided.
- 7. Enter the Code and click **Confirm**.
- 8. Enter a **Password** and **Confirm Password**.
- 9. Click **Register**.
- 10. Click **Enroll** and **Confirm** on the game home page to enroll in a game.
- <!-- This step is still pending addition of Organization support -->
- 11. Click **Organization** under _Enrollment Checklist_ and choose your department or agency.
-
- 13. Complete enrollment by requesting a custom display name. Ensure your display name is appropriate for public and professional presentation. All requested display names are subject to approval by competition administrators.
-
-<h2 id="gameplay">Gameplay (Both Teams and Individuals)</h2>
 
 ### Using the Gameboard
 
