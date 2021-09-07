@@ -1,10 +1,11 @@
 
 ## Getting Started
 
+
 ### Registering and Enrolling
 
  1. Go to [presidentscup.cisa.gov](https://presidentscup.cisa.gov).
- 2. Click **Team Competition**.
+ 2. Click **Team Competition**, **Individual Track A**, or **Individual Track B**.
  3. Click **Login**.
  4. At the Notice screen, click **Continue**.
  5. If you have not participated in a previous year's competition, click **Register for an account**. Enter an email address with one of the approved domains.
@@ -16,10 +17,11 @@
  11. Request an updated display name for your user.
  12. Choose your Sponsoring Organization.
  13. Click **Home** to return to the gameboard home page. 
- 14. Click the **Team** competition card.
+ 14. Click the card for your desired competition (Teams, Individual Track A, or Individual Track B).
  15. Click **Enroll** and **Confirm** on the game home page to enroll in a game.  
  16. A) Create a team by requesting a custom display name and generating an invitation link to send to your teammates. *Clicking the **Generate** button more than once will invalidate all previously generated links.*  
     B) If you are joining a team, you can redeem the **Invitation Code** from your manager to join the team.
+ 17. You can enroll in more than 1 game by clicking **Home**, selecting a different game card, then clicking **Enroll** and **Confirm**
 
 > *If you have competed in a previous year's competition, use the same email address and password as before. You can also click **Reset my password** if you don't remember your password.*
 
