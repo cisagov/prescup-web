@@ -18,44 +18,35 @@
  7. Enter the Code and click **Confirm**.
  8. Enter a **Password** and **Confirm Password**.
  9. Click **Register**.
- 10. Click **Enroll** and **Confirm** on the game home page to enroll in a game.
- <!-- This step is still pending addition of Organization support -->
- 11. Click **Organization** under _Enrollment Checklist_ and choose your department or agency.
-
- 12. Complete the enrollment steps if you're starting a new team. Create a team by requesting a custom display name and generating an invitation link to send to your teammates. *Clicking the **Generate** button more than once will invalidate all previously generated links.*
- If you are joining a team, you can redeem the **Invitation Code** from your manager to join the team.
+ 10. Click **Profile** in the menu bar.
+ 11. Request an updated display name for your user. 
+ 12. Choose your Sponsoring Organization. 
+ 13. Click **Home** then click **Team Competition**.
+ 14. Click **Enroll** and **Confirm** to enroll in the game.
+ 15. A) Create a team by requesting a custom display name and generating an invitation link to send to your teammates. *Clicking the **Generate** button more than once will invalidate all previously generated links.*  
+    B) If you are joining a team, you can redeem the **Invitation Code** from your manager to join the team.
 
 > *If you have competed in a previous year's competition, use the same email address and password as before. You can also click **Reset my password** if you don't remember your password.*
 
-> Note: If you plan to join someone else's team, don't enroll a new team. If you are starting a team, make sure your team name is appropriate for public and professional presentation. All requested team names are subject to approval by competition administrators.
+> Note: If you are starting a team, make sure your team name is appropriate for public and professional presentation. All requested team names are subject to approval by competition administrators.
 
 
 ### Creating a Team
 
-1. Under **Enrollment** , request a new display name for the scoreboard.
-2. Click **Update**.
-3. To invite other members to join your new team, click **Generate** to generate a new **Invitation Code** and **Convenience URL**.
-4. Click the generated **Invitation Code** text to copy the code or URL to your clipboard. Paste the invite code or URL into an email or a chat to share with your teammates.
-5. As your teammates join, you should see them in the list.
-<!-- Not sure if anything under this line still applies to this section. Need to test inviting team members (Not able to test yet) -->
-7. When all of your teammates have joined, click **Finalize Enrollment** to “lock” the team in place for the competition. Teams must be locked before challenges can be started!
-
-> Note: Once a team is locked it is set in stone! Members, logos, and team names can’t be changed.
-
-8. Click **Complete Enrollment**, then click **Confirm**.
-
-Under STATUS, each task should be checked and green meaning you are good to go.
+1. Enroll in the **Team Competition**
+2. Under **Enrollment** , request a new display name for the scoreboard.
+3. Click **Update**.
+4. To invite other members to join your new team, click **Generate** to generate a new **Invitation Code**.
+5. Click the generated **Invitation Code** text to copy the code or URL to your clipboard. Paste the invite code into an email or a chat to share with your teammates.
+6. As your teammates join, you should see them in the list.
+7. Your team will be locked upon launching the first round gameboard.
 
 ### Joining a Team
 
-1. Click the link provided to you by your team leader.
-2. Click **Login**.
-3. At the Notice screen, click **Continue**.
-4. Enter your Email and Password and click **Continue**.
-5. Enter your authentication code and click **Continue**. You may have to send a new code.
-6. Under STATUS, you should see the name of your team and the members who have already joined.
-
-After logging in, under **Competition** , select the appropriate competition.
+1. Enroll in the **Team Competition**
+2. Receive an **Invitation Code** from your team manager.
+3. Under **Enrollment**, redeem the **Invitation Code**.
+4. Your team name and members of your team should appear under **Status**
 
 <h2 id="individuals">Individuals (Track A & B)</h2>
 
@@ -70,11 +61,11 @@ After logging in, under **Competition** , select the appropriate competition.
  7. Enter the Code and click **Confirm**.
  8. Enter a **Password** and **Confirm Password**.
  9. Click **Register**.
- 10. Click **Enroll** and **Confirm** on the game home page to enroll in a game.
- <!-- This step is still pending addition of Organization support -->
- 11. Click **Organization** under _Enrollment Checklist_ and choose your department or agency.
-
- 13. Complete enrollment by requesting a custom display name. Ensure your display name is appropriate for public and professional presentation. All requested display names are subject to approval by competition administrators.
+ 10. Click **Profile** in the menu bar.
+ 11. Request an updated display name for your user. 
+ 12. Choose your Sponsoring Organization. 
+ 13. Click **Home** then click **Team Competition**.
+ 14. Click **Enroll** and **Confirm** to enroll in the game.
 
 <h2 id="gameplay">Gameplay (Both Teams and Individuals)</h2>
 
@@ -82,7 +73,7 @@ After logging in, under **Competition** , select the appropriate competition.
 
 1. Select a circle on map to view a challenge.
 2. Click **Start**, click **Confirm**. The challenge timer begins.
-3. Follow the challenge instructions presented on the screen, including solving the challengfe in the virtual work space.
+3. Follow the challenge instructions presented on the screen, including solving the challenge in the virtual work space.
 4. When you think you have the answer, enter the token in the appropriate **Challenge Question** field.
 5. Click **SUBMIT** when you are sure you want to submit your answers.
 6. Correct answers will change colors to **Green**. Incorrect answers will change colors to **Yellow**. Fields not filled out will remain **Blue**. The current submission number, session time remaining, and earned challenge score are shown.
