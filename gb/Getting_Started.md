@@ -1,11 +1,10 @@
-
 # Getting Started
 
-- [Teams](doc/getting_started#teams)
-- [Individuals (Track A & B)](doc/getting_started#individuals)
-- [Gameplay (Both Teams and Individuals)](doc/getting_started#gameplay)
+Welcome to _President's Cup 2021_. Please review the [**Rules**](https://presidentscup.cisa.gov/#rules) and [**FAQ**](https://presidentscup.cisa.gov/#faq) before starting the competition.
 
-<h2 id="teams">Teams</h2>
+Read below for how to get started and where to ask for help.
+
+## Teams
 
 ### Registering and Enrolling
 
@@ -19,8 +18,8 @@
  8. Enter a **Password** and **Confirm Password**.
  9. Click **Register**.
  10. Click **Profile** in the menu bar.
- 11. Request an updated display name for your user. 
- 12. Choose your Sponsoring Organization. 
+ 11. Request an updated display name for your user.
+ 12. Choose your Sponsoring Organization.
  13. Click **Home** then click **Team Competition**.
  14. Click **Enroll** and **Confirm** to enroll in the game.
  15. A) Create a team by requesting a custom display name and generating an invitation link to send to your teammates. *Clicking the **Generate** button more than once will invalidate all previously generated links.*  
@@ -48,7 +47,7 @@
 3. Under **Enrollment**, redeem the **Invitation Code**.
 4. Your team name and members of your team should appear under **Status**
 
-<h2 id="individuals">Individuals (Track A & B)</h2>
+## Individuals (Track A & B)
 
 ### Registering and Enrolling
 
@@ -62,12 +61,14 @@
  8. Enter a **Password** and **Confirm Password**.
  9. Click **Register**.
  10. Click **Profile** in the menu bar.
- 11. Request an updated display name for your user. 
- 12. Choose your Sponsoring Organization. 
+ 11. Request an updated display name for your user.
+ 12. Choose your Sponsoring Organization.
  13. Click **Home** then click **Team Competition**.
  14. Click **Enroll** and **Confirm** to enroll in the game.
 
-<h2 id="gameplay">Gameplay (Both Teams and Individuals)</h2>
+> *If you have competed in a previous year's competition, use the same email address and password as before. You can also click **Reset my password** if you don't remember your password.*
+
+## Gameplay (Both Teams and Individuals)
 
 ### Using the Gameboard
 
@@ -84,7 +85,7 @@ The challenge Support Code can be found in the lower-right corner of the challen
 
 ### Viewing the Scoreboard
 
-Your current rank, score, cumulative time, and challenge completions show at the top of the **Gameboard**. 
+Your current rank, score, cumulative time, and challenge completions show at the top of the **Gameboard**.
 
 To view the full scoreboard, return to the game home page by clicking on the round card in the top left of the **Gameboard**. Scroll to the bottom of the game home page to view the full **Scoreboard**. Click the link next to the **Scoreboard** title to open the dedicated scoreboard page.
 
