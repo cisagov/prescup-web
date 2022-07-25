@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,12 +46,12 @@
         }
 
         a {
-            color: #f4deb8 !important;
+            color: #f4deb8;
             text-decoration: none;
         }
 
         a:hover {
-            color: #d1bd99 !important;
+            color: #d1bd99;
             text-decoration: underline;
         }
 
@@ -162,6 +163,16 @@
             border-color: #562C83
         }
 
+        .nav-color {
+            color: #f4deb8 !important;
+            text-decoration: none;
+        }
+
+        .nav-color:hover {
+            color: #d1bd99 !important;
+            text-decoration: underline;
+        }
+
         /*
         Added separate anchors Safari doesn't support scroll-padding-top property
         https://stackoverflow.com/a/13184714
@@ -178,7 +189,7 @@
 <body data-bs-spy="scroll" data-bs-target=".navbar">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand nav-color" href="#">
                 <img width="30" height="30" class="d-inline-block align-top mr-1" src="img/PC4_Logo.png" />
                 President's Cup
             </a>
@@ -189,19 +200,19 @@
             <div class="collapse navbar-collapse align-right" id="prescupNavbar">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">HOME</a>
+                        <a class="nav-link nav-color" href="#home">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#new-for-2022">NEW FOR 2022</a>
+                        <a class="nav-link nav-color" href="#new-for-2022">NEW FOR 2022</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#media">MEDIA</a>
+                        <a class="nav-link nav-color" href="#media">MEDIA</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#rules">RULES</a>
+                        <a class="nav-link nav-color" href="#rules">RULES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#faq">FAQ</a>
+                        <a class="nav-link nav-color" href="#faq">FAQ</a>
                     </li>
                 </ul>
             </div>
