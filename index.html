@@ -60,9 +60,8 @@
         }
 
         .card {
-            background-color: #1a3248;
-            opacity: 0.85;
-        }
+            background-color: rgba(26, 50, 72, 0.85);
+	}
 
         .faq {
             display: flex;
@@ -87,6 +86,14 @@
         h3.thin {
             text-align: center;
             font-weight: 200;
+        }
+
+	h3.reg {
+            text-align: center;
+            font-weight: bold;
+	    font-size: 1em;
+	    text-transform: uppercase;
+	    color: white !important;
         }
 
         .card-body h3 {
@@ -152,15 +159,23 @@
         }
 
         .btn-success4 {
-            color: #fff;
-            background-color: #782B90;
-            border-color: #782B90
+            color: #ffffff;
+            background-color: #d63e2f;
         }
 
         .btn-success4:hover {
-            color: #fff;
-            background-color: #562C83;
-            border-color: #562C83
+            color: #ffffff;
+            background-color: #a52215;
+        }
+
+        .btn-success5 {
+            color: #1a3248;
+            background-color: #f4deb8;
+        }
+
+        .btn-success5:hover {
+            color: #10202d;
+            background-color: #d1bd99;
         }
 
         .nav-color {
@@ -191,7 +206,7 @@
         <div class="container">
             <a class="navbar-brand nav-color" href="#">
                 <img width="30" height="30" class="d-inline-block align-top mr-1" src="img/PC4_Logo.png" />
-                President's Cup
+                PRESIDENT'S CUP
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#prescupNavbar"
                 aria-controls="prescupNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -242,12 +257,10 @@
                             competitors will face a diverse array of challenges and will
                             require an extensive skill set to succeed.
                         </p>
-                        <div class="alert alert-warning" role="alert">
-                            <h4 class="alert-heading">2022 Competition</h4>
-                            <p class="mb-1">The new President's Cup site is "preparing to launch." 
-                                The 2022 President's Cup dates are below. 
-                                Remember registration opens <strong>August 8th, 2022.</strong>
-                            </p>
+                        <div>
+				<h3 class="reg">
+				Registration opens <a class="nav-color" href="#">August 8th!</a>
+				</h3>
                         </div>
                     </div>
                 </div>
@@ -292,7 +305,7 @@
                         <a class="btn btn-success4 btn-lg col-10"
                             href="https://presidentscup.cisa.gov/gb/pc">
                             Gameboard<br /><small><em>Practice & 2021 Results</em></small></a>
-                        <a class="btn btn-success4 btn-lg col-10 mt-2"
+                        <a class="btn btn-success5 btn-lg col-10 mt-2"
                             href="https://github.com/cisagov/prescup-challenges">GitHub
                             <br /><small><em>Open Source Challenges</em></small></a>
                     </div>
@@ -312,8 +325,8 @@
                                 </h2>
                             </div>
                             <div class="col-lg-6 my-auto pt-3 pt-lg-0">
-                                <a class="btn btn-secondary btn-lg mr-3 col-4" href="#rules">Rules</a>
-                                <a class="btn btn-secondary btn-lg my-auto col-4" href="#faq">FAQ</a>
+                                <a class="btn btn-success4 btn-lg mr-3 col-4" href="#rules">Rules</a>
+                                <a class="btn btn-success5 btn-lg my-auto col-4" href="#faq">FAQ</a>
                             </div>
                         </div>
                     </div>
