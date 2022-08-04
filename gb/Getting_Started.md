@@ -16,7 +16,7 @@ Welcome to _President's Cup 2022_! Please review the [Rules](https://presidentsc
 10. Click **Profile** in the menu bar.
 11. Request an updated **Display Name** for your user.
 12. Select your sponsoring organization.
-13. Click **Home**, then **Team Competition**. <!--This changes, right? They will get a "Teams Round 1" game card, I *think*.-->
+13. Click **Home**, then **Teams Competition** game card. 
 14. Click **Enroll** and **Confirm** to enroll in the game.
 
 ### Create or Join a Team
@@ -41,7 +41,7 @@ Welcome to _President's Cup 2022_! Please review the [Rules](https://presidentsc
 10. Click **Profile** in the menu bar.
 11. Request an updated **Display Name** for your user.
 12. Select your Sponsoring Organization.
-13. Click **Home** then an **Individual Track** game.
+13. Click **Home** then an **Individual Track** game card.
 14. Click **Enroll** and **Confirm** to enroll in the game.
 
 >*Note for returning players: If you have competed in a previous year's competition, use the same email address and password as before. You can also click **Reset my password** if you don't remember your password.*
@@ -49,7 +49,7 @@ Welcome to _President's Cup 2022_! Please review the [Rules](https://presidentsc
 ## Game play
 
 1. After enrolling in a game, select **Start Session** and **Confirm**. Select **Yes, start** and **Confirm** at the final reminder that the clock is starting. 
-2. Select **Continue to Gameboard**. Select a circle on map to view the challenge information.
+2. Select **Continue to Gameboard**. Select a circle on the map to view the challenge information.
 2. Click **Start**, click **Confirm**. The challenge timer begins.
 3. Follow the challenge instructions presented on the screen, including solving the challenge in the virtual work space.
 4. When you think you have the answer, enter the token in the appropriate **Challenge Question** field.
