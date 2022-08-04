@@ -23,7 +23,8 @@
     <meta name="theme-color" content="#233f83">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title>President's Cup</title>
 
@@ -76,10 +77,7 @@
         }
 
         h1.thin {
-            font-weight: bold;
-            color: #f4deb8;
-            font-size: 28px;
-            text-align: center;
+            font-weight: 200;
         }
 
         .bg-dark {
@@ -214,8 +212,8 @@
             </div>
             <div class="col-lg-8">
                 <div class="card">
-                    <div class="card-body">
-                        <h1 class="thin">President's Cup Cybersecurity Competition</h1>
+                    <div class="card-body p-4">
+                        <h1 class="thin pb-3 text-center">President's Cup Cybersecurity Competition</h1>
                         <p>
                             Established in response to
                             <a
@@ -230,7 +228,7 @@
                         </p>
                         <div>
                             <h3 class="reg">
-                                Registration opens <a class="nav-color" href="#">August 8th!</a>
+                                Registration opens <strong>August 8th</strong>!
                             </h3>
                         </div>
                     </div>
@@ -239,29 +237,35 @@
         </div>
 
         <div class="row mt-5 text-center">
-            <div class="col-lg-4 d-lg-flex align-items-stretch my-1 my-lg-0">
+            <div class="col-lg-8 d-lg-flex align-items-stretch my-1 my-lg-0">
                 <div class="card flex-fill">
-                    <div class="card-body">
-                        <img src="img/PC4_Icon_Team.png" alt="logo" height="70" />
-                        <h5 class="card-title mt-3">2022 Team Competition</h5>
-                        <p class="card-text mb-4">
-                            Registration: Aug 8-Aug 29, 2022<br />Qualifying Round 1:
-                            Aug 22-29, 2022<br />Qualifying Round 2: Sep 26-Oct 3, 2022
-                            <br />Final Round: Dec 7-8, 2022
-                        </p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card-body">
+                                <img src="img/PC4_Icon_Team.png" alt="logo" height="70" />
+                                <h5 class="card-title mt-3">2022 Team Competition</h5>
+                                <p class="card-text mb-4">
+                                    Registration: Aug 8-Aug 29, 2022<br />Qualifying Round 1:
+                                    Aug 22-29, 2022<br />Qualifying Round 2: Sep 26-Oct 3, 2022
+                                    <br />Final Round: Dec 7-8, 2022
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-body">
+                                <img src="img/PC4_Icon_Individual.png" alt="logo" height="70" />
+                                <h5 class="card-title mt-3">2022 Individual Competition</h5>
+                                <p class="card-text mb-4">
+                                    Registration: Aug 8-Sep 13, 2022<br />Qualifying Round 1:
+                                    Sep 6-Sep 13, 2022<br />Qualifying Round 2: Oct 17-24, 2022
+                                    <br /> Final Round: Dec 5-6, 2022
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4 d-lg-flex align-items-stretch my-1 my-lg-0">
-                <div class="card flex-fill">
-                    <div class="card-body">
-                        <img src="img/PC4_Icon_Individual.png" alt="logo" height="70" />
-                        <h5 class="card-title mt-3">2022 Individual Competition</h5>
-                        <p class="card-text mb-4">
-                            Registration: Aug 8-Sep 13, 2022<br />Qualifying Round 1:
-                            Sep 6-Sep 13, 2022<br />Qualifying Round 2: Oct 17-24, 2022
-                            <br /> Final Round: Dec 5-6, 2022
-                        </p>
+                    <div class="row justify-content-lg-center mt-4">
+                        <a class="btn btn-success4 col-6 mx-auto btn-lg" href="https://presidentscup.cisa.gov/gb">
+                            Competition Gameboard<br /><small><em>Register, Practice, and Compete!</em></small></a>
                     </div>
                 </div>
             </div>
@@ -273,11 +277,12 @@
                         <p class="card-text mb-4">
                             Practice demo challenges and content from past President's Cup competitions
                         </p>
-                        <a class="btn btn-success4 btn-lg col-10" href="https://presidentscup.cisa.gov/gb/pc">
-                            Gameboard<br /><small><em>Practice & 2021 Results</em></small></a>
+                        <a class="btn btn-success4 btn-lg col-10" href="https://presidentscup.cisa.gov/archive">
+                            Archive Site<br /><small><em>Hosted Challenges from Past Years</em></small></a>
                         <a class="btn btn-success5 btn-lg col-10 mt-2"
                             href="https://github.com/cisagov/prescup-challenges">GitHub
-                            <br /><small><em>Open Source Challenges</em></small></a>
+                            <br /><small><em>Challenge Code,<br />Solution Guides,<br />and Virtual
+                                    Machines</em></small></a>
                     </div>
                 </div>
             </div>
@@ -309,15 +314,36 @@
                 <div class="card p-4">
                     <div class="card-body">
                         <h2 id="new-for-2022">New for 2022</h2>
-                        <p>Welcome to the <strong>2022 President's Cup Cybersecurity Competition</strong>! For those of
-                            you who competed last year&mdash;we're glad to have you back. For those of you who are
-                            competing for the first time in 2022&mdash;we're glad you joined us.</p>
-                        <p>Here are the updates to this year's competition:</p>
-                        <h3>Team Participant Update</h3>
-                        <p>Teams can now be comprised of participants from different departments and agencies.</p>
+                        <p>Welcome to the 2022 President's Cup Cybersecurity Competition! For those of you who competed
+                            in previous years&mdash;we're glad to have you back. For those of you who are competing for
+                            the first time in 2022&mdash;we're glad you joined us. Good luck to all participants, new
+                            and returning.</p>
+                        <p>Here are some important updates to this year's competition:</p>
+                        <h3>Streamlined Registration</h3>
+                        <p>The registration process was streamlined to include numbered steps, clearer requirements, and
+                            additional instructions, making it easier for participants to register for President's Cup
+                            2022.</p>
+                        <h3>Archive Site Online</h3>
+                        <p>The <a href="https://presidentscup.cisa.gov/archive">Archive Site</a> is back! Here, players
+                            can practice President's Cup challenges from past competitions as a team or as an
+                            individual. All of the game cards are on the Archive Site organized by round from the
+                            President's Cup 2021 competition.</p>
+                        <h3>Cross-Department Teams</h3>
+                        <p>Teams can now include participants from <em>different</em> departments and agencies.</p>
+                        <h3>Support Inside Gameboard</h3>
+                        <p>Competition support is now integrated within the Gameboard web app. Participants can create
+                            support tickets from a deployed challenge or from the new <strong>Support</strong> link at
+                            the top of the gameboard. The new Support link is where participants view, update, and track
+                            the status of support tickets. When created from a deployed challenge, new tickets already
+                            include the challenge name, support code, and game.</p>
                         <h3>Open Source Virtual Machines</h3>
-                        <p>Builds of the virtual machine workstations used by participants will be published to Github
+                        <p>Builds of the virtual machine workstations used by participants will be published to
+                            Github
                             prior to the start of competition. Link coming soon.</p>
+                        <h3>Round Completion Certificates</h3>
+                        <p>When each round of the competition is over, participants can view and print completion
+                            certificate of their accomplishment. Certificates will be available from the
+                            <strong>Profile</strong> page in the gameboard.</p>
                         <h3>Final Words</h3>
                         <p>Please review <em>all</em> of the <a href="#faq">FAQs</a> and <a href="#videos">videos</a>
                             before starting the competition, but pay particular attention to:</p>
@@ -325,7 +351,8 @@
                             <li><a href="#q0">FAQ #0: What does "Cumulative Time" mean on the leaderboard?</a></li>
                             <li><a href="#q3">FAQ #3: How does each round's continuous session timer work?</a></li>
                         </ul>
-                        <p>Thank you all for your participation and best of luck to you in the 2022 President's Cup!</p>
+                        <p>Thank you all for your participation and best of luck in the 2022 President's Cup!
+                        </p>
                     </div>
                 </div>
             </div>
@@ -357,49 +384,49 @@
                         </div>
 
                         <h3 id="teaser-video" class="pt-5">2022 Teaser</h3>
-                        <!--<div class="ratio ratio-16x9">
+                        <div class="ratio ratio-16x9">
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/PZEpG4XnEzc"
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
-                        </div>-->
+                        </div>
 
                         <h3 class="pt-5">2022 Desktop Backgrounds</h3>
                         <div class="container" id="desktop-backgrounds">
                             <div class="row pb-3">
                                 <div class="col">
                                     <a href="img/PC4-backgrounds-4k-red.jpg">
-                                    <img src="img/PC4-backgrounds-4k-red.jpg" class="img-thumbnail"
-                                        alt="Red Desktop Background"></a>
+                                        <img src="img/PC4-backgrounds-4k-red.jpg" class="img-thumbnail"
+                                            alt="Red Desktop Background"></a>
                                 </div>
                                 <div class="col">
                                     <a href="img/PC4-backgrounds-4k-green.jpg">
-                                    <img src="img/PC4-backgrounds-4k-green.jpg" class="img-thumbnail"
-                                        alt="Green Desktop Background"></a>
+                                        <img src="img/PC4-backgrounds-4k-green.jpg" class="img-thumbnail"
+                                            alt="Green Desktop Background"></a>
                                 </div>
                             </div>
                             <div class="row pb-3">
                                 <div class="col">
                                     <a href="img/PC4-backgrounds-4k-blue.jpg">
-                                    <img src="img/PC4-backgrounds-4k-blue.jpg" class="img-thumbnail"
-                                        alt="Blue Desktop Background"></a>
+                                        <img src="img/PC4-backgrounds-4k-blue.jpg" class="img-thumbnail"
+                                            alt="Blue Desktop Background"></a>
                                 </div>
                                 <div class="col">
                                     <a href="img/PC4-backgrounds-4k-purple.jpg">
-                                    <img src="img/PC4-backgrounds-4k-purple.jpg" class="img-thumbnail"
-                                        alt="Purple Desktop Background"></a>
+                                        <img src="img/PC4-backgrounds-4k-purple.jpg" class="img-thumbnail"
+                                            alt="Purple Desktop Background"></a>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
                                     <a href="img/PC4-backgrounds-4k-orange.jpg">
-                                    <img src="img/PC4-backgrounds-4k-orange.jpg" class="img-thumbnail"
-                                        alt="Orange Desktop Background"></a>
+                                        <img src="img/PC4-backgrounds-4k-orange.jpg" class="img-thumbnail"
+                                            alt="Orange Desktop Background"></a>
                                 </div>
                                 <div class="col">
                                     <a href="img/PC4-backgrounds-4k-black.jpg">
-                                    <img src="img/PC4-backgrounds-4k-black.jpg" class="img-thumbnail"
-                                        alt="Black Desktop Background"></a>
+                                        <img src="img/PC4-backgrounds-4k-black.jpg" class="img-thumbnail"
+                                            alt="Black Desktop Background"></a>
                                 </div>
                             </div>
                         </div>
@@ -415,37 +442,48 @@
                         <h2 id="rules">Competition Rules</h2>
                         <h3 id="conduct">Conduct</h3>
                         <ol>
-                            <li>Violation of the Rules of Conduct as outlined may result in disqualification from the
+                            <li>Violation of the Rules of Conduct as outlined may result in disqualification from
+                                the
                                 competition.</li>
-                            <li>Enforcement of the Rules of Conduct is at the discretion of the Competition Staff.</li>
+                            <li>Enforcement of the Rules of Conduct is at the discretion of the Competition Staff.
+                            </li>
                             <li>Competitors will conduct themselves in a manner that befits employees of the Federal
-                                government and members of the Uniformed Services in all aspects of the competition.</li>
-                            <li>When choosing team and individual nicknames, competitors will show decorum and refrain
+                                government and members of the Uniformed Services in all aspects of the competition.
+                            </li>
+                            <li>When choosing team and individual nicknames, competitors will show decorum and
+                                refrain
                                 from any names that are vulgar or political in nature (In accordance with the Hatch
                                 Act). Names will go through an approval process before appearing on the leaderboard.
                                 Inappropriate language, references to political persons or parties, or otherwise
                                 inappropriate content will be asked to be changed. The competition aims to support
                                 morale building, esprit de corps, and friendly rivalries between military units, and
-                                government departments and agencies. The competition staff reserves the right to ask any
+                                government departments and agencies. The competition staff reserves the right to ask
+                                any
                                 team or individual to change their name and maintains final judgement on what is
                                 acceptable.</li>
-                            <li>Classified toolsets are not authorized for use. All challenges are designed to be solved
+                            <li>Classified toolsets are not authorized for use. All challenges are designed to be
+                                solved
                                 using open source tools including those provided on the hosted virtual machines</li>
                             <li>Any attempts at unauthorized access or “Denial of Service” attacks are forbidden and
-                                will result in disqualification. “Escaping” the virtual machines or otherwise tampering
+                                will result in disqualification. “Escaping” the virtual machines or otherwise
+                                tampering
                                 with or targeting the hosting environment is prohibited.</li>
-                            <li>Competitors will not disclose any information involving the challenges to anyone during
+                            <li>Competitors will not disclose any information involving the challenges to anyone
+                                during
                                 the respective round outside of their competition team.</li>
                         </ol>
                         <h3 id="team-composition">Team Composition</h3>
                         <ol>
                             <li>Participants can only be on one team and cannot change teams during the competition.
-                                Once a team is locked during registration, it can <strong>NOT</strong> be changed later
+                                Once a team is locked during registration, it can <strong>NOT</strong> be changed
+                                later
                                 in the competition.</li>
                             <li>Teams of <strong>2 to 5 members</strong> can be from any federal Executive Branch
                                 department or agency.</li>
-                            <li>Detailees to an external department can represent their home or detailed department. For
-                                example, a member of the Coast Guard detailed to DoD's US Cyber Command can be on a DoD
+                            <li>Detailees to an external department can represent their home or detailed department.
+                                For
+                                example, a member of the Coast Guard detailed to DoD's US Cyber Command can be on a
+                                DoD
                                 or a DHS team. </li>
                             <li>Detailees should seek approval of both their home agency and detail
                                 supervisor, including agreement on which agency will be responsible for awards.</li>
@@ -453,27 +491,38 @@
                                 Government contractors are <strong>NOT</strong> allowed to participate in the 2022
                                 President's Cup. </li>
                         </ol>
-                        <h3 id="time-and-challenge-submission-restrictions">Time and Challenge Submission Restrictions
+                        <h3 id="time-and-challenge-submission-restrictions">Time and Challenge Submission
+                            Restrictions
                         </h3>
                         <ol>
-                            <li>During the qualifying rounds, teams have <strong>8 hours</strong> to complete as many
-                                challenges as they can. Individuals have <strong>4 hours</strong> per track to solve as
+                            <li>During the qualifying rounds, teams have <strong>8 hours</strong> to complete as
+                                many
+                                challenges as they can. Individuals have <strong>4 hours</strong> per track to solve
+                                as
                                 many challenges as they can.</li>
-                            <li>In the event of a tiebreaker, the "Cumulative Time" figure will be used to determine who
-                                moves on to the Final Round. The Cumulative Time is the total time spent in challenges
-                                successfully solved. This is calculated using a timer specific to each challenge on your
-                                game board. When you start a challenge, the timer starts. When you successfully solve a
+                            <li>In the event of a tiebreaker, the "Cumulative Time" figure will be used to determine
+                                who
+                                moves on to the Final Round. The Cumulative Time is the total time spent in
+                                challenges
+                                successfully solved. This is calculated using a timer specific to each challenge on
+                                your
+                                game board. When you start a challenge, the timer starts. When you successfully
+                                solve a
                                 challenge, your score and cumulative time are updated.</li>
-                            <li>Correct answers will vary based on the challenge format and the questions being asked.
-                                Please refer to each challenge description which will clearly articulate the format of
+                            <li>Correct answers will vary based on the challenge format and the questions being
+                                asked.
+                                Please refer to each challenge description which will clearly articulate the format
+                                of
                                 the answer.</li>
                         </ol>
                         <h3 id="registration">Registration</h3>
                         <ul>
-                            <li><strong>Teams:</strong> Starts at 12:00 PM ET on August 8, 2022 and ends at 4:00 PM ET
+                            <li><strong>Teams:</strong> Starts at 12:00 PM ET on August 8, 2022 and ends at 4:00 PM
+                                ET
                                 on
                                 August 29, 2022</li>
-                            <li><strong>Individuals:</strong> Starts at 12:00 PM ET on August 8, 2022 and ends at 4:00
+                            <li><strong>Individuals:</strong> Starts at 12:00 PM ET on August 8, 2022 and ends at
+                                4:00
                                 PM
                                 ET on September 13, 2022 </li>
                             <li>Participation in the President's Cup will be closed after these dates/times.</li>
@@ -481,24 +530,30 @@
                         <h3 id="support-and-contact-information">Support and Contact Information</h3>
                         <p>To ask a question, report a problem, or provide other feedback on the President's Cup
                             Cybersecurity Competition, send email to: <a
-                                href="mailto:prescup-support@sei.cmu.edu">prescup-support@sei.cmu.edu</a> or call (412)
+                                href="mailto:prescup-support@sei.cmu.edu">prescup-support@sei.cmu.edu</a> or call
+                            (412)
                             268-3054.</p>
-                        <p>Please include as much detail as possible including the specific challenge title, challenge
-                            Support Code (found in the lower-right corner of the challenge pane), any system element(s)
+                        <p>Please include as much detail as possible including the specific challenge title,
+                            challenge
+                            Support Code (found in the lower-right corner of the challenge pane), any system
+                            element(s)
                             involved, and any error messages you may have received.</p>
                         <h3 id="hours-of-operation">Hours of Operation</h3>
                         <p>The President's Cup Cybersecurity Competition is open for participation 24/7 during
-                            registration and qualifying. Support during registration and qualifying is available:</p>
+                            registration and qualifying. Support during registration and qualifying is available:
+                        </p>
                         <ul>
-                            <li><strong>Registration period</strong> - Monday through Friday, 8:00 AM - 5:00 PM ET</li>
+                            <li><strong>Registration period</strong> - Monday through Friday, 8:00 AM - 5:00 PM ET
+                            </li>
                             <li><strong>Qualifying rounds</strong> - 24x5 support starting Monday at 8:00 AM ET and
-                                ending Friday at 11:59 PM ET; Saturday and Sunday, 8:00 AM - 5:00 PM ET</li>
+                                ending Friday at 11:59 PM ET; Saturday and Sunday, 9:00 AM - 5:00 PM ET</li>
                             <li><strong>Finals</strong> - support throughout Finals</li>
                             <li>Hours are Eastern Time</li>
                         </ul>
                         <p><strong>PLEASE NOTE:</strong> Support availability is limited on weekends during the
                             competition;
-                            participants who choose to compete during this time do so at their own risk. Please make use
+                            participants who choose to compete during this time do so at their own risk. Please make
+                            use
                             of the demo challenges to ensure access and compatibility before competing.</p>
                     </div>
                 </div>
@@ -514,7 +569,8 @@
                             President's Cup. If you can't find the answer here, please contact us.</p>
                         <ol class="questions ps-0" start="0">
                             <li><a href="#q0">What does "Cumulative Time" mean on the leaderboard?</a></li>
-                            <li><a href="#q1">I'm a government contractor and I want to participate. Am I eligible?</a>
+                            <li><a href="#q1">I'm a government contractor and I want to participate. Am I
+                                    eligible?</a>
                             </li>
                             <li><a href="#q2">Will I need any special software or applications to participate in the
                                     President's Cup?</a></li>
@@ -527,13 +583,16 @@
                                     President's Cup in 2022?</a></li>
                             <li><a href="#q8">My agency wants to enter two teams in Qualifying Round 1. Is that
                                     possible?</a></li>
-                            <li><a href="#q9">One of my team members dropped out after Qualifying Round 1. Can I replace
+                            <li><a href="#q9">One of my team members dropped out after Qualifying Round 1. Can I
+                                    replace
                                     them with
                                     someone else for Round 2?</a></li>
                             <li><a href="#q10">When does registration for the competition start?</a></li>
-                            <li><a href="#q11">You mention that the competition challenges will be mapped to the NICE
+                            <li><a href="#q11">You mention that the competition challenges will be mapped to the
+                                    NICE
                                     Framework. Where can I get more information on the NICE Framework?</a></li>
-                            <li><a href="#q12">I'm eligible to participate in the President's Cup, but I don't have a
+                            <li><a href="#q12">I'm eligible to participate in the President's Cup, but I don't have
+                                    a
                                     team. Can I participate as an individual?</a></li>
                             <li><a href="#q13">I'm a detailee and I want to participate. Which organization do I
                                     participate with&mdash;my original agency or my detailed agency?</a></li>
@@ -545,10 +604,12 @@
                                     individuals), can I move on to another challenge?</a></li>
                             <li><a href="#q18">Is partial credit available for challenge submissions?</a></li>
                             <li><a href="#q19">Is there a recommended format for answer submissions?</a></li>
-                            <li><a href="#q20">President's Cup Support is asking for my “challenge Support Code”. Where
+                            <li><a href="#q20">President's Cup Support is asking for my “challenge Support Code”.
+                                    Where
                                     can I find it?</a></li>
                             <li><a href="#q21">How are teams selected to advance to Qualifying Round 2?</a></li>
-                            <li><a href="#q22">How are individuals selected to advance to Qualifying Round 2?</a></li>
+                            <li><a href="#q22">How are individuals selected to advance to Qualifying Round 2?</a>
+                            </li>
                             <li><a href="#q23">How are teams and individuals selected to advance to the Finals?</a>
                             </li>
                             <li><a href="#q24">What happens if I qualify for both the team and individual Finals</a>
@@ -566,10 +627,12 @@
                             <div class="mr-4">0.</div>
                             <div>
                                 <p class="question">What does "Cumulative Time" mean on the leaderboard?</p>
-                                <p>The <strong>Cumulative Time</strong> column is only used for tiebreaking purposes.
+                                <p>The <strong>Cumulative Time</strong> column is only used for tiebreaking
+                                    purposes.
                                     When a challenge is started, a timer tracks how long it takes to solve that
                                     challenge. The
-                                    sum time of all successfully solved challenges is posted to the leaderboard under
+                                    sum time of all successfully solved challenges is posted to the leaderboard
+                                    under
                                     Cumulative Time. Again, this is for tiebreaking purposes only.</p>
                             </div>
                         </div>
@@ -586,10 +649,12 @@
                         <div id="q2" class="faq mb-4">
                             <div class="mr-4">2.</div>
                             <div>
-                                <p class="question">Will I need any special software or applications to participate in
+                                <p class="question">Will I need any special software or applications to participate
+                                    in
                                     the President's Cup?</p>
                                 <p>No. All that is needed for the first two qualifying rounds is an up-to-date web
-                                    browser and your registered account. Supported browsers are: Chrome, Firefox, and
+                                    browser and your registered account. Supported browsers are: Chrome, Firefox,
+                                    and
                                     Edge.</p>
                             </div>
                         </div>
@@ -627,7 +692,8 @@
                                     </tbody>
                                 </table>
                                 <p>The session timer runs continuously and cannot be paused. Your round score is
-                                    determined by the sum of all successful challenges completed during your session.
+                                    determined by the sum of all successful challenges completed during your
+                                    session.
                                 </p>
                                 <p><strong>PLEASE NOTE:</strong> For the Teams competition, any team member can
                                     start the session.</p>
@@ -646,20 +712,29 @@
                             <div class="mr-4">5.</div>
                             <div>
                                 <p class="question">How are ties handled?</p>
-                                <p>In the event of a tiebreaker, the "Cumulative Time" figure will be used to determine
+                                <p>In the event of a tiebreaker, the "Cumulative Time" figure will be used to
+                                    determine
                                     who moves on to the Final Round. The Cumulative Time is the total time spent in
-                                    challenges successfully solved. This is calculated using a timer specific to each
-                                    challenge on your game board. When you start a challenge, the timer starts. When you
+                                    challenges successfully solved. This is calculated using a timer specific to
+                                    each
+                                    challenge on your game board. When you start a challenge, the timer starts. When
+                                    you
                                     successfully solve a challenge, your score and cumulative time are updated.</p>
                                 <p><strong>PLEASE NOTE:</strong></p>
                                 <ul>
-                                    <li>Your challenge timer does not stop if you "delete" a challenge space or go work
-                                        on another challenge. If you start a challenge, then start and work on another
-                                        challenge, and return to your previous challenge, your challenge timer is still
+                                    <li>Your challenge timer does not stop if you "delete" a challenge space or go
+                                        work
+                                        on another challenge. If you start a challenge, then start and work on
+                                        another
+                                        challenge, and return to your previous challenge, your challenge timer is
+                                        still
                                         running.</li>
-                                    <li>Time spent in challenges failed, or challenges started and not finished, does
-                                        not count towards your cumulative score. You won't be penalized for trying!</li>
-                                    <li>Your overall competition time is still capped at eight (8) hours from when you
+                                    <li>Time spent in challenges failed, or challenges started and not finished,
+                                        does
+                                        not count towards your cumulative score. You won't be penalized for trying!
+                                    </li>
+                                    <li>Your overall competition time is still capped at eight (8) hours from when
+                                        you
                                         launch your first challenge.</li>
                                 </ul>
                             </div>
@@ -670,8 +745,10 @@
                             <div>
                                 <p class="question">I saw that the Finals are an in-person, two-day event.
                                     Where are the Finals held?</p>
-                                <p>Determination will be made in the coming months if the 2022 Finals will be held on
-                                    location at a CISA facility in Arlington, VA. If held on location, agencies will be
+                                <p>Determination will be made in the coming months if the 2022 Finals will be held
+                                    on
+                                    location at a CISA facility in Arlington, VA. If held on location, agencies will
+                                    be
                                     responsible for travel of their personnel if they qualify.</p>
                             </div>
                         </div>
@@ -679,9 +756,11 @@
                         <div id="q7" class="faq mb-4">
                             <div class="mr-4">7.</div>
                             <div>
-                                <p class="question">I heard about the President's Cup, but it is too late to register.
+                                <p class="question">I heard about the President's Cup, but it is too late to
+                                    register.
                                     Will there be a President's Cup in 2023?</p>
-                                <p>Yes. The President's Cup will continue to evolve in future years based upon lessons
+                                <p>Yes. The President's Cup will continue to evolve in future years based upon
+                                    lessons
                                     learned from past competitions.</p>
                             </div>
                         </div>
@@ -689,7 +768,8 @@
                         <div id="q8" class="faq mb-4">
                             <div class="mr-4">8.</div>
                             <div>
-                                <p class="question">My agency wants to enter two teams in Qualifying Round 1. Is that
+                                <p class="question">My agency wants to enter two teams in Qualifying Round 1. Is
+                                    that
                                     possible?</p>
                                 <p>Yes. A department or agency can enter more than one team in the competition.</p>
                             </div>
@@ -698,7 +778,8 @@
                         <div id="q9" class="faq mb-4">
                             <div class="mr-4">9.</div>
                             <div>
-                                <p class="question">One of my team members dropped out after Qualifying Round 1. Can I
+                                <p class="question">One of my team members dropped out after Qualifying Round 1. Can
+                                    I
                                     replace them
                                     with someone else for Round 2?</p>
                                 <p>No. Once a team is established, members cannot be added. You have the option to
@@ -718,7 +799,8 @@
                         <div id="q11" class="faq mb-4">
                             <div class="mr-4">11.</div>
                             <div>
-                                <p class="question">You mention that the competition challenges will be mapped to the
+                                <p class="question">You mention that the competition challenges will be mapped to
+                                    the
                                     NICE Framework. Where can I get more information on the NICE Framework?</p>
                                 <p>This
                                     <a
@@ -726,7 +808,8 @@
                                         one-page overview</a> is a good place to start. This video,
                                     <a
                                         href="https://www.nist.gov/nice-tutorials#NICE%20Cybersecurity%20Workforce%20Framework%20101">
-                                        NICE Cybersecurity Workforce Framework 101</a>, is a more detailed introduction
+                                        NICE Cybersecurity Workforce Framework 101</a>, is a more detailed
+                                    introduction
                                     to the NICE Framework website.
                                 </p>
                             </div>
@@ -735,10 +818,13 @@
                         <div id="q12" class="faq mb-4">
                             <div class="mr-4">12.</div>
                             <div>
-                                <p class="question">I'm eligible to participate in the President's Cup, but I don't have
+                                <p class="question">I'm eligible to participate in the President's Cup, but I don't
+                                    have
                                     a team. Can I participate as an individual?</p>
-                                <p>Yes. Participants can compete either as part of a team or as an individual or both.
-                                    Round 1 is open to any and all Federal Executive Branch cybersecurity professionals.
+                                <p>Yes. Participants can compete either as part of a team or as an individual or
+                                    both.
+                                    Round 1 is open to any and all Federal Executive Branch cybersecurity
+                                    professionals.
                                 </p>
                             </div>
                         </div>
@@ -746,9 +832,11 @@
                         <div id="q13" class="faq mb-4">
                             <div class="mr-4">13.</div>
                             <div>
-                                <p class="question">I'm a detailee and I want to participate. Which organization do I
+                                <p class="question">I'm a detailee and I want to participate. Which organization do
+                                    I
                                     participate with&mdash;my original agency or my detailed agency?</p>
-                                <p>Detailees to a specific agency can participate on a team for their detailed agency
+                                <p>Detailees to a specific agency can participate on a team for their detailed
+                                    agency
                                     or their home agency subject to the approval of both their home agency and
                                     detail supervisor, including agreement on which agency will be responsible for
                                     awards.</p>
@@ -770,11 +858,13 @@
                                 <p>To use multi-factor authentication without access to email, visit your <a
                                         href="https://presidentscup.cisa.gov/id/ui/profile">identity
                                         profile</a>
-                                    and select <em>Configure 2FA</em>. You'll need to be logged in for this, so be sure
+                                    and select <em>Configure 2FA</em>. You'll need to be logged in for this, so be
+                                    sure
                                     to do
                                     this while you do have access to email.</p>
                                 <p>There you can generate a Time-based One Time Password (TOTP) secret key. Use this
-                                    secret key with any totp-enabled authentication app, such as Duo Mobile or Google
+                                    secret key with any totp-enabled authentication app, such as Duo Mobile or
+                                    Google
                                     Authenticator, by simply scanning the barcode. If you don't have access to your
                                     device, copy down the secret key and later input it into the TOTP app on your
                                     device.</p>
@@ -784,9 +874,11 @@
                         <div id="q16" class="faq mb-4">
                             <div class="mr-4">16.</div>
                             <div>
-                                <p class="question">Can I copy/paste between my host and the gamespace virtual machines?
+                                <p class="question">Can I copy/paste between my host and the gamespace virtual
+                                    machines?
                                 </p>
-                                <p>Yes. The cog button in the upper-left corner of the virtual machine console allows
+                                <p>Yes. The cog button in the upper-left corner of the virtual machine console
+                                    allows
                                     you to move text bidirectionally between your host and that virtual machine.</p>
                             </div>
                         </div>
@@ -796,8 +888,10 @@
                             <div>
                                 <p class="question">If I reach my limit of virtual gamespaces (5 for teams, 2 for
                                     individuals), can I move on to another challenge?</p>
-                                <p>Yes. If you start a challenge but would like to move on to another challenge without
-                                    finishing it, you can <em>DELETE</em> that gamespace. However, the challenge timer
+                                <p>Yes. If you start a challenge but would like to move on to another challenge
+                                    without
+                                    finishing it, you can <em>DELETE</em> that gamespace. However, the challenge
+                                    timer
                                     will not stop. When you return to this challenge, you can <em>RESTART</em> the
                                     gamespace
                                     in its original state.</p>
@@ -808,14 +902,18 @@
                             <div class="mr-4">18.</div>
                             <div>
                                 <p class="question">Is partial credit available for challenge submissions?</p>
-                                <p><strong>Yes.</strong> All 2022 President's Cup challenges have multiple parts which
-                                    allow competitors to earn partial credit. Each challenge part includes the number of
+                                <p><strong>Yes.</strong> All 2022 President's Cup challenges have multiple parts
+                                    which
+                                    allow competitors to earn partial credit. Each challenge part includes the
+                                    number of
                                     points awarded for providing the correct answer.</p>
-                                <p><strong>PLEASE NOTE:</strong> When you click the <em>Submit</em> button, ALL of your
+                                <p><strong>PLEASE NOTE:</strong> When you click the <em>Submit</em> button, ALL of
+                                    your
                                     answer parts will be
                                     sent to the grading server, and you are limited to <strong>THREE (3)</strong>
                                     submissions <em>per
-                                        challenge</em>. This applies whether or not you leave any answer fields empty.
+                                        challenge</em>. This applies whether or not you leave any answer fields
+                                    empty.
                                 </p>
                             </div>
                         </div>
@@ -825,7 +923,8 @@
                             <div>
                                 <p class="question">Is there a recommended format for answer submissions?</p>
                                 <p>Correct answers will vary based on the challenge format and the questions being
-                                    asked. Please refer to the example answer provided beneath each answer submission
+                                    asked. Please refer to the example answer provided beneath each answer
+                                    submission
                                     form field.</p>
                             </div>
                         </div>
@@ -833,9 +932,11 @@
                         <div id="q20" class="faq mb-4">
                             <div class="mr-4">20.</div>
                             <div>
-                                <p class="question">President's Cup Support is asking for my “challenge Support Code”.
+                                <p class="question">President's Cup Support is asking for my “challenge Support
+                                    Code”.
                                     Where can I find it?</p>
-                                <p>The challenge Support Code can be found in the lower-right corner of the challenge
+                                <p>The challenge Support Code can be found in the lower-right corner of the
+                                    challenge
                                     pane. The Support Code looks similar to this: <strong>a347c5c6</strong>.</p>
                             </div>
                         </div>
@@ -845,23 +946,28 @@
                             <div>
                                 <p class="question">How are teams selected to advance to Qualifying Round 2?</p>
                                 <p>In the Teams competition, the top-scoring team from each competing Department
-                                    automatically advances to Round 2. For the purposes of the competition, Departments
+                                    automatically advances to Round 2. For the purposes of the competition,
+                                    Departments
                                     align with the organizations listed during enrollment.</p>
-                                <p>For those not included as top Department teams, the top 20% of remaining teams based
+                                <p>For those not included as top Department teams, the top 20% of remaining teams
+                                    based
                                     on their final scores advance to Qualifying Round 2 as well. No time-based
                                     tiebreakers are used
                                     to
-                                    calculate the 20% cutoff, so all teams tied at the score cutoff will advance.</p>
+                                    calculate the 20% cutoff, so all teams tied at the score cutoff will advance.
+                                </p>
                             </div>
                         </div>
 
                         <div id="q22" class="faq mb-4">
                             <div class="mr-4">22.</div>
                             <div>
-                                <p class="question">How are individuals selected to advance to Qualifying Round 2?</p>
+                                <p class="question">How are individuals selected to advance to Qualifying Round 2?
+                                </p>
                                 <p>In the Individuals competition, the top 100 scores in each track advance to
                                     Qualifying Round 2. There are no
-                                    tie-breakers; all tied for 100th place in each track will be invited to continue.
+                                    tie-breakers; all tied for 100th place in each track will be invited to
+                                    continue.
                                     Qualifying Round 1
                                     leaderboard scores are used to determine the cutoff line, and no time-based
                                     tiebreakers are used
@@ -872,8 +978,10 @@
                         <div id="q23" class="faq mb-4">
                             <div class="mr-4">23.</div>
                             <div>
-                                <p class="question">How are teams and individuals selected to advance to the Finals?</p>
-                                <p>The <strong>top five (5) teams</strong> and <strong>top ten (10) individuals <em>in
+                                <p class="question">How are teams and individuals selected to advance to the Finals?
+                                </p>
+                                <p>The <strong>top five (5) teams</strong> and <strong>top ten (10) individuals
+                                        <em>in
                                             each track</em></strong> will advance to the Finals based on
                                     each respective leaderboard at the end of Qualifying Round 2.</p>
                             </div>
@@ -886,9 +994,12 @@
                                     rounds?</p>
                                 <p>The final rounds for the President's Cup team and individual competitions will be
                                     held
-                                    on different days. Competitors who qualify for both final round events will be able
-                                    to compete in each one without a conflict. Furthermore, each Individual Track final
-                                    will take place at different times, allowing for someone to participate in both if
+                                    on different days. Competitors who qualify for both final round events will be
+                                    able
+                                    to compete in each one without a conflict. Furthermore, each Individual Track
+                                    final
+                                    will take place at different times, allowing for someone to participate in both
+                                    if
                                     they
                                     should qualify.</p>
                             </div>
@@ -901,7 +1012,8 @@
                                 <p>Service Academy Cadets are eligible and encouraged to participate! Cadets can
                                     register with their .edu email address, or contact
                                     the help desk at <a
-                                        href="mailto:prescup-support@sei.cmu.edu">prescup-support@sei.cmu.edu</a> and we
+                                        href="mailto:prescup-support@sei.cmu.edu">prescup-support@sei.cmu.edu</a>
+                                    and we
                                     will work to get you enrolled.</p>
                             </div>
                         </div>
@@ -911,18 +1023,23 @@
                                 <p class="question">I participated in President's Cup last year. Should I use my
                                     existing account or create a new one?</p>
                                 <p>If you are using the same email address as last year, use the <a
-                                        href="https://presidentscup.cisa.gov/id/account/reset">Password Reset</a> option
+                                        href="https://presidentscup.cisa.gov/id/account/reset">Password Reset</a>
+                                    option
                                     to gain access to your existing account.</p>
                             </div>
                         </div>
                         <div id="q27" class="faq mb-4">
                             <div class="mr-4">27.</div>
                             <div>
-                                <p class="question">Can I publish thoughts, opinions, or walkthroughs of the President's
+                                <p class="question">Can I publish thoughts, opinions, or walkthroughs of the
+                                    President's
                                     Cup Challenges?</p>
-                                <p>Competitors can publish thoughts, opinions or walkthroughs but should wait until the
-                                    end of the respective round. Publishing before the end of a round is in violation of
-                                    <a href="#rules">Competition Conduct Rule #7</a> and could result in removal from
+                                <p>Competitors can publish thoughts, opinions or walkthroughs but should wait until
+                                    the
+                                    end of the respective round. Publishing before the end of a round is in
+                                    violation of
+                                    <a href="#rules">Competition Conduct Rule #7</a> and could result in removal
+                                    from
                                     the current President's Cup.
                                 </p>
                             </div>
@@ -934,7 +1051,9 @@
     </main>
 
     <!-- Bootstrap JS includes -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
     <script>
         var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
         var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
