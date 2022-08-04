@@ -23,8 +23,7 @@
     <meta name="theme-color" content="#233f83">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title>President's Cup</title>
 
@@ -32,6 +31,7 @@
     <style>
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 100px;
         }
 
         body {
@@ -45,12 +45,12 @@
         }
 
         a {
-            color: #f4deb8;
+            color: #e08926;
             text-decoration: none;
         }
 
         a:hover {
-            color: #d1bd99;
+            color: #5090ac;
             text-decoration: underline;
         }
 
@@ -64,6 +64,10 @@
 
         .faq {
             display: flex;
+        }
+
+        .faq .mr-4 {
+            padding-right: .5em;
         }
 
         .faq .mr-4,
@@ -114,7 +118,6 @@
 
         ol.questions li::before {
             content: counter(question) ". ";
-            color: #5ec7d3;
         }
 
         hr {
@@ -177,31 +180,10 @@
             background-color: #d1bd99;
         }
 
-        .nav-color {
-            color: #f4deb8 !important;
-            text-decoration: none;
-        }
-
-        .nav-color:hover {
-            color: #d1bd99 !important;
-            text-decoration: underline;
-        }
-
-        /*
-        Added separate anchors Safari doesn't support scroll-padding-top property
-        https://stackoverflow.com/a/13184714
-        */
-        a.anchor {
-            display: block;
-            position: relative;
-            top: -100px;
-            visibility: hidden;
-        }
-
     </style>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar">
+<body data-bs-spy="scroll" data-bs-target=".navbar-nav" data-bs-offset="110">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
         <div class="container">
             <a class="navbar-brand nav-color" href="#">
@@ -213,31 +195,20 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse align-right" id="prescupNavbar">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link nav-color" href="#home">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-color" href="#new-for-2022">NEW FOR 2022</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-color" href="#media">MEDIA</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-color" href="#rules">RULES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-color" href="#faq">FAQ</a>
-                    </li>
-                </ul>
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link nav-color" href="#home">HOME</a>
+                    <a class="nav-link nav-color" href="#new-for-2022">NEW FOR 2022</a>
+                    <a class="nav-link nav-color" href="#media">MEDIA</a>
+                    <a class="nav-link nav-color" href="#rules">RULES</a>
+                    <a class="nav-link nav-color" href="#faq">FAQ</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <main role="main" class="container py-4">
 
-        <a class="anchor" id="home"></a>
-        <div class="row">
+        <div class="row" id="home">
             <div class="col-lg-4 my-auto d-lg-block d-none text-center">
                 <img src="img/PC4_Sticker.svg" height="250px" alt="logo" />
             </div>
@@ -249,7 +220,7 @@
                             Established in response to
                             <a
                                 href="https://www.federalregister.gov/documents/2019/05/09/2019-09750/americas-cybersecurity-workforce">Executive
-                                Order 13870</a>, the President's Cup Cybersecurity Competition is a national
+                                Order 13870</a>, the <em>President's Cup Cybersecurity Competition</em> is a national
                             cyber competition aiming to identify, recognize, and reward the
                             best cybersecurity talent in the federal executive workforce.
                             Hosting challenges from across the National Initiative for
@@ -334,11 +305,10 @@
         </div>
 
         <div class="row justify-content-center mt-5">
-            <a class="anchor" id="new-for-2022"></a>
             <div class="col-lg-9">
                 <div class="card p-4">
                     <div class="card-body">
-                        <h2>New for 2022</h2>
+                        <h2 id="new-for-2022">New for 2022</h2>
                         <p>Welcome to the <strong>2022 President's Cup Cybersecurity Competition</strong>! For those of
                             you who competed last year&mdash;we're glad to have you back. For those of you who are
                             competing for the first time in 2022&mdash;we're glad you joined us.</p>
@@ -363,31 +333,22 @@
 
 
         <div class="row justify-content-center mt-5">
-            <a class="anchor" id="media"></a>
             <div class="col-lg-9">
                 <div class="card p-4">
                     <div class="card-body">
-                        <h2>Media</h2>
-                        <a class="anchor" id="videos"></a>
-                        <h3>Videos</h3>
+                        <h2 id="media">Media</h2>
+                        <h3 id="videos">Videos</h3>
                         <ul>
                             <li><a href="#register-video">Register/Enroll</a></li>
                             <li><a href="#teaser-video">2022 Teaser</a></li>
                         </ul>
-                        <a class="anchor" id="images"></a>
-                        <h3>Images</h3>
+                        <h3 id="images">Images</h3>
                         <ul>
-                            <li><a href="#desktop-background-red">2022 Desktop Background (Red)</a></li>
-                            <li><a href="#desktop-background-blue">2022 Desktop Background (Blue)</a></li>
-                            <li><a href="#desktop-background-purple">2022 Desktop Background (Purple)</a></li>
-                            <li><a href="#desktop-background-orange">2022 Desktop Background (Orange)</a></li>
-                            <li><a href="#desktop-background-green">2022 Desktop Background (Green)</a></li>
-                            <li><a href="#desktop-background-black">2022 Desktop Background (Black)</a></li>
+                            <li><a href="#desktop-backgrounds">2022 Desktop Backgrounds</a></li>
                         </ul>
 
                         <hr class="my-4" />
-                        <h3 class="pt-5">Register/Enroll</h3>
-                        <a class="anchor" id="register-video"></a>
+                        <h3 id="register-video" class="pt-5">Register/Enroll</h3>
                         <div class="ratio ratio-16x9">
                             <video controls>
                                 <source src="https://files-presidentscup.cisa.gov/pc3-login.mp4" type="video/mp4">
@@ -395,55 +356,52 @@
                             </video>
                         </div>
 
-                        <h3 class="pt-5">2022 Teaser</h3>
-                        <a class="anchor" id="teaser-video"></a>
-                        <div class="ratio ratio-16x9">
+                        <h3 id="teaser-video" class="pt-5">2022 Teaser</h3>
+                        <!--<div class="ratio ratio-16x9">
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/PZEpG4XnEzc"
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
-                        </div>
-                        <h3 class="pt-5">2022 Desktop Background (Red)</h3>
-                        <a class="anchor" id="desktop-background-red"></a>
-                        <div class="thumbnail">
-                            <a href="img/PC4-backgrounds-4k-red.jpg" download>
-                                <img src="img/PC4-backgrounds-4k-red.jpg" class="img-fluid"
-                                    alt="Red Desktop Background"></a>
-                        </div>
-                        <h3 class="pt-5">2022 Desktop Background (Blue)</h3>
-                        <a class="anchor" id="desktop-background-blue"></a>
-                        <div class="thumbnail">
-                            <a href="img/PC4-backgrounds-4k-blue.jpg" download>
-                                <img src="img/PC4-backgrounds-4k-blue.jpg" class="img-fluid"
-                                    alt="Blue Desktop Background"></a>
-                        </div>
-                        <h3 class="pt-5">2022 Desktop Background (Purple)</h3>
-                        <a class="anchor" id="desktop-background-purple"></a>
-                        <div class="thumbnail">
-                            <a href="img/PC4-backgrounds-4k-purple.jpg" download>
-                                <img src="img/PC4-backgrounds-4k-purple.jpg" class="img-fluid"
-                                    alt="Purple Desktop Background"></a>
-                        </div>
-                        <h3 class="pt-5">2022 Desktop Background (Black)</h3>
-                        <a class="anchor" id="desktop-background-black"></a>
-                        <div class="thumbnail">
-                            <a href="img/PC4-backgrounds-4k-black.jpg" download>
-                                <img src="img/PC4-backgrounds-4k-black.jpg" class="img-fluid"
-                                    alt="Black Desktop Background"></a>
-                        </div>
-                        <h3 class="pt-5">2022 Desktop Background (Orange)</h3>
-                        <a class="anchor" id="desktop-background-orange"></a>
-                        <div class="thumbnail">
-                            <a href="img/PC4-backgrounds-4k-orange.jpg" download>
-                                <img src="img/PC4-backgrounds-4k-orange.jpg" class="img-fluid"
-                                    alt="Orange Desktop Background"></a>
-                        </div>
-                        <h3 class="pt-5">2022 Desktop Background (Green)</h3>
-                        <a class="anchor" id="desktop-background-green"></a>
-                        <div class="thumbnail">
-                            <a href="img/PC4-backgrounds-4k-green.jpg" download>
-                                <img src="img/PC4-backgrounds-4k-green.jpg" class="img-fluid"
-                                    alt="Green Desktop Background"></a>
+                        </div>-->
+
+                        <h3 class="pt-5">2022 Desktop Backgrounds</h3>
+                        <div class="container" id="desktop-backgrounds">
+                            <div class="row pb-3">
+                                <div class="col">
+                                    <a href="img/PC4-backgrounds-4k-red.jpg">
+                                    <img src="img/PC4-backgrounds-4k-red.jpg" class="img-thumbnail"
+                                        alt="Red Desktop Background"></a>
+                                </div>
+                                <div class="col">
+                                    <a href="img/PC4-backgrounds-4k-green.jpg">
+                                    <img src="img/PC4-backgrounds-4k-green.jpg" class="img-thumbnail"
+                                        alt="Green Desktop Background"></a>
+                                </div>
+                            </div>
+                            <div class="row pb-3">
+                                <div class="col">
+                                    <a href="img/PC4-backgrounds-4k-blue.jpg">
+                                    <img src="img/PC4-backgrounds-4k-blue.jpg" class="img-thumbnail"
+                                        alt="Blue Desktop Background"></a>
+                                </div>
+                                <div class="col">
+                                    <a href="img/PC4-backgrounds-4k-purple.jpg">
+                                    <img src="img/PC4-backgrounds-4k-purple.jpg" class="img-thumbnail"
+                                        alt="Purple Desktop Background"></a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <a href="img/PC4-backgrounds-4k-orange.jpg">
+                                    <img src="img/PC4-backgrounds-4k-orange.jpg" class="img-thumbnail"
+                                        alt="Orange Desktop Background"></a>
+                                </div>
+                                <div class="col">
+                                    <a href="img/PC4-backgrounds-4k-black.jpg">
+                                    <img src="img/PC4-backgrounds-4k-black.jpg" class="img-thumbnail"
+                                        alt="Black Desktop Background"></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -451,11 +409,10 @@
         </div>
 
         <article class="row justify-content-center mt-5">
-            <a class="anchor" id="rules"></a>
             <div class="col-lg-9">
                 <div class="card p-4">
                     <div class="card-body">
-                        <h2 id="competition-rules">Competition Rules</h2>
+                        <h2 id="rules">Competition Rules</h2>
                         <h3 id="conduct">Conduct</h3>
                         <ol>
                             <li>Violation of the Rules of Conduct as outlined may result in disqualification from the
@@ -549,14 +506,13 @@
         </article>
 
         <article class="row justify-content-center mt-5">
-            <a class="anchor" id="faq"></a>
             <div class="col-lg-9">
                 <div class="card p-4">
                     <div class="card-body">
-                        <h2>Frequently Asked Questions (FAQ)</h2>
+                        <h2 id="faq">Frequently Asked Questions (FAQ)</h2>
                         <p>Below you will find some commonly asked questions and answers to help you with 2022
                             President's Cup. If you can't find the answer here, please contact us.</p>
-                        <ol class="questions pl-0" start="0">
+                        <ol class="questions ps-0" start="0">
                             <li><a href="#q0">What does "Cumulative Time" mean on the leaderboard?</a></li>
                             <li><a href="#q1">I'm a government contractor and I want to participate. Am I eligible?</a>
                             </li>
@@ -606,8 +562,7 @@
 
                         <hr />
 
-                        <a class="anchor" id="q0"></a>
-                        <div class="faq mb-4">
+                        <div id="q0" class="faq mb-4">
                             <div class="mr-4">0.</div>
                             <div>
                                 <p class="question">What does "Cumulative Time" mean on the leaderboard?</p>
@@ -619,8 +574,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q1"></a>
-                        <div class="faq mb-4">
+                        <div id="q1" class="faq mb-4">
                             <div class="mr-4">1.</div>
                             <div>
                                 <p class="question">I'm a government contractor and I want to participate. Am I
@@ -629,8 +583,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q2"></a>
-                        <div class="faq mb-4">
+                        <div id="q2" class="faq mb-4">
                             <div class="mr-4">2.</div>
                             <div>
                                 <p class="question">Will I need any special software or applications to participate in
@@ -641,8 +594,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q3"></a>
-                        <div class="faq mb-4">
+                        <div id="q3" class="faq mb-4">
                             <div class="mr-4">3.</div>
                             <div>
                                 <p class="question">How does each round's continuous session timer work?</p>
@@ -682,8 +634,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q4"></a>
-                        <div class="faq mb-4">
+                        <div id="q4" class="faq mb-4">
                             <div class="mr-4">4.</div>
                             <div>
                                 <p class="question">Does my score carry over from one round to the next?</p>
@@ -691,8 +642,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q5"></a>
-                        <div class="faq mb-4">
+                        <div id="q5" class="faq mb-4">
                             <div class="mr-4">5.</div>
                             <div>
                                 <p class="question">How are ties handled?</p>
@@ -715,8 +665,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q6"></a>
-                        <div class="faq mb-4">
+                        <div id="q6" class="faq mb-4">
                             <div class="mr-4">6.</div>
                             <div>
                                 <p class="question">I saw that the Finals are an in-person, two-day event.
@@ -727,8 +676,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q7"></a>
-                        <div class="faq mb-4">
+                        <div id="q7" class="faq mb-4">
                             <div class="mr-4">7.</div>
                             <div>
                                 <p class="question">I heard about the President's Cup, but it is too late to register.
@@ -738,8 +686,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q8"></a>
-                        <div class="faq mb-4">
+                        <div id="q8" class="faq mb-4">
                             <div class="mr-4">8.</div>
                             <div>
                                 <p class="question">My agency wants to enter two teams in Qualifying Round 1. Is that
@@ -748,8 +695,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q9"></a>
-                        <div class="faq mb-4">
+                        <div id="q9" class="faq mb-4">
                             <div class="mr-4">9.</div>
                             <div>
                                 <p class="question">One of my team members dropped out after Qualifying Round 1. Can I
@@ -760,8 +706,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q10"></a>
-                        <div class="faq mb-4">
+                        <div id="q10" class="faq mb-4">
                             <div class="mr-4">10.</div>
                             <div>
                                 <p class="question">When does registration for the 2022 competition start?</p>
@@ -770,8 +715,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q11"></a>
-                        <div class="faq mb-4">
+                        <div id="q11" class="faq mb-4">
                             <div class="mr-4">11.</div>
                             <div>
                                 <p class="question">You mention that the competition challenges will be mapped to the
@@ -788,8 +732,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q12"></a>
-                        <div class="faq mb-4">
+                        <div id="q12" class="faq mb-4">
                             <div class="mr-4">12.</div>
                             <div>
                                 <p class="question">I'm eligible to participate in the President's Cup, but I don't have
@@ -800,8 +743,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q13"></a>
-                        <div class="faq mb-4">
+                        <div id="q13" class="faq mb-4">
                             <div class="mr-4">13.</div>
                             <div>
                                 <p class="question">I'm a detailee and I want to participate. Which organization do I
@@ -813,8 +755,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q14"></a>
-                        <div class="faq mb-4">
+                        <div id="q14" class="faq mb-4">
                             <div class="mr-4">14.</div>
                             <div>
                                 <p class="question">Can I participate on more than one team at a time?</p>
@@ -822,8 +763,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q15"></a>
-                        <div class="faq mb-4">
+                        <div id="q15" class="faq mb-4">
                             <div class="mr-4">15.</div>
                             <div>
                                 <p class="question">What if I can't access my email when I'm out of the office?</p>
@@ -841,8 +781,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q16"></a>
-                        <div class="faq mb-4">
+                        <div id="q16" class="faq mb-4">
                             <div class="mr-4">16.</div>
                             <div>
                                 <p class="question">Can I copy/paste between my host and the gamespace virtual machines?
@@ -852,8 +791,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q17"></a>
-                        <div class="faq mb-4">
+                        <div id="q17" class="faq mb-4">
                             <div class="mr-4">17.</div>
                             <div>
                                 <p class="question">If I reach my limit of virtual gamespaces (5 for teams, 2 for
@@ -866,8 +804,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q18"></a>
-                        <div class="faq mb-4">
+                        <div id="q18" class="faq mb-4">
                             <div class="mr-4">18.</div>
                             <div>
                                 <p class="question">Is partial credit available for challenge submissions?</p>
@@ -883,8 +820,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q19"></a>
-                        <div class="faq mb-4">
+                        <div id="q19" class="faq mb-4">
                             <div class="mr-4">19.</div>
                             <div>
                                 <p class="question">Is there a recommended format for answer submissions?</p>
@@ -894,8 +830,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q20"></a>
-                        <div class="faq mb-4">
+                        <div id="q20" class="faq mb-4">
                             <div class="mr-4">20.</div>
                             <div>
                                 <p class="question">President's Cup Support is asking for my “challenge Support Code”.
@@ -905,8 +840,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q21"></a>
-                        <div class="faq mb-4">
+                        <div id="q21" class="faq mb-4">
                             <div class="mr-4">21.</div>
                             <div>
                                 <p class="question">How are teams selected to advance to Qualifying Round 2?</p>
@@ -921,8 +855,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q22"></a>
-                        <div class="faq mb-4">
+                        <div id="q22" class="faq mb-4">
                             <div class="mr-4">22.</div>
                             <div>
                                 <p class="question">How are individuals selected to advance to Qualifying Round 2?</p>
@@ -936,8 +869,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q23"></a>
-                        <div class="faq mb-4">
+                        <div id="q23" class="faq mb-4">
                             <div class="mr-4">23.</div>
                             <div>
                                 <p class="question">How are teams and individuals selected to advance to the Finals?</p>
@@ -947,8 +879,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q24"></a>
-                        <div class="faq mb-4">
+                        <div id="q24" class="faq mb-4">
                             <div class="mr-4">24.</div>
                             <div>
                                 <p class="question">What happens if I qualify for both the team and individual final
@@ -963,8 +894,7 @@
                             </div>
                         </div>
 
-                        <a class="anchor" id="q25"></a>
-                        <div class="faq mb-4">
+                        <div id="q25" class="faq mb-4">
                             <div class="mr-4">25.</div>
                             <div>
                                 <p class="question">Are Service Academy Cadets eligible to participate?</p>
@@ -975,8 +905,7 @@
                                     will work to get you enrolled.</p>
                             </div>
                         </div>
-                        <a class="anchor" id="q26"></a>
-                        <div class="faq mb-4">
+                        <div id="q26" class="faq mb-4">
                             <div class="mr-4">26.</div>
                             <div>
                                 <p class="question">I participated in President's Cup last year. Should I use my
@@ -986,8 +915,7 @@
                                     to gain access to your existing account.</p>
                             </div>
                         </div>
-                        <a class="anchor" id="q27"></a>
-                        <div class="faq mb-4">
+                        <div id="q27" class="faq mb-4">
                             <div class="mr-4">27.</div>
                             <div>
                                 <p class="question">Can I publish thoughts, opinions, or walkthroughs of the President's
@@ -1006,9 +934,7 @@
     </main>
 
     <!-- Bootstrap JS includes -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script>
         var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
         var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
