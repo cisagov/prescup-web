@@ -1,6 +1,6 @@
 # Getting Started
 
-Welcome to _President's Cup 2022_! Please review the [Rules](https://presidentscup.cisa.gov/#rules) and [FAQ](https://presidentscup.cisa.gov/#faq) before starting the competition. Read on below for how to get started and how to get support.
+Welcome to _President's Cup V_! Please review the [Rules](https://presidentscup.cisa.gov/#rules) and [FAQ](https://presidentscup.cisa.gov/#faq) before starting the competition. Read on below for how to get started and how to get support.
 
 ## Teams: Register and Enroll
 
@@ -56,9 +56,13 @@ Welcome to _President's Cup 2022_! Please review the [Rules](https://presidentsc
 5. Click **Submit** when you are sure you want to submit your answers.
 6. Correct answers will change colors to **Green**. Incorrect answers will change colors to **Orange**. Fields not filled out will remain **Blue**. The current submission number, session time remaining, and earned challenge score are shown.
 
+## Practice Area
+
+New for President's Cup V is the [Practice Area](https://presidentscup.cisa.gov/gb/practice). Play challenges from past years to hone your skills before competing in this year's competition. 
+
 ## Get Support
 
-New for President's Cup 2022 is an integrated support ticket system. Players can create support tickets from a deployed challenge or from the new Support link in the navigation bar. 
+President's Cup V uses an integrated support ticket system. Players can create support tickets from a deployed challenge or from the new Support link in the navigation bar. 
 
 **In a deployed challenge:** below the Challenge Questions, click **Create Ticket**. By default, the challenge name, support code, and game are included in the new ticket. Complete the remaining fields (be sure to add a screenshot if applicable) and click **Submit**.
 
