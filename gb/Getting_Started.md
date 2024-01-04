@@ -4,33 +4,31 @@ Welcome to _President's Cup V_! Please review the [Rules](https://presidentscup.
 
 ## Register and Enroll
 
-1. Click **Login**.
-2. Click **Login - presidentscup.cisa.gov**.
-3. Read the notice on the President's Cup Identity page, then click **Continue**.
-4. Enter your Email and Password on the President's Cup Identity page and then click **Continue**. 
-*If you have not participated in a previous year's competition, click Register for an account. Enter an email address with one of the approved domains.*
-*If you have participated in a previous year's competition, use the same email address and password as before. You can also click Reset my password if you don't remember your password.*
+1. Click **Login**.  
+2. Click **Login - presidentscup.cisa.gov**.  
+3. Read the notice on the President's Cup Identity page, then click **Continue**.  
+4. Enter your Email and Password on the President's Cup Identity page and then click **Continue**.  
+  *If you have not participated in a previous year's competition, click Register for an account. Enter an email address with one of the approved domains.*  
+  *If you have participated in a previous year's competition, use the same email address and password as before. You can also click Reset my password if you don't remember your password.*  
+5. If you have not [configured email-less MFA](https://presidentscup.cisa.gov/#q30), Click **Send me a Code** to send a verification code to the email address you provided. Otherwise, click **I have a Code** and use your configured TOTP provder.  
+6. Enter the Code and click **Continue**.  
+7. If you'd like, request an updated Display Name in your [Gameboard Profile](https://presidentscup.cisa.gov/gb/user/profile).  
+8. Select or update your sponsoring organization in your [Gameboard Profile](https://presidentscup.cisa.gov/gb/user/profile).   
+9. Click **Home**.  
+10. Find the card for the game(s) you would like to play and click **Open Game**. You can play in more than one game.   
+11. Click **Enroll** and **Confirm**.  
+12. If you are registering as a team, **Generate** or **Redeem** a team invitation code to create or join a team.  
 
-5. If you have not [configured email-less MFA](https://presidentscup.cisa.gov/#q30), Click **Send me a Code** to send a verification code to the email address you provided. Otherwise, click **I have a Code** and use your configured TOTP provder. 
-6. Enter the Code and click **Continue**.
-7. If you'd like, request an updated Display Name in your [Gameboard Profile](https://presidentscup.cisa.gov/gb/user/profile).
-8. Select or update your sponsoring organization in your [Gameboard Profile](https://presidentscup.cisa.gov/gb/user/profile). 
-9. Click **Home**.
-10. Find the card for the game(s) you would like to play and click **Open Game**. You can play in more than one game. 
-11. Click **Enroll** and **Confirm**.
-12. If you are registering as a team, **Generate** or **Redeem** a team invitation code to create or join a team. 
+Please view the [Register/Enroll](https://presidentscup.cisa.gov/#media) video for more information about registering as a team or an individual.  
 
-Please view the [Register/Enroll](https://presidentscup.cisa.gov/#media) video for more information about registering as a team or an individual.
-
-We recommend configuring multi-factor authentication via TOTP for your account in case you will not have access to your government email address. Please [follow the steps here](https://presidentscup.cisa.gov/#q30) to configure email-less MFA. 
+**We recommend configuring multi-factor authentication via TOTP for your account in case you will not have access to your government email address. Please [follow the steps here](https://presidentscup.cisa.gov/#q30) to configure email-less MFA.**   
 
 ### Create or Join a Team
 
-**Create a team** by setting a custom team display name and generating an invitation link to send to your teammates. Clicking the **Generate** button more than once will invalidate all previously generated links.
-
+**Create a team** by setting a custom team display name and generating an invitation link to send to your teammates. Clicking the **Generate** button more than once will invalidate all previously generated links.  
 **Join a team** by redeeming the **Invitation Code** from your manager to join the team.
 
->*Note for returning players: If you have competed in a previous year's competition, use the same email address and password as before. You can also click **Reset my password** if you don't remember your password.*
+> *Note for returning players: If you have competed in a previous year's competition, use the same email address and password as before. You can also click **Reset my password** if you don't remember your password.*
 
 
 ## Game play
