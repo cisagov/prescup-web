@@ -2,22 +2,27 @@
 
 Welcome to _President's Cup V_! Please review the [Rules](https://presidentscup.cisa.gov/#rules) and [FAQ](https://presidentscup.cisa.gov/#faq) before starting the competition. Read on below for how to get started and how to get support.
 
-## Teams: Register and Enroll
+## Register and Enroll
 
-1. Go to [presidentscup.cisa.gov](https://presidentscup.cisa.gov).
-2. Click **Team Competition**.
-3. Click **Login**.
-4. At the Notice screen, click **Continue**.
-5. If you have not participated in a previous year's competition, click **Register for an account**. Enter an email address with one of the approved domains.
-6. Click **Send Verification Code**. A code is sent to the email address you provided.
-7. Enter the Code and click **Confirm**.
-8. Enter a **Password** and **Confirm Password**.
-9. Click **Register**.
-10. Click **Profile** in the menu bar.
-11. Request an updated **Display Name** for your user.
-12. Select your sponsoring organization.
-13. Click **Home**, then **Teams Competition** game card. 
-14. Click **Enroll** and **Confirm** to enroll in the game.
+1. Click **Login**.
+2. Click **Login - presidentscup.cisa.gov**.
+3. Read the notice on the President's Cup Identity page, then click **Continue**.
+4. Enter your Email and Password on the President's Cup Identity page and then click **Continue**. 
+*If you have not participated in a previous year's competition, click Register for an account. Enter an email address with one of the approved domains.*
+*If you have participated in a previous year's competition, use the same email address and password as before. You can also click Reset my password if you don't remember your password.*
+
+5. If you have not [configured email-less MFA](https://presidentscup.cisa.gov/#q30), Click **Send me a Code** to send a verification code to the email address you provided. Otherwise, click **I have a Code** and use your configured TOTP provder. 
+6. Enter the Code and click **Continue**.
+7. If you'd like, request an updated Display Name in your [Gameboard Profile](https://presidentscup.cisa.gov/gb/user/profile).
+8. Select or update your sponsoring organization in your [Gameboard Profile](https://presidentscup.cisa.gov/gb/user/profile). 
+9. Click **Home**.
+10. Find the card for the game(s) you would like to play and click **Open Game**. You can play in more than one game. 
+11. Click **Enroll** and **Confirm**.
+12. If you are registering as a team, **Generate** or **Redeem** a team invitation code to create or join a team. 
+
+Please view the [Register/Enroll](https://presidentscup.cisa.gov/#media) video for more information about registering as a team or an individual.
+
+We recommend configuring multi-factor authentication via TOTP for your account in case you will not have access to your government email address. Please [follow the steps here](https://presidentscup.cisa.gov/#q30) to configure email-less MFA. 
 
 ### Create or Join a Team
 
@@ -27,24 +32,6 @@ Welcome to _President's Cup V_! Please review the [Rules](https://presidentscup.
 
 >*Note for returning players: If you have competed in a previous year's competition, use the same email address and password as before. You can also click **Reset my password** if you don't remember your password.*
 
-## Individuals: Register and Enroll
-
-1. Go to [presidentscup.cisa.gov](https://presidentscup.cisa.gov).
-2. Click **Individual Track A** or **Individual Track B**.
-3. Click **Login**.
-4. At the Notice screen, click **Continue**.
-5. If you have not participated in a previous year's competition, click **Register for an account**. Enter an email address with one of the approved domains.
-6. Click **Send Verification Code**. A code is sent to the email address you provided.
-7. Enter the Code and click **Confirm**.
-8. Enter a **Password** and **Confirm Password**.
-9. Click **Register**.
-10. Click **Profile** in the menu bar.
-11. Request an updated **Display Name** for your user.
-12. Select your Sponsoring Organization.
-13. Click **Home** then an **Individual Track** game card.
-14. Click **Enroll** and **Confirm** to enroll in the game.
-
->*Note for returning players: If you have competed in a previous year's competition, use the same email address and password as before. You can also click **Reset my password** if you don't remember your password.*
 
 ## Game play
 
@@ -62,7 +49,7 @@ New for President's Cup V is the [Practice Area](https://presidentscup.cisa.gov/
 
 ## Get Support
 
-President's Cup V uses an integrated support ticket system. Players can create support tickets from a deployed challenge or from the new Support link in the navigation bar. 
+President's Cup V uses an [integrated support ticket system](https://presidentscup.cisa.gov/gb/support/tickets). Players can create support tickets from a deployed challenge or from the [Support link](https://presidentscup.cisa.gov/gb/support/tickets) in the navigation bar. 
 
 **In a deployed challenge:** below the Challenge Questions, click **Create Ticket**. By default, the challenge name, support code, and game are included in the new ticket. Complete the remaining fields (be sure to add a screenshot if applicable) and click **Submit**.
 
