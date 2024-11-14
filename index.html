@@ -10,7 +10,7 @@
     <meta property="og:title" content="President's Cup Cybersecurity Competition" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://presidentscup.cisa.gov" />
-    <meta property="og:image" content="https://presidentscup.cisa.gov/files/img/pc4-opengraph.jpg" />
+    <meta property="og:image" content="https://presidentscup.cisa.gov/img/PC6-Logo_top.png" />
     <meta property="og:description"
         content="The President's Cup Cybersecurity Competition is a national cyber competition aiming to identify, recognize, and reward the best cybersecurity talent in the federal executive workforce." />
 
@@ -34,9 +34,18 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700&display=swap" rel="stylesheet" />
     <style>
         :root {
-            --root-bg-color: #351586;
-            --root-highlight-color: #fdcd42;
+            /* 
+	    --root-bg-color: #351586;
+	    --root-highlight-color: #fdcd42;
             --root-secondary-color: #22aa63;
+            --root-text-color: #eeeeee;
+	    */
+
+
+
+            --root-bg-color: rgba(34,34,34,.75);
+            --root-highlight-color: #CDFF00;
+            --root-secondary-color: #F80060;
             --root-text-color: #eeeeee;
         }
 
@@ -46,7 +55,7 @@
         }
 
         body {
-            background: url("img/pc5-web-background.jpg") #241734 no-repeat fixed center;
+            background: url("img/pc6-Landing-page-Background.jpg") #241734 no-repeat fixed center;
             background-size: cover;
             background-color: #241734;
             font-family: 'Source Sans Pro', sans-serif;
@@ -72,22 +81,45 @@
             text-decoration: none;
         }
 
-        .navbar-brand,
+	.navbar-brand{ 
+/*
+		background-color:#CDFF00;
+*/
+	}
+
         .navbar-nav .nav-link {
-            color: rgba(255, 255, 255, .75) !important;
+            /*color: rgba(255, 255, 255, .75) !important;
             font-size: 1.3rem;
-            text-transform: uppercase;
+            text-transform: uppercase;*/
+
+		color: rgba(0,0,0, .75) !important;
+		font-size: 2rem;
+		text-transform: uppercase;
+
+		
         }
 
         .navbar-nav .nav-link:hover {
-            color: rgba(255, 255, 255, 1) !important;
+            /* color: rgba(255, 255, 255, 1) !important; */
+		color:#F80060 !important;
         }
+
+	.navbar-container {
+		background-color: #CDFF00 !important;
+	}
 
         .card {
             /* OLD:::: background-color: rgba(26, 50, 72, 0.85); */
             /* background-color: #612FDD; */
             background-color: var(--root-bg-color);
+	  border: 8px solid #CDFF00; 
+	   
         }
+
+	.btn-signup{
+		color:#000000 !important;
+	}
+
 
         .faq {
             display: flex;
@@ -108,8 +140,8 @@
 
         .bg-dark {
             /* OLD::::: background-color: #1a3248 !important;i */
-            /* background-color: #612FDD !important; */
-            background-color: var(--root-bg-color) !important;
+            background-color: #CDFF00 !important; 
+            /*background-color: var(--root-bg-color) !important; */
         }
 
         h3.thin {
@@ -170,7 +202,7 @@
         .btn-success1:hover {
             color: #fff;
             background-color: #4E7D29;
-            border-color: #4E7D29
+	    border-color: #4E7D29
         }
 
         .btn-success2 {
@@ -223,7 +255,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
         <div class="container">
             <a class="navbar-brand nav-color" href="#">
-                <img class="d-inline-block align-top me-2" src="img/pc5-logo.png" alt="President's Cup V logo" />
+                <img class="d-inline-block align-top me-2" src="img/PC6_Logo_navigation.png" alt="President's Cup 6 logo" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#prescupNavbar"
                 aria-controls="prescupNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -244,8 +276,8 @@
     <main role="main" class="container py-4">
         <div class="row" id="home">
             <div class="col-lg-4 my-auto d-block text-center">
-                <img src="img/pc5-mission-patch.png" height="350px"
-                    alt="President's Cup 5 Cybersecurity Competition logo" />
+                <img src="img/PC6-Logo_top.png" height="350px"
+                    alt="President's Cup 6 Cybersecurity Competition logo" />
                 <div class="dropdown">
                     <button class="btn btn-secondary btn-lg btn-success5 dropdown-toggle my-4" type="button"
                         id="shareDropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
@@ -294,7 +326,7 @@
                     <div class="row">
                         <div class="col">
                             <div class="card-body">
-                                <img src="img/pc5-icon-teams.png" alt="Logo for President's Cup 5 Teams Challenges"
+                                <img src="img/pc6-teams-Icon.png" alt="Logo for President's Cup 6 Teams Challenges"
                                     height="125" />
                                 <h4 class="card-title mt-3">President's Cup 6 Teams Competition</h4>
                                 <p class="card-text mb-4">
@@ -306,10 +338,10 @@
                         </div>
                         <div class="col">
                             <div class="card-body">
-                                <img src="img/pc5-icon-trackA-individuals.png" height="125"
-                                    alt="President's Cup 5 Individuals (Track A) Logo" />
-                                <img src="img/pc5-icon-trackB-individuals.png" height="125"
-                                    alt="President's Cup 5 Individuals (Track B) Logo" />
+                                <img src="img/pc6-track-a-Icon.png" height="125"
+                                    alt="President's Cup 6 Individuals (Track A) Logo" />
+                                <img src="img/pc6-track-b-Icon.png" height="125"
+                                    alt="President's Cup 6 Individuals (Track B) Logo" />
                                 <h4 class="card-title mt-3">President's Cup 6 Individuals Competition</h4>
                                 <p class="card-text mb-4">
                                     Registration: Dec 9, 2024 - Jan 28, 2025<br />Qualifying Round 1:
@@ -320,7 +352,7 @@
                         </div>
                     </div>
                     <div class="row justify-content-lg-center my-4">
-                        <a class="btn btn-success4 col-6 mx-auto btn-lg" href="/gb/doc/getting_started">
+                        <a class="btn btn-success4 col-6 mx-auto btn-lg btn-signup" href="/gb/doc/getting_started">
                             Sign Up Here<br /><small><em>Register and Compete!</em></small></a>
                     </div>
                 </div>
@@ -328,7 +360,7 @@
             <div class="col-lg-4 d-lg-flex align-items-stretch my-1 my-lg-0">
                 <div class="card flex-fill">
                     <div class="card-body">
-                        <img src="img/pc5-icon-practice.png" alt="" height="125" />
+                        <img src="img/PC6-practice-icon.png" alt="Presidents Cup 6 Practice Icon" height="125" />
                         <h4 class="card-title mt-3">PCCC Practice Area</h4>
                         <p class="card-text mb-4">
                             Practice demo challenges and content from past President's Cup competitions
@@ -472,7 +504,7 @@
                         </ul>
                         <h3 id="images">Images</h3>
                         <ul>
-                            <li><a href="#desktop-backgrounds">President's Cup 5 Desktop Backgrounds</a></li>
+                            <li><a href="#desktop-backgrounds">President's Cup 6 Desktop Backgrounds</a></li>
                         </ul>
 
                         <hr class="my-4" />
@@ -513,75 +545,63 @@
                         <div class="container px-0" id="desktop-backgrounds">
                             <div class="row pb-4 pt-2">
                                 <div class="col">
-                                    <a href="img/pc5-generic-track-backgrounds-01.png">
-                                        <img src="img/pc5-generic-track-backgrounds-01-thumbnail.png"
-                                            class="img-thumbnail" alt="Generic Track Desktop Background"></a>
+                                    <a href="img/pc6-background_1.png">
+                                        <img src="img/pc6-background-thumbnail_1.png"
+                                            class="img-thumbnail" alt="Generic Black Desktop Background"></a>
                                 </div>
 
                                 <div class="col">
-                                    <a href="img/pc5-generic-track-backgrounds-02.png">
-                                        <img src="img/pc5-generic-track-backgrounds-02-thumbnail.png"
-                                            class="img-thumbnail" alt="Track A Blue Desktop Background"></a>
+                                    <a href="img/pc6-background_2.png">
+                                        <img src="img/pc6-background-thumbnail_2.png"
+                                            class="img-thumbnail" alt="Generic Green Desktop Background"></a>
+                                </div>
+                            </div>
+
+
+                            <div class="row pb-4 pt-2">
+                                <div class="col">
+                                    <a href="img/pc6-background_4.png">
+                                        <img src="img/pc6-background-thumbnail_4.png"
+                                            class="img-thumbnail" alt="Generic Green Desktop Background"></a>
+                                </div>
+                                <div class="col">
+                                    <a href="img/pc6-background_teams.png">
+                                        <img src="img/pc6-background-thumbnail_teams.png"
+                                            class="img-thumbnail" alt="Teams Colorful light Desktop Background"></a>
                                 </div>
                             </div>
 
                             <div class="row pb-4 pt-2">
                                 <div class="col">
-                                    <a href="img/pc5-generic-track-backgrounds-03.png">
-                                        <img src="img/pc5-generic-track-backgrounds-03-thumbnail.png"
-                                            class="img-thumbnail" alt="Track 2 Red Desktop Background"></a>
+                                    <a href="img/pc6-background_track_a.png">
+                                        <img src="img/pc6-background-thumbnail_track_a.png"
+                                            class="img-thumbnail" alt="Teams Track A Light Green Desktop Background"></a>
                                 </div>
                                 <div class="col">
-                                    <a href="img/pc5-team-backgrounds-01.png">
-                                        <img src="img/pc5-team-backgrounds-01-thumbnail.png" class="img-thumbnail"
-                                            alt="Track A Individuals Blue Desktop Background"></a>
-                                </div>
-                            </div>
-
-                            <div class="row pb-4 pt-2">
-                                <div class="col">
-                                    <a href="img/pc5-team-backgrounds-02.png">
-                                        <img src="img/pc5-team-backgrounds-02-thumbnail.png" class="img-thumbnail"
-                                            alt="Track B Individuals Red Desktop Background"></a>
-                                </div>
-                                <div class="col">
-                                    <a href="img/pc5-team-backgrounds-03.png">
-                                        <img src="img/pc5-team-backgrounds-03-thumbnail.png" class="img-thumbnail"
-                                            alt="Teams Green Desktop Background"></a>
+                                    <a href="img/pc6-background_track_b.png">
+                                        <img src="img/pc6-background-thumbnail_track_b.png"
+                                            class="img-thumbnail" alt="Teams Track B Light Blue Desktop Background"></a>
                                 </div>
                             </div>
 
                             <div class="row pb-4 pt-2">
                                 <div class="col">
-                                    <a href="img/pc5-team-backgrounds-04.png">
-                                        <img src="img/pc5-team-backgrounds-04-thumbnail.png" class="img-thumbnail"
-                                            alt="Teams Yellow Desktop Background"></a>
+                                    <a href="img/pc6-background_8.png">
+                                        <img src="img/pc6-background-thumbnail_8.png"
+                                            class="img-thumbnail" alt="Generic Black Desktop Background"></a>
                                 </div>
                                 <div class="col">
-                                    <a href="img/pc5-team-backgrounds-05.png">
-                                        <img src="img/pc5-team-backgrounds-05-thumbnail.png" class="img-thumbnail"
-                                            alt="Teams Blue Desktop Background"></a>
-                                </div>
-                            </div>
-
-                            <div class="row pb-4 pt-2">
-                                <div class="col">
-                                    <a href="img/pc5-team-backgrounds-06.png">
-                                        <img src="img/pc5-team-backgrounds-06-thumbnail.png" class="img-thumbnail"
-                                            alt="Teams Red Desktop Background"></a>
-                                </div>
-                                <div class="col">
-                                    <a href="img/pc5-team-backgrounds-07.png">
-                                        <img src="img/pc5-team-backgrounds-07-thumbnail.png" class="img-thumbnail"
-                                            alt="Teams Purple Desktop Background"></a>
+                                    <a href="img/pc6-background_9.png">
+                                        <img src="img/pc6-background-thumbnail_9.png"
+                                            class="img-thumbnail" alt="Generic Black Desktop Background"></a>
                                 </div>
                             </div>
 
                             <div class="row pb-4 pt-2">
                                 <div class="col">
-                                    <a href="img/pc5-generic-track-backgrounds-04.png">
-                                        <img src="img/pc5-generic-track-backgrounds-04-thumbnail.png"
-                                            class="img-thumbnail" alt=" Teams Generic Desktop Background"></a>
+                                    <a href="img/pc6-background_3.png">
+                                        <img src="img/pc6-background-thumbnail_3.png"
+                                            class="img-thumbnail" alt="Generic Black Desktop Background"></a>
                                 </div>
                                 <div class="col">
 
