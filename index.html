@@ -34,10 +34,18 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700&display=swap" rel="stylesheet" />
     <style>
         :root {
-            /* --root-bg-color: #351586; */
-		--root-bg-color: rgba(34,34,34,.75);;
-            --root-highlight-color: #fdcd42;
+            /* 
+	    --root-bg-color: #351586;
+	    --root-highlight-color: #fdcd42;
             --root-secondary-color: #22aa63;
+            --root-text-color: #eeeeee;
+	    */
+
+
+
+            --root-bg-color: rgba(34,34,34,.75);
+            --root-highlight-color: #fdcd42;
+            --root-secondary-color: #F80060;
             --root-text-color: #eeeeee;
         }
 
@@ -73,21 +81,39 @@
             text-decoration: none;
         }
 
-        .navbar-brand,
+	.navbar-brand{ 
+/*
+		background-color:#CDFF00;
+*/
+	}
+
         .navbar-nav .nav-link {
-            color: rgba(255, 255, 255, .75) !important;
+            /*color: rgba(255, 255, 255, .75) !important;
             font-size: 1.3rem;
-            text-transform: uppercase;
+            text-transform: uppercase;*/
+
+		color: rgba(0,0,0, .75) !important;
+		font-size: 2rem;
+		text-transform: uppercase;
+
+		
         }
 
         .navbar-nav .nav-link:hover {
-            color: rgba(255, 255, 255, 1) !important;
+            /* color: rgba(255, 255, 255, 1) !important; */
+		color:#F80060 !important;
         }
+
+	.navbar-container {
+		background-color: #CDFF00 !important;
+	}
 
         .card {
             /* OLD:::: background-color: rgba(26, 50, 72, 0.85); */
             /* background-color: #612FDD; */
             background-color: var(--root-bg-color);
+	  border: 8px solid #CDFF00; 
+	   
         }
 
         .faq {
@@ -109,8 +135,8 @@
 
         .bg-dark {
             /* OLD::::: background-color: #1a3248 !important;i */
-            /* background-color: #612FDD !important; */
-            background-color: var(--root-bg-color) !important;
+            background-color: #CDFF00 !important; 
+            /*background-color: var(--root-bg-color) !important; */
         }
 
         h3.thin {
