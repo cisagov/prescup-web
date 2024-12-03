@@ -10,7 +10,7 @@
     <meta property="og:title" content="President's Cup Cybersecurity Competition" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://presidentscup.cisa.gov" />
-    <meta property="og:image" content="https://presidentscup.cisa.gov/img/PC6-Logo_top.png" />
+    <meta property="og:image" content="https://presidentscup.cisa.gov/img/PC6-Logo_social.png" />
     <meta property="og:description"
         content="The President's Cup Cybersecurity Competition is a national cyber competition aiming to identify, recognize, and reward the best cybersecurity talent in the federal executive workforce." />
 
@@ -81,45 +81,54 @@
             text-decoration: none;
         }
 
-	.navbar-brand{ 
-/*
-		background-color:#CDFF00;
-*/
-	}
+        #logo, #hero-pc6  {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .navbar-brand{ 
+            /*
+                background-color:#CDFF00;
+            */
+        }
 
         .navbar-nav .nav-link {
             /*color: rgba(255, 255, 255, .75) !important;
             font-size: 1.3rem;
             text-transform: uppercase;*/
 
-		color: rgba(0,0,0, .75) !important;
-		font-size: 2rem;
-		text-transform: uppercase;
-
-		
+		    color: rgba(0,0,0, .75) !important;
+		    font-size: 2rem;
+		    text-transform: uppercase;
         }
 
         .navbar-nav .nav-link:hover {
             /* color: rgba(255, 255, 255, 1) !important; */
-		color:#F80060 !important;
+		    color:#F80060 !important;
         }
 
-	.navbar-container {
-		background-color: #CDFF00 !important;
-	}
+	    .navbar-container {
+		    background-color: #CDFF00 !important;
+	    }
+
+        button.navbar-toggler:after {
+            content: 'Menu';
+            margin-left: 5px;
+            vertical-align: middle;
+            font-weight: bold;
+        }
 
         .card {
             /* OLD:::: background-color: rgba(26, 50, 72, 0.85); */
             /* background-color: #612FDD; */
             background-color: var(--root-bg-color);
-	  border: 8px solid #CDFF00; 
+	        border: 8px solid #CDFF00; 
 	   
         }
 
-	.btn-signup{
-		color:#000000 !important;
-	}
-
+	    .btn-signup{
+		    color:#000000 !important;
+	    }
 
         .faq {
             display: flex;
@@ -252,10 +261,10 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar-nav" data-bs-offset="110">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-dark">
         <div class="container">
             <a class="navbar-brand nav-color" href="#">
-                <img class="d-inline-block align-top me-2" src="img/PC6_Logo_navigation.png" alt="President's Cup 6 logo" />
+                <img id="logo" class="d-inline-block align-top me-2" src="img/PC6_Logo_navigation.png" alt="President's Cup 6 logo" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#prescupNavbar"
                 aria-controls="prescupNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -276,7 +285,7 @@
     <main role="main" class="container py-4">
         <div class="row" id="home">
             <div class="col-lg-4 my-auto d-block text-center">
-                <img src="img/PC6-Logo_top.png" height="350px"
+                <img id="hero-pc6" src="img/PC6-Logo_top.png" height="350px"
                     alt="President's Cup 6 Cybersecurity Competition logo" />
                 <div class="dropdown">
                     <button class="btn btn-secondary btn-lg btn-success5 dropdown-toggle my-4" type="button"
