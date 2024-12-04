@@ -100,12 +100,21 @@
 		    color: rgba(0,0,0, .75) !important;
 		    font-size: 2rem;
 		    text-transform: uppercase;
+            margin-right: 0.25rem;
+            margin-left: 0.25rem;
         }
 
         .navbar-nav .nav-link:hover {
             /* color: rgba(255, 255, 255, 1) !important; */
 		    color:#F80060 !important;
         }
+
+        @media screen and (min-width: 992px) and (max-width: 1400px) {
+            .navbar-nav .nav-link {
+                white-space: nowrap;
+                font-size: 1.85rem;
+            }
+        }        
 
 	    .navbar-container {
 		    background-color: #CDFF00 !important;
