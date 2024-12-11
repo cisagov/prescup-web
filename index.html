@@ -114,7 +114,7 @@
                 white-space: nowrap;
                 font-size: 1.85rem;
             }
-        }        
+        }         
 
 	    .navbar-container {
 		    background-color: #CDFF00 !important;
@@ -266,6 +266,19 @@
             color: #10202d;
             filter: brightness(1.25);
         }
+
+        /* responsive fixes */
+        @media screen and (max-width: 480px) {
+            .row > div {
+                padding: 0px !important;
+            }
+            article .card-body {
+                padding: 0px !important;
+            }
+            main.container {
+                padding-bottom: 0px !important;
+            }
+        } 
     </style>
 </head>
 
