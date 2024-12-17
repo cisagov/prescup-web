@@ -100,12 +100,21 @@
 		    color: rgba(0,0,0, .75) !important;
 		    font-size: 2rem;
 		    text-transform: uppercase;
+            margin-right: 0.25rem;
+            margin-left: 0.25rem;
         }
 
         .navbar-nav .nav-link:hover {
             /* color: rgba(255, 255, 255, 1) !important; */
 		    color:#F80060 !important;
         }
+
+        @media screen and (min-width: 992px) and (max-width: 1400px) {
+            .navbar-nav .nav-link {
+                white-space: nowrap;
+                font-size: 1.85rem;
+            }
+        }         
 
 	    .navbar-container {
 		    background-color: #CDFF00 !important;
@@ -257,6 +266,19 @@
             color: #10202d;
             filter: brightness(1.25);
         }
+
+        /* responsive fixes */
+        @media screen and (max-width: 480px) {
+            .row > div {
+                padding: 0px !important;
+            }
+            article .card-body {
+                padding: 0px !important;
+            }
+            main.container {
+                padding-bottom: 0px !important;
+            }
+        } 
     </style>
 </head>
 
@@ -315,8 +337,11 @@
                         <p class="intro-blurb">
                             Established in response to
                             <a
-                                href="https://www.federalregister.gov/documents/2019/05/09/2019-09750/americas-cybersecurity-workforce">Executive
-                                Order 13870</a>, the <em>President's Cup Cybersecurity Competition</em> is a national
+                                target="_blank"
+                                href="https://www.federalregister.gov/documents/2019/05/09/2019-09750/americas-cybersecurity-workforce">
+                                Executive Order 13870
+                            </a> 
+                            , the <em>President's Cup Cybersecurity Competition</em> is a national
                             cyber competition aiming to identify, recognize, and reward the
                             best cybersecurity talent in the federal executive workforce.
                             Hosting challenges from across the National Initiative for
@@ -377,7 +402,7 @@
                         <a class="btn btn-success5 btn-lg col-10" href="/gb/practice" target="_blank">
                             Practice Area<br /><small><em>Play Challenges from Past Rounds</em></small></a>
                         <a class="btn btn-success5 btn-lg col-10 mt-3"
-                            href="https://github.com/cisagov/prescup-challenges">GitHub
+                            href="https://github.com/cisagov/prescup-challenges" target="_blank">GitHub
                             <br /><small><em>Challenge Source Code,<br />Solution Guides, and Virtual
                                     Machines</em></small></a>
                     </div>
@@ -446,9 +471,7 @@
 			now a requirement to participate in the Finals. If you have any questions or concerns, please 
 			contact the <a href="mailto:presidentscup@cisa.dhs.gov">President's Cup team</a>.</p>
 			<h3>Teams Finals</h3>
-			<p>The Teams Finals will be <em>one day</em> in President's Cup 6, as opposed to two days in 
-			previous years. As in President's Cup 5, the Teams Finals will include an ICScape Room based upon 
-			Industrial Control Systems challenges.</p>
+			<p>The Teams Finals in President's Cup 6 will take place over the course of a <em>single day</em>, unlike the two-day format used in previous years. As in President's Cup 5, the Teams Finals will include an ICScape Room based upon Industrial Control Systems challenges.</p>
                         <h3>Gamespace Package Repositories</h3>
                         <p>Package repositories from the Internet have been mirrored inside the President's Cup
                             challenge environment. The current build includes Kali and Python (PyPI). If the default VM
@@ -461,10 +484,10 @@
                                 past competitions. <em> Users can receive a certificate of completion after each
                                     challenge.</em></li>
                             <li><strong>Open Source Updates</strong> &#124; The <a
-                                    href="https://github.com/cisagov/prescup-challenges">prescup-challenges</a> GitHub
+                                    href="https://github.com/cisagov/prescup-challenges" target="_blank">prescup-challenges</a> GitHub
                                 project has practice resources this year, including solution guides and challenge
                                 code from all previous competitions. <a
-                                    href="https://github.com/cisagov/prescup-challenges/tree/main/pc4/vm">Virtual
+                                    href="https://github.com/cisagov/prescup-challenges/tree/main/pc4/vm" target="_blank">Virtual
                                     machine builds</a> are also included.</li>
                         </ul>
                         <h3>Gameboard Features</h3>
@@ -647,10 +670,10 @@
                                 otherwise inappropriate content will be asked to be changed. The competition aims to
                                 support morale building, esprit de corps, and friendly rivalries between military units,
                                 and government departments and agencies. The competition staff reserves the right to ask
-                                any team or individual to change their name and maintains final judgement on what is
+                                any team or individual to change their name and retains final judgement on what is
                                 acceptable.</li>
                             <li>Classified toolsets are not authorized for use. All challenges are designed to be
-                                solved using open source tools including those provided on the hosted virtual machines
+                                solved using open source tools including those provided on the hosted virtual machines.
                             </li>
                             <li>Any attempts at unauthorized access or “Denial of Service” attacks are forbidden and
                                 will result in disqualification. “Escaping” the virtual machines or otherwise
@@ -717,7 +740,7 @@
                                 11:59
                                 PM
                                 ET on January 28, 2025</li>
-                            <li>Participation in the President's Cup will be closed after these dates/times</li>
+                            <li>Registration for the President's Cup will close after the specified dates and times.</li>
                         </ul>
                         <h3 id="support-and-contact-information">Support and Contact Information</h3>
                         <p>Support requests are tracked in the <a href="/gb/support/tickets">President's Cup gameboard
@@ -725,7 +748,7 @@
                             create support tickets from a deployed challenge or from the new <strong>Support</strong>
                             link in the navigation bar. Navigate to this location within the game to view a ticket's
                             progress and communicate with the President's Cup support team.</p>
-                        <p>Please add as much detail as possible including screen shots, challenge Support Code (found
+                        <p>Please add as much detail as possible including screenshots, challenge Support Code (found
                             in the lower-right corner of the challenge pane), any system element(s) involved, and any
                             error messages you may have received. </p>
 
@@ -753,7 +776,7 @@
                                 </ul>
                             </li>
                             <li><strong>Finals</strong>: Support throughout Finals</li>
-                            <li>Hours are Eastern Time</li>
+                            <li>All noted hours and times are in Eastern Time (ET).</li>
                         </ul>
                         <p>The President's Cup email address (<a
                                 href="mailto:presidentscup@cisa.dhs.gov">presidentscup@cisa.dhs.gov</a>) will be monitored 
@@ -777,7 +800,7 @@
                     <div class="card-body">
                         <h2 id="faq">Frequently Asked Questions (FAQ)</h2>
                         <p>Below you will find some commonly asked questions and answers to help you with the
-                            President's Cup Competition. If you can't find the answer here, please contact us.</p>
+                            competition. If you can't find the answer here, please contact us.</p>
                         <ol class="questions ps-0" start="0">
                             <li><a href="#q0">What does "Cumulative Time" mean on the leaderboard?</a></li>
                             <li><a href="#q1">I'm a government contractor and I want to participate. Am I
