@@ -267,6 +267,13 @@
             filter: brightness(1.25);
         }
 
+        .warning-alert-shutdown {
+            color: #4c001d;
+            background-color: #ffa2af;
+            border: 8px solid var(--root-secondary-color);
+            margin-bottom: 50px;
+        }
+
         /* responsive fixes */
         @media screen and (max-width: 480px) {
             .row > div {
@@ -305,6 +312,25 @@
     </nav>
 
     <main role="main" class="container py-4">
+
+        <div class="row mt-5">
+            <div class="col">
+                <div class="alert warning-alert-shutdown p-4" role="alert">
+                    <h3><strong>President’s Cup 6 Finals Update Amid Federal Government Shutdown</strong></h3>
+                    <p>
+                        Due to the current federal lapse in funding, the President’s Cup 6 Competition Finals schedule may be adjusted:
+                        <ul>
+                            <li><b>If the government shutdown ends on or before April 1, 2025</b>: The Finals will proceed as originally scheduled.</li>
+                            <li><b>If the government shutdown ends on or after April 2, 2025</b>: The Finals will be postponed to a later date.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Continue to check here for the latest updates. Finalists will also receive direct communications from the President’s Cup team. 
+                    </p>
+                </div>
+            </div>
+        </div>
+
         <div class="row" id="home">
             <div class="col-lg-4 my-auto d-block text-center">
                 <img id="hero-pc6" src="img/PC6-Logo_top.png" height="350px"
