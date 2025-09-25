@@ -1,195 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>President's Cup 7 Cybersecurity Competition</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
 
-    <meta property="og:title" content="President's Cup Cybersecurity Competition" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://presidentscup.cisa.gov" />
-    <meta property="og:image" content="https://presidentscup.cisa.gov/img/PC6-Logo_social.png" />
-    <meta property="og:description"
-        content="The President's Cup Cybersecurity Competition is a national cyber competition aiming to identify, recognize, and reward the best cybersecurity talent in the federal executive workforce." />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-    <link rel="pc5-cube-icon" sizes="180x180" href="/pc5-cube-icon.png">
-    <link rel="icon" type="image/jpg" sizes="32x32" href="img/pc6-Favicon-option-2.jpg">
-    <link rel="icon" type="image/jpg" sizes="16x16" href="img/pc6-Favicon-option-2.jpg">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/pcc5-cube.svg" color="#233f83">
-    <meta name="theme-color" content="#1a3248">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-
-    <link rel="stylesheet" href="style.css">
-
-    <title>President's Cup VI</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700&display=swap" rel="stylesheet" />
+    <!-- Your Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NVR9SKL9J6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NVR9SKL9J6');
+</script>
+
+<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=CISA" id="_fed_an_ua_tag"></script>
+
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-dark">
+
+    <!-- Header Navigation -->
+    <header>
         <div class="container">
-            <a class="navbar-brand nav-color" href="index.html">
-                <img id="logo" class="d-inline-block align-top me-2" src="img/PC6_Logo_navigation.png" alt="President's Cup 6 logo" />
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#prescupNavbar"
-                aria-controls="prescupNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse align-right" id="prescupNavbar">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link nav-color" href="index.html">Home</a>
-                    <a class="nav-link nav-color" href="key-information.html">Key Information</a>
-                    <a class="nav-link nav-color" href="media.html">Media</a>
-                    <a class="nav-link nav-color" href="rules.html">Rules</a>
-                    <a class="nav-link nav-color" href="faq.html">FAQ</a>
-                </div>
-            </div>
+            <ul class="nav nav-tabs-spy">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html"><span>Home</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="intel.html"><span>PC07</span></a>
+                </li>
+                <li class="nav-item" style="display:none">
+                    <a class="nav-link" href="media.html"><span>Media</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="workshops.html"><span>Workshops</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-minimized" href="gom.html"><span>GoM</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-minimized" href="hof.html"><span>HoF</span></a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </header>
 
-    <main role="main" class="container py-4">
-        <div class="row" id="home">
-            <div class="col-lg-4 my-auto d-block text-center">
-                <img id="hero-pc6" src="img/PC6-Logo_top.png" height="350px"
-                    alt="President's Cup 6 Cybersecurity Competition logo" />
-                <div class="dropdown">
-                    <button class="btn btn-secondary btn-lg btn-success5 dropdown-toggle my-4" type="button"
-                        id="shareDropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
-                        Share
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="shareDropdownMenu">
-                        <li><a class="dropdown-item" target="_blank"
-                                href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fpresidentscup.cisa.gov"><i
-                                    class="bi bi-facebook me-2"></i>Facebook</a></li>
-                        <li><a class="dropdown-item" target="_blank"
-                                href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fpresidentscup.cisa.gov&hashtags=PresCup"><i
-                                    class="bi bi-twitter me-2"></i>Twitter</a></li>
-                        <li><a class="dropdown-item" target="_blank"
-                                href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fpresidentscup.cisa.gov"><i
-                                    class="bi bi-linkedin me-2"></i>LinkedIn</a></li>
-                        <li><a class="dropdown-item" target="_blank"
-                                href="mailto:?subject=President%27s%20Cup%20Cyber%20Competition&body=https%3A%2F%2Fpresidentscup.cisa.gov"><i
-                                    class="bi bi-envelope-fill me-2"></i>Email</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-8">
-                <div class="card">
-                    <div class="card-body p-4">
-                        <h1 class="thin pb-3 text-center">President's Cup Cybersecurity Competition</h1>
-                        <p class="intro-blurb">
-                            Established in response to
-                            <a
-                                target="_blank"
-                                href="https://www.federalregister.gov/documents/2019/05/09/2019-09750/americas-cybersecurity-workforce">
-                                Executive Order 13870
-                            </a>
-                            , the <em>President's Cup Cybersecurity Competition</em> is a national
-                            cyber competition aiming to identify, recognize, and reward the
-                            best cybersecurity talent in the federal executive workforce.
-                            Hosting challenges from across the National Initiative for
-                            Cybersecurity Education (NICE) Cybersecurity Framework,
-                            competitors will face a diverse array of challenges and will
-                            require an extensive skill set to succeed.
-                        </p>
+    <main>
+        <!-- Executive Order -->
+        <section id="executive-order" class="ps-4 pb-3 pt-5 pe-5 text-black">
+            <div class="container">
+                <div class="row">
+                    <div class="pt-4">
+                        <p>This operation was<br>
+                        established in response<br>
+                        to Executive Order 13870.</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="row mt-5 text-center">
-            <div class="col-lg-8 d-lg-flex align-items-stretch my-1 my-lg-0">
-                <div class="card flex-fill">
-                    <div class="row">
-                        <div class="col">
-                            <div class="card-body">
-                                <img src="img/pc6-teams-Icon.png" alt="Logo for President's Cup 6 Teams Challenges"
-                                    height="125" />
-                                <h4 class="card-title mt-3">President's Cup 6 Teams Competition</h4>
-                                <p class="card-text mb-4">
-                                    Registration: Dec 9, 2024 - Jan 14, 2025<br />Qualifying Round 1:
-                                    Jan 7-14, 2025<br />Qualifying Round 2: Feb 4-11, 2025
-                                    <br />Final Round: Apr 10, 2025
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card-body">
-                                <img src="img/pc6-track-a-Icon.png" height="125"
-                                    alt="President's Cup 6 Individuals (Track A) Logo" />
-                                <img src="img/pc6-track-B-Icon.png" height="125"
-                                    alt="President's Cup 6 Individuals (Track B) Logo" />
-                                <h4 class="card-title mt-3">President's Cup 6 Individuals Competition</h4>
-                                <p class="card-text mb-4">
-                                    Registration: Dec 9, 2024 - Jan 28, 2025<br />Qualifying Round 1:
-                                    Jan 21-28,2025<br />Qualifying Round 2: Feb 18-25, 2025
-                                    <br /> Final Round: Apr 8 (Track A) & 9 (Track B), 2025
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-lg-center my-4">
-                        <a class="btn btn-success4 col-6 mx-auto btn-lg btn-signup" href="/gb/doc/getting_started">
-                            Sign Up Here<br /><small><em>Register and Compete!</em></small></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 d-lg-flex align-items-stretch my-1 my-lg-0">
-                <div class="card flex-fill">
-                    <div class="card-body">
-                        <img src="img/PC6-practice-icon.png" alt="Presidents Cup 6 Practice Icon" height="125" />
-                        <h4 class="card-title mt-3">PCCC Practice Area</h4>
-                        <p class="card-text mb-4">
-                            Practice demo challenges and content from past President's Cup competitions
-                        </p>
-                        <a class="btn btn-success5 btn-lg col-10" href="/gb/practice" target="_blank">
-                            Practice Area<br /><small><em>Play Challenges from Past Rounds</em></small></a>
-                        <a class="btn btn-success5 btn-lg col-10 mt-3"
-                            href="https://github.com/cisagov/prescup-challenges" target="_blank">GitHub
-                            <br /><small><em>Challenge Source Code,<br />Solution Guides, and Virtual
-                                    Machines</em></small></a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="row mt-5 text-center">
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <h2>As announced at:</h2>
-                                <h2>
-                                    <a href="https://cisa.gov/presidentscup" target="_blank">cisa.gov/presidentscup</a>
-                                </h2>
-                            </div>
-                            <div class="col-lg-6 my-auto pt-3 pt-lg-0">
-                                <a class="btn btn-success5 btn-lg me-3 col-4" href="rules.html">Rules</a>
-                                <a class="btn btn-success5 btn-lg my-auto col-4" href="faq.html">FAQ</a>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="hero-content">
+                             <div class="d-flex align-items-center justify-content-center">
+                                <!-- Hero Logo -->
+                                <img src="img/logo.svg" alt="President's Cup Logo" class="hero-logo-img me-4">
+                                <!-- Hero Title -->
+                                <img src="img/hero.svg" alt="President's Cup 7 Cybersecurity Competition" class="hero-title-img">
+                             </div>
+                            <!-- Register Button -->
+                            <button class="btn btn-register px-5" data-toggle="tooltip" data-placement="top" title="Registration Unlocks 12.08.25">Registration Unlocks 12.08.25</button>
+                            <p class="mobile-tablet-only p-4">This operation was established in response to Executive Order 13870.</p>
+                            <!-- Scroll Arrow -->
+                            <div>
+                               <img src="img/scroll.svg" alt="Scroll Down" class="scroll-arrow">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Mission Awaits Section -->
+        <section id="mission-awaits" class="pt-5 text-white">
+            <div class="container pt-5 pb-3">
+                <div class="row pt-2 align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="redacted-container">
+                           <div class="redaction-row">
+                                <div class="redacted-text" style="--animation-delay: 0s;"><span>SHOULD YOU CHOOSE TO</span></div>
+                           </div>
+                           <div class="redaction-row">
+                                <div class="redacted-text" style="--animation-delay: 0.2s; transform: rotate(3deg);"><span>ACCEPT</span></div>
+                                <h2 class="text-white">YOUR</h2>
+                                <div class="redacted-text" style="--animation-delay: 0.4s;"><span>CHALLENGING</span></div>
+                           </div>
+                           <div class="redaction-row">
+                                <div class="redacted-text" style="--animation-delay: 0.6s;"><span>CYBERSECURITY</span></div>
+                                <h2 class="text-white">MISSION</h2>
+                                <div class="redacted-text" style="--animation-delay: 0.8s; transform: rotate(3deg);"><span>IS A</span></div>
+                           </div>
+                           <div class="redaction-row">
+                                <div class="redacted-text" style="--animation-delay: 1s; transform: rotate(3deg);"><span>GO AND</span></div>
+                                <h2 class="text-white">AWAITS</h2>
+                                <div class="redacted-text" style="--animation-delay: 1.2s; transform: rotate(1deg);"><span>YOUR SKILLS</span></div>
+                           </div>
+                           <div class="redaction-row">
+                                <div class="redacted-text" style="--animation-delay: 1.4s;"><span>AND EXPERTISE TO COMPLETE</span></div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 px-4">
+                        <p class="fs-6">Established to identify, recognize, and reward the best cyber talent across the federal workforce, the President’s Cup Cybersecurity Competition challenges participants to outthink and outwit their competitors in a series of cyber challenges based on real-world situations. Packed with covert operations and encrypted intel, President’s Cup 7 offers you the opportunity to identify threats, sharpen skills, and rise through the ranks.</p>
+                        <p class="fs-6">Only the sharpest minds will make it through two virtual qualifying rounds to the finals in the National Capital Region. Are you ready to accept your mission? <span class="fw-bold">Registration opens December 8, 2025.<span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agent Toolkit Section -->
+            <div id="intel" class="container">
+                <div class="intel-card p-md-5">
+                    <h3 class="text-center pt-5 pt-5 ms-4 mt-4">
+                        <img class="intel-card-title pt-xl-5 mt-xl-2 ps-xl-5 px-3 img-fluid" src="img/intel-title.svg" alt="Mission Critical Intel">
+                    </h3>
+
+                        <div class="intel-icons ps-md-5 ms-xl-4 mx-2 pt-3 pb-5 row text-center align-items-center">
+                            <!-- Icon Block 1 -->
+                            <div class="col-6 col-md-3 mb-4">
+                                <a href="intel.html" class="text-decoration-none text-dark">
+                                    <img src="img/icon-registration.png" class="intel-icon-1 img-fluid mb-3" alt="Registration Portal Icon">
+                                </a>
+                            </div>
+                            <!-- Icon Block 2 -->
+                            <div class="col-6 col-md-3 mb-4">
+                                <a href="https://presidentscup.cisa.gov/gb/practice" target="_blank" class="text-decoration-none text-dark">
+                                    <img src="img/icon-practice.png" class="intel-icon-2 img-fluid mb-3" alt="Practice Area Icon">
+                                </a>
+                            </div>
+                            <!-- Icon Block 3 -->
+                            <div class="col-6 col-md-3 mb-4">
+                                <a href="gom.html" class="text-decoration-none text-dark">
+                                    <img src="img/icon-gom.png" class="intel-icon-3 img-fluid mb-3" alt="Game of the Month Icon">
+                                </a>
+                            </div>
+                            <!-- Icon Block 4 -->
+                            <div class="col-6 col-md-3 mb-4">
+                                <a href="hof.html" class="text-decoration-none text-dark">
+                                    <img src="img/icon-hof.png" class="intel-icon-4 img-fluid mb-3" alt="Hack of Fame Icon">
+                                </a>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Mission Timeline Section -->
+        <section id="timeline" class="py-5 text-dark">
+            <div class="timeline-title py-5">
+                <img src="img/timeline-title.svg" alt="Mission Timeline">
+            </div>
+            <div class="container timeline-individual-mobile mobile-tablet-only">
+                <div class="row text-left">
+                    <div class="col-12 py-4 px-3">
+                        <img class="" src="img/timeline-mobile.png" alt="Mission Timeline">                    
+                    </div>
+                </div>
+            </div>
+            <div class="container timeline-locality mobile-tablet-hide">
+                <div class="row text-center">
+                    <div class="col-12 col-blank"></div>
+                    <div class="col-12 col-virtual"></div>
+                    <div class="col-12 col-in-person"></div>
+                </div>
+            </div>
+            <div class="container timeline-individual mobile-tablet-hide">
+                <div class="row text-center">
+                    <div class="col-12 col-md-1-of-7 p-2 pt-4">
+                        <img class="py-5 ind-eagle" src="img/timeline-individual.png" alt="Individual Competitions">                    
+                    </div>
+                    <div class="col-12 col-md-2-of-7 p-2">
+                        <img class="py-1" src="img/timeline-dec-jan.png" alt="Decmeber - January">
+                        <img class="pt-4 pb-5 timeline-dates" src="img/timeline-dec-jan-ind.png" alt="Decmeber - January Individual Competitions">
+                    </div>
+                    <div class="col-12 col-md-2-of-7 p-2">
+                        <img class="py-1" src="img/timeline-feb-mar.png" alt="February - March">
+                        <img class="pt-4 pb-5 timeline-dates timeline-dates-solo" src="img/timeline-feb-mar-ind.png" alt="February - March Individual Competitions">                   
+                    </div>
+                    <div class="col-12 col-md-2-of-7 p-2 timeline-black">
+                        <img class="py-1" src="img/timeline-apr-may.png" alt="April - May">
+                        <img class="pt-4 pb-3 timeline-dates" src="img/timeline-apr-may-ind.png" alt="April - May Individual Competitions">                      
+                    </div>
+                </div>
+            </div>
+            <div class="container timeline-team mobile-tablet-hide">
+                <div class="row text-center">
+                    <div class="col-12 col-md-1-of-7 p-2 pt-4">
+                        <img class="py-5 team-eagle" src="img/timeline-teams.png" alt="Team Competitions">                    
+                    </div>
+                    <div class="col-12 col-md-2-of-7 p-2">
+                        <img class="pt-4 pb-5 timeline-dates" src="img/timeline-dec-jan-teams.png" alt="December - January Team Competitions">  
+                    </div>
+                    <div class="col-12 col-md-2-of-7 p-2">
+                        <img class="pt-4 pb-5 timeline-dates timeline-dates-solo" src="img/timeline-feb-mar-teams.png" alt="February - March Team Competitions">        
+                    </div>
+                    <div class="col-12 col-md-2-of-7 p-2 timeline-black">
+                        <img class="pt-4 pb-5 timeline-dates timeline-dates-solo"  src="img/timeline-apr-may-teams.png" alt="April - May Team Competitions">
+                        <img class="pt-2 pb-2"  src="img/timeline-finals-teams.png" alt="Finals Team Competitions">                        
+                    </div>
+                </div>
+            </div>
+            <div class="container timeline-button">
+                <!-- Register Button -->
+                <button class="btn btn-register px-5" data-toggle="tooltip" data-placement="top" title="Registration Unlocks 12.08.25">Registration Unlocks 12.08.25</button>
+            </div>
+        </section>
+
+        <!-- Hone Skills Section -->
+        <section id="skills" class="py-5 text-white">
+            <div class="skills-title pt-5">
+                <img class="pt-5" src="img/skills-title.svg" alt="Hone Your Skills">
+            </div>
+            <div class="container pt-4 pb-5 text-center">
+                <h3 class="fw-bold mt-4">Mission Prep Using Past Operations</h3>
+                <p>Practice challenges and content from past President's Cup competitions</p>
+                <a class="btn btn-light mt-3 px-4 py-2 me-3 shadow-light" href="https://presidentscup.cisa.gov/gb/practice" target="_blank">PRACTICE AREA</a>
+                <a class="btn btn-outline-light px-4 py-2 mt-3 shadow-light" href="https://github.com/cisagov/prescup-challenges" target="_blank">GITHUB</a>
+                <div class="py-5"></div>
+            </div>
+        </section>
+
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-    <script>
-        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-            return new bootstrap.Popover(popoverTriggerEl)
-        })
-    </script>
-</body>
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="mb-4 mb-md-0">
+                    <div class="footer-briefed px-2">
+                        <a href="https://www.cisa.gov/prescup" target="_blank">
+                            <img src="img/footer-briefed.png" alt="CISA Link">
+                        </a>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="footer-stamp me-4">
+                        <img src="img/footer-logo-pc7.png" alt="PC07 Logo">
+                    </div>
+                    <div class="footer-logo">
+                        <a href="https://www.cisa.gov" target="_blank">
+                            <img src="img/footer-logo-cisa.png" alt="CISA Logo">  
+                        </a>                  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS for tooltips -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const tooltipTriggerList = document.querySelectorAll('[data-toggle="tooltip"]');
+        const tooltipList = [...tooltipTriggerList].map(
+            (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+        );
+        });
+    </script>
+    
+    <!-- Custom JS for animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const animatedElements = document.querySelectorAll('.redacted-container, .btn-register');
+
+            if (animatedElements.length > 0) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.5 // Trigger when 50% of the element is visible
+                });
+
+                animatedElements.forEach(el => {
+                    observer.observe(el);
+                });
+            }
+
+            // Text decode effect for navigation
+            const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/$@!?";
+            const navLinks = document.querySelectorAll('.nav-tabs-spy .nav-link span');
+
+            const decodeEffect = (element) => {
+                const originalText = element.dataset.originalText;
+                let iteration = 0;
+
+                if (element.dataset.intervalId) {
+                    clearInterval(parseInt(element.dataset.intervalId));
+                }
+
+                const intervalId = setInterval(() => {
+                    element.innerText = originalText
+                        .split("")
+                        .map((letter, index) => {
+                            if(index < iteration) {
+                                return originalText[index];
+                            }
+                            return letters[Math.floor(Math.random() * letters.length)];
+                        })
+                        .join("");
+
+                    if(iteration >= originalText.length){
+                        clearInterval(intervalId);
+                        element.dataset.intervalId = null;
+                    }
+
+                    iteration += 1 / 3;
+                }, 65); // animation speed
+
+                element.dataset.intervalId = intervalId;
+            };
+
+            navLinks.forEach(span => {
+                span.dataset.originalText = span.innerText;
+                span.style.minWidth = span.offsetWidth + 'px';
+                span.style.display = 'inline-block';
+
+                // Initial animation on page load
+                decodeEffect(span);
+
+                // Add hover event listener
+                span.parentElement.onmouseover = () => {
+                    // decodeEffect(span);
+                };
+            });
+        });
+    </script>
+
+</body>
 </html>
