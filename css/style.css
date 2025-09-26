@@ -314,7 +314,16 @@ header {
 
 @media (max-width: 390px) {
     .nav-tabs-std .nav-link {
-        padding: 3px 0.5rem;
+        padding: 3px 0.4rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .nav-tabs-std .nav-link {
+        padding: 3px 0.3rem;
+    }
+    .nav-tabs-std .nav-link.active span {
+        padding: 0rem 0.25rem;
     }
 }
 
@@ -406,7 +415,7 @@ header {
 }
 
 .btn {
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
     font-weight: bold;
 }
 
@@ -428,6 +437,8 @@ header {
     color: white;
 }
 
+/* Disable animation overlay effect on registration buttons */
+/*
 .btn-register::after {
     content: '';
     position: absolute;
@@ -441,6 +452,7 @@ header {
     transition: transform 2s cubic-bezier(0.25, 1, 0.5, 1);
     z-index: 2;
 }
+*/
 
 .btn-register.is-visible::after {
     transform: scaleX(0);
@@ -584,26 +596,10 @@ header {
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 100% 100%;
-    min-height: 68vh;
 }
 
 @media (max-width: 1200px) {
     #agent-toolkit {
-        min-height: 55vh;
-        background-size: cover;
-    }
-}
-
-@media (max-width: 767px) {
-    #agent-toolkit {
-        min-height: 95vh;
-        background-size: cover;
-    }
-}
-
-@media (max-width: 576px) {
-    #agent-toolkit {
-        min-height: 75vh;
         background-size: cover;
     }
 }
@@ -963,11 +959,11 @@ footer {
 
 @media (max-width: 992px) {
     #hero {
-        background-image: url('../img/spy-mobile.svg');
+        /* background-image: url('../img/spy-mobile.svg');
         background-repeat: no-repeat;
         background-position: bottom right;
+        background-size: cover; */
         height: 75vh;
-        background-size: cover;
         min-height: 490px;
     }
     
@@ -1506,6 +1502,10 @@ footer {
     font-size: 1.1rem;
 }
 
+#workshop-details img {
+    filter: contrast(2);
+}
+
 #workshops-request {
     /*
     background-image: url(../img/workshops-request-bg.svg);
@@ -1815,6 +1815,10 @@ footer {
 
 #hof-details li::marker {
     font-size: 1.1rem;
+}
+
+#hof-details img {
+    filter: contrast(2.0);
 }
 
 #hof-members {
