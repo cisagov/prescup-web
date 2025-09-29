@@ -604,6 +604,13 @@ header {
     }
 }
 
+@media (max-width: 576px) {
+    #agent-toolkit .d-flex .col {
+        padding-right: calc(var(--bs-gutter-x) * .2) !important;
+        padding-left: calc(var(--bs-gutter-x) * .2) !important;
+    }
+}
+
 .intel-icons > div:hover {
     transition: transform 0.2s ease-in-out;
 }

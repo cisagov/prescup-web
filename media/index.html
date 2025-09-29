@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- Your Custom Stylesheet -->
-    <link rel="stylesheet" href="../css/style.css?v5.1u">
+    <link rel="stylesheet" href="../css/style.css?v5.4ux">
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -230,8 +230,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Custom JS for animations -->
+    <!-- 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            const animatedElements = document.querySelectorAll('.redacted-container, .btn-register');
+
+            if (animatedElements.length > 0) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.5 // Trigger when 50% of the element is visible
+                });
+
+                animatedElements.forEach(el => {
+                    observer.observe(el);
+                });
+            }
+
             // Text decode effect for navigation
             const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/$@!?";
             const navLinks = document.querySelectorAll('.nav-tabs-spy .nav-link span');
@@ -280,6 +300,27 @@
                 };
             });
         });
+    </script>
+    -->
+
+    <!-- Fix for Cloudflare Miroge -->
+    <script>   
+        function fixCloudflareMirageImages() {
+            const images = document.querySelectorAll('img[loading="eager"]');
+            
+            images.forEach(img => {
+
+                if (!img.src && img.dataset.cfsrc) {
+                    // Override Cloudflare parameters
+                    img.style.setProperty('display', 'inherit', 'important');
+                    img.style.setProperty('visibility', 'inherit', 'important');
+                    img.src = img.dataset.cfsrc;
+                }
+            });
+        }
+    
+        // Run the function after the current browser execution stack is clear
+        setTimeout(fixCloudflareMirageImages, 1);
     </script>
 
 </body>

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- Your Custom Stylesheet -->
-    <link rel="stylesheet" href="css/style.css?v5.1u">
+    <link rel="stylesheet" href="css/style.css?v5.4ux">
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -368,6 +368,26 @@
         });
     </script>
     -->
+
+    <!-- Fix for Cloudflare Miroge -->
+    <script>   
+        function fixCloudflareMirageImages() {
+            const images = document.querySelectorAll('img[loading="eager"]');
+            
+            images.forEach(img => {
+
+                if (!img.src && img.dataset.cfsrc) {
+                    // Override Cloudflare parameters
+                    img.style.setProperty('display', 'inherit', 'important');
+                    img.style.setProperty('visibility', 'inherit', 'important');
+                    img.src = img.dataset.cfsrc;
+                }
+            });
+        }
+    
+        // Run the function after the current browser execution stack is clear
+        setTimeout(fixCloudflareMirageImages, 1);
+    </script>
 
 </body>
 </html>
