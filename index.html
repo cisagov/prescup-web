@@ -6,16 +6,18 @@
     <title>President's Cup Cybersecurity Competition</title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="icon" href="img/favicon/favicon.png" type="image/png">
+    <link rel="icon" href="img/favicon/favicon-light.png" type="image/png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="img/favicon/favicon-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Animate.css for animations -->
+    <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-    <!-- Your Custom Stylesheet -->
-    <link rel="stylesheet" href="css/style.css?v5.4ux">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css?v7.0ux">
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -43,7 +45,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="pc7/"><span>PC7</span></a>
                 </li>
-                <li class="nav-item" style="display:none">
+                <li class="nav-item">
                     <a class="nav-link" href="media/"><span>Media</span></a>
                 </li>
                 <li class="nav-item">
@@ -82,7 +84,7 @@
                                 <!-- Hero Logo -->
                                 <img src="img/logo-pccc.svg" class="hero-logo-img img-fluid" loading="eager" data-cf-lazy="never" alt="President's Cup Cybersecurity Competition">
                              </div>
-                            <!-- Register Button -->
+                            <!-- Registration Button -->
                             <button class="btn btn-register px-5" data-toggle="tooltip" data-placement="top" title="Registration Unlocks 12.08.25">Registration Unlocks 12.08.25</button>
                             <p class="mobile-tablet-only p-4">This operation was established in response to Executive Order 13870.</p>
                             <!-- Scroll Arrow -->
@@ -144,7 +146,7 @@
                 <div class="row row-cols-2 row-cols-sm-4 g-5 px-5 pb-5 mb-5 text-center intel-icons d-flex align-items-center">
                     
                     <!-- Icon 1: Registration Portal -->
-                    <div class="col">
+                    <div class="col" data-toggle="tooltip" data-placement="top" title="Registration Unlocks 12.08.25">
                         <a href="" class="text-decoration-none text-light intel-icon-1">
                             <img src="img/icon-registration-portal.svg" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Registration Portal Icon">
                         </a>
@@ -177,63 +179,82 @@
 
         <!-- Mission Timeline Section -->
         <section id="timeline" class="text-dark">
-            <div class="container timeline-individual-mobile mobile-tablet-only">
-                <div class="row text-left">
-                    <h1 class="display-3 fw-bold pb-3">Mission Timeline</h1>
-                    <div class="col-12 py-4 px-3">
-                        <img class="img-fluid" src="img/timeline-mobile.png" loading="eager" data-cf-lazy="never" alt="Mission Timeline">                    
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-xl-9">
+                        <!-- Mobile-only timeline -->
+                        <div class="timeline-individual-mobile mobile-tablet-only">
+                            <div class="row text-center">
+                                <h3 class="display-5 fw-bold pb-5">Mission Timeline</h3>
+                                <div class="col-12 py-4 px-3">
+                                    <img class="img-fluid" src="img/timeline-mobile.png" loading="eager" data-cf-lazy="never" alt="Mission Timeline">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Desktop timeline content -->
+                        <div class="mobile-tablet-hide">
+                            <div class="timeline-locality pt-5">
+                                <h3 class="display-5 fw-bold pb-5 text-center">Mission Timeline</h3>
+                                <div class="row text-center">
+                                    <div class="col-12 col-blank"></div>
+                                    <div class="col-12 col-virtual"></div>
+                                    <div class="col-12 col-in-person"></div>
+                                </div>
+                            </div>
+                            <div class="timeline-individual">
+                                <div class="row text-center">
+                                    <div class="col-12 col-md-1-of-7 p-2 pt-4">
+                                        <img class="py-5 ind-eagle" src="img/timeline-individual.png" loading="eager" data-cf-lazy="never" alt="Individual Competitions">
+                                    </div>
+                                    <div class="col-12 col-md-2-of-7 p-2">
+                                        <img class="py-1" src="img/timeline-dec-jan.png" loading="eager" data-cf-lazy="never" alt="Decmeber - January">
+                                        <img class="pt-4 pb-5 timeline-dates" src="img/timeline-dec-jan-ind.png" loading="eager" data-cf-lazy="never" alt="Decmeber - January Individual Competitions">
+                                    </div>
+                                    <div class="col-12 col-md-2-of-7 p-2">
+                                        <img class="py-1" src="img/timeline-feb-mar.png" loading="eager" data-cf-lazy="never" alt="February - March">
+                                        <img class="pt-4 pb-5 timeline-dates timeline-dates-solo" src="img/timeline-feb-mar-ind.png" loading="eager" data-cf-lazy="never" alt="February - March Individual Competitions">
+                                    </div>
+                                    <div class="col-12 col-md-2-of-7 p-2 timeline-black">
+                                        <img class="py-1" src="img/timeline-apr-may.png" alt="April - May">
+                                        <img class="pt-4 pb-3 timeline-dates" src="img/timeline-apr-may-ind.png" loading="eager" data-cf-lazy="never" alt="April - May Individual Competitions">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-team pb-5">
+                                <div class="row text-center">
+                                    <div class="col-12 col-md-1-of-7 p-2 pt-4">
+                                        <img class="py-5 team-eagle" src="img/timeline-teams.png" loading="eager" data-cf-lazy="never" alt="Team Competitions">
+                                    </div>
+                                    <div class="col-12 col-md-2-of-7 p-2">
+                                        <img class="pt-4 pb-5 timeline-dates" src="img/timeline-dec-jan-teams.png" loading="eager" data-cf-lazy="never" alt="December - January Team Competitions">
+                                    </div>
+                                    <div class="col-12 col-md-2-of-7 p-2">
+                                        <img class="pt-4 pb-5 timeline-dates timeline-dates-solo" src="img/timeline-feb-mar-teams.png" loading="eager" data-cf-lazy="never" alt="February - March Team Competitions">
+                                    </div>
+                                    <div class="col-12 col-md-2-of-7 p-2 timeline-black">
+                                        <img class="pt-4 pb-5 timeline-dates timeline-dates-solo" src="img/timeline-apr-may-teams.png" loading="eager" data-cf-lazy="never" alt="April - May Team Competitions">
+                                        <img class="pt-2 pb-2" src="img/timeline-finals-teams.png" loading="eager" data-cf-lazy="never" alt="Finals Team Competitions">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right column for the image (desktop only) -->
+                    <div id="spy-wrapper" class="col-xl-3 d-none d-xl-block">
+                        <img id="spy" src="img/spy-solo.svg" alt="Agent Silhouette" class="img-fluid">
                     </div>
                 </div>
-            </div>
-            <div class="container timeline-locality pt-5 mobile-tablet-hide">
-            <h1 class="display-3 fw-bold pb-5">Mission Timeline</h1>
-                <div class="row text-center">
-                    <div class="col-12 col-blank"></div>
-                    <div class="col-12 col-virtual"></div>
-                    <div class="col-12 col-in-person"></div>
+
+                <!-- Registration Button -->
+                <div class="timeline-button">
+                    <button class="btn btn-register px-5" data-toggle="tooltip" data-placement="top" title="Registration Unlocks 12.08.25">Registration Unlocks 12.08.25</button>
                 </div>
-            </div>
-            <div class="container timeline-individual mobile-tablet-hide">
-                <div class="row text-center">
-                    <div class="col-12 col-md-1-of-7 p-2 pt-4">
-                        <img class="py-5 ind-eagle" src="img/timeline-individual.png" loading="eager" data-cf-lazy="never" alt="Individual Competitions">                    
-                    </div>
-                    <div class="col-12 col-md-2-of-7 p-2">
-                        <img class="py-1" src="img/timeline-dec-jan.png" loading="eager" data-cf-lazy="never" alt="Decmeber - January">
-                        <img class="pt-4 pb-5 timeline-dates" src="img/timeline-dec-jan-ind.png" loading="eager" data-cf-lazy="never" alt="Decmeber - January Individual Competitions">
-                    </div>
-                    <div class="col-12 col-md-2-of-7 p-2">
-                        <img class="py-1" src="img/timeline-feb-mar.png" loading="eager" data-cf-lazy="never" alt="February - March">
-                        <img class="pt-4 pb-5 timeline-dates timeline-dates-solo" src="img/timeline-feb-mar-ind.png" loading="eager" data-cf-lazy="never" alt="February - March Individual Competitions">                   
-                    </div>
-                    <div class="col-12 col-md-2-of-7 p-2 timeline-black">
-                        <img class="py-1" src="img/timeline-apr-may.png" alt="April - May">
-                        <img class="pt-4 pb-3 timeline-dates" src="img/timeline-apr-may-ind.png" loading="eager" data-cf-lazy="never" alt="April - May Individual Competitions">                      
-                    </div>
-                </div>
-            </div>
-            <div class="container timeline-team pb-5 mobile-tablet-hide">
-                <div class="row text-center">
-                    <div class="col-12 col-md-1-of-7 p-2 pt-4">
-                        <img class="py-5 team-eagle" src="img/timeline-teams.png" loading="eager" data-cf-lazy="never" alt="Team Competitions">                    
-                    </div>
-                    <div class="col-12 col-md-2-of-7 p-2">
-                        <img class="pt-4 pb-5 timeline-dates" src="img/timeline-dec-jan-teams.png" loading="eager" data-cf-lazy="never" alt="December - January Team Competitions">  
-                    </div>
-                    <div class="col-12 col-md-2-of-7 p-2">
-                        <img class="pt-4 pb-5 timeline-dates timeline-dates-solo" src="img/timeline-feb-mar-teams.png" loading="eager" data-cf-lazy="never" alt="February - March Team Competitions">        
-                    </div>
-                    <div class="col-12 col-md-2-of-7 p-2 timeline-black">
-                        <img class="pt-4 pb-5 timeline-dates timeline-dates-solo"  src="img/timeline-apr-may-teams.png" loading="eager" data-cf-lazy="never" alt="April - May Team Competitions">
-                        <img class="pt-2 pb-2"  src="img/timeline-finals-teams.png" loading="eager" data-cf-lazy="never" alt="Finals Team Competitions">                        
-                    </div>
-                </div>
-            </div>
-            <div class="container pb-5 timeline-button">
-                <!-- Register Button -->
-                <button class="btn btn-register px-5" data-toggle="tooltip" data-placement="top" title="Registration Unlocks 12.08.25">Registration Unlocks 12.08.25</button>
+
             </div>
         </section>
+
 
         <!-- Hone Skills Section -->    
         <section id="hone-skills" class="py-5 text-light">
@@ -264,7 +285,7 @@
                 <div class="mb-4 mb-md-0">
                     <div class="footer-briefed px-2">
                         <a href="https://www.cisa.gov/prescup" target="_blank">
-                            <img src="img/footer-briefed.png" loading="eager" data-cf-lazy="never" alt="CISA Link">
+                            <img src="img/footer-cisa.png" loading="eager" data-cf-lazy="never" alt="CISA Link">
                         </a>
                     </div>
                 </div>
@@ -372,7 +393,7 @@
     <!-- Fix for Cloudflare Miroge -->
     <script>   
         function fixCloudflareMirageImages() {
-            const images = document.querySelectorAll('img[loading="eager"]');
+            const images = document.querySelectorAll('img');
             
             images.forEach(img => {
 

@@ -9,6 +9,11 @@
     --placeholder-gray: #CCCCCC;
 }
 
+html {
+    /* touch-screen off-canvas color */
+    /* background: #333333; */
+}
+
 body {
     /* background-color: var(--dark-bg); */ 
     color: var(--light-text);
@@ -50,6 +55,22 @@ p, li {
         padding: 0.1rem 1.4rem !important;
     }
 }
+
+
+
+/*--------------------------------------------------
+  Cloudflare Mirage / Server-Side Overrides
+--------------------------------------------------*/
+@media (max-width: 768px) {
+    #workshop-details img[data-cfsrc*="icon"] {
+        margin: 0px auto !important;
+        margin-bottom: 20px !important;
+    }
+    #why-participate img[data-cfsrc*="icon"] {
+        margin: 0px auto !important;
+    }
+}
+
 
 
 
@@ -118,6 +139,30 @@ header {
         padding-right: 0px !important;
     }
 }
+
+@media (max-width: 576px) {
+    /* Full-width mobile navigation */
+    header .container {
+        max-width: 100%;
+        padding: 0;
+    }
+    .nav-tabs-std {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+    .nav-tabs-std .nav-item {
+        flex-grow: 1;
+        text-align: center;
+        margin: 0;
+    }
+    .nav-tabs-std .nav-link {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+
 
 
 /*----------------------------
@@ -310,11 +355,24 @@ header {
     .nav-tabs-std .nav-link {
         padding: 3px 0.5rem;
     }
+    .nav-tabs-std .nav-link.active span {
+        padding: 0rem 0.5rem;
+    }
+    .nav-tabs-std .nav-link span {
+        font-weight: 600 !important;
+    }
 }
 
 @media (max-width: 390px) {
     .nav-tabs-std .nav-link {
         padding: 3px 0.4rem;
+    }
+    .nav-tabs-std .nav-link.active span {
+        padding: 0rem 0.4rem;
+    }
+    .nav-tabs-std .nav-link span {
+        font-size: 0.85rem;
+        font-weight: 600 !important;
     }
 }
 
@@ -324,6 +382,10 @@ header {
     }
     .nav-tabs-std .nav-link.active span {
         padding: 0rem 0.25rem;
+    }
+    .nav-tabs-std .nav-link span {
+        font-size: 0.8rem;
+        font-weight: 600 !important;
     }
 }
 
@@ -596,6 +658,7 @@ header {
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 100% 100%;
+    overflow-x: hidden;
 }
 
 @media (max-width: 1200px) {
@@ -694,6 +757,16 @@ header {
     text-align: center;
 }
 
+.timeline-button .btn-register {
+    margin-top: 0.5rem !important;
+}
+
+@media (max-width: 1200px) {
+    .timeline-button .btn-register {
+        margin-top: 2rem !important;
+    }
+}
+
 .timeline-individual .row div,
 .timeline-team .row div {
     border-right: 3px dotted #bbbbbb;
@@ -786,6 +859,52 @@ header {
     text-transform: uppercase;          
 }
 
+#spy-wrapper {
+
+}
+
+#spy {
+    position: relative;    
+    bottom: -125px;
+    right: 100px;
+    transform: scale(2.5);
+}
+
+@media (min-width: 1200px) {
+    #spy {
+        position: relative;    
+        right: 200px;
+    }
+}
+
+@media (min-width: 1400px) {
+    #spy {
+        position: relative;    
+        right: 150px;
+    }
+}
+
+@media (min-width: 1700px) {
+    #spy {
+        position: relative;    
+        bottom: -200px;
+        right: 100px;
+        transform: scale(2.65);
+    }
+}
+
+@media (min-width: 2200px) {
+    #spy {
+        position: relative;    
+        bottom: -200px;
+        right: 100px;
+        transform: scale(2.8);
+    }
+}
+
+
+
+
 /*--------------------------------------------------
   Home -> Skills Section & Buttons
 --------------------------------------------------*/
@@ -819,7 +938,7 @@ header {
 }
 
 #hone-skills {
-    background-image: url(../img/hone-skills.svg);
+    background-image: url(../img/hone-skills-transparent.svg);
     background-repeat: no-repeat;
     background-position: top left;
     background-size: cover;
@@ -929,7 +1048,7 @@ footer {
         */
     }
     #timeline > .container {
-        max-width: 1350px;
+        max-width: 1375px;
     }
     .timeline-title {
         max-width: 1500px;
@@ -949,7 +1068,35 @@ footer {
     #intelTabs > li:first-of-type {
         margin-left: 19% !important;
     }   
-}   
+}
+
+@media (min-width: 2200px) {          
+    #intelTabs > li:first-of-type {
+        margin-left: 23% !important;
+    }   
+}
+
+@media (min-width: 2800px) {          
+    #intelTabs > li:first-of-type {
+        margin-left: 28% !important;
+    }   
+}
+
+@media (min-width: 3400px) {          
+    #intelTabs > li:first-of-type {
+        margin-left: 33% !important;
+    }   
+}
+
+@media (min-width: 4000px) {          
+    #hone-skills {
+        padding-top: 12rem !important;
+        padding-bottom: 7rem !important;
+        margin-top: -100px;
+    }
+}
+
+
 
 /* Responsive: max-width */
 
@@ -989,7 +1136,8 @@ footer {
     }
 
     #executive-order {
-        display: none;
+        visibility: hidden;
+        max-height: 125px;
     }
 }
 
@@ -1131,6 +1279,10 @@ footer {
     .redacted-text::after {
         background-size: cover !important;
     }
+
+    #executive-order {
+        display: none;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1155,6 +1307,10 @@ footer {
     #agent-toolkit {
         overflow-x: hidden;
     }    
+
+    #upcoming-mission h1, #timeline h1 {
+        text-align: center;
+    }
 }
 
 @media (max-width: 420px) {
@@ -1238,24 +1394,23 @@ footer {
 
 .intel-title {
     overflow: hidden;
-    
-    /* margin-bottom: -15px; */
-    margin-top: -20px;
-    margin-bottom: 35px;
-
     position: relative;
     z-index: 1;
 }
 
 .intel-title img {
-    width: 85% !important;
+    max-width: 400px;
 }
 
 @media (max-width: 768px) {
     .intel-title img {
-        width: 200% !important;
-        margin-left: -30%;
-        margin-bottom: 40px;
+        margin-bottom: 3rem !important
+    }
+}
+
+@media (max-width: 576px) {
+    .intel-title img {
+        max-width: 85%;
     }
 }
 
@@ -1316,7 +1471,8 @@ footer {
     background-repeat: no-repeat;
     background-position: top right;
     background-size: cover;
-    padding-bottom: 10rem !important;
+    padding-bottom: 7rem !important;
+    margin-bottom: -40px;
     z-index: 9999;
     /*
     position: relative;
@@ -1364,6 +1520,10 @@ footer {
     #intelligence-tabs button.nav-link h5 {
         font-size: 16px;
     }
+
+    #intelligence-continued {
+        background-position-x: 62%;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1388,71 +1548,110 @@ footer {
   Page -> Media
 --------------------------------------------------*/
 #media {
-    background-image: url(../img/media-bg.svg);
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-    min-height: 85vh;
+    border-top: 4px solid #d93a4a;
 }
 
-.media-title {
-    overflow: hidden;
+#media-title  {
+    position: absolute;
+    top: -123px;
+    left: 0%;
+    width: 400px;
+    height: 120px;
+    z-index: 5;
 }
 
-.media-title img {
-    width: 80%;
-}
-
-.media-archive-title {
-    overflow: hidden;
-}
-
-.media-archive-title img {
-    width: 100%;
-}
-
-.media-video {
-    background-color: transparent;
-    aspect-ratio: 16 / 9;
-    width: 100%;
-}
-
-.media-photo {
-    background-color: var(--placeholder-gray);
-    aspect-ratio: 16 / 9;
-    width: 100%;
-    border: 2px solid #fff;
-}
-
-#media-archive {
-    background-image: url(../img/media-archive-bg.svg);
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-size: cover;
-    min-height: 75vh;
-}
-
-.media-archive img {
-    width: 100%;
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    #media-title{
+        top: -100px !important;
+        left: 25px !important;
+        max-width: 338px;
+    }
 }
 
 @media (max-width: 768px) {
-    #media, #media-archive {
-        margin-top: -50px;
+    #media {
+        margin-top: 30px !important;
     }
-
-    .media-title img {
-        width: 150%;
-    }
-
-    .media-archive-title img {
-        width: 150%;
-        margin-left: -25%;
+    #media-title {
+        position: relative !important;
+        top: 40px !important;
+        margin: 0px auto !important;
+        padding: 0px 12px;
+        width: 100%;
+        height: auto;
+        z-index: 5;
+        max-width: 450px;
     }
 }
 
+.tab-content-media .tab-content-media-left p {
+    max-width: 500px;
+}
 
+.tab-content-media .tab-content-media-left img {
+    max-width: 300px;
+}
 
+.pc1-logo, .pc3-logo, .pc4-logo {
+    max-width: 225px !important;    
+}
+
+.pc2-logo, .pc5-logo, .pc6-logo {
+    max-width: 270px !important;    
+}
+
+@media (max-width: 768px) {
+    .pc1-logo, .pc2-logo, .pc3-logo, .pc4-logo, .pc5-logo, .pc6-logo, .pc7-logo {
+        margin: 0px auto !important;
+        display: block;
+    }
+}
+
+.media-tabs-ext {
+    background: linear-gradient(91deg, rgb(76 16 23) 0%, rgb(14 26 37) 100%);
+}
+
+.media-tabs-ext * {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+.video-thumbnail {
+    /* filter: saturate(0); */
+    text-decoration: none;
+}
+
+.video-thumbnail:hover {
+    /* filter: saturate(1); */
+}
+
+@media (max-width: 768px) {
+    .media-tabs-ext button.nav-link {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .media-tabs-ext button.nav-link {
+        padding-left: 0.65rem !important;
+        padding-right: 0.65rem !important;
+    }
+}
+
+#media-faq {
+    background-image: url(../img/hone-skills.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+    color: var(--dark-text);
+    position: relative;
+}
+
+@media (max-width: 420px) {
+    #media-faq {
+        background-position-x: 7%;
+    }
+}
 
 
 
@@ -1541,9 +1740,13 @@ footer {
 }
 
 @media (max-width: 768px) {
+    #workshops-hero {
+        margin-top: 0rem !important;
+    }
+
     .workshops-hero-title {
         position: relative !important;
-        top: 55px !important;
+        top: 10px !important;
         margin: 0px auto !important;
         padding: 0px 25px;
         width: 100%;
@@ -1557,8 +1760,8 @@ footer {
     }
     
     #workshop-details img {
-        max-width: 95%;
-        margin-bottom: 25px;
+        max-width: 172px;
+        margin-bottom: 20px;
     }
     
     #workshops-request {
@@ -1574,19 +1777,17 @@ footer {
 }
 
 @media (max-width: 576px) {
-    #workshop-details img {
-        max-width: 172px;
-        margin-bottom: 25px;
-    }
+
 }
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
     #workshops-hero {
-        margin-top: 10rem !important;
+        margin-top: 6rem !important;
     }
     .workshops-hero-title {
-        top: -65px !important;
+        top: -95px !important;
         left: 25px !important;
+        max-width: 355px;
     }
 }
 
@@ -1712,8 +1913,14 @@ footer {
     max-width: 48px;
 }
 
+#gom-game ul {
+    list-style: none;
+    padding-left: 0;
+}
+
 .gom-game-card img {
-    width: 250px;
+    width: 400px;
+    max-width: 100%;
 }
 
 #gom-practice .btn {
@@ -1745,8 +1952,9 @@ footer {
     }
     .gom-hero-title {
         position: relative !important;
-        top: 60px !important;
+        top: 50px !important;
         margin: 0px auto !important;
+        margin-top: -25px !important;
         padding: 0px 25px;
         width: 100%;
         height: auto;
@@ -1867,6 +2075,12 @@ footer {
     min-height: 44px;
 }
 
+@media (min-width: 1600px) {
+    #spotlight-caption-details {
+        min-height: 80px;
+    }
+}
+
 .spotlight-thumbnail {
     cursor: pointer;
     border: 3px solid transparent;
@@ -1912,13 +2126,12 @@ footer {
 @media (max-width: 768px) {
     .hof-hero-title {
         position: relative !important;
-        top: 55px !important;
+        top: 25px !important;
         margin: 0px auto !important;
         padding: 0px 25px;
         width: 100%;
         height: auto;
         z-index: 5;
-        margin-top: -60px !important;
         max-width: 450px;
     }
 
@@ -1967,4 +2180,46 @@ footer {
         top: -90px !important;
         left: 25px !important;
     }
+}
+
+/* Styles for member pop-ups */
+#memberModal .modal-content {
+    background-color: #f8f9fa;
+    border: none;
+}
+
+#memberModal .modal-avatar-col {
+    background: linear-gradient(135deg, rgba(76,15,22,1) 0%, rgba(14,26,37,1) 100%);
+}
+
+#memberModal .modal-body {
+    color: #212529;
+}
+
+#memberModal #modal-avatar {
+    border-radius: 50% !important;
+}
+
+#memberModal #modal-name {
+    font-size: 2.5rem;
+}
+
+#memberModal #modal-handle {
+    font-size: 1.25rem;
+    color: #555555;
+    margin-top: -15px;
+    margin-bottom: -2px;
+    font-weight: bold;
+}
+
+#memberModal #modal-competitions {
+    padding-left: 14px;
+}
+
+#memberModal #modal-competitions li::before {
+    content: "•";
+    color: #6c757d;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
