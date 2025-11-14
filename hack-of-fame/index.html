@@ -6,16 +6,18 @@
     <title>President's Cup Cybersecurity Competition - Hack of Fame</title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <link rel="icon" href="../img/favicon/favicon.png" type="image/png">
+    <link rel="icon" href="../img/favicon/favicon-light.png" type="image/png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="../img/favicon/favicon-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Animate.css for animations -->
+    <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-    <!-- Your Custom Stylesheet -->
-    <link rel="stylesheet" href="../css/style.css?v5.4ux">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css?v7.0ux">
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -43,7 +45,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="../pc7/"><span>PC7</span></a>
                 </li>
-                <li class="nav-item" style="display:none">
+                <li class="nav-item">
                     <a class="nav-link" href="../media/"><span>Media</span></a>
                 </li>
                 <li class="nav-item">
@@ -161,68 +163,165 @@
         <section id="hof-members" class="py-5 gradient-section">
             <div class="container py-3 px-3 text-light">
                 <h3 class="fs-2 text-center">Hack of Fame</h3>
-                <p class="text-center mb-5">The list of current members by username is below.</p>
+                <p class="text-center mb-0">The list of current members by username is below.</p>
+                <p class="text-center mb-5">Click to see more information on each inductee.</p>
 
                 <div class="row mb-3 row-cols-2 row-cols-md-4 g-4 text-center">
                     
                     <!-- Icon 1 -->
                     <div class="col py-2">
-                        <img src="../media/members/01.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 1">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#memberModal" 
+                           data-name="Ben Marks"
+                           data-handle="blue_sky"
+                           data-username="National Security Agency (NSA)"
+                           data-bio="Ben Marks joined the National Security Agency (NSA) as a participant in the Stokes Educational Scholarship Program. A computer scientist with a penchant for teaching, he is always excited to geek out about operating systems, hypervisors, network protocols, and 2's complement. In 2021, he led NSA's annual Codebreaker Challenge, an outreach effort that gives students across the US a taste of NSA's technical work and mission."
+                           data-competitions="PC4 (1st Place, Defensive Track)|PC5 (2nd Place, Teams)|PC6 (2nd Place, Teams)"
+                           data-avatar="members/pics/blue_sky.jpg">
+                            <img src="members/icons/01.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 1">
+                        </a>
                     </div>
 
                     <!-- Icon 2 -->
                     <div class="col py-2">
-                        <img src="../media/members/02.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 2">
+                         <a href="#" data-bs-toggle="modal" data-bs-target="#memberModal" 
+                           data-name="batman"
+                           data-handle="batman"
+                           data-username="U.S. Army"
+                           data-bio=""
+                           data-competitions="PC2 (1st Place, Teams)|PC3 (1st Place, Teams)|PC4 (1st Place, Teams)|PC5 (1st Place, Teams)"
+                           data-avatar="members/avatars/eagle-avatar.png">
+                            <img src="members/icons/02.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 2">
+                        </a>
                     </div>
 
                     <!-- Icon 3 -->
                     <div class="col py-2">
-                        <img src="../media/members/03.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 3">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#memberModal" 
+                           data-name="Jack McDowell"
+                           data-handle="eager.trepidation"
+                           data-username="Department of Defense (DoD)"
+                           data-bio=""
+                           data-competitions="PC2 (2nd Place, Defensive Track)|PC3 (3rd Place, Offensive Track)|PC4 (2nd Place, Defensive Track)|PC5 (2nd Place, Teams)|PC6 (1st Place, Defensive Track & 1st Place, Offensive Track & 2nd Place, Teams)"
+                           data-avatar="members/pics/eager.trepidation.jpg">
+                            <img src="members/icons/03.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 3">
+                        </a>
                     </div>
 
                     <!-- Icon 4 -->
                     <div class="col py-2">
-                        <img src="../media/members/04.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 4">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#memberModal" 
+                           data-name="Jakob Kreuze"
+                           data-handle="0daysfordays"
+                           data-username="Naval Criminal Investigative Service (NCIS)"
+                           data-bio="Jakob Kreuze is a Cyber Defense Analyst for the U.S. Naval Criminal Investigative Service's (NCIS) Cyber Operations Field Office (CBFO), where he plays a pivotal role in safeguarding the Department of the Navy and national security interests across cyberspace. A graduate of Brown University (M.S., Computer Science, 2024) and the University of Massachusetts Amherst (B.S., Computer Science & Mathematics, 2021), Kreuze leverages his expertise to analyze logs, network data, and malicious software in support of CBFO's mission of defending against cyber adversaries."
+                           data-competitions="PC3 (1st Place, Offensive Track)|PC4 (3rd Place, Offensive Track)|PC6 (3rd Place, Offensive Track)"
+                           data-avatar="members/pics/0daysfordays.jpg">
+                            <img src="members/icons/04.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 4">
+                        </a>
                     </div>
 
                     <!-- Icon 5 -->
                     <div class="col py-2">
-                        <img src="../media/members/05.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 5">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#memberModal" 
+                           data-name="John F."
+                           data-handle="clif"
+                           data-username="Department of Defense (DoD)"
+                           data-bio=""
+                           data-competitions="PC1 (2nd Place, Teams)|PC4 (1st Place, Teams)|PC5 (1st Place,Teams)"
+                           data-avatar="members/avatars/eagle-avatar.png">
+                            <img src="members/icons/05.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 5">
+                        </a>
                     </div>
 
                     <!-- Icon 6 -->
                     <div class="col py-2">
-                        <img src="../media/members/06.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 6">
+                         <a href="#" data-bs-toggle="modal" data-bs-target="#memberModal" 
+                           data-name="Matt E."
+                           data-handle="divinehawk"
+                           data-username="Naval Criminal Investigative Service (NCIS)"
+                           data-bio="Matt E. is a civilian Special Agent of the U.S. Naval Criminal Investigative Service (NCIS), where he conducts national security cyber operations and investigations for the Department of the Navy. His prior tenure with the Federal Bureau of Investigation included advanced malware analysis, software development, and incident response, as part the elite Cyber Action Team (CAT)."
+                           data-competitions="PC2 (1st Place, Defensive Track)|PC3 (2nd Place, Defensive Track & 2nd Place, Offensive Track)|PC4 (2nd Place, Offensive Track)"
+                           data-avatar="members/pics/divinehawk.jpg">
+                            <img src="members/icons/06.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 6">
+                        </a>
                     </div>
 
                     <!-- Icon 7 -->
                     <div class="col py-2">
-                        <img src="../media/members/07.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 7">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#memberModal" 
+                           data-name="Matt Shockley"
+                           data-handle="shocktop"
+                           data-username="U.S. Army"
+                           data-bio="Matt Shockley is a 2017 graduate of the United States Military Academy. While at the Academy, he was a four-year member of the Cadet Competitive Cyber Team (C3T). After graduating, he was commissioned as a Cyber Officer in the United States Army, eventually qualifying as a Senior Cyber Capability Developer (17D). In this capacity, he has spent 8 years as a developer within the Joint Special Operations Command, the United States Cyber Command, and the National Security Agency."
+                           data-competitions="PC3 (1st Place, Teams)|PC4 (1st Place, Teams)|PC5 (1st Place, Teams)"
+                           data-avatar="members/pics/shocktop.jpg">
+                            <img src="members/icons/07.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 7">
+                        </a>
                     </div>
 
                     <!-- Icon 8 -->
                     <div class="col py-2">
-                        <img src="../media/members/08.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 8">
+                         <a href="#" data-bs-toggle="modal" data-bs-target="#memberModal" 
+                           data-name="Melissa Leslie"
+                           data-handle="somber.eggs"
+                           data-username="U.S. Air Force"
+                           data-bio=""
+                           data-competitions="PC2 (2nd Place, Offensive Track)|PC4 (3rd Place, Teams)|PC6 (1st Place, Teams)"
+                           data-avatar="members/pics/somber.eggs.jpg">
+                            <img src="members/icons/08.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 8">
+                        </a>
                     </div>
 
                     <!-- Icon 9 -->
                     <div class="col py-2">
-                        <img src="../media/members/09.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 9">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#memberModal" 
+                           data-name="nolax"
+                           data-handle="nolax"
+                           data-username="U.S. Army"
+                           data-bio=""
+                           data-competitions="PC1 (3rd Place, Solo Track)|PC3 (2nd Place, Teams)|PC5 (1st Place, Defensive Track)"
+                           data-avatar="members/avatars/eagle-avatar.png">
+                            <img src="members/icons/09.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 9">
+                        </a>
                     </div>
 
                     <!-- Icon 10 -->
                     <div class="col py-2">
-                        <img src="../media/members/10.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 10">
+                         <a href="#" data-bs-toggle="modal" data-bs-target="#memberModal" 
+                           data-name="Phillip Smith"
+                           data-handle="psmitty"
+                           data-username="U.S. Army"
+                           data-bio="Phillip Smith is a Senior Software Developer and Offensive Security Researcher with more than 30 years of experience, including a full career in the U.S. Army. He has worked on a wide range of cyberspace projects for the military, the intelligence community, and civilian corporations, leading teams and developing software and hardware solutions. His background includes low-level programming, vulnerability research, and both offensive and defensive security. Since retiring from the Army in 2024, Phillip has been working at NVIDIA as a Senior Offensive Security Engineer, where he continues to focus on security through vulnerability research."
+                           data-competitions="PC1 (1st Place, Teams)|PC2 (1st Place, Teams)|PC3 (1st Place, Teams)|PC4 (1st Place, Teams)|PC5 (1st Place, Teams)"
+                           data-avatar="members/pics/psmitty.jpg">
+                            <img src="members/icons/10.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 10">
+                        </a>
                     </div>
 
                     <!-- Icon 11 -->
                     <div class="col py-2">
-                        <img src="../media/members/11.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 11">
+                         <a href="#" data-bs-toggle="modal" data-bs-target="#memberModal" 
+                           data-name="Sears	Schulz"
+                           data-handle="sears"
+                           data-username="U.S. Air Force"
+                           data-bio="Sears Schulz grew up in Cleveland, OH and studied cybersecurity at the US Air Force Academy and Carnegie Mellon University. He has always had a passion for cybersecurity competitions, and his accomplishments include winning the first individual President's Cup, captaining the first two iterations of the US Cyber Team, and leading the Air Force team to win the SANS Service Cup. He currently works in proactive cyber defense on a Cyber Protection Team in San Antonio, TX. He is transitioning from the Air Force at the end of this year."
+                           data-competitions="PC1 (1st Place, Solo Track)|PC2 (2nd Place, Teams & 3rd Place, Defensive Track)|PC4 (3rd Place, Teams & 3rd Place, Offensive Track)|PC5 (3rd Place, Defensive Track)|PC6 (1st Place, Teams)"
+                           data-avatar="members/pics/sears.jpg">
+                            <img src="members/icons/11.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 11">
+                        </a>
                     </div>
 
                     <!-- Icon 12 -->
                     <div class="col py-2">
-                        <img src="../media/members/12.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 12">
+                         <a href="#" data-bs-toggle="modal" data-bs-target="#memberModal" 
+                           data-name="Tim Nosco"
+                           data-handle="jocular"
+                           data-username="U.S. Army"
+                           data-bio="Tim has hacked technologies ranging from embedded microelectronics to multi-billion dollar weapon-platforms. He has worked for prestigious offensive cyber organizations within the US Army and at the NSA with a focus on cryptography and binary exploitation. He loves Capture The Flag as a means to teach others the value of secure programming and the fun in exploitation."
+                           data-competitions="PC2 (1st Place, Teams)|PC3 (1st Place, Teams)|PC4 (1st Place, Teams)"
+                           data-avatar="members/pics/jocular.jpg">
+                            <img src="members/icons/12.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Member Icon 12">
+                        </a>
                     </div>
 
                 </div>
@@ -241,8 +340,8 @@
                         <div class="row g-2 mt-2">
                             <!-- Thumbnail 1 -->
                             <div class="col-3">
-                                <img src="../media/photos/spotlight/Melissa-Leslie-US-Air-Force.jpg"
-                                     data-large-src="../media/photos/spotlight/Melissa-Leslie-US-Air-Force.jpg"
+                                <img src="photos/spotlight/Melissa-Leslie-US-Air-Force.jpg"
+                                     data-large-src="photos/spotlight/Melissa-Leslie-US-Air-Force.jpg"
                                      data-name="Melissa Leslie (U.S. Air Force)"
                                      data-details="PC6 Track A Finals"
                                      alt="Spotlight Thumbnail 1"
@@ -251,8 +350,8 @@
                             </div>
                             <!-- Thumbnail 2 -->
                             <div class="col-3">
-                                <img src="../media/photos/spotlight/Jakob-Kreuze-NCIS.jpg"
-                                     data-large-src="../media/photos/spotlight/Jakob-Kreuze-NCIS.jpg"
+                                <img src="photos/spotlight/Jakob-Kreuze-NCIS.jpg"
+                                     data-large-src="photos/spotlight/Jakob-Kreuze-NCIS.jpg"
                                      data-name="Jakob Kreuze (NCIS)"
                                      data-details="With Division Chief Jessica Moore (NCIS) and Supervisory Special Agent Heidi Schumacher (NCIS) at PC6 Finals"
                                      alt="Spotlight Thumbnail 2"
@@ -261,8 +360,8 @@
                             </div>
                             <!-- Thumbnail 3 -->
                             <div class="col-3">
-                                <img src="../media/photos/spotlight/Sears-Schulz-US-Air-Force.jpg"
-                                     data-large-src="../media/photos/spotlight/Sears-Schulz-US-Air-Force.jpg"
+                                <img src="photos/spotlight/Sears-Schulz-US-Air-Force.jpg"
+                                     data-large-src="photos/spotlight/Sears-Schulz-US-Air-Force.jpg"
                                      data-name="Sears Schulz (U.S. Air Force)"
                                      data-details="PC6 Track B Finals"
                                      alt="Spotlight Thumbnail 4"
@@ -273,8 +372,8 @@
                         <div class="row g-2 mt-1">
                             <!-- Thumbnail 4 -->
                             <div class="col-3">
-                                <img src="../media/photos/spotlight/Nolan-Miles-US-Army.jpg"
-                                     data-large-src="../media/photos/spotlight/Nolan-Miles-US-Army.jpg"
+                                <img src="photos/spotlight/Nolan-Miles-US-Army.jpg"
+                                     data-large-src="photos/spotlight/Nolan-Miles-US-Army.jpg"
                                      data-name="Nolan Miles (U.S. Army)"
                                      data-details="PC5 Track A Finals"
                                      alt="Spotlight Thumbnail 1"
@@ -283,8 +382,8 @@
                             </div>
                             <!-- Thumbnail 5 -->
                             <div class="col-3" style="display: none;">
-                                <img src="../media/photos/spotlight/The-Presidents-Cup-Trophy.jpg"
-                                     data-large-src="../media/photos/spotlight/The-Presidents-Cup-Trophy.jpg"
+                                <img src="photos/spotlight/The-Presidents-Cup-Trophy.jpg"
+                                     data-large-src="photos/spotlight/The-Presidents-Cup-Trophy.jpg"
                                      data-name="The President’s Cup Trophy"
                                      data-details="The Illustrious President’s Cup Trophy"
                                      alt="Spotlight Thumbnail 2"
@@ -293,8 +392,8 @@
                             </div>
                             <!-- Thumbnail 6 -->
                             <div class="col-3" style="display: none;">
-                                <img src="../media/photos/photo-thumb.png"
-                                     data-large-src="../media/photos/photo-winner-b.jpg"
+                                <img src="photos/photo-thumb.png"
+                                     data-large-src="photos/photo-winner-b.jpg"
                                      data-name="Jane Doe"
                                      data-details="Speaking at the finals"
                                      alt="Spotlight Thumbnail 3"
@@ -305,7 +404,7 @@
                     </div>
                     <!-- Right Column: Main Image -->
                     <div class="col-lg-7 mt-4 mt-lg-0">
-                        <img src="../media/photos/spotlight/Melissa-Leslie-US-Air-Force.jpg" id="spotlight-image" class="img-fluid rounded" loading="eager" data-cf-lazy="never" alt="Main Spotlight Image">
+                        <img src="photos/spotlight/Melissa-Leslie-US-Air-Force.jpg" id="spotlight-image" class="img-fluid rounded" loading="eager" data-cf-lazy="never" alt="Main Spotlight Image">
                     </div>
                 </div>
             </div>
@@ -320,7 +419,7 @@
                     <!-- Item 2 -->
                     <div class="col-md-4 mb-4 mb-md-0">
                          <a href="https://www.ncis.navy.mil/Media/News/Article/4177813/ncis-cyber-analyst-competes-in-presidents-cup-cybersecurity-competition/" target="_blank" class="publicity-item">
-                            <img src="../media/photos/Jakob-Kreuze-2.jpg" class="img-fluid mb-3 publicity-image-placeholder" loading="eager" data-cf-lazy="never" alt="Jakob Kreuze">
+                            <img src="photos/Jakob-Kreuze-2.jpg" class="img-fluid mb-3 publicity-image-placeholder" loading="eager" data-cf-lazy="never" alt="Jakob Kreuze">
                             <p class="fw-bold mb-2">NCIS Cyber Analyst Competes in President’s Cup Cybersecurity Competition</p>
                             <p class="publicity-source">Naval Criminal Investigative Service (NCIS News)</p>
                         </a>
@@ -328,7 +427,7 @@
                     <!-- Item 3 -->
                     <div class="col-md-4">
                          <a href="https://www.aflcmc.af.mil/NEWS/Article/3096528/hanscom-civilian-honored-at-the-white-house/" target="_blank" class="publicity-item">
-                            <img src="../media/photos/Jakob-Kreuze.jpg" class="img-fluid mb-3 publicity-image-placeholder" loading="eager" data-cf-lazy="never" alt="Jakob Kreuze">
+                            <img src="photos/Jakob-Kreuze.jpg" class="img-fluid mb-3 publicity-image-placeholder" loading="eager" data-cf-lazy="never" alt="Jakob Kreuze">
                             <p class="fw-bold mb-2">Hanscom civilian honored at the White House</p>
                             <p class="publicity-source">Air Force Life Cycle Management Center</p>
                         </a>
@@ -377,7 +476,7 @@
                 <div class="mb-4 mb-md-0">
                     <div class="footer-briefed px-2">
                         <a href="https://www.cisa.gov/prescup" target="_blank">
-                            <img src="../img/footer-briefed.png" loading="eager" data-cf-lazy="never" alt="CISA Link">
+                            <img src="../img/footer-cisa.png" loading="eager" data-cf-lazy="never" alt="CISA Link">
                         </a>
                     </div>
                 </div>
@@ -392,84 +491,35 @@
         </div>
     </footer>
 
+    <!-- Member Modal -->
+    <div class="modal fade" id="memberModal" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="row g-0">
+                        <div class="col-md-4 modal-avatar-col d-flex align-items-center justify-content-center">
+                            <img src="" id="modal-avatar" class="img-fluid p-4" alt="Member Avatar">
+                        </div>
+                        <div class="col-md-8 p-4">
+                            <div class="d-flex justify-content-end">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <h3 id="modal-name" class="fw-bold"></h3>
+                            <p id="modal-handle"></p>
+                            <p id="modal-username" class="text-muted"></p>
+                            <p id="modal-bio"></p>
+                            <ul id="modal-competitions" class="list-unstyled"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Custom JS for animations -->
-    <!-- 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const animatedElements = document.querySelectorAll('.redacted-container, .btn-register');
-
-            if (animatedElements.length > 0) {
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('is-visible');
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, {
-                    threshold: 0.5 // Trigger when 50% of the element is visible
-                });
-
-                animatedElements.forEach(el => {
-                    observer.observe(el);
-                });
-            }
-
-            // Text decode effect for navigation
-            const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/$@!?";
-            const navLinks = document.querySelectorAll('.nav-tabs-spy .nav-link span');
-
-            const decodeEffect = (element) => {
-                const originalText = element.dataset.originalText;
-                let iteration = 0;
-
-                if (element.dataset.intervalId) {
-                    clearInterval(parseInt(element.dataset.intervalId));
-                }
-
-                const intervalId = setInterval(() => {
-                    element.innerText = originalText
-                        .split("")
-                        .map((letter, index) => {
-                            if(index < iteration) {
-                                return originalText[index];
-                            }
-                            return letters[Math.floor(Math.random() * letters.length)];
-                        })
-                        .join("");
-
-                    if(iteration >= originalText.length){
-                        clearInterval(intervalId);
-                        element.dataset.intervalId = null;
-                    }
-
-                    iteration += 1 / 3;
-                }, 65); // animation speed
-
-                element.dataset.intervalId = intervalId;
-            };
-
-            navLinks.forEach(span => {
-                span.dataset.originalText = span.innerText;
-                span.style.minWidth = span.offsetWidth + 'px';
-                span.style.display = 'inline-block';
-
-                // Initial animation on page load
-                decodeEffect(span);
-
-                // Add hover event listener
-                span.parentElement.onmouseover = () => {
-                    // decodeEffect(span);
-                };
-            });
-        });
-    </script>
-    -->
-
-    <!-- Slideshow JS -->
+    <!-- Spotlight Gallery Logic And Member Modal Logic -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {    
             // Spotlight Gallery Logic
@@ -481,16 +531,46 @@
             if (thumbnails.length > 0 && mainImage) {
                 thumbnails.forEach(thumb => {
                     thumb.addEventListener('click', function() {
-                        // Update main image
                         mainImage.src = this.dataset.largeSrc;
-
-                        // Update caption
                         if (captionName) captionName.innerHTML = this.dataset.name;
                         if (captionDetails) captionDetails.innerHTML = this.dataset.details;
-
-                        // Update active state
                         thumbnails.forEach(t => t.classList.remove('active'));
                         this.classList.add('active');
+                    });
+                });
+            }
+
+            // Member Modal Logic
+            const memberModal = document.getElementById('memberModal');
+            if (memberModal) {
+                memberModal.addEventListener('show.bs.modal', function (event) {
+                    const triggerElement = event.relatedTarget;
+                    
+                    const name = triggerElement.getAttribute('data-name');
+                    const handle = triggerElement.getAttribute('data-handle');
+                    const username = triggerElement.getAttribute('data-username');
+                    const bio = triggerElement.getAttribute('data-bio');
+                    const competitions = triggerElement.getAttribute('data-competitions').split('|');
+                    const avatar = triggerElement.getAttribute('data-avatar');
+
+                    const modalName = memberModal.querySelector('#modal-name');
+                    const modalHandle = memberModal.querySelector('#modal-handle');
+                    const modalUsername = memberModal.querySelector('#modal-username');
+                    const modalBio = memberModal.querySelector('#modal-bio');
+                    const modalCompetitionsList = memberModal.querySelector('#modal-competitions');
+                    const modalAvatar = memberModal.querySelector('#modal-avatar');
+
+                    modalName.textContent = name;
+                    modalHandle.textContent = handle;
+                    modalUsername.textContent = username;
+                    modalBio.textContent = bio;
+                    modalAvatar.src = avatar;
+                    
+                    modalCompetitionsList.innerHTML = '';
+                    competitions.forEach(itemText => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = itemText;
+                        modalCompetitionsList.appendChild(listItem);
                     });
                 });
             }
@@ -500,7 +580,7 @@
     <!-- Fix for Cloudflare Miroge -->
     <script>   
         function fixCloudflareMirageImages() {
-            const images = document.querySelectorAll('img[loading="eager"]');
+            const images = document.querySelectorAll('img');
             
             images.forEach(img => {
 
@@ -519,3 +599,4 @@
 
 </body>
 </html>
+
