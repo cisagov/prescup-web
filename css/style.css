@@ -1653,6 +1653,65 @@ footer {
     }
 }
 
+/* play button overlay styles */
+a.video-thumbnail {
+  position: relative;
+  display: block;
+  text-decoration: none;
+}
+
+a.video-thumbnail:after {
+  content: ''; /* Pseudo-elements must have 'content' */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Cover the entire <a> tag */
+  
+  background-color: rgba(255, 255, 255, 0.2); /* 50% black, semi-transparent */
+
+  /* Hide it by default */
+  opacity: 0;
+  
+  /* Add a smooth fade-in/out transition */
+  transition: opacity 0.3s ease;
+  
+  /* Sits above the image but below the icon and text */
+  z-index: 5; 
+}
+
+a.video-thumbnail:before {
+  content: '';
+  position: absolute;
+  
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  background-image: url('../img/icon-play.png'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+  /* Set the size of your icon */
+  width: 77px;
+  height: 77px;
+  
+  /* Hide it by default */
+  opacity: 0;
+  
+  /* Add a smooth fade-in/out transition */
+  transition: opacity 0.3s ease;
+  
+  /* Sits on top of the dark overlay */
+  z-index: 10;
+}
+
+/* on hover, show the overlay */
+a.video-thumbnail:hover:before,
+a.video-thumbnail:hover:after {
+  opacity: 1;
+}
+
 
 
 
