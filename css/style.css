@@ -684,7 +684,7 @@ header {
 
 /* Disable pointer events until registration opens */
 .intel-icon-1 {   
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 .intel-icon-1 img {   
