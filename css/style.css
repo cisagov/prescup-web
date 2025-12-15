@@ -482,10 +482,10 @@ header {
 }
 
 .btn-register {
-    background-color: #fff;
+    background-color: #4C0F16;
     border: 2px solid #888;
-    color: #000;
-    padding: 0.5rem 2rem;
+    color: white;
+    padding: 0.45rem 2rem 0.6rem 2rem;
     margin-top: 2rem;
     font-weight: bold;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -495,9 +495,29 @@ header {
 }
 
 .btn-register:hover {
+    background: white;
+    color: black;
+}
+
+.btn-practice {
+    background-color: #fff;
+    border: 2px solid #4C0F16;
+    color: #000;
+    padding: 0.45rem 2rem 0.6rem 2rem;
+    margin-top: 2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-practice:hover {
     background: black;
     color: white;
 }
+
+
 
 /* Disable animation overlay effect on registration buttons */
 /*
@@ -1295,8 +1315,10 @@ footer {
         background-position: bottom right;
     }
     
-    .btn-register {
-        padding: 0.5rem 1.5rem !important;
+    
+    .btn-practice {
+        margin-top: 1rem !important;
+        padding: 0.5rem 1rem !important;
     }
 
     .nav-tabs-spy .nav-link, .nav-tabs-alt .nav-link {
