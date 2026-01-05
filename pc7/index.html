@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../css/style.css?v8.1ux">
+    <link rel="stylesheet" href="../css/style.css?v8.2ux">
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -211,22 +211,36 @@
                      <div class="tab-pane fade" id="rules" role="tabpanel" aria-labelledby="rules-tab">
                         <div class="row">
                             <div class="col">
-                                <h2 class="mb-4">Rules of Conduct</h2>
+                                <h2 class="mb-4">Gamespace Environment & Rules</h2>
+
+                                <h5 class="mt-5 mb-2">Challenge Environment Access</h5>
+                                <p>All necessary tools for solving challenges are provided within the challenge environment. To ensure competition integrity and create a level playing field for all participants, Internet connectivity is disabled within the environment (with the exception of limited Internet access to Python <i>pip</i> and Kali <i>apt</i> repositories). Participants are only required to use a modern web browser to access the challenges; no special applications are needed.</p>
+
+
+                                <h5 class="mt-5 mb-2">Workspaces</h5>
+                                <p>Each player will be provided with a Kali instance, referred to as their "workspace". This is a persistent environment that will be available to players throughout the duration of the event.</p>                               
+                                
+                                <h5 class="mt-5 mb-2">Deploying Challenges</h5>
+                                <p>When starting a challenge, a virtual network will be spun up and the player's workspace will be attached to that challenge's virtual network. Players are only able to connect their workspace to one challenge at a time; however, they can switch between challenges at will. Deployed challenges will continue running regardless of whether the player is connected to them or not.</p>
+                                <p class="mt-3">During team-based events, each member will have their own workspace. All members on a team share the same challenge instances, and multiple members can be connected to the same challenge at the same time.</p>
+
+                                <h5 class="mt-5 mb-2">Connectivity</h5>
+                                <p>Player workspaces have Internet connectivity to Python <i>pip</i> and Kali <i>apt</i> repositories. Access to other Internet resources is blocked and attempting to bypass these restrictions is a violation of the Rules of Conduct.</p>
+
+                                <h5 class="mt-5 mb-2">Rules Of Conduct</h5>
                                 <ol class="rules-list">
                                     <li>Violation of the Rules of Conduct as outlined may result in disqualification from the competition.</li>
                                     <li>Enforcement of the Rules of Conduct is at the discretion of the Competition Staff.</li>
-                                    <li>Competitors will conduct themselves in a manner that befits employees of the Federal government and members of the Uniformed Services in all aspects of the competition.</li>
+                                    <li>Competitors will conduct themselves in a manner that befits employees of the federal government and members of the Uniformed Services in all aspects of the competition.</li>
                                     <ul>
-                                        <li>When choosing team and individual names, competitors will follow OPSEC best practices and not use real names, work location, or other identifying information. Competitors will also refrain from any names that are vulgar or political in nature (In accordance with the Hatch Act).</li> 
+                                        <li>When choosing team and individual names, competitors will follow OPSEC best practices and not use real names, work location, or other identifying information. Competitors will also refrain from any names that are vulgar or political in nature (in accordance with the Hatch Act).</li> 
                                     </ul>
                                     <li>Names will go through an approval process before appearing on the leaderboard. Inappropriate language, references to political persons or parties, or otherwise inappropriate content will be asked to be changed. The competition staff reserves the right to ask any team or individual to change their name and retains final judgement on what is acceptable.</li>
                                     <li>Classified toolsets are not authorized for use. All challenges are designed to be solved using open source tools including those provided on the hosted environment.</li>
-                                    <li>Any attempts at unauthorized access or “Denial of Service” attacks are forbidden and will result in disqualification. “Escaping” the virtual machines or otherwise tampering with or targeting the hosting environment is prohibited.</li>
+                                    <li>Any attempts at unauthorized access or "Denial of Service" attacks are forbidden and will result in disqualification. "Escaping" the virtual machines or otherwise tampering with or targeting the hosting environment is prohibited.</li>
                                     <li>Competitors must not disclose any information about the challenges to anyone outside their competition team during the respective round.</li>
                                     <li>All freely available internet resources used during the competition are allowed; this includes both subscription and licensed services.</li>
                                 </ol>
-                                <h5 class="mt-5 mb-2">Challenge Access Requirements</h5>
-                                <p>All necessary tools for solving challenges are provided within the challenge environment. To ensure competition integrity and create a level playing field for all participants, Internet connectivity is disabled within the environment. Participants are only required to use a modern web browser to access the challenges, no special applications are needed.</p>
                             </div>
                         </div>
                     </div>                   
