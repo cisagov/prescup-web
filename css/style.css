@@ -76,7 +76,6 @@ p, li {
 
 
 
-
 /*--------------------------------------------------
   Torn Edge Mask Effect (Only Works On Server, Can't Be Tested Locally)
 --------------------------------------------------*/
@@ -1995,8 +1994,8 @@ a.video-thumbnail:hover:after {
 }
 
 #gom-game ul {
-    list-style: none;
-    padding-left: 0;
+    /* list-style: none;
+    padding-left: 0; */
 }
 
 .gom-game-card img {
