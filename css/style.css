@@ -481,6 +481,10 @@ header {
 }
 
 .btn-register {
+    display: none !important; /* Hide the register button until registration opens again */
+}
+
+.btn-register {
     background-color: #4C0F16;
     border: 2px solid #888;
     color: white;
@@ -870,7 +874,7 @@ header {
 }
 
 .timeline-locality .col-in-person:before {
-    content: 'in person';
+    content: 'in person finals';
     position: relative;
     top: -25px;
     font-size: 0.8rem;
