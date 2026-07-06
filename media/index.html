@@ -17,21 +17,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../css/style.css?v9.9">
+    <link rel="stylesheet" href="../css/style.css?v10.0">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVR9SKL9J6"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    gtag('set', {
+        'allow_google_signals': false,
+        'allow_ad_personalization_signals': false,
+        'ads_data_redaction': true
+    });
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-NVR9SKL9J6', {
+        'allow_google_signals': false,
+        'allow_ad_personalization_signals': false
+    });
+    </script>
+
+    <!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+    <script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DHS" id="_fed_an_ua_tag"></script>
+
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NVR9SKL9J6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-NVR9SKL9J6');
-</script>
-
-<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
-<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DHS" id="_fed_an_ua_tag"></script>
-
 
 <body>
 
@@ -43,7 +54,7 @@
                     <a class="nav-link" href="../"><span>Home</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../pc7/"><span>PC7</span></a>
+                    <a class="nav-link" href="../pc8/"><span>PC8</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="../media/"><span>Media</span></a>
@@ -90,7 +101,7 @@
                         <h3 class="display-4 fw-bold">Media</h3>
                     </div>
                     <div class="col-md-6">
-                        <p class="fs-6 mt-2">Journey back and relive the excitement and triumph of the President's Cup Cybersecurity Competition. This vibrant archive is your official source for media assets, featuring the logos, highlight videos, and graphics that have defined each year of the event. We invite you to explore our history, celebrate past champions, and experience the competitive spirit that continues to drive cybersecurity excellence forward.</p>
+                        <p class="fs-6 mt-2">Relive the excitement and triumph of the President's Cup Cybersecurity Competition. This vibrant archive is your official source for media assets, featuring highlight videos and graphics that have defined each year of the event. We invite you to explore our history, celebrate past champions, and experience the competitive spirit that continues to drive cybersecurity excellence forward.</p>
                     </div>
                 </div>
             </div>
@@ -99,13 +110,11 @@
 <section id="intelligence-tabs" class="pb-5 bg-white">
             <div class="text-light">
                  <ul class="nav nav-tabs intel-tabs-nav media-tabs-ext bg-black" id="intelTabs" role="tablist">
-                    <!--
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="pc7-tab" data-bs-toggle="tab" data-bs-target="#pc7" type="button" role="tab" aria-controls="pc7" aria-selected="true"><h5>PC7</h5></button>
                     </li>
-                    -->
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pc6-tab" data-bs-toggle="tab" data-bs-target="#pc6" type="button" role="tab" aria-controls="pc6" aria-selected="false"><h5>PC6</h5></button>
+                        <button class="nav-link" id="pc6-tab" data-bs-toggle="tab" data-bs-target="#pc6" type="button" role="tab" aria-controls="pc6" aria-selected="false"><h5>PC6</h5></button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="pc5-tab" data-bs-toggle="tab" data-bs-target="#pc5" type="button" role="tab" aria-controls="pc5" aria-selected="false"><h5>PC5</h5></button>
@@ -125,25 +134,29 @@
                 </ul>
 
                 <div class="tab-content tab-content-media bg-white text-dark p-4 p-md-5">
-                    <div class="tab-pane fade" id="pc7" role="tabpanel" aria-labelledby="pc7-tab">
+                    <div class="tab-pane fade show active" id="pc7" role="tabpanel" aria-labelledby="pc7-tab">
                         <div class="container-fluid mt-4">
                             <div class="row">
                                 <div class="col-md-6 tab-content-media-left">
                                     <div>
-                                        <img src="../img/logo-pc7-spy.png" alt="President's Cup 7 Logo" class="pc7-logo img-fluid">
+                                        <img src="assets/pc7/pc7-logo.png" alt="President's Cup 7 Logo" class="pc7-logo img-fluid">
                                     </div>
                                     <h3 class="mt-4">PC7</h3> 
-                                    <p>President's Cup 7 will be held from January 2026 to April 2026. PC7 will feature a bold spy theme that fuses high-contrast minimalism with slick, shape-driven design, evoking the intrigue of espionage through modern execution. Inspired by classic spy tools and retro-futurist aesthetics, it will include sleek, coded visuals that command attention and conceal layers beneath the surface.</p>
+                                    <p>The seventh annual President's Cup ran from January to May 2026. PC7 featured a bold spy theme that fused high-contrast minimalism with slick, shape-driven design, evoking the intrigue of espionage through modern execution. Inspired by classic spy tools and retro-futurist aesthetics, it included sleek, coded visuals that commanded attention and concealed layers beneath the surface.</p>
                                     <h4 class="mt-4 mb-2">Media Assets</h4>
                                     <ul class="list-unstyled">
-                                        <li><a style="display: none;" href="assets/pc7/pc7-onepager.pdf" target="_blank">Competition Overview</a></li>
-                                        <li><a href="assets/pc7/Branding.zip" target="_blank">Branding</a></li>
-                                        <li style="display: none;"><a href="assets/pc7/Graphics.zip" target="_blank">Graphics</a></li>
+                                        <li><a href="assets/pc7/registration-open.mp4" target="_blank" rel="noopener noreferrer">Registration Trailer</a></li>
+                                        <li><a href="assets/pc7/Branding.zip" target="_blank" rel="noopener noreferrer">Branding</a></li>
+                                        <li><a href="assets/pc7/Graphics.zip" target="_blank" rel="noopener noreferrer">Graphics</a></li>
+                                    </ul>
+                                    <h4 class="mt-4 mb-2">Walkthroughs</h4>
+                                    <ul class="list-unstyled">
+                                        <li><a href="https://www.youtube.com/playlist?list=PL-BF3N9rHBLKeSOqmaWx3-DIzxp8OLRiS" target="_blank" rel="noopener noreferrer">Challenge Walkthroughs</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mt-4">
-                                        <a class="video-thumbnail" href="assets/pc7/pc7-trailer.mp4" target="_blank">
+                                        <a class="video-thumbnail" href="assets/pc7/pc7-trailer.mp4" target="_blank" rel="noopener noreferrer">
                                             <img src="assets/pc7/pc7-trailer.jpg" alt="President's Cup 7 Trailer" class="img-fluid">
                                             <p class="mt-2 text-end">President's Cup 7 Trailer Video 🎬</p>
                                         </a>
@@ -152,7 +165,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade show active" id="pc6" role="tabpanel" aria-labelledby="pc6-tab">
+                    <div class="tab-pane fade" id="pc6" role="tabpanel" aria-labelledby="pc6-tab">
                         <div class="container-fluid mt-4">
                             <div class="row">
                                 <div class="col-md-6 tab-content-media-left">
@@ -160,24 +173,22 @@
                                         <img src="assets/pc6/pc6-logo-alt2.png" alt="President's Cup 6 Logo" class="pc6-logo img-fluid">
                                     </div>
                                     <h3 class="mt-4">PC6</h3> 
-                                    <p>The sixth annual President's Cup ran from January 2025 to April 2025 and featured an edgy cyberpunk theme that took competitors on a journey through a neon-drenched, high-tech metropolis. The Finals were held in person in Tysons Corner, Virginia and the Teams Finals included an Industrial Control Systems ICScape Room for the second year in a row that had the competitors test their luck to escape from a locked-down island compound.</p>
+                                    <p>The sixth annual President's Cup ran from January to April 2025 and featured an edgy cyberpunk theme that took competitors on a journey through a neon-drenched, high-tech metropolis. The Finals were held in person in Tysons Corner, Virginia and the Teams Finals included an Industrial Control Systems ICScape Room for the second year in a row that had the competitors test their luck to escape from a locked-down island compound.</p>
                                     <h4 class="mt-4 mb-2">Media Assets</h4>
                                     <ul class="list-unstyled">
-                                        <li><a href="assets/pc6/pc6-trailer.mp4" target="_blank">PC6 Trailer Video</a></li>
-                                        <li><a href="assets/pc6/pc6-onepager.pdf" target="_blank">Competition Overview</a></li>
-                                        <li><a href="assets/pc6/Branding.zip" target="_blank">Branding</a></li>
-                                        <li><a href="assets/pc6/Graphics.zip" target="_blank">Graphics</a></li>
+                                        <li><a href="assets/pc6/pc6-trailer.mp4" target="_blank" rel="noopener noreferrer">PC6 Trailer Video</a></li>
+                                        <li><a href="assets/pc6/pc6-onepager.pdf" target="_blank" rel="noopener noreferrer">Competition Overview</a></li>
+                                        <li><a href="assets/pc6/Branding.zip" target="_blank" rel="noopener noreferrer">Branding</a></li>
+                                        <li><a href="assets/pc6/Graphics.zip" target="_blank" rel="noopener noreferrer">Graphics</a></li>
                                     </ul>
                                     <h4 class="mt-4 mb-2">Walkthroughs</h4>
                                     <ul class="list-unstyled">
-                                        <li><a href="https://www.youtube.com/watch?v=zyBvTePCGzM" target="_blank">PC6 Walkthrough: Car-tastrophe</a></li>
-                                        <li><a href="https://www.youtube.com/watch?v=6-oAWmOgFyQ" target="_blank">PC6 Walkthrough: ChatJippity</a></li>
-                                        <li><a href="https://www.youtube.com/watch?v=ckQswR0wAYw" target="_blank">PC6 Walkthrough: Ransomware Rhapsody</a></li>
+                                        <li><a href="https://www.youtube.com/playlist?list=PL-BF3N9rHBLJCVdrk97DBXQAuUUbhRwGF" target="_blank" rel="noopener noreferrer">Challenge Walkthroughs</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mt-4">
-                                        <a class="video-thumbnail" href="https://www.youtube.com/watch?v=jACScI60xO8" target="_blank">
+                                        <a class="video-thumbnail" href="https://www.youtube.com/watch?v=jACScI60xO8" target="_blank" rel="noopener noreferrer">
                                             <img src="assets/pc6/pc6-trailer.jpg" alt="President's Cup 6 Highlights" class="img-fluid">
                                             <p class="mt-2 text-end">President's Cup 6 Highlights Video 🎬</p>
                                         </a>
@@ -194,17 +205,21 @@
                                         <img src="assets/pc5/pc5-logo.jpg" alt="President's Cup 5 Logo" class="pc5-logo img-fluid">
                                     </div>
                                     <h3 class="mt-4">PC5</h3> 
-                                    <p>The fifth annual President's Cup ran from January 2024 to April 2024 and featured an exciting theme centered around several beloved video games, with competitors showing off their best cyber moves and stretching their skills. The Finals were held in person at CISA facilities, and the Teams Finals included a new Industrial Control Systems ICScape Room. This interactive escape room experience immersed participants in a fictional storyline where teams navigated through an intense scenario, completing various hands-on tasks such as finding hidden PLC equipment and installing a Ladder Logic and HMI display, to secure the scene and save the day.</p>
+                                    <p>The fifth annual President's Cup ran from January to April 2024 and featured an exciting theme centered around several beloved video games, with competitors showing off their best cyber moves and stretching their skills. The Finals were held in person at CISA facilities, and the Teams Finals included a new Industrial Control Systems ICScape Room. This interactive escape room experience immersed participants in a fictional storyline in which teams navigated through an intense scenario, completing various hands-on tasks such as finding hidden PLC equipment and installing a Ladder Logic and HMI display, to secure the scene and save the day.</p>
                                     <h4 class="mt-4 mb-2">Media Assets</h4>
                                     <ul class="list-unstyled">
-                                        <li><a href="assets/pc5/pc5-onepager.pdf" target="_blank">Competition Overview</a></li>
-                                        <li><a href="assets/pc5/Branding.zip" target="_blank">Branding</a></li>
-                                        <li><a href="assets/pc5/Graphics.zip" target="_blank">Graphics</a></li>
+                                        <li><a href="assets/pc5/pc5-onepager.pdf" target="_blank" rel="noopener noreferrer">Competition Overview</a></li>
+                                        <li><a href="assets/pc5/Branding.zip" target="_blank" rel="noopener noreferrer">Branding</a></li>
+                                        <li><a href="assets/pc5/Graphics.zip" target="_blank" rel="noopener noreferrer">Graphics</a></li>
+                                    </ul>
+                                    <h4 class="mt-4 mb-2">Walkthroughs</h4>
+                                    <ul class="list-unstyled">
+                                        <li><a href="https://www.youtube.com/playlist?list=PL-BF3N9rHBLIEPdFMHx9un3AYHsMXmnzr" target="_blank" rel="noopener noreferrer">Challenge Walkthroughs</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mt-4">
-                                        <a class="video-thumbnail" href="assets/pc5/pc5-highlights.mp4" target="_blank">
+                                        <a class="video-thumbnail" href="assets/pc5/pc5-highlights.mp4" target="_blank" rel="noopener noreferrer">
                                             <img src="assets/pc5/pc5-highlights.jpg" alt="President's Cup 5 Highlights" class="img-fluid">
                                             <p class="mt-2 text-end">President's Cup 5 Highlights Video 🎬</p>
                                         </a>
@@ -221,17 +236,17 @@
                                         <img src="assets/pc4/pc4-logo.jpg" alt="President's Cup 4 Logo" class="pc4-logo img-fluid">
                                     </div>
                                     <h3 class="mt-4">PC4</h3> 
-                                    <p>The fourth annual President's Cup ran from August 2022 to December 2022 and had competitors blasting into orbit with a new space exploration theme. PC4 was packed with competitors from across the entire federal government, and the Finals were held in person for the first time in two years at CISA's Arlington facilities. The Teams Finals included a galaxy-traversing experience featuring sci-fi technology, aliens, and a race to restore balance to the universe.</p>
+                                    <p>The fourth annual President's Cup ran from August to December 2022 and had competitors blasting into orbit with a new space exploration theme. PC4 was packed with competitors from across the entire federal government, and the Finals were held in person for the first time in two years at CISA's Arlington facilities. The Teams Finals included a galaxy-traversing experience featuring sci-fi technology, aliens, and a race to restore balance to the universe.</p>
                                     <h4 class="mt-4 mb-2">Media Assets</h4>
                                     <ul class="list-unstyled">
-                                        <li><a href="assets/pc4/pc4-onepager.pdf" target="_blank">Competition Overview</a></li>
-                                        <li><a href="assets/pc4/Branding.zip" target="_blank">Branding</a></li>
-                                        <li><a href="assets/pc4/Graphics.zip" target="_blank">Graphics</a></li>
+                                        <li><a href="assets/pc4/pc4-onepager.pdf" target="_blank" rel="noopener noreferrer">Competition Overview</a></li>
+                                        <li><a href="assets/pc4/Branding.zip" target="_blank" rel="noopener noreferrer">Branding</a></li>
+                                        <li><a href="assets/pc4/Graphics.zip" target="_blank" rel="noopener noreferrer">Graphics</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mt-4">
-                                        <a class="video-thumbnail" href="assets/pc4/pc4-trailer.mp4" target="_blank">
+                                        <a class="video-thumbnail" href="assets/pc4/pc4-trailer.mp4" target="_blank" rel="noopener noreferrer">
                                             <img src="assets/pc4/pc4-trailer.jpg" alt="President's Cup 4 Trailer" class="img-fluid">
                                             <p class="mt-2 text-end">President's Cup 4 Trailer Video 🎬</p>
                                         </a>
@@ -248,17 +263,17 @@
                                         <img src="assets/pc3/pc3-logo.jpg" alt="President's Cup 3 Logo" class="pc3-logo img-fluid">
                                     </div>
                                     <h3 class="mt-4">PC3</h3> 
-                                    <p>The third annual President's Cup ran from August 2021 to December 2021 and featured a retro, 1980's-inspired theme and all new challenges based upon in-demand NICE Framework Work Roles. PC3 saw a significant increase in participation from the first two competitions, and the Finals were held virtually and livestreamed over the internet with live commentary provided by CISA's cybersecurity experts.</p>
+                                    <p>The third annual President's Cup ran from August to December 2021 and featured a retro 1980's-inspired theme and all-new challenges based on in-demand NICE Framework Work Roles. PC3 saw a significant increase in participation from the first two competitions.  The Finals were held virtually and livestreamed with live commentary from CISA's cybersecurity experts.</p>
                                     <h4 class="mt-4 mb-2">Media Assets</h4>
                                     <ul class="list-unstyled">
-                                        <li><a href="assets/pc3/pc3-onepager.pdf" target="_blank">Competition Overview</a></li>
-                                        <li><a href="assets/pc3/Branding.zip" target="_blank">Branding</a></li>
-                                        <li><a href="assets/pc3/Graphics.zip" target="_blank">Graphics</a></li>
+                                        <li><a href="assets/pc3/pc3-onepager.pdf" target="_blank" rel="noopener noreferrer">Competition Overview</a></li>
+                                        <li><a href="assets/pc3/Branding.zip" target="_blank" rel="noopener noreferrer">Branding</a></li>
+                                        <li><a href="assets/pc3/Graphics.zip" target="_blank" rel="noopener noreferrer">Graphics</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mt-4">
-                                        <a class="video-thumbnail" href="assets/pc3/pc3-trailer.mp4" target="_blank">
+                                        <a class="video-thumbnail" href="assets/pc3/pc3-trailer.mp4" target="_blank" rel="noopener noreferrer">
                                             <img src="assets/pc3/pc3-trailer.jpg" alt="President's Cup 3 Trailer" class="img-fluid">
                                             <p class="mt-2 text-end">President's Cup 3 Trailer Video 🎬</p>
                                         </a>
@@ -278,14 +293,14 @@
                                     <p>The second annual President's Cup Cybersecurity Competition ran from August 2020 to February 2021 and provided a new and improved experience for competitors. For the first time, Individuals were split into two tracks: Track A, focusing on defensive NICE Work Roles, and Track B, focusing on Offensive NICE Work Roles. The Teams Finals also included a new iteration of the escape room concept featuring a “Save the World” scenario in which teams responded to a weather-based crisis at a local municipality as part of a Disaster Relief Task Force (DRTF).</p>
                                     <h4 class="mt-4 mb-2">Media Assets</h4>
                                     <ul class="list-unstyled">
-                                        <li><a href="assets/pc2/pc2-onepager.pdf" target="_blank">Competition Overview</a></li>
-                                        <li><a href="assets/pc2/Branding.zip" target="_blank">Branding</a></li>
-                                        <li><a href="assets/pc2/Graphics.zip" target="_blank">Graphics</a></li>
+                                        <li><a href="assets/pc2/pc2-onepager.pdf" target="_blank" rel="noopener noreferrer">Competition Overview</a></li>
+                                        <li><a href="assets/pc2/Branding.zip" target="_blank" rel="noopener noreferrer">Branding</a></li>
+                                        <li><a href="assets/pc2/Graphics.zip" target="_blank" rel="noopener noreferrer">Graphics</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mt-4">
-                                        <a class="video-thumbnail" href="assets/pc2/pc2-trailer.mp4" target="_blank">
+                                        <a class="video-thumbnail" href="assets/pc2/pc2-trailer.mp4" target="_blank" rel="noopener noreferrer">
                                             <img src="assets/pc2/pc2-trailer.jpg" alt="President's Cup 2 Trailer" class="img-fluid">
                                             <p class="mt-2 text-end">President's Cup 2 Trailer Video 🎬</p>
                                         </a>
@@ -302,18 +317,18 @@
                                         <img src="assets/pc1/pc1-logo.png" alt="President's Cup 1 Logo" class="pc1-logo img-fluid">
                                     </div>
                                     <h3 class="mt-4">PC1</h3> 
-                                    <p>The first annual President's Cup Cybersecurity Competition ran from September to December 13, 2019, and drew more than 1,000 individuals and 200 teams. After two Qualifying Rounds, 10 Individuals finalists and five Teams finalists came to the Washington, D.C. area for the Finals at the CISA Cybersecurity Lab. The five teams were given a series of challenges to solve on the first day, followed by a virtual escape room on the second day. During the scenario, teams were given eight hours to solve a series of challenges from forensics to exploitation, culminating in gaining a password to an elevator to "escape."</p>
+                                    <p>The inaugural President's Cup Cybersecurity Competition ran from September to December 2019, and drew more than 1,000 individuals and 200 teams. After two Qualifying Rounds, 10 Individuals finalists and five Teams finalists came to the Washington, D.C., area for the Finals at the CISA Cybersecurity Lab. The five teams were given a series of challenges to solve on the first day, followed by a virtual escape room on the second day. During the escape scenario, teams were given 8 hours to solve a series of challenges from forensics to exploitation, culminating in gaining a password to an elevator to "escape."</p>
                                     <h4 class="mt-4 mb-2">Media Assets</h4>
                                     <ul class="list-unstyled">
-                                        <li><a href="assets/pc1/pc1-onepager.pdf" target="_blank">Competition Overview</a></li>
-                                        <li><a href="https://www.youtube.com/watch?v=1I8Rfb-oi54" target="_blank">White House Awards Ceremony: Trophy Presentation</a></li>
-                                        <li><a href="assets/pc1/Branding.zip" target="_blank">Branding</a></li>
-                                        <li><a href="assets/pc1/Graphics.zip" target="_blank">Graphics</a></li>
+                                        <li><a href="assets/pc1/pc1-onepager.pdf" target="_blank" rel="noopener noreferrer">Competition Overview</a></li>
+                                        <li><a href="https://www.youtube.com/watch?v=1I8Rfb-oi54" target="_blank" rel="noopener noreferrer">White House Awards Ceremony: Trophy Presentation</a></li>
+                                        <li><a href="assets/pc1/Branding.zip" target="_blank" rel="noopener noreferrer">Branding</a></li>
+                                        <li><a href="assets/pc1/Graphics.zip" target="_blank" rel="noopener noreferrer">Graphics</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mt-4">
-                                        <a class="video-thumbnail" href="assets/pc1/pc1-highlights.mp4" target="_blank">
+                                        <a class="video-thumbnail" href="assets/pc1/pc1-highlights.mp4" target="_blank" rel="noopener noreferrer">
                                             <img src="assets/pc1/pc1-highlights.jpg" alt="President's Cup 1 Highlights" class="img-fluid">
                                             <p class="mt-2 text-end">President's Cup 1 Highlights Video 🎬</p>
                                         </a>
@@ -326,12 +341,12 @@
             </div>
         </section>
         
-        <section id="media-faq"  class="px-3 py-5">
+        <section id="media-faq"  class="px-3 py-5 gradient-dark">
             <div class="container py-5 text-light">
-                <div class="row py-5 mt-5 align-items-center text-end">
+                <div class="row py-5 mb-4 align-items-center text-end">
                     <div class="col-12">
                         <h3 class="display-4 fw-bold mt-5 mb-4">Questions?</h3>
-                        <p class="fs-5">If you have any media or branding questions about the competition, you can email us <a class="link-light" href="mailto:presidentscup@cisa.dhs.gov" target="_blank">here</a>.</p>
+                        <p class="fs-5">If you have any media or branding questions about the competition, you can email us <a class="link-light" href="mailto:presidentscup@cisa.dhs.gov" target="_blank" rel="noopener noreferrer">here</a>.</p>
                     </div>
                 </div>
             </div>
@@ -345,14 +360,14 @@
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
                 <div class="mb-4 mb-md-0">
                     <div class="footer-briefed px-2">
-                        <a href="https://www.cisa.gov/prescup" target="_blank">
+                        <a href="https://www.cisa.gov/prescup" target="_blank" rel="noopener noreferrer">
                             <img src="../img/footer-cisa.png" loading="eager" data-cf-lazy="never" alt="CISA Link">
                         </a>
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
                     <div class="footer-logo">
-                        <a href="https://www.cisa.gov" target="_blank">
+                        <a href="https://www.cisa.gov" target="_blank" rel="noopener noreferrer">
                             <img src="../img/footer-logo-cisa.png" loading="eager" data-cf-lazy="never" alt="CISA Logo"> 
                         </a>                  
                     </div>
