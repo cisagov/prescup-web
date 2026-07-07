@@ -17,21 +17,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/style.css?v9.9">
+    <link rel="stylesheet" href="css/style.css?v10.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVR9SKL9J6"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    gtag('set', {
+        'allow_google_signals': false,
+        'allow_ad_personalization_signals': false,
+        'ads_data_redaction': true
+    });
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-NVR9SKL9J6', {
+        'allow_google_signals': false,
+        'allow_ad_personalization_signals': false
+    });
+    </script>
+
+    <!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+    <script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DHS" id="_fed_an_ua_tag"></script>
+
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NVR9SKL9J6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-NVR9SKL9J6');
-</script>
-
-<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
-<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DHS" id="_fed_an_ua_tag"></script>
-
 
 <body>
 
@@ -43,7 +53,7 @@
                     <a class="nav-link active" aria-current="page" href="./"><span>Home</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pc7/"><span>PC7</span></a>
+                    <a class="nav-link" href="pc8/"><span>PC8</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="media/"><span>Media</span></a>
@@ -85,8 +95,8 @@
                                 <img src="img/logo-pccc.svg" class="hero-logo-img img-fluid" loading="eager" data-cf-lazy="never" alt="President's Cup Cybersecurity Competition">
                              </div>
                             <!-- Registration Button -->
-                            <a class="btn btn-primary btn-register mx-2 fs-5 shadow-dark" href="https://presidentscup.cisa.gov/ctf/" target="_blank" role="button">Register for PC7</a>
-                            <a class="btn btn-primary btn-practice mx-2 fs-5 shadow-dark" href="https://presidentscup.cisa.gov/ctf/practice" target="_blank" role="button">Practice & Prepare</a>
+                            <a class="btn btn-primary btn-register mx-2 fs-5 shadow-dark" href="https://presidentscup.cisa.gov/ctf/" target="_blank" rel="noopener noreferrer" role="button">Register for PC7</a>
+                            <a class="btn btn-primary btn-practice mx-2 fs-5 shadow-dark" href="https://presidentscup.cisa.gov/ctf/practice" target="_blank" rel="noopener noreferrer" role="button">Practice & Prepare</a>
                             <p class="mobile-tablet-only p-4">This operation was established in response to Executive Order 13870.</p>
                             <!-- Scroll Arrow -->
                             <div class="mt-2">
@@ -130,7 +140,7 @@
                             <b>Team</b>: ENOENTHUSIASM | United States Army & United States Marine Corps<br>
                             <b>Individuals - Offensive</b>: bdubya | United States Army<br>
                             <b>Individuals - Defensive</b>: sheriffsparks | United States Navy<br><br>
-                            The PC7 awards ceremony will be held Summer 2026 in the National Capital Region.
+                            Awards ceremony will be held Summer 2026 in the National Capital Region.
                         </p>
                         <h1 class="display-4 fw-bold mt-5" style="display: none">The Next Chapter Begins with President's Cup 8</h1>
                         <p class="fs-5 mt-3" style="display: none">
@@ -140,7 +150,7 @@
                             Registration opens December 1, 2026
                         </p>
                         <p class="fs-5 mt-3" style="display: none">
-                            Get ahead of the competition and stay in the loop by creating your account and visiting the  <a href="https://presidentscup.cisa.gov/ctf/practice" target="_blank" class="text-dark">practice area</a>. 
+                            Get ahead of the competition and stay in the loop by creating your account and visiting the  <a href="https://presidentscup.cisa.gov/ctf/practice" target="_blank" rel="noopener noreferrer" class="text-dark">practice area</a>. 
                         </p>
                     </div>
                 </div>
@@ -149,11 +159,11 @@
 
         <!-- Agent Toolkit Section -->
         <section id="agent-toolkit" class="py-5 gradient-dark text-light">
-            <div class="py-5 mb-5 container">
+            <div class="py-5 mt-5 mt-2 container">
                 <!-- Section Title -->
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h3 class="display-5 fw-bold mb-5">Agent Toolkit</h3>
+                        <h3 class="display-5 fw-bold mb-5">Toolkit</h3>
                     </div>
                 </div>
 
@@ -161,14 +171,14 @@
                     
                     <!-- Icon 1: Registration Portal -->
                     <div class="col">
-                        <a href="https://presidentscup.cisa.gov/ctf/" target="_blank" class="text-decoration-none text-light intel-icon-1">
+                        <a href="https://presidentscup.cisa.gov/ctf/" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-light intel-icon-1">
                             <img src="img/icon-registration-portal.svg" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Registration Portal Icon">
                         </a>
                     </div>
 
                     <!-- Icon 2: Practice Area -->
                     <div class="col">
-                        <a href="https://presidentscup.cisa.gov/ctf/practice" target="_blank" class="text-decoration-none text-light intel-icon-2">
+                        <a href="https://presidentscup.cisa.gov/ctf/practice" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-light intel-icon-2">
                             <img src="img/icon-bullseye.svg" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Practice Area Icon">
                         </a>
                     </div>
@@ -191,8 +201,32 @@
             </div>
         </section>        
 
+
+
+        <!-- PC8 Introduction Section -->
+        <section id="timeline" class="py-5 text-dark">
+            <div class="container py-5 mb-4">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <h1 class="display-4 fw-bold mt-5">The Next Chapter Begins with President's Cup 8</h1>
+                        <p class="fs-5 mt-3">
+                            President's Cup 8 invites competitors to celebrate America's 250 year journey of innovation. 
+                        </p>
+                        <p class="fs-5 mt-3">
+                            Registration opens December 1, 2026
+                        </p>
+                        <p class="fs-5 mt-3">
+                            Get ahead of the competition and stay in the loop by creating your account and visiting the  <a href="https://presidentscup.cisa.gov/ctf/practice" target="_blank" rel="noopener noreferrer" class="text-dark">practice area</a>. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
         <!-- Mission Timeline Section -->
-        <section id="timeline" class="text-dark">
+        <section id="timeline" class="text-dark" style="display:none">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-12 col-xl-9">
@@ -225,7 +259,7 @@
 
                 <!-- Registration Button -->
                 <div class="timeline-button">
-                    <a class="btn btn-primary btn-register px-5 fs-5" href="https://presidentscup.cisa.gov/ctf/" target="_blank" role="button">Register for PC7</a>
+                    <a class="btn btn-primary btn-register px-5 fs-5" href="https://presidentscup.cisa.gov/ctf/" target="_blank" rel="noopener noreferrer" role="button">Register for PC7</a>
                 </div>
 
             </div>
@@ -233,17 +267,17 @@
 
 
         <!-- Hone Skills Section -->    
-        <section id="hone-skills" class="py-5 text-light">
-            <div class="container py-5 mt-5">
-                <div class="row py-5 mt-5 justify-content-end align-items-center">
-                    <div class="col-lg-7 text-center text-lg-start">
+        <section id="hone-skills-cta" class="py-5 text-light gradient-dark">
+            <div class="container py-5 my-5">
+                <div class="row py-5 justify-content-center align-items-center">
+                    <div class="col-lg-7 text-center">
                         <h3 class="display-3 fw-bold">Hone Your Skills</h3>
                         <p class="fs-5 mt-3">
                             Mission prep using practice challenges and content from past President's Cup competitions.
                         </p>
                         <div class="mt-4">
-                            <a class="btn btn-light mt-3 px-4 py-2 mx-2 shadow-light" href="https://presidentscup.cisa.gov/ctf/practice" target="_blank">PRACTICE AREA</a>
-                            <a class="btn btn-outline-light mt-3 px-4 py-2 mx-2 shadow-light" href="https://github.com/cisagov/prescup-challenges" target="_blank">GITHUB</a>
+                            <a class="btn btn-light mt-3 px-4 py-2 mx-2 shadow-light" href="https://presidentscup.cisa.gov/ctf/practice" target="_blank" rel="noopener noreferrer">PRACTICE AREA</a>
+                            <a class="btn btn-outline-light mt-3 px-4 py-2 mx-2 shadow-light" href="https://github.com/cisagov/prescup-challenges" target="_blank" rel="noopener noreferrer">GITHUB</a>
                         </div>
                     </div>
                 </div>
@@ -260,17 +294,14 @@
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
                 <div class="mb-4 mb-md-0">
                     <div class="footer-briefed px-2">
-                        <a href="https://www.cisa.gov/prescup" target="_blank">
+                        <a href="https://www.cisa.gov/prescup" target="_blank" rel="noopener noreferrer">
                             <img src="img/footer-cisa.png" loading="eager" data-cf-lazy="never" alt="CISA Link">
                         </a>
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
-                    <div class="footer-stamp me-4">
-                        <img src="img/footer-logo-pc7.png" loading="eager" data-cf-lazy="never" alt="PC07 Logo">
-                    </div>
                     <div class="footer-logo">
-                        <a href="https://www.cisa.gov" target="_blank">
+                        <a href="https://www.cisa.gov" target="_blank" rel="noopener noreferrer">
                             <img src="img/footer-logo-cisa.png" loading="eager" data-cf-lazy="never" alt="CISA Logo"> 
                         </a>                  
                     </div>

@@ -28,10 +28,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2, h5 {
-    font-family: Courier;
+    font-family: Futura, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
 }
 
-p, li {
+p, li, .inner-table {
     font-size: 0.9rem;
 }
 
@@ -677,6 +678,12 @@ header {
 }
 
 #agent-toolkit {
+    background: linear-gradient(91deg, rgba(55, 5, 13, 1) 0%, rgba(27, 50, 72, 1) 100%);
+    overflow-x: hidden;
+}
+
+/*
+#agent-toolkit {
     background-image: url(../img/agent-toolkit.svg);
     background-repeat: no-repeat;
     background-position: bottom;
@@ -689,6 +696,7 @@ header {
         background-size: cover;
     }
 }
+*/
 
 @media (max-width: 576px) {
     #agent-toolkit .d-flex .col {
@@ -961,12 +969,18 @@ header {
 }
 
 #hone-skills {
-    background-image: url(../img/hone-skills-transparent.svg);
+    background-image: url(../img/hone-skills.svg);
     background-repeat: no-repeat;
-    background-position: top left;
+    background-position: 0% 20%;
     background-size: cover;
     color: var(--dark-text);
     position: relative;
+}
+
+@media (max-width: 480px) {
+    #hone-skills {
+        background-position: 12% 40%;
+    }
 }
 
 /*--------------------------------------------------
@@ -1404,7 +1418,7 @@ footer {
   Page -> Intel
 --------------------------------------------------*/
 #intelligence {
-    background-image: url(../img/media-bg.svg);
+    background-image: url(../img/bg-pc8-hero.jpg);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -1424,7 +1438,7 @@ footer {
 }
 
 .intel-title img {
-    max-width: 400px;
+    max-width: 500px;
 }
 
 @media (max-width: 768px) {
@@ -1441,8 +1455,9 @@ footer {
 
 
 .intel-tabs-nav {
-    background: #000000;
-    /* background: linear-gradient(91deg, rgba(55,5,13,1) 0%, rgba(27,50,72,1) 100%); */
+    /* background: #000000;
+    background: linear-gradient(91deg, rgba(55,5,13,1) 0%, rgba(27,50,72,1) 100%); */
+    margin-top: -36px;
     border-bottom: none;
 }
 
@@ -1487,12 +1502,13 @@ footer {
 }
 
 #intelligence-tabs button.nav-link h5 {
+    text-transform: none;
     margin-bottom: 0px !important;
 }
 
 #intelligence-continued {
     position: relative;
-    background-image: url(../img/intel-footer-bg.svg);
+    background-image: url(../img/bg-pc8-footer-v2.jpg);
     background-repeat: no-repeat;
     background-position: top right;
     background-size: cover;
@@ -1535,7 +1551,7 @@ footer {
         /* background: rgb(29 48 69);
         background: linear-gradient(180deg, rgb(29 48 69) 51%, rgb(37 39 55) 51%); */
         background: black;
-        background: linear-gradient(180deg, rgb(34 34 34) 51%, rgb(56 55 55) 51%);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.0) 52%, rgba(255, 255, 255, 1.0) 52%);
     }
 
     #intelligence-tabs button.nav-link {
@@ -1664,10 +1680,10 @@ footer {
 }
 
 #media-faq {
-    background-image: url(../img/hone-skills.svg);
+    /*background-image: url(../img/hone-skills.svg);
     background-repeat: no-repeat;
     background-position: top left;
-    background-size: cover;
+    background-size: cover;*/
     color: var(--dark-text);
     position: relative;
 }
@@ -2003,7 +2019,7 @@ a.video-thumbnail:hover:after {
 }
 
 .gom-game-card img {
-    width: 500px;
+    width: 550px;
     max-width: 100%;
 }
 
