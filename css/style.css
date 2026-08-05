@@ -1066,7 +1066,7 @@ footer {
 
 @media (min-width: 1401px) {          
     #timeline > .container {
-        max-width: 1100px;
+        /* max-width: 1100px; */
     }
     #skills {
         background-size: 100% 100%;
@@ -1085,7 +1085,7 @@ footer {
         */
     }
     #timeline > .container {
-        max-width: 1375px;
+        /* max-width: 1375px; */
     }
     .timeline-title {
         max-width: 1500px;
