@@ -481,8 +481,12 @@ header {
     font-weight: bold;
 }
 
+.btn:hover {
+    border-color: #000000;
+}
+
 .btn-register {
-    display: none !important; /* Hide the register button until registration opens again */
+    /* display: none !important;  Hide the register button until registration opens again */
 }
 
 .btn-register {
@@ -517,7 +521,7 @@ header {
 }
 
 .btn-practice:hover {
-    background: black;
+    background: #16385a;
     color: white;
 }
 
@@ -1414,11 +1418,447 @@ footer {
 
 
 
+
+
+
+
+
+
+/*--------------------------------------------------
+  President's Cup Photo Carousel
+--------------------------------------------------*/
+
+.pc-photo-carousel {
+    --pc-gallery-visible: 2;
+    --pc-gallery-arrow-size: 42px;
+    position: relative;
+    width: 100%;
+}
+
+/*--------------------------------------------------
+  Mobile Column Setting
+
+  data-mobile-columns="1" = one photo wide
+  data-mobile-columns="2" = two photos wide
+--------------------------------------------------*/
+
+.pc-photo-carousel[data-mobile-columns="1"] {
+    --pc-gallery-visible: 1;
+}
+
+.pc-photo-carousel[data-mobile-columns="2"] {
+    --pc-gallery-visible: 2;
+}
+
+/*--------------------------------------------------
+  Carousel Layout
+--------------------------------------------------*/
+
+.pc-photo-carousel__shell {
+    position: relative;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.pc-photo-carousel__viewport {
+    width: 100%;
+    overflow: hidden;
+    touch-action: pan-y;
+}
+
+.pc-photo-carousel__track {
+    display: flex;
+    width: 100%;
+    transform: translate3d(0, 0, 0);
+    transition: transform 450ms ease;
+    will-change: transform;
+}
+
+/*--------------------------------------------------
+  Slides
+--------------------------------------------------*/
+
+.pc-photo-carousel__slide {
+    flex: 0 0 50%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 0.4rem;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.pc-photo-carousel[data-mobile-columns="1"] .pc-photo-carousel__slide {
+    flex-basis: 100%;
+}
+
+.pc-photo-carousel[data-mobile-columns="2"] .pc-photo-carousel__slide {
+    flex-basis: 50%;
+}
+
+.pc-photo-carousel__slide img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.pc-photo-carousel__slide:hover img {
+    transform: scale(1.015);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+}
+
+.pc-photo-carousel__slide:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+/*--------------------------------------------------
+  Tablet - 3 Photos Wide
+--------------------------------------------------*/
+
+@media (min-width: 768px) {
+    .pc-photo-carousel,
+    .pc-photo-carousel[data-mobile-columns="1"],
+    .pc-photo-carousel[data-mobile-columns="2"] {
+        --pc-gallery-visible: 3;
+    }
+
+    .pc-photo-carousel__slide,
+    .pc-photo-carousel[data-mobile-columns="1"] .pc-photo-carousel__slide,
+    .pc-photo-carousel[data-mobile-columns="2"] .pc-photo-carousel__slide {
+        flex-basis: 33.333333%;
+    }
+}
+
+/*--------------------------------------------------
+  Desktop - 4 Photos Wide
+--------------------------------------------------*/
+
+@media (min-width: 992px) {
+    .pc-photo-carousel,
+    .pc-photo-carousel[data-mobile-columns="1"],
+    .pc-photo-carousel[data-mobile-columns="2"] {
+        --pc-gallery-visible: 4;
+    }
+
+    .pc-photo-carousel__slide,
+    .pc-photo-carousel[data-mobile-columns="1"] .pc-photo-carousel__slide,
+    .pc-photo-carousel[data-mobile-columns="2"] .pc-photo-carousel__slide {
+        flex-basis: 25%;
+    }
+
+    /*
+     * Extend the full carousel approximately 50px
+     * beyond the container on each side.
+     */
+    .pc-photo-carousel__shell {
+        margin-left: -50px;
+        margin-right: -50px;
+    }
+}
+
+/*--------------------------------------------------
+  Main Carousel Controls
+--------------------------------------------------*/
+
+.pc-photo-carousel__control {
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--pc-gallery-arrow-size);
+    height: var(--pc-gallery-arrow-size);
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: opacity 150ms ease;
+}
+
+.pc-photo-carousel__control:hover {
+    background: transparent;
+    box-shadow: none;
+    opacity: 0.7;
+}
+
+.pc-photo-carousel__control:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+.pc-photo-carousel__control img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.pc-photo-carousel__control--prev {
+    left: 0;
+}
+
+.pc-photo-carousel__control--prev img {
+    transform: rotate(90deg);
+}
+
+.pc-photo-carousel__control--next {
+    right: 0;
+}
+
+.pc-photo-carousel__control--next img {
+    transform: rotate(-90deg);
+}
+
+/*--------------------------------------------------
+  Smaller Controls on Phones
+--------------------------------------------------*/
+
+@media (max-width: 575.98px) {
+    .pc-photo-carousel {
+        --pc-gallery-arrow-size: 34px;
+    }
+
+    .pc-photo-carousel__shell {
+        padding-left: 2.35rem;
+        padding-right: 2.35rem;
+    }
+
+    .pc-photo-carousel__slide {
+        padding: 0.25rem;
+    }
+}
+
+/*==================================================
+  Lightbox
+==================================================*/
+
+.pc-photo-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 4.5rem;
+    background: rgba(0, 0, 0, 0.88);
+    cursor: zoom-out;
+}
+
+.pc-photo-lightbox[hidden] {
+    display: none !important;
+}
+
+.pc-photo-lightbox__dialog {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    cursor: default;
+}
+
+.pc-photo-lightbox__image {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: min(1200px, 86vw);
+    max-height: 86vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+/*--------------------------------------------------
+  Lightbox Close
+--------------------------------------------------*/
+
+.pc-photo-lightbox__close {
+    position: fixed;
+    top: 18px;
+    right: 22px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border: 0;
+    color: #fff;
+    background: transparent;
+    font-family: Arial, sans-serif;
+    font-size: 2.8rem;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.pc-photo-lightbox__close:hover {
+    opacity: 0.7;
+}
+
+.pc-photo-lightbox__close:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+/*--------------------------------------------------
+  Lightbox Previous / Next
+--------------------------------------------------*/
+
+.pc-photo-lightbox__nav {
+    position: fixed;
+    top: 50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: opacity 150ms ease;
+}
+
+.pc-photo-lightbox__nav:hover {
+    background: transparent;
+    opacity: 0.7;
+}
+
+.pc-photo-lightbox__nav:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
+.pc-photo-lightbox__nav img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: invert(1);
+}
+
+.pc-photo-lightbox__nav--prev {
+    left: 18px;
+}
+
+.pc-photo-lightbox__nav--prev img {
+    transform: rotate(90deg);
+}
+
+.pc-photo-lightbox__nav--next {
+    right: 18px;
+}
+
+.pc-photo-lightbox__nav--next img {
+    transform: rotate(-90deg);
+}
+
+/*--------------------------------------------------
+  Lightbox Counter
+--------------------------------------------------*/
+
+.pc-photo-lightbox__counter {
+    position: fixed;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/*--------------------------------------------------
+  Mobile Lightbox
+--------------------------------------------------*/
+
+@media (max-width: 575.98px) {
+    .pc-photo-lightbox {
+        padding: 3rem 2.8rem;
+    }
+
+    .pc-photo-lightbox__image {
+        max-width: 90vw;
+        max-height: 82vh;
+    }
+
+    .pc-photo-lightbox__nav {
+        width: 38px;
+        height: 38px;
+    }
+
+    .pc-photo-lightbox__nav--prev {
+        left: 5px;
+    }
+
+    .pc-photo-lightbox__nav--next {
+        right: 5px;
+    }
+
+    .pc-photo-lightbox__close {
+        top: 8px;
+        right: 10px;
+    }
+}
+
+/*--------------------------------------------------
+  Reduced Motion
+--------------------------------------------------*/
+
+@media (prefers-reduced-motion: reduce) {
+    .pc-photo-carousel__track,
+    .pc-photo-carousel__slide img {
+        transition: none !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*--------------------------------------------------
   Page -> Intel
 --------------------------------------------------*/
 #intelligence {
-    background-image: url(../img/bg-pc8-hero.jpg);
+    background-image: url(../img/bg-pc8.jpg);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -2171,8 +2611,14 @@ a.video-thumbnail:hover:after {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+#hof-spotlight .spotlight-caption {
+    height: 110px;
+    overflow: hidden;
+}
+
 #spotlight-caption-details {
     min-height: 44px;
+    margin-bottom: 0px;
 }
 
 @media (min-width: 1600px) {
@@ -2322,4 +2768,500 @@ a.video-thumbnail:hover:after {
     display: inline-block;
     width: 1em;
     margin-left: -1em;
+}
+
+
+
+/*--------------------------------------------------
+  Page -> PC8 Custom Design
+--------------------------------------------------*/
+/* Scoped to .pc8-page (set on the <body> of /pc8/index.html)
+   so nothing here leaks into other pages */
+
+.pc8-page {
+    /* local tokens for this page only */
+    --pc8-blue: #2f9bff;
+    --pc8-red: #d93a4a;
+    --pc8-line: rgba(255, 255, 255, 0.25);
+    /* "good-times" is already loaded on the PC8 page via Adobe Fonts */
+    --pc8-display-font: "good-times", Futura, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    background: #000000;
+}
+
+/* Smooth in-page scrolling, but only for visitors who haven't asked for reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+    html.pc8-html {
+        scroll-behavior: smooth;
+    }
+}
+
+.pc8-page a:focus-visible,
+.pc8-page button:focus-visible {
+    outline: 2px solid var(--pc8-blue);
+    outline-offset: 2px;
+}
+
+/* Grey placeholder boxes -- swap for real images later */
+.pc8-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: var(--placeholder-gray); */
+    color: #333333;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.25rem;
+}
+
+/* Red triangular indicator (mobile bar; side/menu links draw theirs via ::before) */
+.pc8-tri {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid var(--pc8-red);
+}
+
+
+/*----------------------------
+  PC8 -> Desktop floating section nav (>= 992px)
+----------------------------*/
+
+.pc8-sidenav {
+    position: sticky;
+    top: 2.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    padding-top: 0.5rem;
+}
+
+.pc8-sidenav__art {
+    width: 84px;
+    height: 192px;
+    flex: 0 0 auto;
+    /* aligns the art's top edge with the top of the menu text
+       (matches the first link's top padding) */
+    /* margin-top: 0.2rem; */
+}
+
+.pc8-side-link {
+    position: relative;
+    display: block;
+    padding: 0.4rem 0 0.4rem 1.3rem;
+    color: #ffffff;
+    font-family: var(--pc8-display-font);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    opacity: 0.78;
+}
+
+.pc8-side-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid transparent; /* invisible until active */
+}
+
+.pc8-side-link:hover,
+.pc8-side-link:focus {
+    color: #ffffff;
+    opacity: 1;
+}
+
+.pc8-side-link.active {
+    opacity: 1;
+}
+
+.pc8-side-link.active::before {
+    border-left-color: var(--pc8-red);
+}
+
+
+/*----------------------------
+  PC8 -> Mobile / tablet sticky section bar (< 992px)
+----------------------------*/
+
+.pc8-mobilebar {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    background: rgba(0, 0, 0, 0.94);
+    border-bottom: 1px solid var(--pc8-line);
+}
+
+.pc8-mobilebar__toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    width: 100%;
+    padding: 0.8rem 1.1rem;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-family: var(--pc8-display-font);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.pc8-mobilebar__label {
+    flex: 1 1 auto;
+}
+
+/* Caret on the right; flips when the menu is open */
+.pc8-caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #ffffff;
+    transition: transform 0.2s ease-in-out;
+}
+
+.pc8-mobilebar__toggle[aria-expanded="true"] .pc8-caret {
+    transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pc8-caret {
+        transition: none;
+    }
+}
+
+/* Full-width dropdown panel (Bootstrap collapse, overlaid below the bar) */
+.pc8-mobilemenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #0b0b0d;
+    border-bottom: 1px solid var(--pc8-line);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.6);
+}
+
+.pc8-mobile-link {
+    position: relative;
+    display: block;
+    padding: 0.7rem 1.25rem 0.7rem 2.5rem;
+    color: #ffffff;
+    font-family: var(--pc8-display-font);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    opacity: 0.85;
+}
+
+.pc8-mobile-link::before {
+    content: '';
+    position: absolute;
+    left: 1.15rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid transparent;
+}
+
+.pc8-mobile-link:hover,
+.pc8-mobile-link:focus {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.06);
+    opacity: 1;
+}
+
+.pc8-mobile-link.active {
+    opacity: 1;
+}
+
+.pc8-mobile-link.active::before {
+    border-left-color: var(--pc8-red);
+}
+
+/* Thin progress line beneath the bar */
+.pc8-progress {
+    height: 2px;
+    /* background: rgba(255, 255, 255, 0.14); */
+    overflow: hidden;
+}
+
+.pc8-progress__fill {
+    display: block;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--pc8-red) 0%, var(--pc8-blue) 100%);
+}
+
+/* Desktop-only fixed variant, pinned to the top of the window
+   (used by #pc8DesktopProgress on the PC8 page). To turn the desktop
+   bar off without touching the HTML, uncomment the rule below. */
+.pc8-progress--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1040;
+}
+
+#pc8DesktopProgress {
+    /* display: none; */
+    height: 4px !important;
+}
+
+
+/*----------------------------
+  PC8 -> Content sections
+  (markup carried over from the tab panes unchanged;
+  the dark theme is applied contextually here)
+----------------------------*/
+
+/* One shared backdrop now spans the whole <main> area of the PC8 page:
+   #intelligence (hero), #intelligence-tabs (sections), and
+   #intelligence-continued (Questions). The .pc8-parallax-clip element was
+   moved in the HTML from inside #intelligence-tabs to be the first child
+   of <main>, so <main> is now the positioning context and the parallax
+   host measured by the page JS. The art lives on its own layer
+   (.pc8-parallax-bg) inside the clipping frame, and the page JS drags the
+   layer downward as you scroll so it moves at a fraction of the content
+   speed. Drop the final image at ../img/pc8/bg-pc8-sections.jpg and it
+   appears with no code change. Phones/tablets and reduced-motion visitors
+   get the same art as a normal static background (the JS never shifts it
+   for them). */
+.pc8-page main {
+    position: relative;
+}
+
+.pc8-parallax-clip {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.pc8-parallax-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-image: url('../img/pc8/pc8-wormhole.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 100% 70%;
+    background-position: center;
+}
+
+@media (max-width: 1280px) {
+    .pc8-parallax-bg {
+        /*background-size: auto 100%;*/
+        background-size: cover;
+    background-position: top;        
+    }
+}
+
+@media (min-width: 2880px) {
+    .pc8-parallax-bg {
+        /*background-size: auto 100%;*/
+        background-size: cover;
+    background-position: top;        
+    }
+}
+
+/* All three sections stack above the backdrop. Their own backgrounds are
+   stripped just below so the shared art shows through everywhere. */
+.pc8-page main > section {
+    position: relative;
+    z-index: 1;
+}
+
+/* content stacks above the backdrop */
+#intelligence-tabs .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Single-background overrides: the shared "Page -> Intel" rules further up
+   still give #intelligence and #intelligence-continued their own art (and
+   the .gradient-dark class gives the hero a gradient); those rules are
+   left untouched in case other pages use them, and are neutralized here
+   for the PC8 page only. */
+.pc8-page #intelligence {
+    background: transparent; /* clears both bg-pc8.jpg and the gradient-dark gradient */
+}
+
+.pc8-page #intelligence-continued {
+    background-image: none; /* clears bg-pc8-footer-v2.jpg; padding/z-index kept */
+}
+
+/* Desktop + motion-friendly: oversize the layer so the JS can drag it
+   (by up to 30% of the <main> height, matching data-pc8-speed="0.3"
+   on the layer -- raise both together if you want a stronger trail)
+   without ever revealing its edges. */
+@media (min-width: 992px) and (prefers-reduced-motion: no-preference) {
+    .pc8-parallax-bg {
+        top: -30%;
+        height: 130%;
+        will-change: transform;
+    }
+}
+
+.pc8-sections {
+    color: var(--light-text);
+}
+
+.pc8-section {
+    position: relative;
+    padding: 1.25rem 0 2.75rem;
+    /* keeps anchored headings clear of the sticky mobile bar */
+    scroll-margin-top: 4.25rem;
+}
+
+@media (min-width: 992px) {
+    .pc8-section {
+        scroll-margin-top: 2rem;
+    }
+}
+
+.pc8-sections h2 {
+    color: #ffffff;
+    font-size: clamp(2rem, 1.2rem + 2.4vw, 2.9rem);
+    line-height: 1.1;
+}
+
+/* h5 font-family/weight is set in the page's inline style block,
+   alongside the matching h2 rule */
+.pc8-sections h5 {
+    color: var(--pc8-blue);
+    font-size: 1rem;
+}
+
+.pc8-sections a {
+    color: var(--pc8-blue);
+}
+
+.pc8-sections a:hover,
+.pc8-sections a:focus {
+    color: #6cb9ff;
+}
+
+/* Absolutely-positioned flourish-art placeholders from the mockup
+   (parchment, telegram, astronaut, chat bubbles, etc.). Shown only on
+   wide screens so they never collide with the text column. */
+.pc8-deco {
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(204, 204, 204, 0);
+    border: 1px dashed rgba(204, 204, 204, 0);
+    color: #9aa0a6;
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.25rem;
+}
+
+@media (min-width: 1400px) {
+    .pc8-deco {
+        display: flex;
+    }
+}
+
+/* We decided to hide these for now. */
+.pc8-deco {
+    display: none;
+}
+
+/* Dash-style unordered list markers per the mockup
+   (ordered lists keep their numbers; older Safari falls back to discs) */
+.pc8-sections ul > li::marker {
+    content: '-\2002';
+}
+
+/* New-design visual login steps (Registration section) */
+.pc8-steps {
+    margin: 1.75rem 0 0.5rem;
+    max-width: 720px;
+}
+
+.pc8-step {
+    text-align: center;
+}
+
+.pc8-step__icon {
+    width: 112px;
+    height: 86px;
+    margin: 0 auto 0.65rem;
+}
+
+.pc8-step__num {
+    font-family: var(--pc8-display-font);
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 0.35rem;
+}
+
+.pc8-step__text {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+}
+
+/* New-design key dates table (Registration section): transparent body,
+   thin white borders, borderless row labels per the mockup */
+.pc8-dates-table {
+    color: #ffffff;
+    margin: 1.75rem 0 0.5rem;
+    --bs-table-bg: transparent;
+    --bs-table-color: #ffffff;
+}
+
+.pc8-dates-table th,
+.pc8-dates-table td {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    font-size: 0.8rem;
+    padding: 0.55rem 0.75rem;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.pc8-dates-table thead th {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.pc8-dates-table .pc8-rowlabel {
+    border: none;
+    text-align: right;
+    padding-right: 1rem;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    vertical-align: middle;
 }

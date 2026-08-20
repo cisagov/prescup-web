@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="pc8-html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../css/style.css?pc8.1.0.5">
+    <link rel="stylesheet" href="../css/style.css?pc8.1.3">
 
     <!-- Adobe Fonts PC8 -->
     <link rel="stylesheet" href="https://use.typekit.net/jeq1tym.css">
@@ -32,6 +32,18 @@
         header {
             margin-bottom: -32px !important;
         }        
+        h5 {
+            font-family: "good-times";
+            font-weight: normal;
+            font-style: normal;
+        }
+        /* New design: below lg the sticky section bar sits directly under the
+           header, so don't pull the page content up behind the header tabs */
+        @media (max-width: 991.98px) {
+            header {
+                margin-bottom: 0 !important;
+            }
+        }
     </style>
 
     <!-- Google tag (gtag.js) -->
@@ -59,7 +71,15 @@
 
 </head>
 
-<body>
+<body class="pc8-page">
+
+    <!-- Desktop-only fixed page progress bar (same red-to-blue line as the
+         mobile section bar, pinned to the top of the window). To disable it,
+         delete this element -- or flip on the commented #pc8DesktopProgress
+         { display: none; } rule in style.css. -->
+    <div id="pc8DesktopProgress" class="pc8-progress pc8-progress--fixed d-none d-lg-block" aria-hidden="true">
+        <span class="pc8-progress__fill"></span>
+    </div>
 
     <!-- Header Navigation -->
     <header>
@@ -87,14 +107,50 @@
         </div>
     </header>
 
+    <!-- Mobile / tablet sticky section bar (< 992px): the label tracks the
+         current section while scrolling; tapping opens a full-width dropdown
+         (Bootstrap collapse); thin progress line underneath. -->
+    <nav id="pc8MobileBar" class="pc8-mobilebar d-lg-none" aria-label="Page sections">
+        <button class="pc8-mobilebar__toggle collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#pc8MobileMenu"
+                aria-expanded="false" aria-controls="pc8MobileMenu">
+            <span class="pc8-tri" aria-hidden="true"></span>
+            <span class="pc8-mobilebar__label" id="pc8BarLabel">Registration</span>
+            <span class="pc8-caret" aria-hidden="true"></span>
+        </button>
+        <div class="pc8-progress" aria-hidden="true">
+            <span class="pc8-progress__fill" id="pc8ProgressFill"></span>
+        </div>
+        <div class="collapse pc8-mobilemenu" id="pc8MobileMenu">
+            <ul class="list-unstyled m-0">
+                <li><a class="pc8-mobile-link active" href="#registration">Registration</a></li>
+                <li><a class="pc8-mobile-link" href="#eligibility">Eligibility</a></li>
+                <li><a class="pc8-mobile-link" href="#scoring">Scoring</a></li>
+                <li><a class="pc8-mobile-link" href="#rules">Rules</a></li>
+                <li><a class="pc8-mobile-link" href="#practice">Practice</a></li>
+                <li><a class="pc8-mobile-link" href="#support">Support</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <main>
-       <!-- Hero Section PC8 -->
-        <section id="intelligence" class="px-3 py-5 gradient-dark">
-            <div class="d-flex justify-content-center align-items-center" style="min-height: 50vh">
-                <img class="pc8-brandmark img-fluid" src="../img/pc8-brandmark-white.png" alt="PC8 Competition" style="width: 500px; max-width: 90%">
-            </div>
+
+        <!-- Slow-scrolling parallax backdrop, moved up from #intelligence-tabs
+             so a single background now spans the whole <main> area (the hero,
+             the sections, and the Questions block). The page JS drags this
+             layer downward as you scroll, so the art moves at a fraction of
+             the content speed. Tune the trail amount via data-pc8-speed
+             (0.3 = trails the scroll by 30%; if you raise it above 0.3,
+             also raise the -30%/130% oversize in style.css to match). -->
+        <div class="pc8-parallax-clip" aria-hidden="true">
+            <div class="pc8-parallax-bg" data-pc8-speed="0.3"></div>
+        </div>
+
+        <!-- Hero Section PC8 -->
+        <section id="intelligence" class="px-3 py-5 gradient-dark d-flex justify-content-center align-items-center">
+            <img class="pc8-brandmark img-fluid py-2 mt-5" src="../img/pc8/pc8-logo-collage.png" alt="PC8 Competition" style="width: 900px; max-width: 90%;">
         </section>
-        
+                
 
         <!-- Hero Section for Intel Page
         <section id="hero-intel" class="mt-5 mb-4">
@@ -132,37 +188,38 @@
         </section>
          -->
 
-        <!-- Intel Tabs -->
+        <!-- Section Nav + Content (replaces the old tabbed layout;
+             the former tab-pane contents are preserved verbatim below as
+             anchored sections, so deep links like /pc8/#eligibility still work.
+             The full-height background art for the page now lives on the
+             .pc8-parallax-bg layer at the top of <main>, spanning this
+             section plus #intelligence and #intelligence-continued -- see
+             "Page -> PC8 Custom Design" in style.css. -->
         <section id="intelligence-tabs" class="pb-5">
-            <div class="text-light">
-                 <!-- Nav tabs -->
-                <ul class="nav nav-tabs intel-tabs-nav mt-n1" id="intelTabs" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="registration-tab" data-bs-toggle="tab" data-bs-target="#registration" type="button" role="tab" aria-controls="registration" aria-selected="true"><h5>Registration</h5></button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="eligibility-tab" data-bs-toggle="tab" data-bs-target="#eligibility" type="button" role="tab" aria-controls="eligibility" aria-selected="false"><h5>Eligibility</h5></button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="scoring-tab" data-bs-toggle="tab" data-bs-target="#scoring" type="button" role="tab" aria-controls="scoring" aria-selected="false"><h5>Scoring</h5></button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="rules-tab" data-bs-toggle="tab" data-bs-target="#rules" type="button" role="tab" aria-controls="rules" aria-selected="false"><h5>Rules</h5></button>
-                    </li>
-                    <li style="display:none" class="nav-item" role="presentation">
-                        <button class="nav-link" id="finals-tab" data-bs-toggle="tab" data-bs-target="#finals" type="button" role="tab" aria-controls="finals" aria-selected="false"><h5>Finals</h5></button>
-                    </li>
-                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="practice-tab" data-bs-toggle="tab" data-bs-target="#practice" type="button" role="tab" aria-controls="practice" aria-selected="false"><h5>Practice</h5></button>
-                    </li>
-                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="support-tab" data-bs-toggle="tab" data-bs-target="#support" type="button" role="tab" aria-controls="support" aria-selected="false"><h5>Support</h5></button>
-                    </li>
-                </ul>
 
-                <!-- Tab panes -->
-                <div class="tab-content bg-white text-dark p-4 p-md-5">
-                    <div class="tab-pane fade show active" id="registration" role="tabpanel" aria-labelledby="registration-tab">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Desktop floating section nav (>= 992px) -->
+                    <aside class="col-lg-3 mt-2 d-none d-lg-block">
+                        <div class="pc8-sidenav">
+                            <img class="pc8-sidenav__art" src="../img/nav-hourglass.png" alt="Hourglass" />
+                            <nav id="pc8SideNav" class="nav flex-column" aria-label="Page sections">
+                                <a class="nav-link pc8-side-link active" href="#registration">Registration</a>
+                                <a class="nav-link pc8-side-link" href="#eligibility">Eligibility</a>
+                                <a class="nav-link pc8-side-link" href="#scoring">Scoring</a>
+                                <a class="nav-link pc8-side-link" href="#rules">Rules</a>
+                                <a class="nav-link pc8-side-link" href="#practice">Practice</a>
+                                <a class="nav-link pc8-side-link" href="#support">Support</a>
+                            </nav>
+                        </div>
+                    </aside>
+
+                    <!-- Section content (formerly the tab panes, reordered to
+                         match the menu; hidden sections sit at the end) -->
+                    <div class="col-lg-9 pc8-sections">
+                    <div id="registration" class="pc8-section">
+                        <div class="pc8-deco" data-pc8-speed="0.12" style="top: 12%; right: -11rem; width: 356px; transform: rotate(6deg);" aria-hidden="true"><img class="img-fluid" src="../img/pc8/pc8-map.png" alt="PC8 Timeline Map"></div>
                     <div style="display:none">
                         <h2 class="fw-bold mb-3">President's Cup 8 <span class="text-muted">| Coming Soon</span></h2>
                         <p>
@@ -238,6 +295,35 @@
                             <li>Enter your <b>federal employee email address</b> in the "Username" field and click <b>Next</b>.</li>
                             <li>You will be redirected to Login.gov to complete the identity verification process.</li>
                         </ol>
+
+                        <!-- New-design addition: visual login steps from the mockup.
+                             Swap the grey boxes for the final step art. Marked
+                             aria-hidden because it restates the numbered list above,
+                             which screen readers already get. -->
+                        <div class="pc8-steps" aria-hidden="true">
+                            <div class="row g-4">
+                                <div class="col-6 col-md-3 pc8-step">
+                                    <div class="pc8-placeholder pc8-step__icon"><img class="img-fluid" src="../img/pc8/pc8-icon-web.png" alt="Web Icon"></div>
+                                    <div class="pc8-step__num">1</div>
+                                    <p class="pc8-step__text">Visit the President's Cup Competition Platform</p>
+                                </div>
+                                <div class="col-6 col-md-3 pc8-step">
+                                    <div class="pc8-placeholder pc8-step__icon"><img class="img-fluid" src="../img/pc8/pc8-icon-login.png" alt="Login Icon"></div>
+                                    <div class="pc8-step__num">2</div>
+                                    <p class="pc8-step__text">Click the Login button.</p>
+                                </div>
+                                <div class="col-6 col-md-3 pc8-step">
+                                    <div class="pc8-placeholder pc8-step__icon"><img class="img-fluid" src="../img/pc8/pc8-icon-user.png" alt="Username Icon"></div>
+                                    <div class="pc8-step__num">3</div>
+                                    <p class="pc8-step__text">Enter your federal employee email address in the &quot;Username&quot; field and click Next.</p>
+                                </div>
+                                <div class="col-6 col-md-3 pc8-step">
+                                    <div class="pc8-placeholder pc8-step__icon"><img class="img-fluid" src="../img/pc8/pc8-icon-profile.png" alt="Profile Icon"></div>
+                                    <div class="pc8-step__num">4</div>
+                                    <p class="pc8-step__text">You will be redirected to Login.gov to complete the identity verification process.</p>
+                                </div>
+                            </div>
+                        </div>
                         <p class="mt-4 mb-2"><b>Existing Login.gov Account:</b></p>
                         <p class="mb-2">If your Login.gov account has both your personal and government-issued email addresses, 
                         please email us at <a href="mailto:presidentscup@cisa.dhs.gov">presidentscup@cisa.dhs.gov</a> 
@@ -249,6 +335,39 @@
                         <p><em>This update will not affect your Login.gov account.</em></p>
                         <p class="mt-4 mb-2"><b>Personal Device Use During the Competition:</b></p>
                         <p class="mb-2">If you plan to use your personal device to compete, please validate that you can successfully log in before starting your session to avoid any delays or disruptions during the competition. If you require a PIV card reader for authentication, please reach out to your agency IT for assistance ahead of time.</p>
+
+                        <!-- New-design addition: key dates table from the mockup.
+                             Dates match the Individuals/Teams lists just below,
+                             which now duplicate this table. -->
+                        <div class="d-none table-responsive">
+                            <table class="table pc8-dates-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="pc8-rowlabel"><span class="visually-hidden">Track</span></th>
+                                        <th scope="col">Registration</th>
+                                        <th scope="col">Round 1</th>
+                                        <th scope="col">Round 2</th>
+                                        <th scope="col">Finals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="pc8-rowlabel">Individuals</th>
+                                        <td>Dec 1, 2026&ndash;Jan 13, 2027</td>
+                                        <td>Jan 6&ndash;13, 2027</td>
+                                        <td>Feb 3&ndash;10, 2027</td>
+                                        <td><strong>Defensive Track:</strong> April 20, 2027<br><strong>Offensive Track:</strong> April 21, 2027</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="pc8-rowlabel">Teams</th>
+                                        <td>Dec 1, 2026&ndash;Jan 27, 2027</td>
+                                        <td>Jan 20&ndash;27, 2027</td>
+                                        <td>Feb 17&ndash;24, 2027</td>
+                                        <td><strong>Teams Track:</strong> April 22, 2027</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                         <div class="row" style="display:none">
                             <div class="col-md-6 mt-5 mb-2">
                                 <h5>Individuals</h5>
@@ -316,7 +435,9 @@
                         <p class="mb-2">This document is intended as a suggested template for participants to adapt and use at their discretion. It is provided as a resource and does not represent an official requirement or endorsement by the Cybersecurity and Infrastructure Security Agency (CISA).</p>
                     </div>
 
-                    <div class="tab-pane fade" id="eligibility" role="tabpanel" aria-labelledby="eligibility-tab">
+                    <div id="eligibility" class="pc8-section">
+                        <div class="pc8-deco" data-pc8-speed="0.18" style="top: 0.5rem; right: -202px; width: 260px; height: 180px; transform: rotate(12deg);" aria-hidden="true"><img class="img-fluid" src="../img/pc8/pc8-patent-tag.png" alt="PC8 Patent Tag" onerror="this.parentElement.classList.add('pc8-deco--missing')"></div>
+                        <div class="pc8-deco" data-pc8-speed="-0.08" style="bottom: 182px; right: -350px; width: 340px; height: 220px; transform: rotate(-25deg);" aria-hidden="true"><img class="img-fluid" src="../img/pc8/pc8-telegram.png" alt="PC8 Telegram" onerror="this.parentElement.classList.add('pc8-deco--missing')"></div>
                         <div class="row">
                             <h2 class="mb-4">Eligibility</h2>
                             <div class="col-md-4">
@@ -344,7 +465,35 @@
                             </div>
                         </div>
                     </div>
-                     <div class="tab-pane fade" id="rules" role="tabpanel" aria-labelledby="rules-tab">
+
+                    <div id="scoring" class="pc8-section">
+                        <div class="pc8-deco" data-pc8-speed="0.15" style="top: 150px; right: -360px; width: 440px; height: 320px; transform: rotate(55deg);" aria-hidden="true"><img class="img-fluid" src="../img/pc8/pc8-im-window.png" alt="PC8 IM Window" onerror="this.parentElement.classList.add('pc8-deco--missing')"></div>
+                        <div class="pc8-deco" data-pc8-speed="-0.10" style="bottom: 1rem; right: -268px; width: 380px; height: 340px;" aria-hidden="true"><img class="img-fluid" src="../img/pc8/pc8-rainbow-ribbon.png" alt="PC8 Rainbow Ribbon" onerror="this.parentElement.classList.add('pc8-deco--missing')"></div>
+                        <h2 class="mb-4">Scoring & Advancement</h2>
+                            <h5 class="mt-2 mb-2">Advancement</h5>
+                            <p>Advancement to Round 2</p>
+                            <ul>
+                                <li>The top 100 individuals in each track will advance, with no tiebreakers; all individuals tied for 100th place, in each track, will advance.</li>
+                                <li>The top 33% of teams will advance, with no tiebreakers; all teams tied at the 33% cutoff will advance.</li>
+                            </ul>
+                            <p>Advancement to Finals</p>
+                            <ul>
+                                <li>The top 10 individuals in each track and the top 5 teams from Round 2 will qualify for the Finals.</li>
+                                <li>In the event of a tie in the Finals, total time to complete challenges will determine the winners.</li>
+                            </ul>
+
+                            <h5 class="mt-5 mb-2">Time & Challenge Submission Restrictions</h5>
+                            <p>During the qualifying rounds, individuals have 4 hours and teams have 6 hours to complete as many challenges as they can.</p>
+                            <p>The session timer runs continuously and cannot be paused once started. This applies to both individuals and teams. Teams should schedule their session during a time when all team members are available. Team Captains are the only individuals who can start the session.</p>
+
+                            <h5 class="mt-5 mb-2">Scoring & Partial Credit</h5>                            
+                            <p>Competitors' round scores are determined by the sum of all successful challenge components completed during their session. In the event of a tie, a fastest-to-solve methodology will be used. Fastest-to-solve is calculated by taking the timestamp of the last <b>correct</b> submission across all of the challenges in the event and subtracting it from the timestamp for when the individual or team started the event. Team and individual scores for Round 1 and Round 2 will be hidden until the end of the respective round.</p>
+                            <p>All President's Cup challenges have multiple parts, which allow competitors to earn partial credit. Each challenge part includes the number of points awarded for providing the correct answer. Participants are limited to THREE submissions per challenge.</p>
+                    </div>
+
+                    <div id="rules" class="pc8-section">
+                        <div class="pc8-deco" data-pc8-speed="0.20" style="top: 0; right: -202px; width: 260px; height: 200px;" aria-hidden="true"><img class="img-fluid" src="../img/pc8/pc8-pixel-cursor.png" alt="PC8 Pixel Cursor" onerror="this.parentElement.classList.add('pc8-deco--missing')"></div>
+                        <div class="pc8-deco" data-pc8-speed="-0.12" style="top: 45%; right: -338px; width: 400px; height: 250px; transform: rotate(-50deg);" aria-hidden="true"><img class="img-fluid" src="../img/pc8/pc8-astronaut.png" alt="PC8 Astronaut" onerror="this.parentElement.classList.add('pc8-deco--missing')"></div>
                         <div class="row">
                             <div class="col">
                                 <h2 class="mb-4">Gamespace Environment & Rules</h2>
@@ -388,29 +537,59 @@
                             </div>
                         </div>
                     </div>                   
-                    <div class="tab-pane fade" id="scoring" role="tabpanel" aria-labelledby="scoring-tab">
-                        <h2 class="mb-4">Scoring & Advancement</h2>
-                            <h5 class="mt-2 mb-2">Advancement</h5>
-                            <p>Advancement to Round 2</p>
-                            <ul>
-                                <li>The top 100 individuals in each track will advance, with no tiebreakers; all individuals tied for 100th place, in each track, will advance.</li>
-                                <li>The top 33% of teams will advance, with no tiebreakers; all teams tied at the 33% cutoff will advance.</li>
-                            </ul>
-                            <p>Advancement to Finals</p>
-                            <ul>
-                                <li>The top 10 individuals in each track and the top 5 teams from Round 2 will qualify for the Finals.</li>
-                                <li>In the event of a tie in the Finals, total time to complete challenges will determine the winners.</li>
-                            </ul>
 
-                            <h5 class="mt-5 mb-2">Time & Challenge Submission Restrictions</h5>
-                            <p>During the qualifying rounds, individuals have 4 hours and teams have 6 hours to complete as many challenges as they can.</p>
-                            <p>The session timer runs continuously and cannot be paused once started. This applies to both individuals and teams. Teams should schedule their session during a time when all team members are available. Team Captains are the only individuals who can start the session.</p>
+                    <div id="practice" class="pc8-section">
+                        <div class="pc8-deco" data-pc8-speed="0.15" style="top: 0.5rem; right: -194px; width: 260px; height: 340px; transform: rotate(-45deg);" aria-hidden="true"><img class="img-fluid" src="../img/pc8/pc8-emoji-face.png" alt="PC8 Emoji Face" onerror="this.parentElement.classList.add('pc8-deco--missing')"></div>
+                        <div class="pc8-deco" data-pc8-speed="-0.08" style="bottom: 2rem; right: -260px; width: 360px; height: 300px; transform: rotate(-4deg);" aria-hidden="true"><img class="img-fluid" src="../img/pc8/pc8-chat-bubbles.png" alt="PC8 Chat Bubbles" onerror="this.parentElement.classList.add('pc8-deco--missing')"></div>
+                        <h2 class="mb-4">Practice Resources</h2>
+                            <p>The Practice Area is a repository of President's Cup challenges from past competitions, open to federal employees and active-duty military and reservist service members only. Users can receive a certificate of completion after each challenge (which may be used for PDU/CPEs).</p>
+                            <h5 class="mt-5 mb-2">Platform Information</h5>
+                            <div class="ms-3">
+                                <p class="mt-4 mb-2"><b>Current Status</b></p>
+                                <ul>
+                                    <li>President's Cup challenges can be found on our  <a href="https://presidentscup.cisa.gov/ctf/practice" target="_blank" rel="noopener noreferrer">Practice Area</a> platform. Our team is working to convert and transfer all legacy challenges onto the platform.</li>
+                                    <li>For assistance, please contact the President's Cup team at <a href="mailto:presidentscup@cisa.dhs.gov">presidentscup@cisa.dhs.gov.</a></li>
+                                </ul>
+                            </div>
+                            <h5 class="mt-5 mb-2">Open Source Updates</h5>
+                            <p class="mb-2">The <a href="https://github.com/cisagov/prescup-challenges" target="_blank" rel="noopener noreferrer">prescup-challenges</a> GitHub project has practice resources available, including:</p>
+                            <ul>
+                                <li>Solution guides</li>
+                                <li>Challenge code from all previous competitions</li>
+                                <li>Virtual machine builds</li>
+                                <li>Challenge containers</li>
+                            </ul>
+                    </div>                    
 
-                            <h5 class="mt-5 mb-2">Scoring & Partial Credit</h5>                            
-                            <p>Competitors' round scores are determined by the sum of all successful challenge components completed during their session. In the event of a tie, a fastest-to-solve methodology will be used. Fastest-to-solve is calculated by taking the timestamp of the last <b>correct</b> submission across all of the challenges in the event and subtracting it from the timestamp for when the individual or team started the event. Team and individual scores for Round 1 and Round 2 will be hidden until the end of the respective round.</p>
-                            <p>All President's Cup challenges have multiple parts, which allow competitors to earn partial credit. Each challenge part includes the number of points awarded for providing the correct answer. Participants are limited to THREE submissions per challenge.</p>
+                    <div id="support" class="pc8-section">
+                        <div class="pc8-deco" data-pc8-speed="0.10" style="top: 15%; right: -292px; width: 390px; height: 550px; transform: rotate(-95deg);" aria-hidden="true"><img class="img-fluid" src="../img/pc8/pc8-phone.png" alt="PC8 Phone" onerror="this.parentElement.classList.add('pc8-deco--missing')"></div>
+                        <h2 class="mb-4">Support</h2>
+
+                        <h5 class="mt-2 mb-2">Hours of Operation</h5>
+                            <p>The President's Cup Cybersecurity Competition is open for participation 24/7 during registration and qualifying rounds.</p>
+                            <p>Support hours during registration and qualifying rounds are as follows:</p>
+                            <ul>
+                                <li>Registration period: Monday through Friday, 8:00 AM - 4:00 PM ET</li>
+                                <li>Qualifying rounds:</li>
+                                    <ul>
+                                        <li>Monday through Friday, 8:00 AM - 11:00 PM ET</li>
+                                        <li>Saturday and Sunday, 9:00 AM - 5:00 PM ET</li>
+                                    </ul>
+                                <li>Finals: Support will be available throughout the Finals</li>
+                            </ul>
+                            <p>Please Note: All times are Eastern Time (ET). Support availability is limited on weekends during the competition, as described in the hours above. Participants who choose to compete during this time do so at their own risk.</p>
+
+                        <h5 class="mt-5 mb-2">Requests for Support</h5>
+                            <p>Support requests are tracked in the President's Cup Support Interface. Participants create support tickets from a deployed challenge or from the <a href="https://presidentscup.cisa.gov/ctf/support" target="_blank" rel="noopener noreferrer">Support</a> link in the navigation bar. Participants will be able to view, update, and track a ticket's status and communicate with the President's Cup support team.</p>                            
+                            <p>When submitting a ticket, please add as much detail as possible, including screenshots, challenge name, system element(s) involved, and any error messages received.</p>
+                            <p>Teams: Team members should coordinate with one another to avoid submitting multiple tickets for the same issue that the team may be experiencing.</p>
+
+                        <h5 class="mt-5 mb-2">President's Cup Team Contact Information</h5>
+                            <p>The President's Cup team can also be reached via email at <a  href="mailto:presidentscup@cisa.dhs.gov" target="_blank" rel="noopener noreferrer">presidentscup@cisa.dhs.gov</a> during normal business hours only; Monday through Friday, 9:00 AM - 5:00 PM ET.</p>                            
+                            <p>The President's Cup email should be used for general questions or information about the competition. Please open a support ticket within the challenge environment to request technical support.</p>
                     </div>
-                    <div class="tab-pane fade" id="finals" role="tabpanel" aria-labelledby="finals-tab">
+
+                    <div id="finals" class="pc8-section" style="display:none">
                         <h2 class="mb-4">Finals</h2>
                         <h5 class="mt-2 mb-2">In Person Finals Attendance</h5>                            
                             <p>All President's Cup finalists are required to attend the Finals in person in the National Capital Region to participate. The Team and Individual Finals competition will be held on separate days, allowing competitors to participate without conflict.</p>
@@ -505,56 +684,9 @@
                                 <li>Publishing or sharing challenge solutions before CISA releases official solution guides.</li>
                             </ul>
                     </div>
-
-                    <div class="tab-pane fade" id="practice" role="tabpanel" aria-labelledby="practice-tab">
-                        <h2 class="mb-4">Practice Resources</h2>
-                            <p>The Practice Area is a repository of President's Cup challenges from past competitions, open to federal employees and active-duty military and reservist service members only. Users can receive a certificate of completion after each challenge (which may be used for PDU/CPEs).</p>
-                            <h5 class="mt-5 mb-2">Platform Information</h5>
-                            <div class="ms-3">
-                                <p class="mt-4 mb-2"><b>Current Status</b></p>
-                                <ul>
-                                    <li>President's Cup challenges can be found on our  <a href="https://presidentscup.cisa.gov/ctf/practice" target="_blank" rel="noopener noreferrer">Practice Area</a> platform. Our team is working to convert and transfer all legacy challenges onto the platform.</li>
-                                    <li>For assistance, please contact the President's Cup team at <a href="mailto:presidentscup@cisa.dhs.gov">presidentscup@cisa.dhs.gov.</a></li>
-                                </ul>
-                            </div>
-                            <h5 class="mt-5 mb-2">Open Source Updates</h5>
-                            <p class="mb-2">The <a href="https://github.com/cisagov/prescup-challenges" target="_blank" rel="noopener noreferrer">prescup-challenges</a> GitHub project has practice resources available, including:</p>
-                            <ul>
-                                <li>Solution guides</li>
-                                <li>Challenge code from all previous competitions</li>
-                                <li>Virtual machine builds</li>
-                                <li>Challenge containers</li>
-                            </ul>
-                    </div>                    
-
-                    <div class="tab-pane fade" id="support" role="tabpanel" aria-labelledby="support-tab">
-                        <h2 class="mb-4">Support</h2>
-
-                        <h5 class="mt-2 mb-2">Hours of Operation</h5>
-                            <p>The President's Cup Cybersecurity Competition is open for participation 24/7 during registration and qualifying rounds.</p>
-                            <p>Support hours during registration and qualifying rounds are as follows:</p>
-                            <ul>
-                                <li>Registration period: Monday through Friday, 8:00 AM - 4:00 PM ET</li>
-                                <li>Qualifying rounds:</li>
-                                    <ul>
-                                        <li>Monday through Friday, 8:00 AM - 11:00 PM ET</li>
-                                        <li>Saturday and Sunday, 9:00 AM - 5:00 PM ET</li>
-                                    </ul>
-                                <li>Finals: Support will be available throughout the Finals</li>
-                            </ul>
-                            <p>Please Note: All times are Eastern Time (ET). Support availability is limited on weekends during the competition, as described in the hours above. Participants who choose to compete during this time do so at their own risk.</p>
-
-                        <h5 class="mt-5 mb-2">Requests for Support</h5>
-                            <p>Support requests are tracked in the President's Cup Support Interface. Participants create support tickets from a deployed challenge or from the <a href="https://presidentscup.cisa.gov/ctf/support" target="_blank" rel="noopener noreferrer">Support</a> link in the navigation bar. Participants will be able to view, update, and track a ticket's status and communicate with the President's Cup support team.</p>                            
-                            <p>When submitting a ticket, please add as much detail as possible, including screenshots, challenge name, system element(s) involved, and any error messages received.</p>
-                            <p>Teams: Team members should coordinate with one another to avoid submitting multiple tickets for the same issue that the team may be experiencing.</p>
-
-                        <h5 class="mt-5 mb-2">President's Cup Team Contact Information</h5>
-                            <p>The President's Cup team can also be reached via email at <a  href="mailto:presidentscup@cisa.dhs.gov" target="_blank" rel="noopener noreferrer">presidentscup@cisa.dhs.gov</a> during normal business hours only; Monday through Friday, 9:00 AM - 5:00 PM ET.</p>                            
-                            <p>The President's Cup email should be used for general questions or information about the competition. Please open a support ticket within the challenge environment to request technical support.</p>
-                    </div>
-                </div>
-            </div>
+                    </div><!-- /.pc8-sections -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
         </section>
         
         <section id="intelligence-continued"  class="px-3 py-5">
@@ -669,23 +801,174 @@
     </script>
     -->
 
-    <!-- Link To Tab by ID -->
+    <!-- PC8 section nav: tracks the active section, syncs the mobile bar,
+         drives the progress line, and closes the dropdown after a pick.
+         (Replaces the old "Link To Tab by ID" script -- with the tabs gone,
+         hash links like /pc8/#eligibility scroll to plain anchors natively.)
+
+         Note: Bootstrap's built-in ScrollSpy can't be used on this page. The
+         global stylesheet sets overflow-x:hidden on <body>, which makes the
+         computed overflow-y "auto"; ScrollSpy then treats <body> as its own
+         scroll container, its IntersectionObserver uses body as the root,
+         every section "intersects" forever, and the active state never
+         updates. The small spy below does the same job deterministically. -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-        // Get the hash from the URL (e.g., #eligibility)
-        const hash = window.location.hash;
+    (function () {
+        'use strict';
 
-        if (hash) {
-            // Find the <button> with a data-bs-target that matches the hash
-            const tabTrigger = document.querySelector(`.nav-tabs button[data-bs-target="${hash}"]`);
+        var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#pc8SideNav .pc8-side-link'));
+        var mobileLinks = Array.prototype.slice.call(document.querySelectorAll('#pc8MobileMenu .pc8-mobile-link'));
+        var allLinks = sideLinks.concat(mobileLinks);
+        var barLabel = document.getElementById('pc8BarLabel');
+        var menuEl = document.getElementById('pc8MobileMenu');
+        var fills = Array.prototype.slice.call(document.querySelectorAll('.pc8-progress__fill'));
 
-            if (tabTrigger) {
-            // Create a new Bootstrap tab instance from the button and show it
-            const tab = new bootstrap.Tab(tabTrigger);
-            tab.show();
+        /* Sections in page order, derived from the side nav links */
+        var sections = [];
+        sideLinks.forEach(function (link) {
+            var el = document.getElementById(link.hash.slice(1));
+            if (el) { sections.push(el); }
+        });
+
+        /* Parallax drift for the flourish art. Each .pc8-deco carries a
+           data-pc8-speed: positive values lag behind the scroll (feel
+           farther away), negative values lead it (feel closer). Tune or
+           remove the attribute per element to adjust. Skipped entirely
+           for visitors who prefer reduced motion. */
+        var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var bgLayer = document.querySelector('.pc8-parallax-bg');
+        /* The backdrop now spans the whole <main> (hero + sections +
+           Questions), so the parallax math measures <main> instead of
+           #intelligence-tabs. */
+        var bgHost = document.querySelector('.pc8-page main');
+        var bgSpeed = bgLayer ? (parseFloat(bgLayer.getAttribute('data-pc8-speed')) || 0.3) : 0;
+        var decoItems = [];
+        if (!reduceMotion) {
+            Array.prototype.slice.call(document.querySelectorAll('.pc8-deco[data-pc8-speed]')).forEach(function (el) {
+                decoItems.push({ el: el, speed: parseFloat(el.getAttribute('data-pc8-speed')) || 0, offset: 0 });
+            });
+        }
+
+        function updateParallax() {
+            if (reduceMotion) { return; }
+
+            /* Backdrop: dragged downward by a fraction of the distance
+               scrolled through the main area, so it visibly crawls
+               slower than the content (desktop only; the CSS oversizes
+               the layer at the same breakpoint so no edges show). */
+            if (bgLayer && bgHost && window.innerWidth >= 992) {
+                var travelled = Math.min(Math.max(-bgHost.getBoundingClientRect().top, 0), bgHost.offsetHeight);
+                bgLayer.style.translate = '0 ' + (travelled * bgSpeed).toFixed(1) + 'px';
+            }
+
+            /* the flourish art only shows on wide screens */
+            if (!decoItems.length || window.innerWidth < 1400) { return; }
+            var mid = window.innerHeight * 0.5;
+            decoItems.forEach(function (item) {
+                /* subtract our own current offset so the math never compounds */
+                var top = item.el.getBoundingClientRect().top - item.offset;
+                item.offset = (mid - top) * item.speed;
+                /* the CSS "translate" property stacks with the inline rotate transform */
+                item.el.style.translate = '0 ' + item.offset.toFixed(1) + 'px';
+            });
+        }
+
+        /* Mark one section active in the side nav, the dropdown, and the bar label */
+        function setActive(hash) {
+            allLinks.forEach(function (link) {
+                var on = link.getAttribute('href') === hash;
+                link.classList.toggle('active', on);
+                if (link.classList.contains('pc8-mobile-link')) {
+                    if (on) {
+                        barLabel.textContent = link.textContent.trim();
+                        link.setAttribute('aria-current', 'true');
+                    } else {
+                        link.removeAttribute('aria-current');
+                    }
+                }
+            });
+        }
+
+        /* --- Section spy: active section = last one whose top has crossed a
+               line 40% down the viewport; at page bottom, the last section --- */
+        var activeHash = null;
+        var clickLock = false;   /* holds the spy while a clicked link scrolls */
+        var settleTimer = null;
+
+        function releaseClickLock() {
+            clickLock = false;
+            queuePaint();
+        }
+
+        function updateSpy() {
+            if (clickLock || !sections.length) { return; }
+            var doc = document.documentElement;
+            var atBottom = window.pageYOffset + window.innerHeight >= doc.scrollHeight - 2;
+            var current = sections[0];
+            if (atBottom) {
+                current = sections[sections.length - 1];
+            } else {
+                var line = window.pageYOffset + window.innerHeight * 0.4;
+                for (var i = 0; i < sections.length; i++) {
+                    if (sections[i].getBoundingClientRect().top + window.pageYOffset <= line) {
+                        current = sections[i];
+                    }
+                }
+            }
+            var hash = '#' + current.id;
+            if (hash !== activeHash) {
+                activeHash = hash;
+                setActive(hash);
             }
         }
+
+        /* --- Progress line + spy share one rAF-throttled paint --- */
+        var ticking = false;
+        function paint() {
+            ticking = false;
+            var doc = document.documentElement;
+            var max = doc.scrollHeight - window.innerHeight;
+            var pct = max > 0 ? (window.pageYOffset / max) * 100 : 0;
+            var width = Math.min(100, Math.max(0, pct)) + '%';
+            fills.forEach(function (f) { f.style.width = width; });
+            updateSpy();
+            updateParallax();
+        }
+        function queuePaint() {
+            if (!ticking) {
+                ticking = true;
+                window.requestAnimationFrame(paint);
+            }
+        }
+
+        window.addEventListener('scroll', function () {
+            if (clickLock) {
+                clearTimeout(settleTimer);
+                settleTimer = setTimeout(releaseClickLock, 150);
+            }
+            queuePaint();
+        }, { passive: true });
+
+        window.addEventListener('resize', queuePaint);
+
+        /* Instant feedback on click; hold the spy until scrolling settles so
+           the highlight doesn't flicker through intermediate sections */
+        allLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                activeHash = link.getAttribute('href');
+                setActive(activeHash);
+                clickLock = true;
+                clearTimeout(settleTimer);
+                settleTimer = setTimeout(releaseClickLock, 150);
+                if (link.classList.contains('pc8-mobile-link') && window.bootstrap && window.bootstrap.Collapse) {
+                    window.bootstrap.Collapse.getOrCreateInstance(menuEl, { toggle: false }).hide();
+                }
+            });
         });
+
+        /* Initial state (covers deep links like /pc8/#scoring) */
+        paint();
+    })();
     </script>
 
     <!-- Fix for Cloudflare Miroge -->
