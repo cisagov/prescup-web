@@ -793,14 +793,30 @@ header {
 #timeline .pc8-intro-logo {
     display: block;
     width: 100%;
-    max-width: 250px;
+    max-width: 495px;
     height: auto;
+}
+
+@media (min-width: 768px) {
+    #timeline .pc8-intro-graphic {
+        width: 37.5%;
+    }
+
+    #timeline .pc8-intro-copy {
+        width: 62.5%;
+    }
 }
 
 @media (max-width: 767.98px) {
     #timeline .pc8-intro-logo {
-        max-width: 200px;
-        margin: 0 auto 1.5rem;
+        max-width: 360px;
+        margin: 0 auto 0.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    #timeline .pc8-intro-actions .btn {
+        width: 100%;
     }
 }
 
@@ -2129,6 +2145,13 @@ footer {
     .media-tabs-ext button.nav-link {
         padding-left: 0.75rem !important;
         padding-right: 0.75rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .media-tabs-ext button.nav-link {
+        padding-left: 0.65rem !important;
+        padding-right: 0.65rem !important;
     }
 }
 

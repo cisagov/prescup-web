@@ -4,49 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>President's Cup Cybersecurity Competition - Media</title>
-    
+
     <!-- Favicon -->
+
     <link rel="icon" href="../img/favicon/favicon.png" type="image/png">
-    <link rel="icon" href="../img/favicon/favicon-light.png" type="image/png" media="(prefers-color-scheme: light)">
-    <link rel="icon" href="../img/favicon/favicon-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+    <link
+        rel="icon"
+        href="../img/favicon/favicon-light.png"
+        type="image/png"
+        media="(prefers-color-scheme: light)">
+    <link
+        rel="icon"
+        href="../img/favicon/favicon-dark.png"
+        type="image/png"
+        media="(prefers-color-scheme: dark)">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
     <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../css/style.css?ver=8.1.6b">
-    
+
+    <link rel="stylesheet" href="../css/style.css?ver=8.1.7">
+
+    <!-- Media-page carousel/lightbox overrides -->
+
+    <style>
+        /* The PC7 carousel fills the right media column below the trailer. */
+        #pc7 .pc-photo-carousel {
+            width: 100%;
+        }
+
+        #pc7 .pc-photo-carousel > .container-fluid {
+            width: 100%;
+        }
+
+        /* Keep the expanded image independent of the Bootstrap tab/column width. */
+        #pc7 .pc-photo-lightbox {
+            position: fixed !important;
+            inset: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            max-width: none !important;
+            max-height: none !important;
+            z-index: 10000 !important;
+            cursor: zoom-out !important;
+        }
+
+        #pc7 .pc-photo-lightbox__dialog {
+            position: relative !important;
+            width: 100% !important;
+            height: 100% !important;
+            max-width: none !important;
+            max-height: none !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            cursor: zoom-out !important;
+        }
+
+        #pc7 .pc-photo-lightbox__image {
+            width: auto !important;
+            height: auto !important;
+            max-width: calc(100vw - 160px) !important;
+            max-height: calc(100vh - 100px) !important;
+            object-fit: contain !important;
+            cursor: default !important;
+        }
+
+        #pc7 .pc-photo-lightbox__close,
+        #pc7 .pc-photo-lightbox__nav {
+            cursor: pointer !important;
+        }
+
+        @media (max-width: 767.98px) {
+            #pc7 .pc-photo-lightbox__image {
+                max-width: calc(100vw - 70px) !important;
+                max-height: calc(100vh - 90px) !important;
+            }
+        }
+
+        /* Keep the carousel to exactly the configured number of full photos. */
+        #pc7 .pc-photo-carousel__viewport {
+            overflow: hidden !important;
+        }
+
+        #pc7 .pc-photo-carousel__slide {
+            flex: 0 0 calc(100% / var(--pc-gallery-visible)) !important;
+            width: calc(100% / var(--pc-gallery-visible)) !important;
+            max-width: calc(100% / var(--pc-gallery-visible)) !important;
+            min-width: 0 !important;
+        }
+    </style>
+
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVR9SKL9J6"></script>
+
+    <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-NVR9SKL9J6"
+    ></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+        window.dataLayer = window.dataLayer || [];
 
-    gtag('set', {
-        'allow_google_signals': false,
-        'allow_ad_personalization_signals': false,
-        'ads_data_redaction': true
-    });
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-    gtag('js', new Date());
+        gtag("set", {
+            allow_google_signals: false,
+            allow_ad_personalization_signals: false,
+            ads_data_redaction: true,
+        });
 
-    gtag('config', 'G-NVR9SKL9J6', {
-        'allow_google_signals': false,
-        'allow_ad_personalization_signals': false
-    });
+        gtag("js", new Date());
+
+        gtag("config", "G-NVR9SKL9J6", {
+            allow_google_signals: false,
+            allow_ad_personalization_signals: false,
+        });
     </script>
 
     <!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
-    <script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DHS" id="_fed_an_ua_tag"></script>
 
+    <script
+        async
+        type="text/javascript"
+        src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DHS"
+        id="_fed_an_ua_tag"
+    ></script>
 </head>
-
 <body>
 
     <!-- Header Navigation -->
+
     <header>
         <div class="container">
             <ul class="nav nav-tabs-std">
@@ -57,43 +155,64 @@
                     <a class="nav-link" href="../pc8/"><span>PC8</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../media/"><span>Media</span></a>
+                    <a class="nav-link active" aria-current="page" href="../media/"
+                        ><span>Media</span></a
+                    >
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../workshops/"><span>Workshops</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-minimized" href="../game-of-the-month/"><span>GoM</span></a>
+                    <a class="nav-link nav-minimized" href="../game-of-the-month/"
+                        ><span>GoM</span></a
+                    >
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-minimized" href="../hack-of-fame/"><span>HoF</span></a>
+                    <a class="nav-link nav-minimized" href="../hack-of-fame/"
+                        ><span>HoF</span></a
+                    >
                 </li>
             </ul>
         </div>
     </header>
-
     <main>
+
         <!-- Executive Order Evergreen -->
-        <section id="executive-order" class="executive-icon ps-4 pb-3 pt-5 pe-5 text-black">
+
+        <section
+            id="executive-order"
+            class="executive-icon ps-4 pb-3 pt-5 pe-5 text-black"
+        >
             <div class="container">
                 <div class="row">
                     <div class="logo-cisa pt-4">
-                        <img src="../img/logo-cisa.png" loading="eager" data-cf-lazy="never" alt="President's Cup Media">
+                        <img
+                            src="../img/logo-cisa.png"
+                            loading="eager"
+                            data-cf-lazy="never"
+                            alt="President's Cup Media">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Workshop Page Title -->
+        <!-- Media Page Title -->
+
         <section class="mt-4">
-             <div class="container position-relative">
+            <div class="container position-relative">
                 <div id="media-title">
-                    <img src="../img/media-title.png" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Workshops Logo">
+                    <img
+                        src="../img/media-title.png"
+                        class="img-fluid"
+                        loading="eager"
+                        data-cf-lazy="never"
+                        alt="President's Cup Media">
                 </div>
             </div>
         </section>
 
-       <!-- Media Content -->
+        <!-- Media Content -->
+
         <section id="media" class="px-3 py-5 mt-5 gradient-section">
             <div class="container py-5 text-light">
                 <div class="row align-items-center">
@@ -101,236 +220,1471 @@
                         <h3 class="display-4 fw-bold">Media</h3>
                     </div>
                     <div class="col-md-6">
-                        <p class="fs-6 mt-2">Relive the excitement and triumph of the President's Cup Cybersecurity Competition. This vibrant archive is your official source for media assets, featuring highlight videos and graphics that have defined each year of the event. We invite you to explore our history, celebrate past champions, and experience the competitive spirit that continues to drive cybersecurity excellence forward.</p>
+                        <p class="fs-6 mt-2">
+                            Relive the excitement and triumph of the President's Cup
+                            Cybersecurity Competition. This vibrant archive is your official
+                            source for media assets, featuring highlight videos and graphics
+                            that have defined each year of the event. We invite you to
+                            explore our history, celebrate past champions, and experience
+                            the competitive spirit that continues to drive cybersecurity
+                            excellence forward.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
-
-<section id="intelligence-tabs" class="pb-5 bg-white">
+        <section id="intelligence-tabs" class="pb-5 bg-white">
             <div class="text-light">
-                 <ul class="nav nav-tabs intel-tabs-nav media-tabs-ext bg-black" id="intelTabs" role="tablist">
+                <ul
+                    class="nav nav-tabs intel-tabs-nav media-tabs-ext bg-black"
+                    id="intelTabs"
+                    role="tablist"
+                >
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pc7-tab" data-bs-toggle="tab" data-bs-target="#pc7" type="button" role="tab" aria-controls="pc7" aria-selected="true"><h5>PC7</h5></button>
+                        <button
+                            class="nav-link active"
+                            id="pc7-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#pc7"
+                            type="button"
+                            role="tab"
+                            aria-controls="pc7"
+                            aria-selected="true"
+                        >
+                            <h5>PC7</h5>
+                        </button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pc6-tab" data-bs-toggle="tab" data-bs-target="#pc6" type="button" role="tab" aria-controls="pc6" aria-selected="false"><h5>PC6</h5></button>
+                        <button
+                            class="nav-link"
+                            id="pc6-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#pc6"
+                            type="button"
+                            role="tab"
+                            aria-controls="pc6"
+                            aria-selected="false"
+                        >
+                            <h5>PC6</h5>
+                        </button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pc5-tab" data-bs-toggle="tab" data-bs-target="#pc5" type="button" role="tab" aria-controls="pc5" aria-selected="false"><h5>PC5</h5></button>
+                        <button
+                            class="nav-link"
+                            id="pc5-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#pc5"
+                            type="button"
+                            role="tab"
+                            aria-controls="pc5"
+                            aria-selected="false"
+                        >
+                            <h5>PC5</h5>
+                        </button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pc4-tab" data-bs-toggle="tab" data-bs-target="#pc4" type="button" role="tab" aria-controls="pc4" aria-selected="false"><h5>PC4</h5></button>
+                        <button
+                            class="nav-link"
+                            id="pc4-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#pc4"
+                            type="button"
+                            role="tab"
+                            aria-controls="pc4"
+                            aria-selected="false"
+                        >
+                            <h5>PC4</h5>
+                        </button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pc3-tab" data-bs-toggle="tab" data-bs-target="#pc3" type="button" role="tab" aria-controls="pc3" aria-selected="false"><h5>PC3</h5></button>
+                        <button
+                            class="nav-link"
+                            id="pc3-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#pc3"
+                            type="button"
+                            role="tab"
+                            aria-controls="pc3"
+                            aria-selected="false"
+                        >
+                            <h5>PC3</h5>
+                        </button>
                     </li>
-                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pc2-tab" data-bs-toggle="tab" data-bs-target="#pc2" type="button" role="tab" aria-controls="pc2" aria-selected="false"><h5>PC2</h5></button>
+                    <li class="nav-item" role="presentation">
+                        <button
+                            class="nav-link"
+                            id="pc2-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#pc2"
+                            type="button"
+                            role="tab"
+                            aria-controls="pc2"
+                            aria-selected="false"
+                        >
+                            <h5>PC2</h5>
+                        </button>
                     </li>
-                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pc1-tab" data-bs-toggle="tab" data-bs-target="#pc1" type="button" role="tab" aria-controls="pc1" aria-selected="false"><h5>PC1</h5></button>
+                    <li class="nav-item" role="presentation">
+                        <button
+                            class="nav-link"
+                            id="pc1-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#pc1"
+                            type="button"
+                            role="tab"
+                            aria-controls="pc1"
+                            aria-selected="false"
+                        >
+                            <h5>PC1</h5>
+                        </button>
                     </li>
                 </ul>
+                <div
+                    class="tab-content tab-content-media bg-white text-dark p-4 p-md-5"
+                >
+                    <div
+                        class="tab-pane fade show active"
+                        id="pc7"
+                        role="tabpanel"
+                        aria-labelledby="pc7-tab"
+                    >
+                        <div class="container-fluid mt-4">
+                            <div class="row">
+                                <div class="col-md-6 tab-content-media-left">
+                                    <div>
+                                        <img
+                                            src="assets/pc7/pc7-logo.png"
+                                            alt="President's Cup 7 Logo"
+                                            class="pc7-logo img-fluid">
+                                    </div>
+                                    <h3 class="mt-4">PC7</h3>
+                                    <p>
+                                        The seventh annual President's Cup ran from January to May
+                                        2026. PC7 featured a bold spy theme that fused
+                                        high-contrast minimalism with slick, shape-driven design,
+                                        evoking the intrigue of espionage through modern
+                                        execution. Inspired by classic spy tools and
+                                        retro-futurist aesthetics, it included sleek, coded
+                                        visuals that commanded attention and concealed layers
+                                        beneath the surface.
+                                    </p>
+                                    <h4 class="mt-4 mb-2">Media Assets</h4>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a
+                                                href="assets/pc7/registration-open.mp4"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Registration Trailer</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="assets/pc7/Branding.zip"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Branding</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="assets/pc7/Graphics.zip"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Graphics</a
+                                            >
+                                        </li>
+                                    </ul>
+                                    <h4 class="mt-4 mb-2">Walkthroughs</h4>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a
+                                                href="https://www.youtube.com/playlist?list=PL-BF3N9rHBLKeSOqmaWx3-DIzxp8OLRiS"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Challenge Walkthroughs</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mt-4">
+                                        <a
+                                            class="video-thumbnail"
+                                            href="assets/pc7/pc7-trailer.mp4"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <img
+                                                src="assets/pc7/pc7-trailer.jpg"
+                                                alt="President's Cup 7 Trailer"
+                                                class="img-fluid">
+                                            <p class="mt-2 text-end">
+                                                President's Cup 7 Trailer Video 🎬
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <h4 class="mt-4 mb-2">Photos</h4>
 
-                <div class="tab-content tab-content-media bg-white text-dark p-4 p-md-5">
-                    <div class="tab-pane fade show active" id="pc7" role="tabpanel" aria-labelledby="pc7-tab">
+                                    <!-- ==================================================
+                                        PRESIDENT'S CUP PHOTO CAROUSEL
+
+                                        Desktop + tablet:
+                                        Change desktopTabletColumns in the JavaScript below.
+
+                                        Mobile:
+                                        Always 2 photos across.
+                                    ================================================== -->
+
+                                    <section
+                                        class="pc-photo-carousel pt-2 pb-4 mb-0"
+                                        data-autoplay-delay="3500"
+                                        aria-label="President's Cup 7 Photo Gallery"
+                                    >
+                                        <div class="container-fluid px-0">
+                                            <h2 class="visually-hidden">
+                                                President's Cup 7 Photo Gallery
+                                            </h2>
+
+                                            <div class="pc-photo-carousel__shell">
+
+                                                <!-- Previous -->
+
+                                                <button
+                                                    class="pc-photo-carousel__control pc-photo-carousel__control--prev"
+                                                    type="button"
+                                                    aria-label="Previous photos"
+                                                >
+                                                    <img
+                                                        data-pc-arrow
+                                                        alt=""
+                                                        loading="eager"
+                                                        data-cf-lazy="never">
+                                                </button>
+
+                                                <!-- Carousel -->
+
+                                                <div class="pc-photo-carousel__viewport">
+                                                    <div class="pc-photo-carousel__track">
+                                                        <button
+                                                            class="pc-photo-carousel__slide"
+                                                            type="button"
+                                                            data-pc-photo="pc7/Presidents-Cup-2026_058.jpg"
+                                                            data-pc-alt="President's Cup 7 Photo 1"
+                                                        >
+                                                            <img alt="" loading="lazy" decoding="async">
+                                                        </button>
+
+                                                        <button
+                                                            class="pc-photo-carousel__slide"
+                                                            type="button"
+                                                            data-pc-photo="pc7/Presidents-Cup-2026_153.jpg"
+                                                            data-pc-alt="President's Cup 7 Photo 2"
+                                                        >
+                                                            <img alt="" loading="lazy" decoding="async">
+                                                        </button>
+
+                                                        <button
+                                                            class="pc-photo-carousel__slide"
+                                                            type="button"
+                                                            data-pc-photo="pc7/Presidents-Cup-2026_294.jpg"
+                                                            data-pc-alt="President's Cup 7 Photo 3"
+                                                        >
+                                                            <img alt="" loading="lazy" decoding="async">
+                                                        </button>
+
+                                                        <button
+                                                            class="pc-photo-carousel__slide"
+                                                            type="button"
+                                                            data-pc-photo="pc7/Presidents-Cup-2026_521.jpg"
+                                                            data-pc-alt="President's Cup 7 Photo 4"
+                                                        >
+                                                            <img alt="" loading="lazy" decoding="async">
+                                                        </button>
+
+                                                        <button
+                                                            class="pc-photo-carousel__slide"
+                                                            type="button"
+                                                            data-pc-photo="pc7/Presidents-Cup-2026_665.jpg"
+                                                            data-pc-alt="President's Cup 7 Photo 5"
+                                                        >
+                                                            <img alt="" loading="lazy" decoding="async">
+                                                        </button>
+
+                                                        <button
+                                                            class="pc-photo-carousel__slide"
+                                                            type="button"
+                                                            data-pc-photo="pc7/Presidents-Cup-2026_704.jpg"
+                                                            data-pc-alt="President's Cup 7 Photo 6"
+                                                        >
+                                                            <img alt="" loading="lazy" decoding="async">
+                                                        </button>
+
+                                                        <button
+                                                            class="pc-photo-carousel__slide"
+                                                            type="button"
+                                                            data-pc-photo="pc7/Presidents-Cup-2026_1050.jpg"
+                                                            data-pc-alt="President's Cup 7 Photo 7"
+                                                        >
+                                                            <img alt="" loading="lazy" decoding="async">
+                                                        </button>
+
+                                                        <button
+                                                            class="pc-photo-carousel__slide"
+                                                            type="button"
+                                                            data-pc-photo="pc7/Presidents-Cup-2026_1208.jpg"
+                                                            data-pc-alt="President's Cup 7 Photo 8"
+                                                        >
+                                                            <img alt="" loading="lazy" decoding="async">
+                                                        </button>
+
+                                                        <button
+                                                            class="pc-photo-carousel__slide"
+                                                            type="button"
+                                                            data-pc-photo="pc7/Presidents-Cup-2026_1348.jpg"
+                                                            data-pc-alt="President's Cup 7 Photo 9"
+                                                        >
+                                                            <img alt="" loading="lazy" decoding="async">
+                                                        </button>
+
+                                                        <button
+                                                            class="pc-photo-carousel__slide"
+                                                            type="button"
+                                                            data-pc-photo="pc7/Presidents-Cup-2026-Award-Ceremony_091.jpg"
+                                                            data-pc-alt="President's Cup 7 Photo 10"
+                                                        >
+                                                            <img alt="" loading="lazy" decoding="async">
+                                                        </button>
+
+                                                        <button
+                                                            class="pc-photo-carousel__slide"
+                                                            type="button"
+                                                            data-pc-photo="pc7/Presidents-Cup-2026-Award-Ceremony_148.jpg"
+                                                            data-pc-alt="President's Cup 7 Photo 11"
+                                                        >
+                                                            <img alt="" loading="lazy" decoding="async">
+                                                        </button>
+
+                                                        <button
+                                                            class="pc-photo-carousel__slide"
+                                                            type="button"
+                                                            data-pc-photo="pc7/Presidents-Cup-2026-Award-Ceremony_154.jpg"
+                                                            data-pc-alt="President's Cup 7 Photo 12"
+                                                        >
+                                                            <img alt="" loading="lazy" decoding="async">
+                                                        </button>
+
+                                                        <button
+                                                            class="pc-photo-carousel__slide"
+                                                            type="button"
+                                                            data-pc-photo="pc7/Presidents-Cup-2026-Award-Ceremony_280.jpg"
+                                                            data-pc-alt="President's Cup 7 Photo 13"
+                                                        >
+                                                            <img alt="" loading="lazy" decoding="async">
+                                                        </button>
+
+                                                        <button
+                                                            class="pc-photo-carousel__slide"
+                                                            type="button"
+                                                            data-pc-photo="pc7/Presidents-Cup-2026-Award-Ceremony_286.jpg"
+                                                            data-pc-alt="President's Cup 7 Photo 14"
+                                                        >
+                                                            <img alt="" loading="lazy" decoding="async">
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Next -->
+
+                                                <button
+                                                    class="pc-photo-carousel__control pc-photo-carousel__control--next"
+                                                    type="button"
+                                                    aria-label="Next photos"
+                                                >
+                                                    <img
+                                                        data-pc-arrow
+                                                        alt=""
+                                                        loading="eager"
+                                                        data-cf-lazy="never">
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Lightbox -->
+
+                                        <div class="pc-photo-lightbox" hidden aria-hidden="true">
+                                            <div
+                                                class="pc-photo-lightbox__dialog"
+                                                role="dialog"
+                                                aria-modal="true"
+                                                aria-label="Expanded President's Cup 7 photo"
+                                            >
+                                                <button
+                                                    class="pc-photo-lightbox__close"
+                                                    type="button"
+                                                    aria-label="Close photo"
+                                                >
+                                                    &times;
+                                                </button>
+
+                                                <button
+                                                    class="pc-photo-lightbox__nav pc-photo-lightbox__nav--prev"
+                                                    type="button"
+                                                    aria-label="Previous photo"
+                                                >
+                                                    <img
+                                                        data-pc-arrow
+                                                        alt=""
+                                                        loading="eager"
+                                                        data-cf-lazy="never">
+                                                </button>
+
+                                                <img class="pc-photo-lightbox__image" alt="">
+
+                                                <button
+                                                    class="pc-photo-lightbox__nav pc-photo-lightbox__nav--next"
+                                                    type="button"
+                                                    aria-label="Next photo"
+                                                >
+                                                    <img
+                                                        data-pc-arrow
+                                                        alt=""
+                                                        loading="eager"
+                                                        data-cf-lazy="never">
+                                                </button>
+
+                                                <div
+                                                    class="pc-photo-lightbox__counter"
+                                                    aria-live="polite"
+                                                ></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Carousel JavaScript -->
+
+                                        <script>
+                                            (() => {
+                                                const section =
+                                                    document.currentScript.closest(
+                                                        ".pc-photo-carousel",
+                                                    );
+
+                                                if (
+                                                    !section ||
+                                                    section.dataset.pcCarouselReady === "true"
+                                                ) {
+                                                    return;
+                                                }
+
+                                                section.dataset.pcCarouselReady = "true";
+
+                                                /* ----------------------------------------------
+                                                Carousel Configuration
+
+                                                Change this number to control how many photos
+                                                appear across on desktop and tablet.
+                                                Mobile always uses 2.
+                                                ---------------------------------------------- */
+
+                                                const desktopTabletColumns = 3;
+                                                const mobileColumns = 1;
+
+                                                /* ----------------------------------------------
+                                                Elements
+                                                ---------------------------------------------- */
+
+                                                const viewport = section.querySelector(
+                                                    ".pc-photo-carousel__viewport",
+                                                );
+                                                const track = section.querySelector(
+                                                    ".pc-photo-carousel__track",
+                                                );
+                                                const previousButton = section.querySelector(
+                                                    ".pc-photo-carousel__control--prev",
+                                                );
+                                                const nextButton = section.querySelector(
+                                                    ".pc-photo-carousel__control--next",
+                                                );
+                                                const originalSlides = Array.from(
+                                                    track.querySelectorAll(".pc-photo-carousel__slide"),
+                                                );
+
+                                                if (
+                                                    !viewport ||
+                                                    !track ||
+                                                    !previousButton ||
+                                                    !nextButton ||
+                                                    !originalSlides.length
+                                                ) {
+                                                    return;
+                                                }
+
+                                                /* ----------------------------------------------
+                                                Automatic Image Path Detection
+                                                ---------------------------------------------- */
+
+                                                const mainStylesheet = Array.from(
+                                                    document.querySelectorAll('link[rel="stylesheet"]'),
+                                                ).find((link) =>
+                                                    /\/css\/style\.css(?:[?#]|$)/i.test(link.href),
+                                                );
+
+                                                const imageRoot = mainStylesheet
+                                                    ? new URL("../img/", mainStylesheet.href)
+                                                    : new URL("img/", document.baseURI);
+
+                                                const arrowURL = new URL("scroll.svg", imageRoot)
+                                                    .href;
+
+                                                /* ----------------------------------------------
+                                                Load Arrows
+                                                ---------------------------------------------- */
+
+                                                section
+                                                    .querySelectorAll("[data-pc-arrow]")
+                                                    .forEach((image) => {
+                                                        image.src = arrowURL;
+                                                    });
+
+                                                /* ----------------------------------------------
+                                                Load Photos
+                                                ---------------------------------------------- */
+
+                                                originalSlides.forEach((slide, index) => {
+                                                    const fileName = slide.dataset.pcPhoto;
+                                                    const altText =
+                                                        slide.dataset.pcAlt ||
+                                                        `President's Cup 7 Photo ${index + 1}`;
+
+                                                    const image = slide.querySelector("img");
+
+                                                    slide.dataset.pcIndex = index;
+
+                                                    image.src = new URL(
+                                                        `photos/${fileName}`,
+                                                        imageRoot,
+                                                    ).href;
+
+                                                    image.alt = "";
+
+                                                    slide.setAttribute(
+                                                        "aria-label",
+                                                        `Open photo ${index + 1} of ${originalSlides.length}: ${altText}`,
+                                                    );
+                                                });
+
+                                                /* ==============================================
+                                                Carousel
+                                                ============================================== */
+
+                                                let visibleCount = 2;
+                                                let physicalIndex = 0;
+                                                let logicalIndex = 0;
+                                                let isAnimating = false;
+
+                                                function getVisibleCount() {
+                                                    const isMobile = window.matchMedia(
+                                                        "(max-width: 767.98px)",
+                                                    ).matches;
+
+                                                    if (isMobile) {
+                                                        return mobileColumns;
+                                                    }
+
+                                                    return Math.max(
+                                                        1,
+                                                        parseInt(desktopTabletColumns, 10) || 1,
+                                                    );
+                                                }
+
+                                                function getSlideWidth() {
+                                                    return viewport.clientWidth / visibleCount;
+                                                }
+
+                                                function setPosition(animate = true) {
+                                                    track.style.transition = animate
+                                                        ? "transform 450ms ease"
+                                                        : "none";
+
+                                                    track.style.transform = `translate3d(-${physicalIndex * getSlideWidth()}px, 0, 0)`;
+                                                }
+
+                                                function createClone(slide) {
+                                                    const clone = slide.cloneNode(true);
+
+                                                    clone.dataset.pcClone = "true";
+                                                    clone.setAttribute("aria-hidden", "true");
+                                                    clone.tabIndex = -1;
+
+                                                    return clone;
+                                                }
+
+                                                function rebuildCarousel() {
+                                                    track
+                                                        .querySelectorAll("[data-pc-clone]")
+                                                        .forEach((clone) => {
+                                                            clone.remove();
+                                                        });
+
+                                                    visibleCount = getVisibleCount();
+
+                                                    section.style.setProperty(
+                                                        "--pc-gallery-visible",
+                                                        visibleCount,
+                                                    );
+
+                                                    originalSlides
+                                                        .slice()
+                                                        .reverse()
+                                                        .forEach((slide) => {
+                                                            track.prepend(createClone(slide));
+                                                        });
+
+                                                    originalSlides.forEach((slide) => {
+                                                        track.append(createClone(slide));
+                                                    });
+
+                                                    physicalIndex =
+                                                        originalSlides.length + logicalIndex;
+                                                    setPosition(false);
+
+                                                    requestAnimationFrame(() => {
+                                                        requestAnimationFrame(() => {
+                                                            track.style.transition = "";
+                                                        });
+                                                    });
+                                                }
+
+                                                function moveCarousel(direction) {
+                                                    if (isAnimating) {
+                                                        return;
+                                                    }
+
+                                                    isAnimating = true;
+
+                                                    /*
+                                                    * Advance one complete visible set.
+                                                    * Desktop/tablet use desktopTabletColumns.
+                                                    * Mobile always uses 2.
+                                                    */
+                                                    const step = visibleCount;
+
+                                                    logicalIndex =
+                                                        (logicalIndex +
+                                                            direction * step +
+                                                            originalSlides.length) %
+                                                        originalSlides.length;
+
+                                                    physicalIndex += direction * step;
+                                                    setPosition(true);
+                                                }
+
+                                                track.addEventListener("transitionend", (event) => {
+                                                    if (event.propertyName !== "transform") {
+                                                        return;
+                                                    }
+
+                                                    const total = originalSlides.length;
+
+                                                    if (
+                                                        physicalIndex < total ||
+                                                        physicalIndex >= total * 2
+                                                    ) {
+                                                        physicalIndex = total + logicalIndex;
+                                                        setPosition(false);
+                                                    }
+
+                                                    isAnimating = false;
+                                                });
+
+                                                previousButton.addEventListener("click", () => {
+                                                    moveCarousel(-1);
+                                                });
+
+                                                nextButton.addEventListener("click", () => {
+                                                    moveCarousel(1);
+                                                });
+
+                                                /* ==============================================
+                                                Touch / Swipe
+                                                ============================================== */
+
+                                                let touchStartX = 0;
+                                                let touchStartY = 0;
+
+                                                viewport.addEventListener(
+                                                    "touchstart",
+                                                    (event) => {
+                                                        if (event.touches.length !== 1) {
+                                                            return;
+                                                        }
+
+                                                        touchStartX = event.touches[0].clientX;
+                                                        touchStartY = event.touches[0].clientY;
+                                                    },
+                                                    { passive: true },
+                                                );
+
+                                                viewport.addEventListener(
+                                                    "touchend",
+                                                    (event) => {
+                                                        if (!event.changedTouches.length) {
+                                                            return;
+                                                        }
+
+                                                        const touchEndX = event.changedTouches[0].clientX;
+                                                        const touchEndY = event.changedTouches[0].clientY;
+                                                        const differenceX = touchEndX - touchStartX;
+                                                        const differenceY = touchEndY - touchStartY;
+
+                                                        if (
+                                                            Math.abs(differenceX) >= 50 &&
+                                                            Math.abs(differenceX) > Math.abs(differenceY)
+                                                        ) {
+                                                            if (differenceX > 0) {
+                                                                moveCarousel(-1);
+                                                            } else {
+                                                                moveCarousel(1);
+                                                            }
+                                                        }
+                                                    },
+                                                    { passive: true },
+                                                );
+
+                                                /* ==============================================
+                                                Lightbox
+                                                ============================================== */
+
+                                                const lightbox =
+                                                    section.querySelector(".pc-photo-lightbox");
+                                                const lightboxDialog = section.querySelector(
+                                                    ".pc-photo-lightbox__dialog",
+                                                );
+                                                const lightboxImage = section.querySelector(
+                                                    ".pc-photo-lightbox__image",
+                                                );
+                                                const lightboxClose = section.querySelector(
+                                                    ".pc-photo-lightbox__close",
+                                                );
+                                                const lightboxPrevious = section.querySelector(
+                                                    ".pc-photo-lightbox__nav--prev",
+                                                );
+                                                const lightboxNext = section.querySelector(
+                                                    ".pc-photo-lightbox__nav--next",
+                                                );
+                                                const lightboxCounter = section.querySelector(
+                                                    ".pc-photo-lightbox__counter",
+                                                );
+
+                                                let lightboxIndex = 0;
+                                                let previouslyFocusedElement = null;
+                                                let previousBodyOverflow = "";
+
+                                                function updateLightbox() {
+                                                    const slide = originalSlides[lightboxIndex];
+                                                    const sourceImage = slide.querySelector("img");
+
+                                                    lightboxImage.src = sourceImage.src;
+                                                    lightboxImage.alt =
+                                                        slide.dataset.pcAlt ||
+                                                        `President's Cup 7 Photo ${lightboxIndex + 1}`;
+
+                                                    lightboxCounter.textContent = `${lightboxIndex + 1} / ${originalSlides.length}`;
+                                                }
+
+                                                function openLightbox(index) {
+                                                    lightboxIndex = index;
+                                                    updateLightbox();
+
+                                                    previouslyFocusedElement = document.activeElement;
+                                                    previousBodyOverflow = document.body.style.overflow;
+                                                    document.body.style.overflow = "hidden";
+
+                                                    lightbox.hidden = false;
+                                                    lightbox.setAttribute("aria-hidden", "false");
+
+                                                    stopAutoplay();
+                                                    lightboxClose.focus();
+                                                }
+
+                                                function closeLightbox() {
+                                                    if (lightbox.hidden) {
+                                                        return;
+                                                    }
+
+                                                    lightbox.hidden = true;
+                                                    lightbox.setAttribute("aria-hidden", "true");
+                                                    document.body.style.overflow = previousBodyOverflow;
+
+                                                    if (
+                                                        previouslyFocusedElement &&
+                                                        typeof previouslyFocusedElement.focus ===
+                                                            "function"
+                                                    ) {
+                                                        previouslyFocusedElement.focus();
+                                                    }
+
+                                                    startAutoplay();
+                                                }
+
+                                                function changeLightbox(direction) {
+                                                    lightboxIndex =
+                                                        (lightboxIndex +
+                                                            direction +
+                                                            originalSlides.length) %
+                                                        originalSlides.length;
+
+                                                    updateLightbox();
+                                                }
+
+                                                track.addEventListener("click", (event) => {
+                                                    const slide = event.target.closest(
+                                                        ".pc-photo-carousel__slide",
+                                                    );
+
+                                                    if (!slide) {
+                                                        return;
+                                                    }
+
+                                                    const index = parseInt(slide.dataset.pcIndex, 10);
+
+                                                    if (!Number.isNaN(index)) {
+                                                        openLightbox(index);
+                                                    }
+                                                });
+
+                                                lightboxClose.addEventListener(
+                                                    "click",
+                                                    closeLightbox,
+                                                );
+
+                                                lightboxPrevious.addEventListener("click", () => {
+                                                    changeLightbox(-1);
+                                                });
+
+                                                lightboxNext.addEventListener("click", () => {
+                                                    changeLightbox(1);
+                                                });
+
+                                                lightbox.addEventListener("click", (event) => {
+                                                    if (
+                                                        event.target === lightbox ||
+                                                        event.target === lightboxDialog
+                                                    ) {
+                                                        closeLightbox();
+                                                    }
+                                                });
+
+                                                document.addEventListener("keydown", (event) => {
+                                                    if (lightbox.hidden) {
+                                                        return;
+                                                    }
+
+                                                    if (event.key === "Escape") {
+                                                        closeLightbox();
+                                                    } else if (event.key === "ArrowLeft") {
+                                                        changeLightbox(-1);
+                                                    } else if (event.key === "ArrowRight") {
+                                                        changeLightbox(1);
+                                                    }
+                                                });
+
+                                                /* ==============================================
+                                                Autoplay
+                                                ============================================== */
+
+                                                const autoplayDelay = Math.max(
+                                                    2500,
+                                                    parseInt(section.dataset.autoplayDelay, 10) || 4000,
+                                                );
+
+                                                const reducedMotion = window.matchMedia(
+                                                    "(prefers-reduced-motion: reduce)",
+                                                );
+
+                                                let autoplayTimer = null;
+                                                let pointerInside = false;
+                                                let focusInside = false;
+
+                                                function stopAutoplay() {
+                                                    if (autoplayTimer) {
+                                                        clearInterval(autoplayTimer);
+                                                        autoplayTimer = null;
+                                                    }
+                                                }
+
+                                                function startAutoplay() {
+                                                    stopAutoplay();
+
+                                                    if (
+                                                        reducedMotion.matches ||
+                                                        document.hidden ||
+                                                        pointerInside ||
+                                                        focusInside ||
+                                                        !lightbox.hidden
+                                                    ) {
+                                                        return;
+                                                    }
+
+                                                    autoplayTimer = setInterval(() => {
+                                                        moveCarousel(1);
+                                                    }, autoplayDelay);
+                                                }
+
+                                                section.addEventListener("mouseenter", () => {
+                                                    pointerInside = true;
+                                                    stopAutoplay();
+                                                });
+
+                                                section.addEventListener("mouseleave", () => {
+                                                    pointerInside = false;
+                                                    startAutoplay();
+                                                });
+
+                                                section.addEventListener("focusin", () => {
+                                                    focusInside = true;
+                                                    stopAutoplay();
+                                                });
+
+                                                section.addEventListener("focusout", () => {
+                                                    setTimeout(() => {
+                                                        focusInside = section.contains(
+                                                            document.activeElement,
+                                                        );
+                                                        startAutoplay();
+                                                    }, 0);
+                                                });
+
+                                                document.addEventListener("visibilitychange", () => {
+                                                    if (document.hidden) {
+                                                        stopAutoplay();
+                                                    } else {
+                                                        startAutoplay();
+                                                    }
+                                                });
+
+                                                /* ==============================================
+                                                Responsive Rebuild
+                                                ============================================== */
+
+                                                let resizeTimer = null;
+
+                                                window.addEventListener("resize", () => {
+                                                    clearTimeout(resizeTimer);
+
+                                                    resizeTimer = setTimeout(() => {
+                                                        rebuildCarousel();
+                                                    }, 100);
+                                                });
+
+                                                /* ==============================================
+                                                Initialize
+                                                ============================================== */
+
+                                                rebuildCarousel();
+                                                startAutoplay();
+                                            })();
+                                        </script>
+                                    </section>
+
+                                    <!-- /President's Cup Photo Carousel -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="tab-pane fade"
+                        id="pc6"
+                        role="tabpanel"
+                        aria-labelledby="pc6-tab"
+                    >
                         <div class="container-fluid mt-4">
                             <div class="row">
                                 <div class="col-md-6 tab-content-media-left">
                                     <div>
-                                        <img src="assets/pc7/pc7-logo.png" alt="President's Cup 7 Logo" class="pc7-logo img-fluid">
+                                        <img
+                                            src="assets/pc6/pc6-logo-alt2.png"
+                                            alt="President's Cup 6 Logo"
+                                            class="pc6-logo img-fluid">
                                     </div>
-                                    <h3 class="mt-4">PC7</h3> 
-                                    <p>The seventh annual President's Cup ran from January to May 2026. PC7 featured a bold spy theme that fused high-contrast minimalism with slick, shape-driven design, evoking the intrigue of espionage through modern execution. Inspired by classic spy tools and retro-futurist aesthetics, it included sleek, coded visuals that commanded attention and concealed layers beneath the surface.</p>
+                                    <h3 class="mt-4">PC6</h3>
+                                    <p>
+                                        The sixth annual President's Cup ran from January to April
+                                        2025 and featured an edgy cyberpunk theme that took
+                                        competitors on a journey through a neon-drenched,
+                                        high-tech metropolis. The Finals were held in person in
+                                        Tysons Corner, Virginia and the Teams Finals included an
+                                        Industrial Control Systems ICScape Room for the second
+                                        year in a row that had the competitors test their luck to
+                                        escape from a locked-down island compound.
+                                    </p>
                                     <h4 class="mt-4 mb-2">Media Assets</h4>
                                     <ul class="list-unstyled">
-                                        <li><a href="assets/pc7/registration-open.mp4" target="_blank" rel="noopener noreferrer">Registration Trailer</a></li>
-                                        <li><a href="assets/pc7/Branding.zip" target="_blank" rel="noopener noreferrer">Branding</a></li>
-                                        <li><a href="assets/pc7/Graphics.zip" target="_blank" rel="noopener noreferrer">Graphics</a></li>
+                                        <li>
+                                            <a
+                                                href="assets/pc6/pc6-trailer.mp4"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >PC6 Trailer Video</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="assets/pc6/pc6-onepager.pdf"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Competition Overview</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="assets/pc6/Branding.zip"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Branding</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="assets/pc6/Graphics.zip"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Graphics</a
+                                            >
+                                        </li>
                                     </ul>
                                     <h4 class="mt-4 mb-2">Walkthroughs</h4>
                                     <ul class="list-unstyled">
-                                        <li><a href="https://www.youtube.com/playlist?list=PL-BF3N9rHBLKeSOqmaWx3-DIzxp8OLRiS" target="_blank" rel="noopener noreferrer">Challenge Walkthroughs</a></li>
+                                        <li>
+                                            <a
+                                                href="https://www.youtube.com/playlist?list=PL-BF3N9rHBLJCVdrk97DBXQAuUUbhRwGF"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Challenge Walkthroughs</a
+                                            >
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mt-4">
-                                        <a class="video-thumbnail" href="assets/pc7/pc7-trailer.mp4" target="_blank" rel="noopener noreferrer">
-                                            <img src="assets/pc7/pc7-trailer.jpg" alt="President's Cup 7 Trailer" class="img-fluid">
-                                            <p class="mt-2 text-end">President's Cup 7 Trailer Video 🎬</p>
+                                        <a
+                                            class="video-thumbnail"
+                                            href="https://www.youtube.com/watch?v=jACScI60xO8"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <img
+                                                src="assets/pc6/pc6-trailer.jpg"
+                                                alt="President's Cup 6 Highlights"
+                                                class="img-fluid">
+                                            <p class="mt-2 text-end">
+                                                President's Cup 6 Highlights Video 🎬
+                                            </p>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="pc6" role="tabpanel" aria-labelledby="pc6-tab">
+                    <div
+                        class="tab-pane fade"
+                        id="pc5"
+                        role="tabpanel"
+                        aria-labelledby="pc5-tab"
+                    >
                         <div class="container-fluid mt-4">
                             <div class="row">
                                 <div class="col-md-6 tab-content-media-left">
                                     <div>
-                                        <img src="assets/pc6/pc6-logo-alt2.png" alt="President's Cup 6 Logo" class="pc6-logo img-fluid">
+                                        <img
+                                            src="assets/pc5/pc5-logo.jpg"
+                                            alt="President's Cup 5 Logo"
+                                            class="pc5-logo img-fluid">
                                     </div>
-                                    <h3 class="mt-4">PC6</h3> 
-                                    <p>The sixth annual President's Cup ran from January to April 2025 and featured an edgy cyberpunk theme that took competitors on a journey through a neon-drenched, high-tech metropolis. The Finals were held in person in Tysons Corner, Virginia and the Teams Finals included an Industrial Control Systems ICScape Room for the second year in a row that had the competitors test their luck to escape from a locked-down island compound.</p>
+                                    <h3 class="mt-4">PC5</h3>
+                                    <p>
+                                        The fifth annual President's Cup ran from January to April
+                                        2024 and featured an exciting theme centered around
+                                        several beloved video games, with competitors showing off
+                                        their best cyber moves and stretching their skills. The
+                                        Finals were held in person at CISA facilities, and the
+                                        Teams Finals included a new Industrial Control Systems
+                                        ICScape Room. This interactive escape room experience
+                                        immersed participants in a fictional storyline in which
+                                        teams navigated through an intense scenario, completing
+                                        various hands-on tasks such as finding hidden PLC
+                                        equipment and installing a Ladder Logic and HMI display,
+                                        to secure the scene and save the day.
+                                    </p>
                                     <h4 class="mt-4 mb-2">Media Assets</h4>
                                     <ul class="list-unstyled">
-                                        <li><a href="assets/pc6/pc6-trailer.mp4" target="_blank" rel="noopener noreferrer">PC6 Trailer Video</a></li>
-                                        <li><a href="assets/pc6/pc6-onepager.pdf" target="_blank" rel="noopener noreferrer">Competition Overview</a></li>
-                                        <li><a href="assets/pc6/Branding.zip" target="_blank" rel="noopener noreferrer">Branding</a></li>
-                                        <li><a href="assets/pc6/Graphics.zip" target="_blank" rel="noopener noreferrer">Graphics</a></li>
+                                        <li>
+                                            <a
+                                                href="assets/pc5/pc5-onepager.pdf"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Competition Overview</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="assets/pc5/Branding.zip"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Branding</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="assets/pc5/Graphics.zip"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Graphics</a
+                                            >
+                                        </li>
                                     </ul>
                                     <h4 class="mt-4 mb-2">Walkthroughs</h4>
                                     <ul class="list-unstyled">
-                                        <li><a href="https://www.youtube.com/playlist?list=PL-BF3N9rHBLJCVdrk97DBXQAuUUbhRwGF" target="_blank" rel="noopener noreferrer">Challenge Walkthroughs</a></li>
+                                        <li>
+                                            <a
+                                                href="https://www.youtube.com/playlist?list=PL-BF3N9rHBLIEPdFMHx9un3AYHsMXmnzr"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Challenge Walkthroughs</a
+                                            >
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mt-4">
-                                        <a class="video-thumbnail" href="https://www.youtube.com/watch?v=jACScI60xO8" target="_blank" rel="noopener noreferrer">
-                                            <img src="assets/pc6/pc6-trailer.jpg" alt="President's Cup 6 Highlights" class="img-fluid">
-                                            <p class="mt-2 text-end">President's Cup 6 Highlights Video 🎬</p>
+                                        <a
+                                            class="video-thumbnail"
+                                            href="assets/pc5/pc5-highlights.mp4"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <img
+                                                src="assets/pc5/pc5-highlights.jpg"
+                                                alt="President's Cup 5 Highlights"
+                                                class="img-fluid">
+                                            <p class="mt-2 text-end">
+                                                President's Cup 5 Highlights Video 🎬
+                                            </p>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="pc5" role="tabpanel" aria-labelledby="pc5-tab">
+                    <div
+                        class="tab-pane fade"
+                        id="pc4"
+                        role="tabpanel"
+                        aria-labelledby="pc4-tab"
+                    >
                         <div class="container-fluid mt-4">
                             <div class="row">
                                 <div class="col-md-6 tab-content-media-left">
                                     <div>
-                                        <img src="assets/pc5/pc5-logo.jpg" alt="President's Cup 5 Logo" class="pc5-logo img-fluid">
+                                        <img
+                                            src="assets/pc4/pc4-logo.jpg"
+                                            alt="President's Cup 4 Logo"
+                                            class="pc4-logo img-fluid">
                                     </div>
-                                    <h3 class="mt-4">PC5</h3> 
-                                    <p>The fifth annual President's Cup ran from January to April 2024 and featured an exciting theme centered around several beloved video games, with competitors showing off their best cyber moves and stretching their skills. The Finals were held in person at CISA facilities, and the Teams Finals included a new Industrial Control Systems ICScape Room. This interactive escape room experience immersed participants in a fictional storyline in which teams navigated through an intense scenario, completing various hands-on tasks such as finding hidden PLC equipment and installing a Ladder Logic and HMI display, to secure the scene and save the day.</p>
+                                    <h3 class="mt-4">PC4</h3>
+                                    <p>
+                                        The fourth annual President's Cup ran from August to
+                                        December 2022 and had competitors blasting into orbit with
+                                        a new space exploration theme. PC4 was packed with
+                                        competitors from across the entire federal government, and
+                                        the Finals were held in person for the first time in two
+                                        years at CISA's Arlington facilities. The Teams Finals
+                                        included a galaxy-traversing experience featuring sci-fi
+                                        technology, aliens, and a race to restore balance to the
+                                        universe.
+                                    </p>
                                     <h4 class="mt-4 mb-2">Media Assets</h4>
                                     <ul class="list-unstyled">
-                                        <li><a href="assets/pc5/pc5-onepager.pdf" target="_blank" rel="noopener noreferrer">Competition Overview</a></li>
-                                        <li><a href="assets/pc5/Branding.zip" target="_blank" rel="noopener noreferrer">Branding</a></li>
-                                        <li><a href="assets/pc5/Graphics.zip" target="_blank" rel="noopener noreferrer">Graphics</a></li>
-                                    </ul>
-                                    <h4 class="mt-4 mb-2">Walkthroughs</h4>
-                                    <ul class="list-unstyled">
-                                        <li><a href="https://www.youtube.com/playlist?list=PL-BF3N9rHBLIEPdFMHx9un3AYHsMXmnzr" target="_blank" rel="noopener noreferrer">Challenge Walkthroughs</a></li>
+                                        <li>
+                                            <a
+                                                href="assets/pc4/pc4-onepager.pdf"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Competition Overview</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="assets/pc4/Branding.zip"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Branding</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="assets/pc4/Graphics.zip"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Graphics</a
+                                            >
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mt-4">
-                                        <a class="video-thumbnail" href="assets/pc5/pc5-highlights.mp4" target="_blank" rel="noopener noreferrer">
-                                            <img src="assets/pc5/pc5-highlights.jpg" alt="President's Cup 5 Highlights" class="img-fluid">
-                                            <p class="mt-2 text-end">President's Cup 5 Highlights Video 🎬</p>
+                                        <a
+                                            class="video-thumbnail"
+                                            href="assets/pc4/pc4-trailer.mp4"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <img
+                                                src="assets/pc4/pc4-trailer.jpg"
+                                                alt="President's Cup 4 Trailer"
+                                                class="img-fluid">
+                                            <p class="mt-2 text-end">
+                                                President's Cup 4 Trailer Video 🎬
+                                            </p>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="pc4" role="tabpanel" aria-labelledby="pc4-tab">
+                    <div
+                        class="tab-pane fade"
+                        id="pc3"
+                        role="tabpanel"
+                        aria-labelledby="pc3-tab"
+                    >
                         <div class="container-fluid mt-4">
                             <div class="row">
                                 <div class="col-md-6 tab-content-media-left">
                                     <div>
-                                        <img src="assets/pc4/pc4-logo.jpg" alt="President's Cup 4 Logo" class="pc4-logo img-fluid">
+                                        <img
+                                            src="assets/pc3/pc3-logo.jpg"
+                                            alt="President's Cup 3 Logo"
+                                            class="pc3-logo img-fluid">
                                     </div>
-                                    <h3 class="mt-4">PC4</h3> 
-                                    <p>The fourth annual President's Cup ran from August to December 2022 and had competitors blasting into orbit with a new space exploration theme. PC4 was packed with competitors from across the entire federal government, and the Finals were held in person for the first time in two years at CISA's Arlington facilities. The Teams Finals included a galaxy-traversing experience featuring sci-fi technology, aliens, and a race to restore balance to the universe.</p>
+                                    <h3 class="mt-4">PC3</h3>
+                                    <p>
+                                        The third annual President's Cup ran from August to
+                                        December 2021 and featured a retro 1980's-inspired theme
+                                        and all-new challenges based on in-demand NICE Framework
+                                        Work Roles. PC3 saw a significant increase in
+                                        participation from the first two competitions. The Finals
+                                        were held virtually and livestreamed with live commentary
+                                        from CISA's cybersecurity experts.
+                                    </p>
                                     <h4 class="mt-4 mb-2">Media Assets</h4>
                                     <ul class="list-unstyled">
-                                        <li><a href="assets/pc4/pc4-onepager.pdf" target="_blank" rel="noopener noreferrer">Competition Overview</a></li>
-                                        <li><a href="assets/pc4/Branding.zip" target="_blank" rel="noopener noreferrer">Branding</a></li>
-                                        <li><a href="assets/pc4/Graphics.zip" target="_blank" rel="noopener noreferrer">Graphics</a></li>
+                                        <li>
+                                            <a
+                                                href="assets/pc3/pc3-onepager.pdf"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Competition Overview</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="assets/pc3/Branding.zip"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Branding</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="assets/pc3/Graphics.zip"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Graphics</a
+                                            >
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mt-4">
-                                        <a class="video-thumbnail" href="assets/pc4/pc4-trailer.mp4" target="_blank" rel="noopener noreferrer">
-                                            <img src="assets/pc4/pc4-trailer.jpg" alt="President's Cup 4 Trailer" class="img-fluid">
-                                            <p class="mt-2 text-end">President's Cup 4 Trailer Video 🎬</p>
+                                        <a
+                                            class="video-thumbnail"
+                                            href="assets/pc3/pc3-trailer.mp4"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <img
+                                                src="assets/pc3/pc3-trailer.jpg"
+                                                alt="President's Cup 3 Trailer"
+                                                class="img-fluid">
+                                            <p class="mt-2 text-end">
+                                                President's Cup 3 Trailer Video 🎬
+                                            </p>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="pc3" role="tabpanel" aria-labelledby="pc3-tab">
+                    <div
+                        class="tab-pane fade"
+                        id="pc2"
+                        role="tabpanel"
+                        aria-labelledby="pc2-tab"
+                    >
                         <div class="container-fluid mt-4">
                             <div class="row">
                                 <div class="col-md-6 tab-content-media-left">
                                     <div>
-                                        <img src="assets/pc3/pc3-logo.jpg" alt="President's Cup 3 Logo" class="pc3-logo img-fluid">
+                                        <img
+                                            src="assets/pc2/pc2-logo.png"
+                                            alt="President's Cup 2 Logo"
+                                            class="pc2-logo img-fluid">
                                     </div>
-                                    <h3 class="mt-4">PC3</h3> 
-                                    <p>The third annual President's Cup ran from August to December 2021 and featured a retro 1980's-inspired theme and all-new challenges based on in-demand NICE Framework Work Roles. PC3 saw a significant increase in participation from the first two competitions.  The Finals were held virtually and livestreamed with live commentary from CISA's cybersecurity experts.</p>
+                                    <h3 class="mt-4">PC2</h3>
+                                    <p>
+                                        The second annual President's Cup Cybersecurity
+                                        Competition ran from August 2020 to February 2021 and
+                                        provided a new and improved experience for competitors.
+                                        For the first time, Individuals were split into two
+                                        tracks: Track A, focusing on defensive NICE Work Roles,
+                                        and Track B, focusing on Offensive NICE Work Roles. The
+                                        Teams Finals also included a new iteration of the escape
+                                        room concept featuring a “Save the World” scenario in
+                                        which teams responded to a weather-based crisis at a local
+                                        municipality as part of a Disaster Relief Task Force
+                                        (DRTF).
+                                    </p>
                                     <h4 class="mt-4 mb-2">Media Assets</h4>
                                     <ul class="list-unstyled">
-                                        <li><a href="assets/pc3/pc3-onepager.pdf" target="_blank" rel="noopener noreferrer">Competition Overview</a></li>
-                                        <li><a href="assets/pc3/Branding.zip" target="_blank" rel="noopener noreferrer">Branding</a></li>
-                                        <li><a href="assets/pc3/Graphics.zip" target="_blank" rel="noopener noreferrer">Graphics</a></li>
+                                        <li>
+                                            <a
+                                                href="assets/pc2/pc2-onepager.pdf"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Competition Overview</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="assets/pc2/Branding.zip"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Branding</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="assets/pc2/Graphics.zip"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Graphics</a
+                                            >
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mt-4">
-                                        <a class="video-thumbnail" href="assets/pc3/pc3-trailer.mp4" target="_blank" rel="noopener noreferrer">
-                                            <img src="assets/pc3/pc3-trailer.jpg" alt="President's Cup 3 Trailer" class="img-fluid">
-                                            <p class="mt-2 text-end">President's Cup 3 Trailer Video 🎬</p>
+                                        <a
+                                            class="video-thumbnail"
+                                            href="assets/pc2/pc2-trailer.mp4"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <img
+                                                src="assets/pc2/pc2-trailer.jpg"
+                                                alt="President's Cup 2 Trailer"
+                                                class="img-fluid">
+                                            <p class="mt-2 text-end">
+                                                President's Cup 2 Trailer Video 🎬
+                                            </p>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="pc2" role="tabpanel" aria-labelledby="pc2-tab">
+                    <div
+                        class="tab-pane fade"
+                        id="pc1"
+                        role="tabpanel"
+                        aria-labelledby="pc1-tab"
+                    >
                         <div class="container-fluid mt-4">
                             <div class="row">
                                 <div class="col-md-6 tab-content-media-left">
                                     <div>
-                                        <img src="assets/pc2/pc2-logo.png" alt="President's Cup 2 Logo" class="pc2-logo img-fluid">
+                                        <img
+                                            src="assets/pc1/pc1-logo.png"
+                                            alt="President's Cup 1 Logo"
+                                            class="pc1-logo img-fluid">
                                     </div>
-                                    <h3 class="mt-4">PC2</h3> 
-                                    <p>The second annual President's Cup Cybersecurity Competition ran from August 2020 to February 2021 and provided a new and improved experience for competitors. For the first time, Individuals were split into two tracks: Track A, focusing on defensive NICE Work Roles, and Track B, focusing on Offensive NICE Work Roles. The Teams Finals also included a new iteration of the escape room concept featuring a “Save the World” scenario in which teams responded to a weather-based crisis at a local municipality as part of a Disaster Relief Task Force (DRTF).</p>
+                                    <h3 class="mt-4">PC1</h3>
+                                    <p>
+                                        The inaugural President's Cup Cybersecurity Competition
+                                        ran from September to December 2019, and drew more than
+                                        1,000 individuals and 200 teams. After two Qualifying
+                                        Rounds, 10 Individuals finalists and five Teams finalists
+                                        came to the Washington, D.C., area for the Finals at the
+                                        CISA Cybersecurity Lab. The five teams were given a series
+                                        of challenges to solve on the first day, followed by a
+                                        virtual escape room on the second day. During the escape
+                                        scenario, teams were given 8 hours to solve a series of
+                                        challenges from forensics to exploitation, culminating in
+                                        gaining a password to an elevator to "escape."
+                                    </p>
                                     <h4 class="mt-4 mb-2">Media Assets</h4>
                                     <ul class="list-unstyled">
-                                        <li><a href="assets/pc2/pc2-onepager.pdf" target="_blank" rel="noopener noreferrer">Competition Overview</a></li>
-                                        <li><a href="assets/pc2/Branding.zip" target="_blank" rel="noopener noreferrer">Branding</a></li>
-                                        <li><a href="assets/pc2/Graphics.zip" target="_blank" rel="noopener noreferrer">Graphics</a></li>
+                                        <li>
+                                            <a
+                                                href="assets/pc1/pc1-onepager.pdf"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Competition Overview</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="https://www.youtube.com/watch?v=1I8Rfb-oi54"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >White House Awards Ceremony: Trophy Presentation</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="assets/pc1/Branding.zip"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Branding</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="assets/pc1/Graphics.zip"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Graphics</a
+                                            >
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mt-4">
-                                        <a class="video-thumbnail" href="assets/pc2/pc2-trailer.mp4" target="_blank" rel="noopener noreferrer">
-                                            <img src="assets/pc2/pc2-trailer.jpg" alt="President's Cup 2 Trailer" class="img-fluid">
-                                            <p class="mt-2 text-end">President's Cup 2 Trailer Video 🎬</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                    
-                    <div class="tab-pane fade" id="pc1" role="tabpanel" aria-labelledby="pc1-tab">
-                        <div class="container-fluid mt-4">
-                            <div class="row">
-                                <div class="col-md-6 tab-content-media-left">
-                                    <div>
-                                        <img src="assets/pc1/pc1-logo.png" alt="President's Cup 1 Logo" class="pc1-logo img-fluid">
-                                    </div>
-                                    <h3 class="mt-4">PC1</h3> 
-                                    <p>The inaugural President's Cup Cybersecurity Competition ran from September to December 2019, and drew more than 1,000 individuals and 200 teams. After two Qualifying Rounds, 10 Individuals finalists and five Teams finalists came to the Washington, D.C., area for the Finals at the CISA Cybersecurity Lab. The five teams were given a series of challenges to solve on the first day, followed by a virtual escape room on the second day. During the escape scenario, teams were given 8 hours to solve a series of challenges from forensics to exploitation, culminating in gaining a password to an elevator to "escape."</p>
-                                    <h4 class="mt-4 mb-2">Media Assets</h4>
-                                    <ul class="list-unstyled">
-                                        <li><a href="assets/pc1/pc1-onepager.pdf" target="_blank" rel="noopener noreferrer">Competition Overview</a></li>
-                                        <li><a href="https://www.youtube.com/watch?v=1I8Rfb-oi54" target="_blank" rel="noopener noreferrer">White House Awards Ceremony: Trophy Presentation</a></li>
-                                        <li><a href="assets/pc1/Branding.zip" target="_blank" rel="noopener noreferrer">Branding</a></li>
-                                        <li><a href="assets/pc1/Graphics.zip" target="_blank" rel="noopener noreferrer">Graphics</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mt-4">
-                                        <a class="video-thumbnail" href="assets/pc1/pc1-highlights.mp4" target="_blank" rel="noopener noreferrer">
-                                            <img src="assets/pc1/pc1-highlights.jpg" alt="President's Cup 1 Highlights" class="img-fluid">
-                                            <p class="mt-2 text-end">President's Cup 1 Highlights Video 🎬</p>
+                                        <a
+                                            class="video-thumbnail"
+                                            href="assets/pc1/pc1-highlights.mp4"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <img
+                                                src="assets/pc1/pc1-highlights.jpg"
+                                                alt="President's Cup 1 Highlights"
+                                                class="img-fluid">
+                                            <p class="mt-2 text-end">
+                                                President's Cup 1 Highlights Video 🎬
+                                            </p>
                                         </a>
                                     </div>
                                 </div>
@@ -340,36 +1694,63 @@
                 </div>
             </div>
         </section>
-        
-        <section id="media-faq"  class="px-3 py-5 gradient-dark">
+        <section id="media-faq" class="px-3 py-5 gradient-dark">
             <div class="container py-5 text-light">
                 <div class="row py-5 mb-4 align-items-center text-end">
                     <div class="col-12">
                         <h3 class="display-4 fw-bold mt-5 mb-4">Questions?</h3>
-                        <p class="fs-5">If you have any media or branding questions about the competition, you can email us <a class="link-light" href="mailto:presidentscup@cisa.dhs.gov" target="_blank" rel="noopener noreferrer">here</a>.</p>
+                        <p class="fs-5">
+                            If you have any media or branding questions about the
+                            competition, you can email us
+                            <a
+                                class="link-light"
+                                href="mailto:presidentscup@cisa.dhs.gov"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >here</a
+                            >.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
 
     <!-- Footer -->
+
     <footer class="py-5">
         <div class="container">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div
+                class="d-flex flex-column flex-md-row justify-content-between align-items-center"
+            >
                 <div class="mb-4 mb-md-0">
                     <div class="footer-briefed px-2">
-                        <a href="https://www.cisa.gov/prescup" target="_blank" rel="noopener noreferrer">
-                            <img src="../img/footer-cisa.png" loading="eager" data-cf-lazy="never" alt="CISA Link">
+                        <a
+                            href="https://www.cisa.gov/prescup"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                src="../img/footer-cisa.png"
+                                loading="eager"
+                                data-cf-lazy="never"
+                                alt="CISA Link">
                         </a>
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
                     <div class="footer-logo">
-                        <a href="https://www.cisa.gov" target="_blank" rel="noopener noreferrer">
-                            <img src="../img/footer-logo-cisa.png" loading="eager" data-cf-lazy="never" alt="CISA Logo"> 
-                        </a>                  
+                        <a
+                            href="https://www.cisa.gov"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                src="../img/footer-logo-cisa.png"
+                                loading="eager"
+                                data-cf-lazy="never"
+                                alt="CISA Logo">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -377,101 +1758,88 @@
     </footer>
 
     <!-- Bootstrap JS Bundle -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Custom JS for animations -->
-    <!-- 
-    <script>
+
+    <!--
+        <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const animatedElements = document.querySelectorAll('.redacted-container, .btn-register');
-
-            if (animatedElements.length > 0) {
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('is-visible');
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, {
-                    threshold: 0.5 // Trigger when 50% of the element is visible
-                });
-
-                animatedElements.forEach(el => {
-                    observer.observe(el);
-                });
-            }
-
-            // Text decode effect for navigation
-            const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/$@!?";
-            const navLinks = document.querySelectorAll('.nav-tabs-spy .nav-link span');
-
-            const decodeEffect = (element) => {
-                const originalText = element.dataset.originalText;
-                let iteration = 0;
-
-                if (element.dataset.intervalId) {
-                    clearInterval(parseInt(element.dataset.intervalId));
-                }
-
-                const intervalId = setInterval(() => {
-                    element.innerText = originalText
-                        .split("")
-                        .map((letter, index) => {
-                            if(index < iteration) {
-                                return originalText[index];
-                            }
-                            return letters[Math.floor(Math.random() * letters.length)];
-                        })
-                        .join("");
-
-                    if(iteration >= originalText.length){
-                        clearInterval(intervalId);
-                        element.dataset.intervalId = null;
-                    }
-
-                    iteration += 1 / 3;
-                }, 65); // animation speed
-
-                element.dataset.intervalId = intervalId;
-            };
-
-            navLinks.forEach(span => {
-                span.dataset.originalText = span.innerText;
-                span.style.minWidth = span.offsetWidth + 'px';
-                span.style.display = 'inline-block';
-
-                // Initial animation on page load
-                decodeEffect(span);
-
-                // Add hover event listener
-                span.parentElement.onmouseover = () => {
-                    // decodeEffect(span);
-                };
-            });
+        const animatedElements = document.querySelectorAll('.redacted-container, .btn-register');
+        if (animatedElements.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+        }
         });
-    </script>
+        }, {
+        threshold: 0.5 // Trigger when 50% of the element is visible
+        });
+        animatedElements.forEach(el => {
+        observer.observe(el);
+        });
+        }
+        // Text decode effect for navigation
+        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/$@!?";
+        const navLinks = document.querySelectorAll('.nav-tabs-spy .nav-link span');
+        const decodeEffect = (element) => {
+        const originalText = element.dataset.originalText;
+        let iteration = 0;
+        if (element.dataset.intervalId) {
+        clearInterval(parseInt(element.dataset.intervalId));
+        }
+        const intervalId = setInterval(() => {
+        element.innerText = originalText
+        .split("")
+        .map((letter, index) => {
+        if(index < iteration) {
+        return originalText[index];
+        }
+        return letters[Math.floor(Math.random() * letters.length)];
+        })
+        .join("");
+        if(iteration >= originalText.length){
+        clearInterval(intervalId);
+        element.dataset.intervalId = null;
+        }
+        iteration += 1 / 3;
+        }, 65); // animation speed
+        element.dataset.intervalId = intervalId;
+        };
+        navLinks.forEach(span => {
+        span.dataset.originalText = span.innerText;
+        span.style.minWidth = span.offsetWidth + 'px';
+        span.style.display = 'inline-block';
+        // Initial animation on page load
+        decodeEffect(span);
+        // Add hover event listener
+        span.parentElement.onmouseover = () => {
+        // decodeEffect(span);
+        };
+        });
+        });
+        </script>
     -->
 
     <!-- Fix for Cloudflare Miroge -->
-    <script>   
-        function fixCloudflareMirageImages() {
-            const images = document.querySelectorAll('img');
-            
-            images.forEach(img => {
 
+    <script>
+        function fixCloudflareMirageImages() {
+            const images = document.querySelectorAll("img");
+            images.forEach((img) => {
                 if (!img.src && img.dataset.cfsrc) {
                     // Override Cloudflare parameters
-                    img.style.setProperty('display', 'inherit', 'important');
-                    img.style.setProperty('visibility', 'inherit', 'important');
+                    img.style.setProperty("display", "inherit", "important");
+                    img.style.setProperty("visibility", "inherit", "important");
                     img.src = img.dataset.cfsrc;
                 }
             });
         }
-    
         // Run the function after the current browser execution stack is clear
         setTimeout(fixCloudflareMirageImages, 1);
     </script>
-
 </body>
 </html>
