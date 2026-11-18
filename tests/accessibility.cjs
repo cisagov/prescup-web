@@ -177,11 +177,16 @@ const routes = ['', 'pc8/', 'media/', 'workshops/', 'game-of-the-month/', 'hack-
         for (let i = 0; i < await members.count(); i++) {
             const member = members.nth(i);
             const name = await member.getAttribute('data-name');
-            assert.equal(await member.getAttribute('aria-label'), `View ${name} profile`);
+            const handle = await member.getAttribute('data-handle');
+            const label = name && name !== handle
+                ? `View ${name.replace(/\s+/g, ' ').trim()} profile (username ${handle})`
+                : `View ${handle} profile`;
+            assert.equal(await page.getByRole('link', { name: label, exact: true }).count(), 1);
             await member.focus(); await page.keyboard.press('Enter');
             await page.locator('#memberModal.show').waitFor();
             await page.waitForTimeout(350);
-            assert.equal(await page.locator('#modal-name').textContent(), name);
+            assert.equal(await page.locator('#modal-name').textContent(), name?.trim() || handle);
+            assert.equal(await page.locator('#modal-handle').isVisible(), Boolean(handle && name && name.trim() !== handle));
             assert.equal(await page.locator('#memberModal').getAttribute('aria-labelledby'), 'modal-name');
             if (i === 0) await scan('member-dialog');
             await page.keyboard.press('Escape'); await page.waitForTimeout(350);

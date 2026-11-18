@@ -576,7 +576,7 @@ header {
     margin-top: 2rem;
     margin-bottom: 2rem;
     width: 60px;
-    animation: gentle-bounce 2s ease-in-out 2;
+    animation: gentle-bounce 2.5s ease-in-out 2;
 }
 
 @keyframes gentle-bounce {
@@ -2510,6 +2510,11 @@ a.video-thumbnail:hover:after {
     max-width: 100%;
 }
 
+.gom-game-card > a:has(> img) {
+    display: block;
+    width: fit-content;
+}
+
 #gom-practice .btn {
     font-family: inherit;
     padding: 3px 40px 6px 40px;
@@ -3345,11 +3350,18 @@ a.video-thumbnail:hover:after {
     transform: translateY(-200%);
 }
 .skip-link:focus { transform: translateY(0); color: #111; }
-body :is(a, button, [tabindex]):focus-visible {
+body :is(a, button, [tabindex]):focus-visible,
+body a:focus-visible > img:only-child {
     outline: 3px solid #005fcc;
     outline-offset: 3px;
     box-shadow: 0 0 0 6px #fff;
 }
+/* An inline link's text box can cross the artwork. Outline the image itself. */
+body a:focus-visible:has(> img:only-child) {
+    outline: none;
+    box-shadow: none;
+}
+
 /* Keep the ring inside each slide so the carousel viewport cannot clip it. */
 body .pc-photo-carousel__slide:focus-visible {
     outline-offset: -4px;
