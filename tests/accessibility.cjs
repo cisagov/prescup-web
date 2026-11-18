@@ -76,6 +76,22 @@ const routes = ['', 'pc8/', 'media/', 'workshops/', 'game-of-the-month/', 'hack-
             }));
             if (width === 390) assert(await page.getByRole('button', { name: /Jump to section.*Eligibility/i }).isVisible());
         }
+        // Reverse-tab to a link that the sticky bar would otherwise cover.
+        await visit('pc8/', 390);
+        const registrationPortal = page.getByRole('link', { name: 'CISA Registration Portal (access.cisa.gov)', exact: true });
+        await page.locator('#registration a[href$="/ctf/events"]').first().focus();
+        await registrationPortal.evaluate(link => {
+            window.scrollTo({ top: window.scrollY + link.getBoundingClientRect().top - 6, behavior: 'instant' });
+        });
+        await page.keyboard.press('Shift+Tab');
+        await page.waitForFunction(() => {
+            const link = document.activeElement;
+            const bar = document.getElementById('pc8MobileBar').getBoundingClientRect();
+            return link.getAttribute('href') === 'https://access.cisa.gov/' &&
+                bar.top <= 1 && link.getBoundingClientRect().top >= bar.bottom + 8;
+        }, null, { timeout: 3000 });
+        console.log('PASS PC8 keyboard focus clears the sticky mobile bar');
+
         for (const width of [320, 390, 768, 1280]) {
             for (const route of routes) {
                 await visit(route, width);

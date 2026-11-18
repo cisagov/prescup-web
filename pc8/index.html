@@ -760,6 +760,7 @@
         var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#pc8SideNav .pc8-side-link'));
         var mobileLinks = Array.prototype.slice.call(document.querySelectorAll('#pc8MobileMenu .pc8-mobile-link'));
         var allLinks = sideLinks.concat(mobileLinks);
+        var mobileBar = document.getElementById('pc8MobileBar');
         var barLabel = document.getElementById('pc8BarLabel');
         var menuEl = document.getElementById('pc8MobileMenu');
         var fills = Array.prototype.slice.call(document.querySelectorAll('.pc8-progress__fill'));
@@ -891,6 +892,26 @@
         }, { passive: true });
 
         window.addEventListener('resize', queuePaint);
+
+        /* The browser can leave a link under the sticky bar if it is already
+           inside the viewport. Check after its normal keyboard focus scroll. */
+        document.addEventListener('focusin', function (event) {
+            var target = event.target;
+            if (target.tabIndex < 0 || mobileBar.contains(target) || !mobileBar.getClientRects().length) {
+                return;
+            }
+            window.requestAnimationFrame(function () {
+                if (document.activeElement !== target || !target.matches(':focus-visible')) {
+                    return;
+                }
+                var bar = mobileBar.getBoundingClientRect();
+                var focused = target.getBoundingClientRect();
+                var clearTop = bar.bottom + 12; // Room for the focus outline.
+                if (bar.top <= 1 && focused.bottom > 0 && focused.top < clearTop) {
+                    window.scrollBy({ top: focused.top - clearTop, behavior: 'instant' });
+                }
+            });
+        });
 
         /* Instant feedback on click; hold the spy until scrolling settles so
            the highlight doesn't flicker through intermediate sections */
