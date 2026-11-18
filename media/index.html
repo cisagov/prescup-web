@@ -33,7 +33,7 @@
 
     <!-- Main Stylesheet -->
 
-    <link rel="stylesheet" href="../css/style.css?ver=8.1.8.2">
+    <link rel="stylesheet" href="../css/style.css?ver=8.1.8b">
 
     <!-- Media-page carousel/lightbox overrides -->
 
@@ -139,13 +139,15 @@
         src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DHS"
         id="_fed_an_ua_tag"
     ></script>
+    <script src="../js/photo-gallery-accessibility.js?ver=8.1.8b"></script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- Header Navigation -->
 
     <header>
-        <div class="container">
+        <nav class="container" aria-label="Primary">
             <ul class="nav nav-tabs-std">
                 <li class="nav-item">
                     <a class="nav-link" href="../"><span>Home</span></a>
@@ -172,9 +174,9 @@
                     >
                 </li>
             </ul>
-        </div>
+        </nav>
     </header>
-    <main>
+    <main id="main-content" tabindex="-1">
 
         <!-- Executive Order Evergreen -->
 
@@ -189,7 +191,7 @@
                             src="../img/logo-cisa.png"
                             loading="eager"
                             data-cf-lazy="never"
-                            alt="President's Cup Media">
+                            alt="Cybersecurity and Infrastructure Security Agency">
                     </div>
                 </div>
             </div>
@@ -216,7 +218,7 @@
             <div class="container py-5 text-light">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <h3 class="display-4 fw-bold">Media</h3>
+                        <h1 class="h3 heading-standard display-4 fw-bold">Media</h1>
                     </div>
                     <div class="col-md-6">
                         <p class="fs-6 mt-2">
@@ -250,7 +252,7 @@
                             aria-controls="pc7"
                             aria-selected="true"
                         >
-                            <h5>PC7</h5>
+                            <span class="media-tab-label">PC7</span>
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
@@ -264,7 +266,7 @@
                             aria-controls="pc6"
                             aria-selected="false"
                         >
-                            <h5>PC6</h5>
+                            <span class="media-tab-label">PC6</span>
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
@@ -278,7 +280,7 @@
                             aria-controls="pc5"
                             aria-selected="false"
                         >
-                            <h5>PC5</h5>
+                            <span class="media-tab-label">PC5</span>
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
@@ -292,7 +294,7 @@
                             aria-controls="pc4"
                             aria-selected="false"
                         >
-                            <h5>PC4</h5>
+                            <span class="media-tab-label">PC4</span>
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
@@ -306,7 +308,7 @@
                             aria-controls="pc3"
                             aria-selected="false"
                         >
-                            <h5>PC3</h5>
+                            <span class="media-tab-label">PC3</span>
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
@@ -320,7 +322,7 @@
                             aria-controls="pc2"
                             aria-selected="false"
                         >
-                            <h5>PC2</h5>
+                            <span class="media-tab-label">PC2</span>
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
@@ -334,7 +336,7 @@
                             aria-controls="pc1"
                             aria-selected="false"
                         >
-                            <h5>PC1</h5>
+                            <span class="media-tab-label">PC1</span>
                         </button>
                     </li>
                 </ul>
@@ -356,7 +358,7 @@
                                             alt="President's Cup 7 Logo"
                                             class="pc7-logo img-fluid">
                                     </div>
-                                    <h3 class="mt-4">PC7</h3>
+                                    <h2 class="h3 heading-standard mt-4">PC7</h2>
                                     <p>
                                         The seventh annual President's Cup ran from January to May
                                         2026. PC7 featured a bold spy theme that fused
@@ -367,7 +369,7 @@
                                         visuals that commanded attention and concealed layers
                                         beneath the surface.
                                     </p>
-                                    <h4 class="mt-4 mb-2">Media Assets</h4>
+                                    <h3 class="h4 heading-standard mt-4 mb-2">Media Assets</h3>
                                     <ul class="list-unstyled">
                                         <li>
                                             <a
@@ -394,7 +396,7 @@
                                             >
                                         </li>
                                     </ul>
-                                    <h4 class="mt-4 mb-2">Walkthroughs</h4>
+                                    <h3 class="h4 heading-standard mt-4 mb-2">Walkthroughs</h3>
                                     <ul class="list-unstyled">
                                         <li>
                                             <a
@@ -423,7 +425,7 @@
                                             </p>
                                         </a>
                                     </div>
-                                    <h4 class="mt-4 mb-2">Photos</h4>
+                                    <h3 class="h4 heading-standard mt-4 mb-2">Photos</h3>
 
                                     <!-- ==================================================
                                         PRESIDENT'S CUP PHOTO CAROUSEL
@@ -441,10 +443,9 @@
                                         aria-label="President's Cup 7 Photo Gallery"
                                     >
                                         <div class="container-fluid px-0">
-                                            <h2 class="visually-hidden">
-                                                President's Cup 7 Photo Gallery
-                                            </h2>
 
+
+                                            <div class="pc-photo-carousel__playback"><button type="button" class="pc-photo-carousel__rotation">Start slideshow</button></div>
                                             <div class="pc-photo-carousel__shell">
 
                                                 <!-- Previous -->
@@ -469,7 +470,7 @@
                                                             class="pc-photo-carousel__slide"
                                                             type="button"
                                                             data-pc-photo="pc7/Presidents-Cup-2026_058.jpg"
-                                                            data-pc-alt="President's Cup 7 Photo 1"
+                                                            data-pc-alt="President&#x27;s Cup 7: A speaker addresses seated attendees in a meeting room."
                                                         >
                                                             <img alt="" loading="lazy" decoding="async">
                                                         </button>
@@ -478,7 +479,7 @@
                                                             class="pc-photo-carousel__slide"
                                                             type="button"
                                                             data-pc-photo="pc7/Presidents-Cup-2026_153.jpg"
-                                                            data-pc-alt="President's Cup 7 Photo 2"
+                                                            data-pc-alt="President&#x27;s Cup 7: A competitor viewed from behind studies code on a monitor."
                                                         >
                                                             <img alt="" loading="lazy" decoding="async">
                                                         </button>
@@ -487,7 +488,7 @@
                                                             class="pc-photo-carousel__slide"
                                                             type="button"
                                                             data-pc-photo="pc7/Presidents-Cup-2026_294.jpg"
-                                                            data-pc-alt="President's Cup 7 Photo 3"
+                                                            data-pc-alt="President&#x27;s Cup 7: A competitor looks across a row of monitors."
                                                         >
                                                             <img alt="" loading="lazy" decoding="async">
                                                         </button>
@@ -496,7 +497,7 @@
                                                             class="pc-photo-carousel__slide"
                                                             type="button"
                                                             data-pc-photo="pc7/Presidents-Cup-2026_521.jpg"
-                                                            data-pc-alt="President's Cup 7 Photo 4"
+                                                            data-pc-alt="President&#x27;s Cup 7: An attendee walks through a lobby beside a competition sign."
                                                         >
                                                             <img alt="" loading="lazy" decoding="async">
                                                         </button>
@@ -505,7 +506,7 @@
                                                             class="pc-photo-carousel__slide"
                                                             type="button"
                                                             data-pc-photo="pc7/Presidents-Cup-2026_665.jpg"
-                                                            data-pc-alt="President's Cup 7 Photo 5"
+                                                            data-pc-alt="President&#x27;s Cup 7: Audience members listen during a presentation."
                                                         >
                                                             <img alt="" loading="lazy" decoding="async">
                                                         </button>
@@ -514,7 +515,7 @@
                                                             class="pc-photo-carousel__slide"
                                                             type="button"
                                                             data-pc-photo="pc7/Presidents-Cup-2026_704.jpg"
-                                                            data-pc-alt="President's Cup 7 Photo 6"
+                                                            data-pc-alt="President&#x27;s Cup 7: Close-up of a participant typing on a keyboard."
                                                         >
                                                             <img alt="" loading="lazy" decoding="async">
                                                         </button>
@@ -523,7 +524,7 @@
                                                             class="pc-photo-carousel__slide"
                                                             type="button"
                                                             data-pc-photo="pc7/Presidents-Cup-2026_1050.jpg"
-                                                            data-pc-alt="President's Cup 7 Photo 7"
+                                                            data-pc-alt="President&#x27;s Cup 7: Competitors work on laptops around a conference table."
                                                         >
                                                             <img alt="" loading="lazy" decoding="async">
                                                         </button>
@@ -532,7 +533,7 @@
                                                             class="pc-photo-carousel__slide"
                                                             type="button"
                                                             data-pc-photo="pc7/Presidents-Cup-2026_1208.jpg"
-                                                            data-pc-alt="President's Cup 7 Photo 8"
+                                                            data-pc-alt="President&#x27;s Cup 7: The competition trophy displayed under a spotlight."
                                                         >
                                                             <img alt="" loading="lazy" decoding="async">
                                                         </button>
@@ -541,7 +542,7 @@
                                                             class="pc-photo-carousel__slide"
                                                             type="button"
                                                             data-pc-photo="pc7/Presidents-Cup-2026_1348.jpg"
-                                                            data-pc-alt="President's Cup 7 Photo 9"
+                                                            data-pc-alt="President&#x27;s Cup 7: Four competitors pose with their individual awards."
                                                         >
                                                             <img alt="" loading="lazy" decoding="async">
                                                         </button>
@@ -550,7 +551,7 @@
                                                             class="pc-photo-carousel__slide"
                                                             type="button"
                                                             data-pc-photo="pc7/Presidents-Cup-2026-Award-Ceremony_091.jpg"
-                                                            data-pc-alt="President's Cup 7 Photo 10"
+                                                            data-pc-alt="President&#x27;s Cup 7: Close-up of the competition trophy base and engraved plaques."
                                                         >
                                                             <img alt="" loading="lazy" decoding="async">
                                                         </button>
@@ -559,7 +560,7 @@
                                                             class="pc-photo-carousel__slide"
                                                             type="button"
                                                             data-pc-photo="pc7/Presidents-Cup-2026-Award-Ceremony_148.jpg"
-                                                            data-pc-alt="President's Cup 7 Photo 11"
+                                                            data-pc-alt="President&#x27;s Cup 7: A group poses with an award at the ceremony."
                                                         >
                                                             <img alt="" loading="lazy" decoding="async">
                                                         </button>
@@ -568,7 +569,7 @@
                                                             class="pc-photo-carousel__slide"
                                                             type="button"
                                                             data-pc-photo="pc7/Presidents-Cup-2026-Award-Ceremony_154.jpg"
-                                                            data-pc-alt="President's Cup 7 Photo 12"
+                                                            data-pc-alt="President&#x27;s Cup 7: Three silver award cups displayed on a table."
                                                         >
                                                             <img alt="" loading="lazy" decoding="async">
                                                         </button>
@@ -577,7 +578,7 @@
                                                             class="pc-photo-carousel__slide"
                                                             type="button"
                                                             data-pc-photo="pc7/Presidents-Cup-2026-Award-Ceremony_280.jpg"
-                                                            data-pc-alt="President's Cup 7 Photo 13"
+                                                            data-pc-alt="President&#x27;s Cup 7: Awards ceremony attendees pose together holding trophies."
                                                         >
                                                             <img alt="" loading="lazy" decoding="async">
                                                         </button>
@@ -586,7 +587,7 @@
                                                             class="pc-photo-carousel__slide"
                                                             type="button"
                                                             data-pc-photo="pc7/Presidents-Cup-2026-Award-Ceremony_286.jpg"
-                                                            data-pc-alt="President's Cup 7 Photo 14"
+                                                            data-pc-alt="President&#x27;s Cup 7: Two competitors in uniform hold award cups beside the large trophy."
                                                         >
                                                             <img alt="" loading="lazy" decoding="async">
                                                         </button>
@@ -797,16 +798,32 @@
                                                 }
 
                                                 function getSlideWidth() {
-                                                    return viewport.clientWidth / visibleCount;
+                                                    return viewport.getBoundingClientRect().width / visibleCount;
                                                 }
 
                                                 function setPosition(animate = true) {
+                                                    animate = animate && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                                                    if (!animate) isAnimating = false;
                                                     track.style.transition = animate
                                                         ? "transform 450ms ease"
                                                         : "none";
 
                                                     track.style.transform = `translate3d(-${physicalIndex * getSlideWidth()}px, 0, 0)`;
                                                 }
+
+                                                track.addEventListener('focusin', event => {
+                                                    const slide = event.target.closest('.pc-photo-carousel__slide');
+                                                    if (!slide || slide.dataset.pcClone) return;
+                                                    viewport.scrollLeft = 0;
+                                                    const bounds = slide.getBoundingClientRect();
+                                                    const frame = viewport.getBoundingClientRect();
+                                                    if (bounds.left < frame.left - 1 || bounds.right > frame.right + 1) {
+                                                        logicalIndex = Number(slide.dataset.pcIndex);
+                                                        physicalIndex = originalSlides.length + logicalIndex;
+                                                        setPosition(false);
+                                                    }
+                                                    viewport.scrollLeft = 0;
+                                                });
 
                                                 function createClone(slide) {
                                                     const clone = slide.cloneNode(true);
@@ -976,8 +993,6 @@
                                                 );
 
                                                 let lightboxIndex = 0;
-                                                let previouslyFocusedElement = null;
-                                                let previousBodyOverflow = "";
 
                                                 function updateLightbox() {
                                                     const slide = originalSlides[lightboxIndex];
@@ -994,36 +1009,11 @@
                                                 function openLightbox(index) {
                                                     lightboxIndex = index;
                                                     updateLightbox();
-
-                                                    previouslyFocusedElement = document.activeElement;
-                                                    previousBodyOverflow = document.body.style.overflow;
-                                                    document.body.style.overflow = "hidden";
-
-                                                    lightbox.hidden = false;
-                                                    lightbox.setAttribute("aria-hidden", "false");
-
-                                                    stopAutoplay();
-                                                    lightboxClose.focus();
+                                                    accessibility.openLightbox();
                                                 }
 
                                                 function closeLightbox() {
-                                                    if (lightbox.hidden) {
-                                                        return;
-                                                    }
-
-                                                    lightbox.hidden = true;
-                                                    lightbox.setAttribute("aria-hidden", "true");
-                                                    document.body.style.overflow = previousBodyOverflow;
-
-                                                    if (
-                                                        previouslyFocusedElement &&
-                                                        typeof previouslyFocusedElement.focus ===
-                                                            "function"
-                                                    ) {
-                                                        previouslyFocusedElement.focus();
-                                                    }
-
-                                                    startAutoplay();
+                                                    accessibility.closeLightbox();
                                                 }
 
                                                 function changeLightbox(direction) {
@@ -1080,10 +1070,13 @@
                                                     }
 
                                                     if (event.key === "Escape") {
+                                                        event.preventDefault();
                                                         closeLightbox();
                                                     } else if (event.key === "ArrowLeft") {
+                                                        event.preventDefault();
                                                         changeLightbox(-1);
                                                     } else if (event.key === "ArrowRight") {
+                                                        event.preventDefault();
                                                         changeLightbox(1);
                                                     }
                                                 });
@@ -1092,74 +1085,10 @@
                                                 Autoplay
                                                 ============================================== */
 
-                                                const autoplayDelay = Math.max(
-                                                    2500,
-                                                    parseInt(section.dataset.autoplayDelay, 10) || 4000,
-                                                );
-
-                                                const reducedMotion = window.matchMedia(
-                                                    "(prefers-reduced-motion: reduce)",
-                                                );
-
-                                                let autoplayTimer = null;
-                                                let pointerInside = false;
-                                                let focusInside = false;
-
-                                                function stopAutoplay() {
-                                                    if (autoplayTimer) {
-                                                        clearInterval(autoplayTimer);
-                                                        autoplayTimer = null;
-                                                    }
-                                                }
-
-                                                function startAutoplay() {
-                                                    stopAutoplay();
-
-                                                    if (
-                                                        reducedMotion.matches ||
-                                                        document.hidden ||
-                                                        pointerInside ||
-                                                        focusInside ||
-                                                        !lightbox.hidden
-                                                    ) {
-                                                        return;
-                                                    }
-
-                                                    autoplayTimer = setInterval(() => {
-                                                        moveCarousel(1);
-                                                    }, autoplayDelay);
-                                                }
-
-                                                section.addEventListener("mouseenter", () => {
-                                                    pointerInside = true;
-                                                    stopAutoplay();
-                                                });
-
-                                                section.addEventListener("mouseleave", () => {
-                                                    pointerInside = false;
-                                                    startAutoplay();
-                                                });
-
-                                                section.addEventListener("focusin", () => {
-                                                    focusInside = true;
-                                                    stopAutoplay();
-                                                });
-
-                                                section.addEventListener("focusout", () => {
-                                                    setTimeout(() => {
-                                                        focusInside = section.contains(
-                                                            document.activeElement,
-                                                        );
-                                                        startAutoplay();
-                                                    }, 0);
-                                                });
-
-                                                document.addEventListener("visibilitychange", () => {
-                                                    if (document.hidden) {
-                                                        stopAutoplay();
-                                                    } else {
-                                                        startAutoplay();
-                                                    }
+                                                const accessibility = window.PCPhotoGalleryAccessibility({
+                                                    section,
+                                                    lightbox,
+                                                    advance: () => moveCarousel(1)
                                                 });
 
                                                 /* ==============================================
@@ -1181,7 +1110,6 @@
                                                 ============================================== */
 
                                                 rebuildCarousel();
-                                                startAutoplay();
                                             })();
                                         </script>
                                     </section>
@@ -1207,7 +1135,7 @@
                                             alt="President's Cup 6 Logo"
                                             class="pc6-logo img-fluid">
                                     </div>
-                                    <h3 class="mt-4">PC6</h3>
+                                    <h2 class="h3 heading-standard mt-4">PC6</h2>
                                     <p>
                                         The sixth annual President's Cup ran from January to April
                                         2025 and featured an edgy cyberpunk theme that took
@@ -1218,7 +1146,7 @@
                                         year in a row that had the competitors test their luck to
                                         escape from a locked-down island compound.
                                     </p>
-                                    <h4 class="mt-4 mb-2">Media Assets</h4>
+                                    <h3 class="h4 heading-standard mt-4 mb-2">Media Assets</h3>
                                     <ul class="list-unstyled">
                                         <li>
                                             <a
@@ -1253,7 +1181,7 @@
                                             >
                                         </li>
                                     </ul>
-                                    <h4 class="mt-4 mb-2">Walkthroughs</h4>
+                                    <h3 class="h4 heading-standard mt-4 mb-2">Walkthroughs</h3>
                                     <ul class="list-unstyled">
                                         <li>
                                             <a
@@ -1301,7 +1229,7 @@
                                             alt="President's Cup 5 Logo"
                                             class="pc5-logo img-fluid">
                                     </div>
-                                    <h3 class="mt-4">PC5</h3>
+                                    <h2 class="h3 heading-standard mt-4">PC5</h2>
                                     <p>
                                         The fifth annual President's Cup ran from January to April
                                         2024 and featured an exciting theme centered around
@@ -1316,7 +1244,7 @@
                                         equipment and installing a Ladder Logic and HMI display,
                                         to secure the scene and save the day.
                                     </p>
-                                    <h4 class="mt-4 mb-2">Media Assets</h4>
+                                    <h3 class="h4 heading-standard mt-4 mb-2">Media Assets</h3>
                                     <ul class="list-unstyled">
                                         <li>
                                             <a
@@ -1343,7 +1271,7 @@
                                             >
                                         </li>
                                     </ul>
-                                    <h4 class="mt-4 mb-2">Walkthroughs</h4>
+                                    <h3 class="h4 heading-standard mt-4 mb-2">Walkthroughs</h3>
                                     <ul class="list-unstyled">
                                         <li>
                                             <a
@@ -1391,7 +1319,7 @@
                                             alt="President's Cup 4 Logo"
                                             class="pc4-logo img-fluid">
                                     </div>
-                                    <h3 class="mt-4">PC4</h3>
+                                    <h2 class="h3 heading-standard mt-4">PC4</h2>
                                     <p>
                                         The fourth annual President's Cup ran from August to
                                         December 2022 and had competitors blasting into orbit with
@@ -1403,7 +1331,7 @@
                                         technology, aliens, and a race to restore balance to the
                                         universe.
                                     </p>
-                                    <h4 class="mt-4 mb-2">Media Assets</h4>
+                                    <h3 class="h4 heading-standard mt-4 mb-2">Media Assets</h3>
                                     <ul class="list-unstyled">
                                         <li>
                                             <a
@@ -1467,7 +1395,7 @@
                                             alt="President's Cup 3 Logo"
                                             class="pc3-logo img-fluid">
                                     </div>
-                                    <h3 class="mt-4">PC3</h3>
+                                    <h2 class="h3 heading-standard mt-4">PC3</h2>
                                     <p>
                                         The third annual President's Cup ran from August to
                                         December 2021 and featured a retro 1980's-inspired theme
@@ -1477,7 +1405,7 @@
                                         were held virtually and livestreamed with live commentary
                                         from CISA's cybersecurity experts.
                                     </p>
-                                    <h4 class="mt-4 mb-2">Media Assets</h4>
+                                    <h3 class="h4 heading-standard mt-4 mb-2">Media Assets</h3>
                                     <ul class="list-unstyled">
                                         <li>
                                             <a
@@ -1541,7 +1469,7 @@
                                             alt="President's Cup 2 Logo"
                                             class="pc2-logo img-fluid">
                                     </div>
-                                    <h3 class="mt-4">PC2</h3>
+                                    <h2 class="h3 heading-standard mt-4">PC2</h2>
                                     <p>
                                         The second annual President's Cup Cybersecurity
                                         Competition ran from August 2020 to February 2021 and
@@ -1555,7 +1483,7 @@
                                         municipality as part of a Disaster Relief Task Force
                                         (DRTF).
                                     </p>
-                                    <h4 class="mt-4 mb-2">Media Assets</h4>
+                                    <h3 class="h4 heading-standard mt-4 mb-2">Media Assets</h3>
                                     <ul class="list-unstyled">
                                         <li>
                                             <a
@@ -1619,7 +1547,7 @@
                                             alt="President's Cup 1 Logo"
                                             class="pc1-logo img-fluid">
                                     </div>
-                                    <h3 class="mt-4">PC1</h3>
+                                    <h2 class="h3 heading-standard mt-4">PC1</h2>
                                     <p>
                                         The inaugural President's Cup Cybersecurity Competition
                                         ran from September to December 2019, and drew more than
@@ -1633,7 +1561,7 @@
                                         challenges from forensics to exploitation, culminating in
                                         gaining a password to an elevator to "escape."
                                     </p>
-                                    <h4 class="mt-4 mb-2">Media Assets</h4>
+                                    <h3 class="h4 heading-standard mt-4 mb-2">Media Assets</h3>
                                     <ul class="list-unstyled">
                                         <li>
                                             <a
@@ -1697,7 +1625,7 @@
             <div class="container py-5 text-light">
                 <div class="row py-5 mb-4 align-items-center text-end">
                     <div class="col-12">
-                        <h3 class="display-4 fw-bold mt-5 mb-4">Questions?</h3>
+                        <h2 class="h3 heading-standard display-4 fw-bold mt-5 mb-4">Questions?</h2>
                         <p class="fs-5">
                             If you have any media or branding questions about the
                             competition, you can email us

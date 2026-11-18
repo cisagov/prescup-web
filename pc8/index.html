@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../css/style.css?ver=8.1.8.2">
+    <link rel="stylesheet" href="../css/style.css?ver=8.1.8b">
 
     <!-- Adobe Fonts PC8 -->
     <link rel="stylesheet" href="https://use.typekit.net/jeq1tym.css">
@@ -32,7 +32,7 @@
         header {
             margin-bottom: -32px !important;
         }        
-        h5 {
+        h3 {
             font-family: "good-times";
             font-weight: normal;
             font-style: normal;
@@ -72,6 +72,7 @@
 </head>
 
 <body class="pc8-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- Desktop-only fixed page progress bar (same red-to-blue line as the
          mobile section bar, pinned to the top of the window). To disable it,
@@ -83,7 +84,7 @@
 
     <!-- Header Navigation -->
     <header>
-        <div class="container">
+        <nav class="container" aria-label="Primary">
             <ul class="nav nav-tabs-std">
                 <li class="nav-item">
                     <a class="nav-link" href="../"><span>Home</span></a>
@@ -104,7 +105,7 @@
                     <a class="nav-link nav-minimized" href="../hack-of-fame/"><span>HoF</span></a>
                 </li>
             </ul>
-        </div>
+        </nav>
     </header>
 
     <!-- Mobile / tablet sticky section bar (< 992px): the label tracks the
@@ -133,7 +134,8 @@
         </div>
     </nav>
 
-    <main>
+    <main id="main-content" tabindex="-1">
+        <h1 class="visually-hidden">President's Cup 8</h1>
 
         <!-- Slow-scrolling parallax backdrop, moved up from #intelligence-tabs
              so a single background now spans the whole <main> area (the hero,
@@ -201,7 +203,7 @@
                 <div class="row">
 
                     <!-- Desktop floating section nav (>= 992px) -->
-                    <aside class="col-lg-3 mt-2 d-none d-lg-block">
+                    <div class="col-lg-3 mt-2 d-none d-lg-block">
                         <div class="pc8-sidenav">
                             <img class="pc8-sidenav__art" src="../img/nav-hourglass.png" alt="Hourglass" />
                             <nav id="pc8SideNav" class="nav flex-column" aria-label="Page sections">
@@ -213,7 +215,7 @@
                                 <a class="nav-link pc8-side-link" href="#support">Support</a>
                             </nav>
                         </div>
-                    </aside>
+                    </div>
 
                     <!-- Section content (formerly the tab panes, reordered to
                          match the menu; hidden sections sit at the end) -->
@@ -308,34 +310,34 @@
                         </div>
                         <div class="row" style="display:none">
                             <div class="col-md-6 mt-5 mb-2">
-                                <h5>Individuals</h5>
+                                <h3>Individuals</h3>
                                 <ul>
                                     <li><strong>Registration:</strong> December 8, 2025 - January 13, 2026</li>
                                     <li><strong>Round 1:</strong> January 6 - 13, 2026</li>
                                     <li><strong>Round 2:</strong> February 3 - 10, 2026</li>
-                                    <li><strong>Finals:</strong></li>
+                                    <li><strong>Finals:</strong>
                                     <ul>
                                         <li>Defensive Track | May 27, 2026</li>
                                         <li>Offensive Track | May 28, 2026</li>
-                                    </ul>
+                                    </ul></li>
                                 </ul>
                             </div>
                             <div class="col-md-6 mt-5 mb-2">
-                                <h5>Teams</h5>
+                                <h3>Teams</h3>
                                 <ul>
                                     <li><strong>Registration:</strong> December 8, 2025 - January 27, 2026</li>
                                     <li><strong>Round 1:</strong> January 20 - 27, 2026</li>
                                     <li><strong>Round 2:</strong> February 17 - 24, 2026</li>
-                                    <li><strong>Finals:</strong></li>
+                                    <li><strong>Finals:</strong>
                                     <ul>
                                         <li>May 29, 2026</li>
-                                    </ul>
+                                    </ul></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 mt-5 mb-2">
-                                <h5>Individuals</h5>
+                                <h3>Individuals</h3>
                                 <ul>
                                     <li><strong>Registration:</strong> December 1, 2026 - January 13, 2027</li>
                                     <li><strong>Round 1:</strong> January 6 - 13, 2027</li>
@@ -352,7 +354,7 @@
                             </div>
 
                             <div class="col-md-6 mt-5 mb-2">
-                                <h5>Teams</h5>
+                                <h3>Teams</h3>
                                 <ul>
                                     <li><strong>Registration:</strong> December 1, 2026 - January 27, 2027</li>
                                     <li><strong>Round 1:</strong> January 20 - 27, 2027</li>
@@ -367,7 +369,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <h5 class="mt-4 mb-2">Justification Letter</h5>
+                        <h3 class="mt-4 mb-2">Justification Letter</h3>
                         <p class="mb-2">Because of the time commitment of this competition, participants are encouraged to seek approval from their supervisors. Suggested language has been provided to assist with this request.</p>
                         <p class="mb-2"><a href="../doc/PC07-Justification-Letter-v9.11.2025.docx" target="_blank" rel="noopener noreferrer">Draft Justification Letter</a></p> 
                         <p class="mb-2">This document is intended as a suggested template for participants to adapt and use at their discretion. It is provided as a resource and does not represent an official requirement or endorsement by the Cybersecurity and Infrastructure Security Agency (CISA).</p>
@@ -386,7 +388,7 @@
                                 </ul>
                             </div>
                             <div class="col-md-8">
-                                <h5 class="mb-2">Eligibility Cap for Repeat Winners</h5>
+                                <h3 class="mb-2">Eligibility Cap for Repeat Winners</h3>
                                 <p>The President's Cup team instituted a formalized cap on repeat winners to ensure fairness, encourage new talent recognition, and sustain community engagement.</p> 
                                 <ul>
                                     <li>The eligibility cap is applied to competitors (whether as individuals or as part of a team) that achieve three top-3 placements over three competition years, with at least one first-place finish across all future competition years and tracks (beginning with PC7).</li>
@@ -395,7 +397,7 @@
                                 <p>Competitors who achieve three top-3 placements with at least one first-place finish in any track throughout the history of the competition will be inducted into the new President's Cup Hack of Fame. The eligibility cap began tracking at the conclusion of PC7 and Hack of Fame induction will apply beginning with competitors from President's Cup 1 (PC1).</p>
                                 <p>Once competitors reach the eligibility cap, they are no longer eligible to place and receive awards in Individuals tracks but may continue to participate in the Teams track. To remain eligible for awards and recognition, Teams may include no more than one member that has reached the eligibility cap. This approach maintains competitive fairness while preserving opportunities for collaboration and mentorship within the team format.</p>
                                 <p>Detailees to an external department can represent their home or detailed department and should seek appropriate approvals prior to participation. For example, a member of the Coast Guard detailed to DoD's US Cyber Command can represent DoD or DHS.</p>
-                                <h5 class="mt-5 mb-2">Teams</h5>
+                                <h3 class="mt-5 mb-2">Teams</h3>
                                 <ul>
                                     <li>Teams of two to five members can be from any federal department or agency, or branch of the Armed Services.</li>
                                     <li>Participants can only participate in one team. Teams are finalized once they start Round 1. If team members are unable to continue, the team may proceed as long as at least two members remain.</li>
@@ -408,7 +410,7 @@
                         <div class="pc8-deco" data-pc8-speed="0.15" style="top: 150px; right: -360px; width: 440px; height: 320px; transform: rotate(55deg);" aria-hidden="true"><img class="img-fluid" src="../img/pc8/pc8-im-window.png" alt="PC8 IM Window" onerror="this.parentElement.classList.add('pc8-deco--missing')"></div>
                         <div class="pc8-deco" data-pc8-speed="-0.10" style="bottom: 1rem; right: -268px; width: 380px; height: 340px;" aria-hidden="true"><img class="img-fluid" src="../img/pc8/pc8-rainbow-ribbon.png" alt="PC8 Rainbow Ribbon" onerror="this.parentElement.classList.add('pc8-deco--missing')"></div>
                         <h2 class="mb-4">Scoring & Advancement</h2>
-                            <h5 class="mt-2 mb-2">Advancement</h5>
+                            <h3 class="mt-2 mb-2">Advancement</h3>
                             <p>Advancement to Round 2</p>
                             <ul>
                                 <li>The top 100 individuals in each track will advance, with no tiebreakers; all individuals tied for 100th place, in each track, will advance.</li>
@@ -420,11 +422,11 @@
                                 <li>In the event of a tie in the Finals, total time to complete challenges will determine the winners.</li>
                             </ul>
 
-                            <h5 class="mt-5 mb-2">Time & Challenge Submission Restrictions</h5>
+                            <h3 class="mt-5 mb-2">Time & Challenge Submission Restrictions</h3>
                             <p>During the qualifying rounds, individuals have 4 hours and teams have 6 hours to complete as many challenges as they can.</p>
                             <p>The session timer runs continuously and cannot be paused once started. This applies to both individuals and teams. Teams should schedule their session during a time when all team members are available. Team Captains are the only individuals who can start the session.</p>
 
-                            <h5 class="mt-5 mb-2">Scoring & Partial Credit</h5>                            
+                            <h3 class="mt-5 mb-2">Scoring & Partial Credit</h3>
                             <p>Competitors' round scores are determined by the sum of all successful challenge components completed during their session. In the event of a tie, a fastest-to-solve methodology will be used. Fastest-to-solve is calculated by taking the timestamp of the last <b>correct</b> submission across all of the challenges in the event and subtracting it from the timestamp for when the individual or team started the event. Team and individual scores for Round 1 and Round 2 will be hidden until the end of the respective round.</p>
                             <p>All President's Cup challenges have multiple parts, which allow competitors to earn partial credit. Each challenge part includes the number of points awarded for providing the correct answer. Participants are limited to THREE submissions per challenge.</p>
                     </div>
@@ -436,36 +438,36 @@
                             <div class="col">
                                 <h2 class="mb-4">Gamespace Environment & Rules</h2>
 
-                                <h5 class="mt-5 mb-2">Challenge Environment Access</h5>
+                                <h3 class="mt-5 mb-2">Challenge Environment Access</h3>
                                 <p>All necessary tools for solving challenges are provided within the challenge environment. To ensure competition integrity and create a level playing field for all participants, internet connectivity is disabled within the environment (with the exception of limited internet access to Python <i>pip</i> and Kali <i>apt</i> repositories). Participants are only required to use a modern web browser to access the challenges; no special applications are needed.</p>
 
 
-                                <h5 class="mt-5 mb-2">Workspaces</h5>
+                                <h3 class="mt-5 mb-2">Workspaces</h3>
                                 <p>Each player will be provided with a Kali instance, referred to as their "workspace". This is a persistent environment that will be available to players throughout the duration of the event.</p>                               
                                 
-                                <h5 class="mt-5 mb-2">Deploying Challenges</h5>
+                                <h3 class="mt-5 mb-2">Deploying Challenges</h3>
                                 <p>When starting a challenge, a virtual network will be spun up and the player's workspace will be attached to that challenge's virtual network. Players are only able to connect their workspace to one challenge at a time; however, they can switch between challenges at will. Deployed challenges will continue running regardless of whether the player is connected to them or not.</p>
                                 <p class="mt-3">During team-based events, each member will have their own workspace. All members on a team share the same challenge instances, and multiple members can be connected to the same challenge at the same time.</p>
 
-                                <h5 class="mt-5 mb-2">Connectivity</h5>
+                                <h3 class="mt-5 mb-2">Connectivity</h3>
                                 <p>Network egress from player workspaces is denied by default. The only permitted outbound access is to the official Python (PyPI) and Kali Linux package repositories for installing tools and dependencies. All other internet access is prohibited. Competitors may not attempt to reach other resources through these channels (including tunneling, proxying, or relaying data over the permitted package services), nor attempt automated interaction with the competition platform. Network activity may be logged and reviewed; violations may result in disqualification.
                                 </p>
 
-                                <h5 class="mt-5 mb-2">Fair Use of Tools and Resources</h5>                            
+                                <h3 class="mt-5 mb-2">Fair Use of Tools and Resources</h3>
                                 <p>The intention of the competition is to evaluate the skills and knowledge of the competitors themselves, not simply the ability to access or purchase advanced tools or services. Participants are encouraged to use resources in a way that aligns with the spirit of fair competition and personal skill development.</p>
 
-                                <h5 class="mt-5 mb-2">AI Usage Limitations</h5>
+                                <h3 class="mt-5 mb-2">AI Usage Limitations</h3>
                                 <p>Players may use artificial intelligence (AI) tools for research, analysis, or code generation; however, players are strictly prohibited from using any AI agent, script, automated tool, or external resource to directly interact with, submit commands to, or manipulate the competition platform or its interfaces on their behalf. All actions on the competition platform must be performed manually by the player.
                                 </p>
 
-                                <h5 class="mt-5 mb-2">Rules Of Conduct</h5>
+                                <h3 class="mt-5 mb-2">Rules Of Conduct</h3>
                                 <ol class="rules-list">
                                     <li>Violation of the Rules of Conduct as outlined may result in disqualification from the competition.</li>
                                     <li>Enforcement of the Rules of Conduct is at the discretion of the Competition Staff.</li>
-                                    <li>Competitors will conduct themselves in a manner that befits employees of the federal government and members of the Uniformed Services in all aspects of the competition.</li>
+                                    <li>Competitors will conduct themselves in a manner that befits employees of the federal government and members of the Uniformed Services in all aspects of the competition.
                                     <ul>
                                         <li>When choosing team and individual names, competitors will follow OPSEC best practices and not use real names, work location, or other identifying information. Competitors will also refrain from any names that are vulgar or political in nature (in accordance with the Hatch Act).</li> 
-                                    </ul>
+                                    </ul></li>
                                     <li>Names will go through an approval process before appearing on the leaderboard. Inappropriate language, references to political persons or parties, or otherwise inappropriate content will be asked to be changed. The competition staff reserves the right to ask any team or individual to change their name and retains final judgement on what is acceptable.</li>
                                     <li>Classified toolsets are not authorized for use. All challenges are designed to be solved using open-source tools, including those provided on the hosted environment.</li>
                                     <li>Any attempts at unauthorized access or "Denial of Service" attacks are forbidden and will result in disqualification. "Escaping" the virtual machines or otherwise tampering with or targeting the hosting environment is prohibited.</li>
@@ -481,7 +483,7 @@
                         <div class="pc8-deco" data-pc8-speed="-0.08" style="bottom: 2rem; right: -260px; width: 360px; height: 300px; transform: rotate(-4deg);" aria-hidden="true"><img class="img-fluid" src="../img/pc8/pc8-chat-bubbles.png" alt="PC8 Chat Bubbles" onerror="this.parentElement.classList.add('pc8-deco--missing')"></div>
                         <h2 class="mb-4">Practice Resources</h2>
                             <p>The Practice Area is a repository of President's Cup challenges from past competitions, open to federal employees and active-duty military and reservist service members only. Users can receive a certificate of completion after each challenge (which may be used for PDU/CPEs).</p>
-                            <h5 class="mt-5 mb-2">Platform Information</h5>
+                            <h3 class="mt-5 mb-2">Platform Information</h3>
                             <div class="ms-3">
                                 <p class="mt-4 mb-2"><b>Current Status</b></p>
                                 <ul>
@@ -489,7 +491,7 @@
                                     <li>For assistance, please contact the President's Cup team at <a href="mailto:presidentscup@cisa.dhs.gov">presidentscup@cisa.dhs.gov.</a></li>
                                 </ul>
                             </div>
-                            <h5 class="mt-5 mb-2">Open Source Updates</h5>
+                            <h3 class="mt-5 mb-2">Open Source Updates</h3>
                             <p class="mb-2">The <a href="https://github.com/cisagov/prescup-challenges" target="_blank" rel="noopener noreferrer">prescup-challenges</a> GitHub project has practice resources available, including:</p>
                             <ul>
                                 <li>Solution guides</li>
@@ -503,45 +505,45 @@
                         <div class="pc8-deco" data-pc8-speed="0.10" style="top: 15%; right: -292px; width: 390px; height: 550px; transform: rotate(-95deg);" aria-hidden="true"><img class="img-fluid" src="../img/pc8/pc8-phone.png" alt="PC8 Phone" onerror="this.parentElement.classList.add('pc8-deco--missing')"></div>
                         <h2 class="mb-4">Support</h2>
 
-                        <h5 class="mt-2 mb-2">Hours of Operation</h5>
+                        <h3 class="mt-2 mb-2">Hours of Operation</h3>
                             <p>The President's Cup Cybersecurity Competition is open for participation 24/7 during registration and qualifying rounds.</p>
                             <p>Support hours during registration and qualifying rounds are as follows:</p>
                             <ul>
                                 <li>Registration period: Monday through Friday, 8:00 AM - 4:00 PM ET</li>
-                                <li>Qualifying rounds:</li>
+                                <li>Qualifying rounds:
                                     <ul>
                                         <li>Monday through Friday, 8:00 AM - 11:00 PM ET</li>
                                         <li>Saturday and Sunday, 9:00 AM - 5:00 PM ET</li>
-                                    </ul>
+                                    </ul></li>
                                 <li>Finals: Support will be available throughout the Finals</li>
                             </ul>
                             <p>Please Note: All times are Eastern Time (ET). Support availability is limited on weekends during the competition, as described in the hours above. Participants who choose to compete during this time do so at their own risk.</p>
 
-                        <h5 class="mt-5 mb-2">Requests for Support</h5>
+                        <h3 class="mt-5 mb-2">Requests for Support</h3>
                             <p>Support requests are tracked in the President's Cup Support Interface. Participants create support tickets from a deployed challenge or from the <a href="https://presidentscup.cisa.gov/ctf/support" target="_blank" rel="noopener noreferrer">Support</a> link in the navigation bar. Participants will be able to view, update, and track a ticket's status and communicate with the President's Cup support team.</p>                            
                             <p>When submitting a ticket, please add as much detail as possible, including screenshots, challenge name, system element(s) involved, and any error messages received.</p>
                             <p>Teams: Team members should coordinate with one another to avoid submitting multiple tickets for the same issue that the team may be experiencing.</p>
 
-                        <h5 class="mt-5 mb-2">President's Cup Team Contact Information</h5>
+                        <h3 class="mt-5 mb-2">President's Cup Team Contact Information</h3>
                             <p>The President's Cup team can also be reached via email at <a  href="mailto:presidentscup@cisa.dhs.gov" target="_blank" rel="noopener noreferrer">presidentscup@cisa.dhs.gov</a> during normal business hours only; Monday through Friday, 9:00 AM - 5:00 PM ET.</p>                            
                             <p>The President's Cup email should be used for general questions or information about the competition. Please open a support ticket within the challenge environment to request technical support.</p>
                     </div>
 
                     <div id="finals" class="pc8-section" style="display:none">
                         <h2 class="mb-4">Finals</h2>
-                        <h5 class="mt-2 mb-2">In Person Finals Attendance</h5>                            
+                        <h3 class="mt-2 mb-2">In Person Finals Attendance</h3>
                             <p>All President's Cup finalists are required to attend the Finals in person in the National Capital Region to participate. The Team and Individual Finals competition will be held on separate days, allowing competitors to participate without conflict.</p>
                             <p>Upon notification of qualification for the Finals, competitors must <a href="mailto:presidentscup@cisa.dhs.gov" target="_blank" rel="noopener noreferrer">RSVP to the President's Cup</a> team by the deadline provided in the invitation, indicating their attendance. If a participant is unable to attend, competitors must notify the President's Cup team immediately.</p>
                             <p>If a finalist is unable to attend, the next highest qualifying individual or team will be invited. Teams can still compete in the Finals as long as at least two members are present.</p>
-                        <h5 class="mt-5 mb-2">Event Details</h5>
+                        <h3 class="mt-5 mb-2">Event Details</h3>
                             <p><b>Location</b>: Intelligent Office, 1934 Old Gallows Road, Suite 350, Vienna, VA 22182</p>
-                        <h5 class="mt-5 mb-2">Dates</h5>
+                        <h3 class="mt-5 mb-2">Dates</h3>
                             <ul>
                                 <li><b>Defensive Track</b>: May 27, 2026</li>
                                 <li><b>Offensive Track</b>: May 28, 2026</li>
                                 <li><b>Teams</b>: May 29, 2026</li>
                             </ul>
-                        <h5 class="mt-5 mb-2">Arrival & Check-In</h5>
+                        <h3 class="mt-5 mb-2">Arrival & Check-In</h3>
                             <p><b>Individuals</b>:</p>
                             <ul>
                                 <li>Competition Hours: 10:00 a.m. - 2:00 p.m.</li>
@@ -570,7 +572,7 @@
                                 <li>Each finalist may bring one guest. Guests must remain in the designated area and will not be able to interact with competitors during competition hours. Guests are responsible for their own lunch.</li>
                             </ul>
 
-                        <h5 class="mt-5 mb-2">Day-of Schedule</h5>
+                        <h3 class="mt-5 mb-2">Day-of Schedule</h3>
                             <p><b>Breaks & Fair Play</b>:</p>
                             <ul>
                                 <li>No official breaks — competitors can step away at their own discretion. The timer will continue running.</li>
@@ -583,7 +585,7 @@
                                 <li><b>Competitor Photos</b>: Competitors are allowed to take photos but should be respectful of others' privacy.</li>
                             </ul>
 
-                        <h5 class="mt-5 mb-2">Travel & Logistics</h5>            
+                        <h3 class="mt-5 mb-2">Travel & Logistics</h3>
                             <p>Travel expenses are the responsibility of the competitor's organization.</p>                
                             <p><b>Parking</b>:</p>
                             <p>Free parking is available behind the building (opposite Gallows Road). Spaces are located in the parking garage one level below the entrance.</p>
@@ -602,7 +604,7 @@
                                 <li><a target="_blank" rel="noopener noreferrer" href="https://www.hilton.com/en/hotels/wasfchx-hampton-suites-falls-church/?SEO_id=GMB-AMER-HX-WASFCHX&y_source=1_MzA4OTEwNi03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D">Hampton Inn & Suites Falls Church</a><br>
                                     6430 Arlington Blvd, Falls Church, VA 22042 • (703) 538-1000</li>
                             </ul>
-                        <h5 class="mt-5 mb-2">Equipment Setup</h5>
+                        <h3 class="mt-5 mb-2">Equipment Setup</h3>
                             <p><b>Workspace</b>:</p>
                             <ul>
                                 <li>All Finalists must <b>bring their own devices to use during the event. CISA will not provide laptops.</b> Questions or concerns should be sent to the <a href="mailto:presidentscup@cisa.dhs.gov" target="_blank" rel="noopener noreferrer">President's Cup team</a>.</li>

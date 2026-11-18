@@ -570,7 +570,7 @@ header {
     margin-top: 2rem;
     margin-bottom: 2rem;
     width: 60px;
-    animation: gentle-bounce 2s ease-in-out infinite;
+    animation: gentle-bounce 2s ease-in-out 2;
 }
 
 @keyframes gentle-bounce {
@@ -815,7 +815,7 @@ header {
     height: auto;
 }
 
-#timeline .pc8-intro-heading h1 {
+#timeline .pc8-intro-heading h2 {
     font-size: clamp(1.5rem, 4vw, 3rem);
     text-align: left;
 }
@@ -1393,7 +1393,7 @@ footer {
         overflow-x: hidden;
     }    
 
-    #upcoming-mission h1, #timeline h1 {
+    #upcoming-mission h1, #timeline h2 {
         text-align: center;
     }
 }
@@ -1974,7 +1974,7 @@ footer {
     padding-bottom: 5px !important;
 }
 
-#intelligence-tabs button.nav-link h5 {
+#intelligence-tabs button.nav-link .media-tab-label {
     text-transform: none;
     margin-bottom: 0px !important;
 }
@@ -2031,7 +2031,7 @@ footer {
         padding-bottom: 2px !important;
     }
 
-    #intelligence-tabs button.nav-link h5 {
+    #intelligence-tabs button.nav-link .media-tab-label {
         font-size: 16px;
     }
 
@@ -2041,13 +2041,13 @@ footer {
 }
 
 @media (max-width: 576px) {
-    #intelligence-tabs button.nav-link h5 {
+    #intelligence-tabs button.nav-link .media-tab-label {
         font-size: 0.9rem;
     }
 }
 
 @media (max-width: 390px) {
-    #intelligence-tabs button.nav-link h5 {
+    #intelligence-tabs button.nav-link .media-tab-label {
         font-size: 0.8rem;
     }
 }
@@ -2647,7 +2647,7 @@ a.video-thumbnail:hover:after {
     border-bottom: none;
 }
 
-#hof-spotlight h3 {
+#hof-spotlight h2 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -3106,7 +3106,7 @@ a.video-thumbnail:hover:after {
     right: 0;
     top: 0;
     height: 100%;
-    background-image: url('../img/pc8/pc8-wormhole.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('../img/pc8/pc8-wormhole.jpg');
     background-repeat: no-repeat;
     background-size: contain;
     background-size: 100% 70%;
@@ -3202,9 +3202,9 @@ a.video-thumbnail:hover:after {
     }
 }
 
-/* h5 font-family/weight is set in the page's inline style block,
+/* h3 font-family/weight is set in the page's inline style block,
    alongside the matching h2 rule */
-.pc8-sections h5 {
+.pc8-sections h3 {
     color: var(--pc8-blue);
     font-size: 1rem;
 }
@@ -3316,4 +3316,56 @@ a.video-thumbnail:hover:after {
     text-transform: uppercase;
     letter-spacing: 0.08em;
     vertical-align: middle;
+}
+
+/* Accessibility: preserve the original appearance when correcting heading levels. */
+.heading-standard {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: none;
+    font-weight: 700;
+}
+.pc8-sections h3 { text-transform: uppercase; }
+.media-tab-label { display: block; font-size: 1.25rem; }
+.skip-link {
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 20000;
+    padding: 0.75rem 1rem;
+    color: #111;
+    background: #fff;
+    border: 2px solid #111;
+    transform: translateY(-200%);
+}
+.skip-link:focus { transform: translateY(0); color: #111; }
+:where(a, button, [tabindex]):focus-visible {
+    outline: 3px solid #005fcc;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 6px #fff;
+}
+#main-content { scroll-margin-top: 4.5rem; }
+#gom-game a { color: #0756bf; text-decoration: underline; }
+#gom-game a:hover, #gom-game a:focus-visible { color: #003c8f; }
+#gom-game a:visited { color: #633794; }
+.features-list { padding-left: 2rem; margin-bottom: 1rem; }
+.spotlight-thumbnail { display: block; width: 100%; background: transparent; }
+.spotlight-thumbnail img { display: block; width: 100%; border-radius: 3px; }
+.pc-photo-carousel__playback { text-align: center; margin-bottom: 1rem; }
+.pc-photo-carousel__rotation {
+    padding: 0.6rem 1rem;
+    border: 2px solid #4c1017;
+    border-radius: 0.25rem;
+    color: #fff;
+    background: #4c1017;
+    font: inherit;
+    font-weight: 700;
+}
+.pc-photo-carousel__rotation:hover { background: #291018; }
+@media (prefers-reduced-motion: reduce) {
+    .scroll-arrow { animation: none; }
+}
+
+/* The homepage heading keeps its original mobile size after the semantic change. */
+@media (max-width: 767.98px) {
+    #timeline .pc8-intro-heading h2 { font-size: 1.75rem; }
 }

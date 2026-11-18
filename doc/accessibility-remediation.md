@@ -1,0 +1,50 @@
+# Accessibility remediation — pc8-v8.1.8b
+
+This change addresses the code findings in the November 17, 2026 accessibility audit of `pc8-v8.1.8` (commit `4647776`). It does not constitute Section 508 certification or close the document, media, assistive-technology, or external-service reviews.
+
+## Implemented
+
+| Audit item | Change |
+| --- | --- |
+| F01: Spotlight keyboard controls | Spotlight thumbnails are native buttons with descriptive names, visible focus, and a selected state. Enter and Space update the image, alternative text, and caption together. Hidden legacy placeholders remain hidden. |
+| F02: Photo lightboxes | Background elements become inert while a lightbox is open. Tab and Shift+Tab cycle through its controls, Escape closes it, and focus returns to the opening photo. Existing inert states are preserved. Keyboard navigation also reveals offscreen carousel photos and uses precise slide widths. |
+| F03: Profile names | All 14 profile links identify the person using the existing published name. The profile dialog references its populated name heading. Redundant avatar/icon alternatives are empty. |
+| F04: Motion controls | Both galleries start paused and offer Start slideshow / Pause slideshow. Entering photo/navigation controls or opening a lightbox stops rotation until explicitly restarted. Hover temporarily suspends requested playback. Reduced-motion changes stop playback, slide transitions honor reduced motion, and the decorative scroll arrow stops after four seconds (or does not animate with reduced motion). |
+| F05: Link contrast | Game of the Month links use darker default, hover/focus, and visited colors with underlines. Contrast against `#f8f8fa`: default 6.40:1, hover/focus 9.69:1, visited 7.90:1. |
+| F06: List structure | PC8 sublists belong to their parent list items, including hidden legacy examples. Game of the Month introductory paragraphs use a normal container; its challenge list is outside the paragraph. |
+| F09: Image alternatives — partial | The 30 gallery photographs have scene descriptions based on visual review; the same 14 PC7 descriptions are used on Media. No new participant identities are inferred. Spotlight descriptions use existing published captions. The homepage timeline links to the HTML schedule. December work roles are available as visible text. Incorrect image names and redundant decorative icon alternatives are corrected. Owner review of descriptions and remaining information graphics is still required. |
+| F10: Navigation and headings | All six main pages have one page-level heading, a labelled primary navigation landmark, a visible-on-focus skip link, and a focusable main-content target. Section/subsection levels are normalized while retaining their styling. Media tab labels are not headings. The PC8 section navigation no longer creates a nested complementary landmark. |
+| F11: Background contrast — partial | An 85% black overlay darkens the PC8 background image while retaining the artwork. Even a white image pixel becomes at most `#262626`: normal PC8 blue `#2f9bff` has 5.23:1 contrast, and body text `#f8f9fa` has 14.36:1 against that bound. These figures cover those text/background pairs, not every control, decorative layer, state, or page. |
+
+Shared gallery accessibility behavior lives in `js/photo-gallery-accessibility.js`; the galleries retain their existing photo order/layout logic. Stylesheet URLs use `8.1.8b` to invalidate cached styling. Existing routes, approved challenge copy, downloadable documents, videos, and artwork files remain in place.
+
+## Verification
+
+The regression script `tests/accessibility.cjs` uses Chrome with Playwright and axe-core 4.11.0. It checks the six main pages at 320, 390, 768, and 1280 pixels, both lightboxes at 320, 390, and 1280 pixels, all seven Media panels, and the profile dialog. It includes keyboard activation, focus containment/restoration, offscreen photo focus, persistent pause/start behavior, reduced motion, skip links, page width, photo/arrow separation, and browser JavaScript errors.
+
+Zero axe violations were reported in the 38 scanned page/state combinations, using WCAG 2.0 A/AA and best-practice tags. Incomplete results, including image/gradient contrast checks, remain unresolved; they are not passes. Targeted desktop/mobile screenshots were inspected with visible images loaded. Width checks do not replace a 200% zoom assessment.
+
+To rerun, serve the checkout locally and supply Playwright, axe-core, and Chrome in the development environment. For example, install the test packages in a temporary directory rather than adding runtime dependencies to the website:
+
+```sh
+npm install --prefix /tmp/prescup-a11y-tools playwright axe-core
+python3 -m http.server 8770 --bind 127.0.0.1
+# In another terminal, from the repository root:
+NODE_PATH=/tmp/prescup-a11y-tools/node_modules BASE_URL=http://127.0.0.1:8770 node tests/accessibility.cjs
+```
+
+Raw scanner JSON and screenshots are written outside the repository (default `/tmp/prescup-accessibility-results`; override with `AUDIT_OUTPUT`). Override `AXE_PATH` when using an independently supplied axe script. Analytics requests are blocked in tests; page styling, fonts, images, Bootstrap, and site JavaScript load normally. No scanner is included in the public pages.
+
+## Remaining review queue
+
+1. **F07 — downloadable documents.** Review the six linked competition overviews, particularly the untagged PC1, PC2, PC5, and PC6 files. Decide whether to provide accessible HTML equivalents alongside the PDFs or remediate the source documents and export tagged replacements. Verify reading order, tables, headings, alternatives, links, and visual equivalence. Review the existing alternative PC5 PDF before changing the download link. Include the Word justification template and agree the scope of archived ZIP/branding assets. AI can prepare equivalents and assist reconstruction; the document owner/specialist must approve and test them.
+2. **F08 — video and audio.** Confirm captions, transcripts, and audio-description needs for the seven directly linked local MP4s and external YouTube content. The original audit did not establish whether embedded/open captions exist. Approved caption/transcript files can be integrated after review of accuracy, timing, speakers, and essential visual information.
+3. **F09 — content approval.** Approve or refine the gallery descriptions and existing spotlight captions. Review remaining information graphics, logos containing text, archived challenge imagery, and any text alternatives that need subject-matter knowledge. The code fixes do not certify the accuracy or completeness of all alternatives.
+4. **F11 — remaining contrast states.** Check incomplete scanner results and rendered image/gradient backgrounds across scroll positions, responsive sizes, hover, focus, selected, and visited states. Check any agency-specific newer non-text contrast requirements separately.
+5. **F12 — acceptance and deployment.** Test with supported screen readers, actual 200% browser/text zoom, forced colors, and agreed complete workflows. Verify the intended deployed branch and served files, then test registration, practice, challenge access, and support with appropriate accounts. The upstream production site and external applications are not changed or certified by this branch.
+
+## References
+
+- [Modal dialog keyboard and focus behavior](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
+- [Carousel accessibility pattern](https://www.w3.org/WAI/ARIA/apg/patterns/carousel/)
+- [Section 508 testing overview](https://www.section508.gov/test/testing-overview/)

@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
         <!-- Main Stylesheet -->
-        <link rel="stylesheet" href="../css/style.css?ver=8.1.8.2">
+        <link rel="stylesheet" href="../css/style.css?ver=8.1.8b">
 
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVR9SKL9J6"></script>
@@ -41,9 +41,10 @@
     </head>
 
     <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
         <!-- Header Navigation -->
         <header>
-            <div class="container">
+            <nav class="container" aria-label="Primary">
                 <ul class="nav nav-tabs-std">
                     <li class="nav-item">
                         <a class="nav-link" href="../"><span>Home</span></a>
@@ -64,9 +65,10 @@
                         <a class="nav-link nav-minimized" href="../hack-of-fame/"><span>HoF</span></a>
                     </li>
                 </ul>
-            </div>
+            </nav>
         </header>
-        <main>
+        <main id="main-content" tabindex="-1">
+        <h1 class="visually-hidden">Game of the Month</h1>
             <!-- Executive Order Evergreen -->
             <section id="executive-order" class="executive-icon ps-4 pb-3 pt-5 pe-5 text-black">
                 <div class="container">
@@ -97,10 +99,10 @@
                         </div>
                         <!-- Right Column: Bullet Points -->
                         <div class="col-lg-5 col-md-12">
-                            <ul class="fs-6 features-list">
+                            <div class="fs-6 features-list">
                                 <p>Each quarter focuses on a <a  class="link-light" href="https://niccs.cisa.gov/tools/nice-framework" target="_blank" rel="noopener noreferrer">NICE Framework</a> Work Role, with monthly challenges that gradually increase in difficulty.</p>
                                 <p>If you have any questions about the Game of the Month Challenge, please reach out to the <a class="link-light" href="mailto:presidentscup@cisa.dhs.gov" target="_blank" rel="noopener noreferrer">President’s Cup Team.</a></p>
-                            </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -108,27 +110,27 @@
             <!-- Why Participate Section -->
             <section id="why-participate" class="py-5 text-center">
                 <div class="container text-dark">
-                    <h3 class="mb-5">Why Participate?</h3>
+                    <h2 class="h3 heading-standard mb-5">Why Participate?</h2>
                     <div class="row">
                         <div class="col-md-4 mb-4">
                             <div class="mb-3 mx-auto">
-                                <img src="../img/icon-laptop.png" class="img-fluid" alt="Cybersecurity Skills Icon" loading="eager" data-cf-lazy="never">
+                                <img src="../img/icon-laptop.png" class="img-fluid" alt="" loading="eager" data-cf-lazy="never">
                             </div>
-                            <h4>Develop Key Skills</h4>
+                            <h3 class="h4 heading-standard">Develop Key Skills</h3>
                             <p class="px-1 mt-2">Continuously learn and gain hands-on experience by applying your skills in intrusion analysis and digital forensics.</p>
                         </div>
                         <div class="col-md-4 mb-4">
                             <div class="mb-3 mx-auto">
-                                <img src="../img/icon-stairs.png" class="img-fluid" alt="Boost Your Career Icon" loading="eager" data-cf-lazy="never">
+                                <img src="../img/icon-stairs.png" class="img-fluid" alt="" loading="eager" data-cf-lazy="never">
                             </div>
-                            <h4>Boost Your Career</h4>
+                            <h3 class="h4 heading-standard">Boost Your Career</h3>
                             <p class="px-1 mt-2">Work on NICE framework tasks critical to cybersecurity investigations.</p>
                         </div>
                         <div class="col-md-4 mb-4">
                             <div class="mb-3 mx-auto">
-                                <img src="../img/icon-flag.png" class="img-fluid" alt="Challenge Yourself Icon" loading="eager" data-cf-lazy="never">
+                                <img src="../img/icon-flag.png" class="img-fluid" alt="" loading="eager" data-cf-lazy="never">
                             </div>
-                            <h4>Challenge Yourself</h4>
+                            <h3 class="h4 heading-standard">Challenge Yourself</h3>
                             <p class="px-1 mt-2">Solve a real-world cyber incident scenario.</p>
                         </div>
                     </div>
@@ -141,7 +143,7 @@
                         <div class="col-lg-1 col-md-12">
                         </div>
                         <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
-                            <h3 class="fs-2 px-4">Game of the Month promotes the best that the President’s Cup has to offer with content from across the archive.</h3>
+                            <h2 class="h3 heading-standard fs-2 px-4">Game of the Month promotes the best that the President’s Cup has to offer with content from across the archive.</h2>
                         </div>
                         <div class="col-lg-1 col-md-12">
                         </div>
@@ -175,7 +177,7 @@
                     <div class="row py-5 align-items-center">
                         <!-- Left Column -->
                         <div class="col-lg-8">
-                            <h3 class="mb-2">December 2026: Ocean’s 0x0D</h3>
+                            <h2 class="h3 heading-standard mb-2">December 2026: Ocean’s 0x0D</h2>
                             <div class="gom-game-card mb-5">
                                 <a href="https://presidentscup.cisa.gov/ctf/events/7/challenge/50" target="_blank" rel="noopener noreferrer">
                                     <p class="fs-5 fw-bold mb-2">Ocean’s 0x0D</p>
@@ -183,18 +185,16 @@
                                 </a>
                                 <p class="fw-bold mb-3">
                                     PC7, Round 2
-                                    <span class="d-none">
-                                        /
+                                    <span class="d-block mt-2">
                                         Defensive Cybersecurity (PD-WRL-001) / Exploitation Analyst (DCWF 121)
                                     </span>
                                 </p>
-                                <p><b>Why Participate?</b>:
+                                <p><b>Why Participate?</b>:</p>
                                     <ul>
                                         <li><b>Develop Key Cyberoperations Skills</b> – Practice telemetry and protocol analysis, operational state-machine modeling, and precision exploitation of a live API.</li>
                                         <li><b>Boost Your Career</b> – Strengthen skills aligned with the Defensive Cybersecurity and Exploitation Analyst roles.</li>
                                         <li><b>Challenge Yourself</b> – Eavesdrop on a hardened vault’s telemetry, learn its tells, and drive the lock through the correct sequence to recover all four access tokens.</li>
                                     </ul>
-                                </p>
                                 <p><b>Last Month's Challenge</b>:
                                     <b><a href="https://presidentscup.cisa.gov/ctf/events/7/challenge/53" target="_blank" rel="noopener noreferrer"> Inception</a></b>
                                 </p>
@@ -204,13 +204,13 @@
                         <div class="col-lg-4 mt-4 mt-lg-0">
                             <div class="row">
                                 <div class="col-12">
-                                    <img src="../img/icon-percent.png" class="img-fluid mb-2 gom-icon" alt="Solvability Rate Icon" loading="eager" data-cf-lazy="never">
-                                    <h4 class="fs-6 mb-1">Solvability Rate</h4>
+                                    <img src="../img/icon-percent.png" class="img-fluid mb-2 gom-icon" alt="" loading="eager" data-cf-lazy="never">
+                                    <h3 class="h4 heading-standard fs-6 mb-1">Solvability Rate</h3>
                                     <p class="fs-5 mb-0 text-muted">Full: 0% / Partial: 17.6%</p>
                                 </div>
                                 <div class="col-6 mt-3">
-                                    <img src="../img/icon-time.png" class="img-fluid mb-2 gom-icon" alt="Average Solve Time Icon" loading="eager" data-cf-lazy="never">
-                                    <h4 class="fs-6 mb-1">Average Time</h4>
+                                    <img src="../img/icon-time.png" class="img-fluid mb-2 gom-icon" alt="" loading="eager" data-cf-lazy="never">
+                                    <h3 class="h4 heading-standard fs-6 mb-1">Average Time</h3>
                                     <p class="fs-5 mb-0 text-muted">2+ Hours</p>
                                 </div>
                             </div>
@@ -224,7 +224,7 @@
             <!-- History Section -->
             <section style="display: none" id="gom-history" class="pt-5 gradient-section text-center">
                 <div class="container px-4 text-light">
-                    <h3 class="mb-3 fs-1">Game of the Month Archive</h3>
+                    <h2 class="h3 heading-standard mb-3 fs-1">Game of the Month Archive</h2>
                     <p class="mb-5 fs-5">Stay tuned for updates as challenges are released.</p>
                 </div>
                 <div>
