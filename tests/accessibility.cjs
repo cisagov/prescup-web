@@ -92,7 +92,28 @@ const routes = ['', 'pc8/', 'media/', 'workshops/', 'game-of-the-month/', 'hack-
             for (const width of [320, 390, 1280]) {
                 await visit(route, width);
                 const gallery = page.locator('.pc-photo-carousel');
-                const photo = gallery.locator('.pc-photo-carousel__slide:not([data-pc-clone])').first();
+                const photos = gallery.locator('.pc-photo-carousel__slide:not([data-pc-clone])');
+                const photo = photos.first();
+                assert.equal(await gallery.getByRole('button', { name: /^(Start|Pause) slideshow$/ }).count(), 0);
+                await gallery.getByRole('button', { name: 'Previous photos', exact: true }).focus();
+                for (let index = 0; index < await photos.count(); index++) {
+                    await page.keyboard.press('Tab');
+                    const ring = await photos.nth(index).evaluate(slide => {
+                        const bounds = slide.getBoundingClientRect();
+                        const viewport = slide.closest('.pc-photo-carousel__viewport').getBoundingClientRect();
+                        const style = getComputedStyle(slide);
+                        const outset = parseFloat(style.outlineWidth) + parseFloat(style.outlineOffset);
+                        return {
+                            focused: document.activeElement === slide && slide.matches(':focus-visible'),
+                            visible: style.outlineStyle === 'solid' && parseFloat(style.outlineWidth) >= 2,
+                            fits: bounds.left - outset >= viewport.left && bounds.right + outset <= viewport.right
+                                && bounds.top - outset >= viewport.top && bounds.bottom + outset <= viewport.bottom
+                        };
+                    });
+                    assert(ring.focused && ring.visible && ring.fits, `${route || 'home'} ${width}px: full focus ring on photo ${index + 1}`);
+                }
+                await page.keyboard.press('Shift+Tab');
+                assert.equal(await photos.nth(await photos.count() - 2).evaluate(slide => document.activeElement === slide), true);
                 await photo.focus();
                 await page.keyboard.press('Enter');
                 const close = page.getByRole('button', { name: 'Close photo', exact: true });
@@ -125,27 +146,20 @@ const routes = ['', 'pc8/', 'media/', 'workshops/', 'game-of-the-month/', 'hack-
                 assert(bounds.x >= viewport.x - 1 && bounds.x + bounds.width <= viewport.x + viewport.width + 1);
             }
             await visit(route);
-            const button = page.locator('.pc-photo-carousel__rotation');
             const track = page.locator('.pc-photo-carousel__track');
             const transform = () => track.evaluate(e => e.style.transform);
             const initial = await transform();
-            await page.waitForTimeout(3800);
-            assert.equal(await transform(), initial, 'gallery starts paused');
-            await button.focus(); await page.keyboard.press('Enter'); await page.mouse.move(0, 0);
-            await page.waitForTimeout(4100);
-            assert.notEqual(await transform(), initial, 'explicit Start advances slides');
-            await page.keyboard.press('Enter');
-            await page.locator('header a').first().focus();
-            const paused = await transform();
-            await page.waitForTimeout(4100);
-            assert.equal(await transform(), paused, 'Pause persists after focus leaves');
-            await button.focus(); await page.keyboard.press('Enter');
-            await page.getByRole('button', { name: 'Next photos', exact: true }).focus();
-            assert.equal(await button.textContent(), 'Start slideshow', 'entering gallery controls stops rotation');
+            await page.waitForTimeout(4500);
+            assert.equal(await transform(), initial, 'gallery remains still past the rotation interval');
+            await page.getByRole('button', { name: 'Next photos', exact: true }).press('Enter');
+            assert.notEqual(await transform(), initial, 'Next photos still advances the gallery');
+            await track.evaluate(element => Promise.all(element.getAnimations().map(animation => animation.finished)));
+            await page.getByRole('button', { name: 'Previous photos', exact: true }).press('Enter');
+            assert.equal(await transform(), initial, 'Previous photos returns to the original position');
             await context.newPage().then(async p => {
                 await p.emulateMedia({ reducedMotion: 'reduce' });
                 await p.goto(`${base}/${route}`, { waitUntil: 'networkidle' });
-                assert.equal(await p.locator('.pc-photo-carousel__rotation').textContent(), 'Start slideshow');
+                assert.equal(await p.getByRole('button', { name: /^(Start|Pause) slideshow$/ }).count(), 0);
                 if (!route) assert.equal(await p.locator('.scroll-arrow').evaluate(e => getComputedStyle(e).animationName), 'none');
                 await p.close();
             });
@@ -184,6 +198,6 @@ const routes = ['', 'pc8/', 'media/', 'workshops/', 'game-of-the-month/', 'hack-
         }
         assert.deepEqual(errors, [], 'no uncaught browser errors');
         fs.writeFileSync(path.join(output, 'summary.json'), JSON.stringify(summary, null, 2));
-        console.log('PASS keyboard, focus, playback, image spacing, member profiles, reduced motion, and page error checks');
+        console.log('PASS keyboard, focus rings, manual galleries, image spacing, member profiles, reduced motion, and page error checks');
     } finally { await browser.close(); }
 })().catch(error => { console.error(error); process.exitCode = 1; });

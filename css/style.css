@@ -1564,12 +1564,6 @@ footer {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
 }
 
-.pc-photo-carousel__slide:focus-visible {
-    outline: 3px solid currentColor;
-    outline-offset: 3px;
-    border-radius: 6px;
-}
-
 /*--------------------------------------------------
   Tablet - 3 Photos Wide
 --------------------------------------------------*/
@@ -3355,6 +3349,12 @@ body :is(a, button, [tabindex]):focus-visible {
     outline: 3px solid #005fcc;
     outline-offset: 3px;
     box-shadow: 0 0 0 6px #fff;
+}
+/* Keep the ring inside each slide so the carousel viewport cannot clip it. */
+body .pc-photo-carousel__slide:focus-visible {
+    outline-offset: -4px;
+    box-shadow: none;
+    border-radius: 6px;
 }
 #main-content { scroll-margin-top: 4.5rem; }
 #gom-game a { color: #0756bf; text-decoration: underline; }

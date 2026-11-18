@@ -1,16 +1,13 @@
-/* Shared keyboard, modal focus and user-controlled playback for photo galleries. */
-window.PCPhotoGalleryAccessibility = function ({ section, lightbox, advance }) {
+/* Playback is optional. Keep the control hidden unless the gallery opts in. */
+function initializePhotoGalleryPlayback(section, lightbox, advance) {
+    const playback = section.querySelector('.pc-photo-carousel__playback');
     const rotationButton = section.querySelector('.pc-photo-carousel__rotation');
-    const closeButton = lightbox.querySelector('.pc-photo-lightbox__close');
     const track = section.querySelector('.pc-photo-carousel__track');
     const delay = Math.max(2500, Number(section.dataset.autoplayDelay) || 4000);
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     let timer = null;
     let rotationRequested = false;
     let pointerInside = false;
-    let returnFocus = null;
-    let previousOverflow = '';
-    let inertElements = [];
 
     function stopTimer() {
         clearInterval(timer);
@@ -53,9 +50,25 @@ window.PCPhotoGalleryAccessibility = function ({ section, lightbox, advance }) {
         if (event.matches) pause();
     });
 
+    // Even when playback is enabled, it requires an explicit Start.
+    updatePlayback();
+    playback.hidden = false;
+    return pause;
+}
+
+/* Shared keyboard and modal focus behavior for photo galleries. */
+window.PCPhotoGalleryAccessibility = function ({ section, lightbox, advance }) {
+    const closeButton = lightbox.querySelector('.pc-photo-lightbox__close');
+    const pausePlayback = section.dataset.autoplay === 'true'
+        ? initializePhotoGalleryPlayback(section, lightbox, advance)
+        : null;
+    let returnFocus = null;
+    let previousOverflow = '';
+    let inertElements = [];
+
     function openLightbox() {
         if (!lightbox.hidden) return;
-        pause();
+        pausePlayback?.();
         returnFocus = document.activeElement;
         previousOverflow = document.body.style.overflow;
         document.body.style.overflow = 'hidden';
@@ -100,7 +113,5 @@ window.PCPhotoGalleryAccessibility = function ({ section, lightbox, advance }) {
         if (!lightbox.hidden && !lightbox.contains(event.target)) closeButton.focus();
     });
 
-    // Start paused for everyone, including visitors who prefer reduced motion.
-    updatePlayback();
     return { openLightbox, closeLightbox };
 };

@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/style.css?ver=8.1.8b.1">
+    <link rel="stylesheet" href="css/style.css?ver=8.1.8b.2">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVR9SKL9J6"></script>
     <script>
@@ -41,7 +41,7 @@
     <!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
     <script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DHS" id="_fed_an_ua_tag"></script>
 
-    <script src="js/photo-gallery-accessibility.js?ver=8.1.8b"></script>
+    <script src="js/photo-gallery-accessibility.js?ver=8.1.8b.2"></script>
 </head>
 
 <body>
@@ -269,12 +269,13 @@
             data-mobile-columns="1" = 1 photo wide
 
             Autoplay:
-            data-autoplay-delay="4000" = 4 seconds
+            data-autoplay="true" shows the optional Start/Pause control
         ================================================== -->
 
         <section
             class="pc-photo-carousel my-5 py-5"
             data-mobile-columns="2"
+            data-autoplay="false"
             data-autoplay-delay="3500"
             aria-label="President's Cup Photo Gallery"
         >
@@ -287,7 +288,7 @@
                        target="_blank" rel="noopener noreferrer">Register for PC8</a>
                 </div>
 
-                <div class="pc-photo-carousel__playback"><button type="button" class="pc-photo-carousel__rotation">Start slideshow</button></div>
+                <div class="pc-photo-carousel__playback" hidden><button type="button" class="pc-photo-carousel__rotation">Start slideshow</button></div>
                 <div class="pc-photo-carousel__shell">
 
                     <!-- Previous -->
