@@ -508,9 +508,9 @@ header {
 }
 
 .btn-register:active, .btn-register:focus-visible {
+    color: #fff;
     background-color: rgba(14, 26, 37, 1) !important;
     border-color: rgba(14, 26, 37, 1) !important;
-    box-shadow: none !important;
 }
 
 .btn-practice {
@@ -524,6 +524,12 @@ header {
     position: relative;
     overflow: hidden;
     z-index: 1;
+}
+
+.btn-practice:focus-visible {
+    color: #000;
+    background-color: #fff;
+    border-color: #4C0F16;
 }
 
 .btn-practice:hover {
@@ -1069,11 +1075,13 @@ footer {
     }
 }
 
-@media (min-width: 769px) {
+@media (width > 992px) {
     .mobile-tablet-only {
         display: none;
     }
-    
+}
+
+@media (min-width: 769px) {
     .col-md-1-of-7 {
         flex: 0 0 auto;
         width: 14.2857%;
@@ -2102,6 +2110,11 @@ footer {
     max-width: 500px;
 }
 
+.tab-content-media-left .list-unstyled a {
+    display: inline-block;
+    min-height: 24px;
+}
+
 .tab-content-media .tab-content-media-left img {
     max-width: min(300px, 100%);
 }
@@ -2259,7 +2272,7 @@ a.video-thumbnail:hover:after {
     border-top: 4px solid #d93a4a;
 }
 
-#workshops-hero h2 {
+#workshops-hero h2:not(.heading-standard) {
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
@@ -2302,7 +2315,7 @@ a.video-thumbnail:hover:after {
     */
 }
 
-#workshops-request h2 {
+#workshops-request h2:not(.heading-standard) {
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
@@ -2652,8 +2665,7 @@ a.video-thumbnail:hover:after {
 }
 
 #hof-spotlight .spotlight-caption {
-    height: 110px;
-    overflow: hidden;
+    min-height: 110px;
 }
 
 #spotlight-caption-details {
@@ -3106,7 +3118,7 @@ a.video-thumbnail:hover:after {
     right: 0;
     top: 0;
     height: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('../img/pc8/pc8-wormhole.jpg');
+    background-image: url('../img/pc8/pc8-wormhole.jpg');
     background-repeat: no-repeat;
     background-size: contain;
     background-size: 100% 70%;
@@ -3168,6 +3180,7 @@ a.video-thumbnail:hover:after {
 }
 
 .pc8-sections {
+    --pc8-blue: #87c9ff;
     color: var(--light-text);
 }
 
@@ -3215,7 +3228,7 @@ a.video-thumbnail:hover:after {
 
 .pc8-sections a:hover,
 .pc8-sections a:focus {
-    color: #6cb9ff;
+    color: #a9d7ff;
 }
 
 /* Absolutely-positioned flourish-art placeholders from the mockup
@@ -3325,7 +3338,7 @@ a.video-thumbnail:hover:after {
     font-weight: 700;
 }
 .pc8-sections h3 { text-transform: uppercase; }
-.media-tab-label { display: block; font-size: 1.25rem; }
+.media-tab-label { display: block; font-size: 1.25rem; line-height: 1.2; }
 .skip-link {
     position: fixed;
     top: 0.5rem;
@@ -3338,7 +3351,7 @@ a.video-thumbnail:hover:after {
     transform: translateY(-200%);
 }
 .skip-link:focus { transform: translateY(0); color: #111; }
-:where(a, button, [tabindex]):focus-visible {
+body :is(a, button, [tabindex]):focus-visible {
     outline: 3px solid #005fcc;
     outline-offset: 3px;
     box-shadow: 0 0 0 6px #fff;
@@ -3347,7 +3360,7 @@ a.video-thumbnail:hover:after {
 #gom-game a { color: #0756bf; text-decoration: underline; }
 #gom-game a:hover, #gom-game a:focus-visible { color: #003c8f; }
 #gom-game a:visited { color: #633794; }
-.features-list { padding-left: 2rem; margin-bottom: 1rem; }
+.features-list { margin-bottom: 1rem; }
 .spotlight-thumbnail { display: block; width: 100%; background: transparent; }
 .spotlight-thumbnail img { display: block; width: 100%; border-radius: 3px; }
 .pc-photo-carousel__playback { text-align: center; margin-bottom: 1rem; }
@@ -3363,9 +3376,4 @@ a.video-thumbnail:hover:after {
 .pc-photo-carousel__rotation:hover { background: #291018; }
 @media (prefers-reduced-motion: reduce) {
     .scroll-arrow { animation: none; }
-}
-
-/* The homepage heading keeps its original mobile size after the semantic change. */
-@media (max-width: 767.98px) {
-    #timeline .pc8-intro-heading h2 { font-size: 1.75rem; }
 }

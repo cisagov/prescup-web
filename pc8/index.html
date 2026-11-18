@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../css/style.css?ver=8.1.8b">
+    <link rel="stylesheet" href="../css/style.css?ver=8.1.8b.1">
 
     <!-- Adobe Fonts PC8 -->
     <link rel="stylesheet" href="https://use.typekit.net/jeq1tym.css">
@@ -116,6 +116,7 @@
                 data-bs-toggle="collapse" data-bs-target="#pc8MobileMenu"
                 aria-expanded="false" aria-controls="pc8MobileMenu">
             <span class="pc8-tri" aria-hidden="true"></span>
+            <span class="visually-hidden">Jump to section. Current section: </span>
             <span class="pc8-mobilebar__label" id="pc8BarLabel">Registration</span>
             <span class="pc8-caret" aria-hidden="true"></span>
         </button>
@@ -649,14 +650,14 @@
                 <div class="mb-4 mb-md-0">
                     <div class="footer-briefed px-2">
                         <a href="https://www.cisa.gov/prescup" target="_blank" rel="noopener noreferrer">
-                            <img src="../img/footer-cisa.png" loading="eager" data-cf-lazy="never" alt="CISA Link">
+                            <img src="../img/footer-cisa.png" loading="eager" data-cf-lazy="never" alt="cisa.gov/prescup">
                         </a>
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
                     <div class="footer-logo">
                         <a href="https://www.cisa.gov" target="_blank" rel="noopener noreferrer">
-                            <img src="../img/footer-logo-cisa.png" loading="eager" data-cf-lazy="never" alt="CISA Logo"> 
+                            <img src="../img/footer-logo-cisa.png" loading="eager" data-cf-lazy="never" alt="CISA home">
                         </a>                  
                     </div>
                 </div>
@@ -818,13 +819,13 @@
             allLinks.forEach(function (link) {
                 var on = link.getAttribute('href') === hash;
                 link.classList.toggle('active', on);
-                if (link.classList.contains('pc8-mobile-link')) {
-                    if (on) {
+                if (on) {
+                    link.setAttribute('aria-current', 'location');
+                    if (link.classList.contains('pc8-mobile-link')) {
                         barLabel.textContent = link.textContent.trim();
-                        link.setAttribute('aria-current', 'true');
-                    } else {
-                        link.removeAttribute('aria-current');
                     }
+                } else {
+                    link.removeAttribute('aria-current');
                 }
             });
         }

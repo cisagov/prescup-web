@@ -35,6 +35,47 @@ const routes = ['', 'pc8/', 'media/', 'workshops/', 'game-of-the-month/', 'hack-
             summary.push({ name, violations: 0, incomplete: results.incomplete.map(v => ({ id: v.id, nodes: v.nodes.length })) });
             console.log(`PASS ${name}`);
         }
+        // The scanner does not compare focus styles or detect missing text at intermediate widths.
+        for (const width of [768, 850, 992, 993]) {
+            await visit('', width);
+            const visibleNotes = await page.locator('#executive-order p, .mobile-tablet-only')
+                .evaluateAll(notes => notes.filter(note => note.checkVisibility({ visibilityProperty: true })).length);
+            assert.equal(visibleNotes, 1, `Exactly one Executive Order note at ${width}px`);
+        }
+        await page.locator('#hero .btn-practice').press('Shift+Tab');
+        const focus = await page.locator('#hero .btn-register').evaluate(button => ({
+            keyboard: button === document.activeElement && button.matches(':focus-visible'),
+            outline: getComputedStyle(button).outlineStyle,
+            width: parseFloat(getComputedStyle(button).outlineWidth)
+        }));
+        assert(focus.keyboard && focus.outline === 'solid' && focus.width >= 2, 'Register has a keyboard focus outline');
+
+        await visit('hack-of-fame/', 320);
+        await page.addStyleTag({ content: `
+            #hof-spotlight * { line-height: 1.5 !important; letter-spacing: .12em !important; word-spacing: .16em !important; }
+            #hof-spotlight p { margin-bottom: 2em !important; }
+        ` });
+        await page.getByRole('button', {name: /Show Jakob Kreuze/}).click();
+        assert(await page.locator('.spotlight-caption').evaluate(box => {
+            const range = document.createRange();
+            range.selectNodeContents(box.lastElementChild);
+            return range.getBoundingClientRect().bottom <= box.getBoundingClientRect().bottom;
+        }), 'Full caption remains visible with user text spacing');
+
+        await visit('media/', 320);
+        const heights = await page.locator('#pc7 .tab-content-media-left .list-unstyled a')
+            .evaluateAll(links => links.map(link => link.getBoundingClientRect().height));
+        assert(heights.length && heights.every(height => height >= 24), 'Media download targets are at least 24px high');
+
+        for (const width of [390, 1280]) {
+            await visit('pc8/', width);
+            await page.locator('#eligibility').scrollIntoViewIfNeeded();
+            await page.waitForFunction(() => ['#pc8SideNav', '#pc8MobileMenu'].every(selector => {
+                const current = document.querySelectorAll(selector + ' [aria-current="location"]');
+                return current.length === 1 && current[0].hash === '#eligibility';
+            }));
+            if (width === 390) assert(await page.getByRole('button', { name: /Jump to section.*Eligibility/i }).isVisible());
+        }
         for (const width of [320, 390, 768, 1280]) {
             for (const route of routes) {
                 await visit(route, width);
