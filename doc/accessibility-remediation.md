@@ -24,6 +24,8 @@ Both galleries now stay still until a visitor interacts with them. This addresse
 
 The PC8 mobile page scrolls a newly focused control clear of the sticky section bar when needed. The registration link was retested with Tab and Shift+Tab at 320px, 390px, and 768px. This addresses supplemental finding F-32.
 
+The two stacked Game of the Month social links now have tap targets at least 24 CSS pixels tall. This addresses the target-size finding from the supplemental review.
+
 ## Verification
 
 The regression script `tests/accessibility.cjs` uses Chrome with Playwright and axe-core 4.11.0. It checks the six main pages at 320, 390, 768, and 1280 pixels, both lightboxes at 320, 390, and 1280 pixels, all seven Media panels, and the profile dialog. It includes keyboard activation, focus containment/restoration, offscreen photo focus, full focus ring visibility, idle galleries, Previous/Next controls, reduced motion, skip links, page width, photo/arrow separation, and browser JavaScript errors.

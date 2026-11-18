@@ -2488,6 +2488,12 @@ a.video-thumbnail:hover:after {
     text-decoration: none;
 }
 
+.gom-social-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
+}
+
 #gom-game {
     background: #f8f8fa;
 }
