@@ -50,6 +50,20 @@ const routes = ['', 'pc8/', 'media/', 'workshops/', 'game-of-the-month/', 'hack-
         }));
         assert(focus.keyboard && focus.outline === 'solid' && focus.width >= 2, 'Register has a keyboard focus outline');
 
+        await visit('', 390);
+        await page.getByRole('link', { name: /View the competition dates and registration schedule as text/ }).press('Enter');
+        await page.waitForURL('**/pc8/#competition-schedule');
+        const schedule = await page.locator('#competition-schedule').ariaSnapshot();
+        for (const label of ['Individuals', 'Teams', 'qualifying rounds are online', 'Finals are held in person',
+            'April 20, 2027', 'April 21, 2027', 'April 22, 2027', 'Summer 2027']) {
+            assert(schedule.includes(label), `Accessible timeline includes ${label}`);
+        }
+
+        await visit('workshops/', 768);
+        assert(await page.locator('#workshop-details .workshop-item:visible img').evaluateAll(images =>
+            images.every(image => image.getBoundingClientRect().right <= image.parentElement.getBoundingClientRect().right)
+        ), 'Workshop artwork stays within its column where the tablet styles and desktop grid meet');
+
         await visit('hack-of-fame/', 320);
         await page.addStyleTag({ content: `
             #hof-spotlight * { line-height: 1.5 !important; letter-spacing: .12em !important; word-spacing: .16em !important; }
@@ -187,7 +201,10 @@ const routes = ['', 'pc8/', 'media/', 'workshops/', 'game-of-the-month/', 'hack-
             await button.focus(); await page.keyboard.press(i % 2 ? 'Space' : 'Enter');
             assert.equal(await button.getAttribute('aria-pressed'), 'true');
             assert.equal(await page.locator('.spotlight-thumbnail[aria-pressed=true]').count(), 1);
-            assert.equal(await page.locator('#spotlight-image').getAttribute('alt'), `${await button.getAttribute('data-name')}, ${await button.getAttribute('data-details')}`);
+            const description = await button.getAttribute('data-photo-alt');
+            assert(description && description !== await button.getAttribute('data-details'));
+            assert.equal(await page.getByRole('img', { name: description, exact: true }).count(), 1);
+            assert.equal(await page.locator('#spotlight-caption-name').textContent(), await button.getAttribute('data-name'));
         }
         const members = page.locator('[data-bs-target="#memberModal"]');
         for (let i = 0; i < await members.count(); i++) {

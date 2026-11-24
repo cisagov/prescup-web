@@ -42,6 +42,18 @@ Zero axe violations were reported in the 38 scanned page/state combinations, usi
 
 The full 38-state local regression was rerun after the November 18 changes and again reported zero violations. It covered the six pages at 320, 390, 768, and 1280 pixels, both lightboxes at three widths, all seven Media panels, and the profile dialog. It also passed keyboard and focus checks. The scanner still returned 884 `color-contrast` incomplete node-results summed across repeated states; these are not 884 distinct failures or passes. A focused browser check confirmed the expanded GoM/HoF names on all six pages, the four Toolkit link names, and both testimonial attributions. This is local-branch evidence only; live deployment, screen readers, actual 200% zoom, PDF reading order, and full image-background contrast remain unverified.
 
+### November 24 follow-up
+
+| Finding | Result |
+| --- | --- |
+| F09: Image alternatives | Addressed on the six marketing pages. The two homepage timeline layouts link directly to the text schedule for individuals and teams, which now includes the virtual and in-person formats. The 10 published Spotlight photos have scene descriptions alongside their existing identity and event captions. The December Game of the Month poster repeats the text in and below its link. Redundant title artwork is decorative and the Media Archive title image uses the words shown in the graphic. |
+| F11: Contrast over artwork | Fixed the mobile timeline's two white-on-blue labels (now 6.42:1) and a Workshops icon that overlapped text at 768 CSS pixels. The PC8 keyboard outline and desktop current-section marker are brighter against the same artwork. The gallery and lightbox arrows remain visible in both tested forced-color palettes. |
+| F12: Acceptance and deployment | Local browser checks passed. Deployment equivalence, testing with the agency's supported screen readers, and authenticated workflows remain open. |
+
+The 38-state regression returned zero axe-core 4.11.4 violations and 886 repeated incomplete contrast results. A separate check masked foreground text and underlines and sampled the pixels behind visible text in 32 browser cases at widths from 320 to 1920 CSS pixels. All 1,276 measured results met their text-size thresholds. Text covered by a modal, menu, or sticky bar was checked in the corresponding unobstructed state. The artwork and CSS also provide contrast bounds for PC8 links in default, hover and focus states, as well as its current-section marker. The Game of the Month visited-link color was checked against its card background.
+
+Chrome's browser zoom was set to 200% in a temporary profile, reducing its layout width from 1280 to 640 CSS pixels. All six pages passed keyboard and horizontal overflow checks in the default palette and in emulated light and dark forced colors. The checks included the text schedule, PC8 rules/practice/support navigation, Media tabs, the featured challenge link, and the Spotlight image update. Browser accessibility snapshots confirmed the exposed names and text. Actual screen reader testing remains a separate acceptance step.
+
 To rerun, serve the checkout locally and supply Playwright, axe-core, and Chrome in the development environment. For example, install the test packages in a temporary directory rather than adding runtime dependencies to the website:
 
 ```sh
@@ -57,9 +69,7 @@ Raw scanner JSON and screenshots are written outside the repository (default `/t
 
 1. **F07 — downloadable documents.** Review the six linked competition overviews, particularly the untagged PC1, PC2, PC5, and PC6 files. Decide whether to provide accessible HTML equivalents alongside the PDFs or remediate the source documents and export tagged replacements. Verify reading order, tables, headings, alternatives, links, and visual equivalence. Review the existing alternative PC5 PDF before changing the download link. Include the Word justification template and agree the scope of archived ZIP/branding assets. AI can prepare equivalents and assist reconstruction; the document owner/specialist must approve and test them.
 2. **F08 — video and audio (excluded from this round).** Featured video thumbnails have `alt` text and visible link titles that identify the videos; those short labels do not describe the video content. Confirm captions, transcripts, and audio-description needs for linked local MP4s and external YouTube content if this work is resumed. The original audit did not establish whether embedded/open captions exist. The current round leaves trailers and videos unchanged and does not pursue audio-input work.
-3. **F09 — content approval.** Review remaining information graphics, logos containing text, archived challenge imagery, and any text alternatives that need subject-matter knowledge.
-4. **F11 — remaining contrast states.** Check incomplete scanner results and rendered image/gradient backgrounds across scroll positions, responsive sizes, hover, focus, selected, and visited states. Check any agency-specific newer non-text contrast requirements separately.
-5. **F12 — acceptance and deployment.** Test with supported screen readers, actual 200% browser/text zoom, forced colors, and agreed complete workflows. Verify the intended deployed branch and served files, then test registration, practice, challenge access, and support with appropriate accounts. The upstream production site and external applications are not changed or certified by this branch.
+3. **F12 — acceptance and deployment.** Verify the intended deployed build and served files. Retest the local acceptance paths with the agency's supported screen readers and browsers on that build. Use authorized test accounts for registration, practice, challenge access, and support. Record results for each in-scope workflow and obtain agency acceptance.
 
 ## References
 

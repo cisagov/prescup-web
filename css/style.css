@@ -2347,7 +2347,7 @@ a.video-thumbnail:hover:after {
     }
     
     #workshop-details img {
-        max-width: 172px;
+        max-width: min(172px, 100%);
         margin-bottom: 20px;
     }
     
@@ -2853,12 +2853,6 @@ a.video-thumbnail:hover:after {
     }
 }
 
-.pc8-page a:focus-visible,
-.pc8-page button:focus-visible {
-    outline: 2px solid var(--pc8-blue);
-    outline-offset: 2px;
-}
-
 /* Grey placeholder boxes -- swap for real images later */
 .pc8-placeholder {
     display: flex;
@@ -2943,7 +2937,7 @@ a.video-thumbnail:hover:after {
 }
 
 .pc8-side-link.active::before {
-    border-left-color: var(--pc8-red);
+    border-left-color: #ff777f;
 }
 
 
@@ -3202,6 +3196,10 @@ a.video-thumbnail:hover:after {
     scroll-margin-top: 4.25rem;
 }
 
+#competition-schedule {
+    scroll-margin-top: 4.25rem;
+}
+
 @media (min-width: 992px) {
     .pc8-section {
         scroll-margin-top: 2rem;
@@ -3368,6 +3366,12 @@ body a:focus-visible:has(> img:only-child) {
     box-shadow: none;
 }
 
+/* Keep the focus ring legible against the dark PC8 artwork and section menu. */
+.pc8-page main :is(a, button):focus-visible,
+#pc8MobileBar :is(a, button):focus-visible {
+    outline-color: #87c9ff;
+}
+
 /* Keep the ring inside each slide so the carousel viewport cannot clip it. */
 body .pc-photo-carousel__slide:focus-visible {
     outline-offset: -4px;
@@ -3394,4 +3398,13 @@ body .pc-photo-carousel__slide:focus-visible {
 .pc-photo-carousel__rotation:hover { background: #291018; }
 @media (prefers-reduced-motion: reduce) {
     .scroll-arrow { animation: none; }
+}
+
+/* The arrow images retain their colors when the browser swaps the canvas. */
+@media (forced-colors: active) and (prefers-color-scheme: light) {
+    .pc-photo-lightbox__nav img { filter: none; }
+}
+
+@media (forced-colors: active) and (prefers-color-scheme: dark) {
+    .pc-photo-carousel__control img { filter: invert(1); }
 }
