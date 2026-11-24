@@ -50,9 +50,17 @@ const routes = ['', 'pc8/', 'media/', 'workshops/', 'game-of-the-month/', 'hack-
         }));
         assert(focus.keyboard && focus.outline === 'solid' && focus.width >= 2, 'Register has a keyboard focus outline');
 
-        await visit('', 390);
-        await page.getByRole('link', { name: /View the competition dates and registration schedule as text/ }).press('Enter');
-        await page.waitForURL('**/pc8/#competition-schedule');
+        for (const width of [390, 1280]) {
+            await visit('', width);
+            const timeline = page.getByRole('link', { name: "View the President's Cup 8 competition timeline as text" });
+            assert.equal(await page.locator('#timeline a[href$="#competition-schedule"]').count(), 1);
+            await timeline.scrollIntoViewIfNeeded();
+            await timeline.locator('img').evaluate(image => image.decode());
+            const source = await timeline.locator('img').evaluate(image => new URL(image.currentSrc).pathname);
+            assert.equal(source, width < 768 ? '/img/pc8/timeline-mobile.png' : '/img/pc8/timeline.png');
+            await timeline.press('Enter');
+            await page.waitForURL('**/pc8/#competition-schedule');
+        }
         const schedule = await page.locator('#competition-schedule').ariaSnapshot();
         for (const label of ['Individuals', 'Teams', 'qualifying rounds are online', 'Finals are held in person',
             'April 20, 2027', 'April 21, 2027', 'April 22, 2027', 'Summer 2027']) {

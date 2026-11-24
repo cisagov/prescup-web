@@ -46,7 +46,7 @@ The full 38-state local regression was rerun after the November 18 changes and a
 
 | Finding | Result |
 | --- | --- |
-| F09: Image alternatives | Addressed on the six marketing pages. The two homepage timeline layouts link directly to the text schedule for individuals and teams, which now includes the virtual and in-person formats. The 10 published Spotlight photos have scene descriptions alongside their existing identity and event captions. The December Game of the Month poster repeats the text in and below its link. Redundant title artwork is decorative and the Media Archive title image uses the words shown in the graphic. |
+| F09: Image alternatives | Addressed on the six marketing pages. The homepage timeline graphic is a single link in both layouts and opens the text schedule for individuals and teams, which now includes the virtual and in-person formats. The 10 published Spotlight photos have scene descriptions alongside their existing identity and event captions. The December Game of the Month poster repeats the text in and below its link. Redundant title artwork is decorative and the Media Archive title image uses the words shown in the graphic. |
 | F11: Contrast over artwork | Fixed the mobile timeline's two white-on-blue labels (now 6.42:1) and a Workshops icon that overlapped text at 768 CSS pixels. The PC8 keyboard outline and desktop current-section marker are brighter against the same artwork. The gallery and lightbox arrows remain visible in both tested forced-color palettes. |
 | F12: Acceptance and deployment | Local browser checks passed. Deployment equivalence, testing with the agency's supported screen readers, and authenticated workflows remain open. |
 
