@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/style.css?ver=8.1.7">
+    <link rel="stylesheet" href="css/style.css?ver=8.1.8b.6">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVR9SKL9J6"></script>
     <script>
@@ -41,13 +41,15 @@
     <!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
     <script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DHS" id="_fed_an_ua_tag"></script>
 
+    <script src="js/photo-gallery-accessibility.js?ver=8.1.8b.2"></script>
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- Header Navigation -->
     <header>
-        <div class="container">
+        <nav class="container" aria-label="Main Menu">
             <ul class="nav nav-tabs-std">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="./"><span>Home</span></a>
@@ -62,16 +64,17 @@
                     <a class="nav-link" href="workshops/"><span>Workshops</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-minimized" href="game-of-the-month/"><span>GoM</span></a>
+                    <a class="nav-link nav-minimized" href="game-of-the-month/" aria-label="GoM (Game of the Month)"><span>GoM</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-minimized" href="hack-of-fame/"><span>HoF</span></a>
+                    <a class="nav-link nav-minimized" href="hack-of-fame/" aria-label="HoF (Hack of Fame)"><span>HoF</span></a>
                 </li>
             </ul>
-        </div>
+        </nav>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
+        <h1 class="visually-hidden">President's Cup Cybersecurity Competition</h1>
         <!-- Executive Order -->
         <section id="executive-order" class="px-4 pt-3 pb-2 text-black">
             <div class="container">
@@ -94,9 +97,11 @@
                                 <!-- Hero Logo -->
                                 <img src="img/logo-pccc.svg" class="hero-logo-img img-fluid" loading="eager" data-cf-lazy="never" alt="President's Cup Cybersecurity Competition">
                              </div>
-                            <!-- Registration Button -->
-                            <a class="btn btn-primary btn-register mx-2 fs-5 shadow-dark" href="https://presidentscup.cisa.gov/ctf/" target="_blank" rel="noopener noreferrer" role="button">Create Account</a>
-                            <a class="btn btn-primary btn-practice mx-2 fs-5 shadow-dark" href="https://presidentscup.cisa.gov/ctf/practice" target="_blank" rel="noopener noreferrer" role="button">Practice & Prepare</a>
+                            <!-- Registration and Practice Buttons -->
+                            <div class="home-action-pair mt-4">
+                                <a class="btn btn-register fs-5 shadow-dark" href="https://presidentscup.cisa.gov/ctf/events" target="_blank" rel="noopener noreferrer">Register for PC8</a>
+                                <a class="btn btn-practice fs-5 shadow-dark" href="https://presidentscup.cisa.gov/ctf/practice" target="_blank" rel="noopener noreferrer">Practice &amp; Prepare</a>
+                            </div>
                             <p class="mobile-tablet-only p-4">This operation was established in response to Executive Order 13870.</p>
                             <!-- Scroll Arrow -->
                             <div class="mt-2">
@@ -120,7 +125,7 @@
                             Ranging from defending networks to analyzing threats and uncovering vulnerabilities, the competition highlights the importance of cybersecurity readiness, encourages professional growth, and showcases the skills of those working to keep our nation secure. Only the sharpest minds will make it through two virtual qualifying rounds to the finals in the National Capital Region. 
                         </p>
                         <p class="fs-5 mt-3 mb-4">
-                            Preparing for its eighth year, the President's Cup continues to foster collaboration, raise awareness of cybersecurity careers, and recognize the dedication of professionals who protect our digital infrastructure.
+                            In it's eighth year, the President's Cup continues to foster collaboration, raise awareness of cybersecurity careers, and recognize the dedication of professionals who protect our digital infrastructure.
                         </p>
                     </div>
                 </div>
@@ -136,10 +141,10 @@
             <div class="container py-5 mb-4">
 
                 <!-- PC8 Introduction -->
-                <div class="row justify-content-center align-items-center gy-4 mb-5">
+                <div class="pc8-intro mb-5">
 
-                    <!-- PC8 Logo -->
-                    <div class="col-12 pc8-intro-graphic d-flex justify-content-center">
+                    <!-- PC8 Logo and Registration Heading -->
+                    <div class="pc8-intro-heading">
                         <img
                             src="img/pc8/pc8-iconmark.png"
                             alt="President's Cup 8"
@@ -149,59 +154,53 @@
                             loading="lazy"
                             decoding="async"
                         >
+                        <h2 class="h1 heading-standard fw-bold m-0">Registration Open</h2>
                     </div>
 
                     <!-- PC8 Introduction Text -->
-                    <div class="col-12 pc8-intro-copy ps-md-4">
-                        <h1 class="display-4 fw-bold mt-0">
-                            PC8: Coming Soon
-                        </h1>
-
+                    <div class="pc8-intro-copy">
                         <p class="fs-5 mt-3">
-                            President's Cup 8 invites competitors to celebrate America's 250 year journey of innovation.
+                            President’s Cup 8 invites competitors to celebrate <strong>America’s 250 year journey of innovation</strong> while putting cybersecurity skills to the test.
+                        </p>
+
+                        <p class="fs-5 mt-3 fw-bold">
+                            <a href="https://presidentscup.cisa.gov/ctf/events" target="_blank" rel="noopener noreferrer" class="text-dark">Registration</a> is now open for individuals and teams.
                         </p>
 
                         <p class="fs-5 mt-3">
-                            Registration opens December 1, 2026.
-                        </p>
-
-                        <p class="fs-5 mt-3">
-                            Get ahead of the competition and stay in the loop by creating your account and visiting the
+                            Step into the timeline, register, and get ready for the journey.
+                            Want to prepare before the competition begins? Visit the
                             <a href="https://presidentscup.cisa.gov/ctf/practice"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="text-dark">practice area</a>.
+                            class="text-dark fw-bold">Practice Area</a> to explore challenges from previous President’s Cup competitions.
                         </p>
 
-                        <div class="pc8-intro-actions d-flex flex-wrap gap-3 mt-4">
-                            <a class="btn btn-primary btn-register fs-5 mt-0"
-                               href="https://presidentscup.cisa.gov/ctf/"
-                               target="_blank" rel="noopener noreferrer">Create Account</a>
-                            <a class="btn btn-practice fs-5 mt-0"
-                               href="pc8/">PC8 Details &amp; Rules</a>
+                        <div class="pc8-intro-actions home-action-pair mt-4">
+                            <a class="btn btn-register fs-5"
+                               href="https://presidentscup.cisa.gov/ctf/events"
+                               target="_blank" rel="noopener noreferrer">Register</a>
+                            <a class="btn btn-practice fs-5"
+                               href="https://presidentscup.cisa.gov/pc8/">PC8 Details &amp; Rules</a>
                         </div>
                     </div>
 
                 </div>
 
-                <!-- PC8 Timeline - Desktop / Tablet -->
-                <img
-                    src="img/pc8/timeline.png"
-                    alt="President's Cup 8 Competition Timeline"
-                    class="img-fluid d-none d-md-block mx-auto mt-3"
-                    loading="lazy"
-                    decoding="async"
-                >
-
-                <!-- PC8 Timeline - Mobile -->
-                <img
-                    src="img/pc8/timeline-mobile.png"
-                    alt="President's Cup 8 Competition Timeline"
-                    class="img-fluid d-block d-md-none mx-auto mt-3"
-                    loading="lazy"
-                    decoding="async"
-                >
-
+                <a class="d-block mt-3" href="pc8/#competition-schedule">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="img/pc8/timeline.png" width="1947" height="664">
+                        <img
+                            src="img/pc8/timeline-mobile.png?ver=2"
+                            alt="View the President's Cup 8 competition timeline as text"
+                            class="img-fluid d-block mx-auto"
+                            width="3190"
+                            height="1313"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </picture>
+                </a>
 
             </div>
         </section>
@@ -216,7 +215,7 @@
                 <!-- Section Title -->
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h3 class="display-5 fw-bold mb-5">Toolkit</h3>
+                        <h2 class="h3 heading-standard display-5 fw-bold mb-5">Toolkit</h2>
                     </div>
                 </div>
 
@@ -224,29 +223,29 @@
                     
                     <!-- Icon 1: Registration Portal -->
                     <div class="col">
-                        <a href="https://presidentscup.cisa.gov/ctf/" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-light intel-icon-1">
-                            <img src="img/icon-registration-portal.svg" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Registration Portal Icon">
+                        <a href="https://presidentscup.cisa.gov/ctf/events" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-light intel-icon-1">
+                            <img src="img/icon-registration-portal.svg" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Registration Portal">
                         </a>
                     </div>
 
                     <!-- Icon 2: Practice Area -->
                     <div class="col">
                         <a href="https://presidentscup.cisa.gov/ctf/practice" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-light intel-icon-2">
-                            <img src="img/icon-bullseye.svg" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Practice Area Icon">
+                            <img src="img/icon-bullseye.svg" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Practice Area">
                         </a>
                     </div>
 
                     <!-- Icon 3: Game of the Month -->
                     <div class="col">
                         <a href="game-of-the-month/" class="text-decoration-none text-light intel-icon-3">
-                            <img src="img/icon-game.svg" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Game of the Month Icon">
+                            <img src="img/icon-game.svg" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Game of the Month">
                         </a>
                     </div>
 
                     <!-- Icon 4: Hack of Fame -->
                     <div class="col">
                         <a href="hack-of-fame/" class="text-decoration-none text-light intel-icon-4">
-                            <img src="img/icon-hack.svg" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Hack of Fame Icon">
+                            <img src="img/icon-hack.svg" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Hack of Fame">
                         </a>
                     </div>
                     
@@ -266,18 +265,26 @@
             data-mobile-columns="1" = 1 photo wide
 
             Autoplay:
-            data-autoplay-delay="4000" = 4 seconds
+            data-autoplay="true" shows the optional Start/Pause control
         ================================================== -->
 
         <section
             class="pc-photo-carousel my-5 py-5"
             data-mobile-columns="2"
+            data-autoplay="false"
             data-autoplay-delay="3500"
             aria-label="President's Cup Photo Gallery"
         >
             <div class="container">
                 <h2 class="visually-hidden">President's Cup Photo Gallery</h2>
 
+                <div class="text-center mb-5">
+                    <a class="btn btn-register fs-5 mt-0"
+                       href="https://presidentscup.cisa.gov/ctf/events"
+                       target="_blank" rel="noopener noreferrer">Register for PC8</a>
+                </div>
+
+                <div class="pc-photo-carousel__playback" hidden><button type="button" class="pc-photo-carousel__rotation">Start slideshow</button></div>
                 <div class="pc-photo-carousel__shell">
 
                     <!-- Previous -->
@@ -297,7 +304,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc4/Presidentscup_Day02_Awards_014.jpg"
-                                data-pc-alt="President's Cup 4 competition photo"
+                                data-pc-alt="President&#x27;s Cup 4: An attendee stands beside an astronaut figure at the awards backdrop."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -306,7 +313,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc4/Presidentscup_Day02_Briefing_015.jpg"
-                                data-pc-alt="President's Cup 4 competition photo"
+                                data-pc-alt="President&#x27;s Cup 4: A speaker addresses the room beside the competition trophy."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -315,7 +322,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc4/Presidentscup_Day02_Candids_010.jpg"
-                                data-pc-alt="President's Cup 4 competition photo"
+                                data-pc-alt="President&#x27;s Cup 4: Competitors work at rows of computer stations."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -324,7 +331,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc4/Presidentscup_Day02_Candids_016.jpg"
-                                data-pc-alt="President's Cup 4 competition photo"
+                                data-pc-alt="President&#x27;s Cup 4: A competitor wearing headphones concentrates on a monitor."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -333,7 +340,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc4/Presidentscup_Day02_Candids_034.jpg"
-                                data-pc-alt="President's Cup 4 competition photo"
+                                data-pc-alt="President&#x27;s Cup 4: A competitor works at a desk with two monitors."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -342,7 +349,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc5/President_s Cup Day 3-56.jpg"
-                                data-pc-alt="President's Cup 5 competition photo"
+                                data-pc-alt="President&#x27;s Cup 5: Participants write notes at a table with electronics and laptops."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -351,7 +358,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc5/President_s Cup Finals-0637.jpg"
-                                data-pc-alt="President's Cup 5 competition photo"
+                                data-pc-alt="President&#x27;s Cup 5: A competitor studies code on two monitors."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -360,7 +367,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc5/President_s Cup Finals-0677.jpg"
-                                data-pc-alt="President's Cup 5 competition photo"
+                                data-pc-alt="President&#x27;s Cup 5: A competitor in uniform studies a computer screen."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -369,7 +376,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc5/Presidents Cup_Day 4_12.jpg"
-                                data-pc-alt="President's Cup 5 competition photo"
+                                data-pc-alt="President&#x27;s Cup 5: An audience watches a cyber challenge briefing on a large screen."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -378,7 +385,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc5/Presidents-Cup_Day 2_31.jpg"
-                                data-pc-alt="President's Cup 5 competition photo"
+                                data-pc-alt="President&#x27;s Cup 5: A participant holds an award shaped like a game cartridge."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -387,7 +394,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc6/M.O.D. Photography_OTA_Presidents Cup_Day 01-18.jpg"
-                                data-pc-alt="President's Cup 6 competition photo"
+                                data-pc-alt="President&#x27;s Cup 6: Three illuminated competition awards on display."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -396,7 +403,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc6/M.O.D. Photography_OTA_Presidents Cup_Day3_CISA Group2-1.jpg"
-                                data-pc-alt="President's Cup 6 competition photo"
+                                data-pc-alt="President&#x27;s Cup 6: Four attendees pose at the competition photo backdrop."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -405,7 +412,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc6/M.O.D. Photography_Presidents Cup_2025_Day 3 (146 of 159).jpg"
-                                data-pc-alt="President's Cup 6 competition photo"
+                                data-pc-alt="President&#x27;s Cup 6: A group shows matching jackets at the competition backdrop."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -414,7 +421,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc6/M.O.D. Photography_Presidents Cup_2025_Day 3 (18 of 159).jpg"
-                                data-pc-alt="President's Cup 6 competition photo"
+                                data-pc-alt="President&#x27;s Cup 6: A competitor works behind a pair of monitors."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -423,7 +430,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc6/M.O.D. Photography_Presidents Cup_2025_Day 3 (74 of 159).jpg"
-                                data-pc-alt="President's Cup 6 competition photo"
+                                data-pc-alt="President&#x27;s Cup 6: Participants gather around a tablet during the competition."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -432,7 +439,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc7/Presidents-Cup-2026-Award-Ceremony_091.jpg"
-                                data-pc-alt="President's Cup 7 competition photo"
+                                data-pc-alt="President&#x27;s Cup 7: Close-up of the competition trophy base and engraved plaques."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -441,7 +448,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc7/Presidents-Cup-2026-Award-Ceremony_148.jpg"
-                                data-pc-alt="President's Cup 7 competition photo"
+                                data-pc-alt="President&#x27;s Cup 7: A group poses with an award at the ceremony."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -450,7 +457,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc7/Presidents-Cup-2026-Award-Ceremony_154.jpg"
-                                data-pc-alt="President's Cup 7 competition photo"
+                                data-pc-alt="President&#x27;s Cup 7: Three silver award cups displayed on a table."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -459,7 +466,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc7/Presidents-Cup-2026-Award-Ceremony_280.jpg"
-                                data-pc-alt="President's Cup 7 competition photo"
+                                data-pc-alt="President&#x27;s Cup 7: Awards ceremony attendees pose together holding trophies."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -468,7 +475,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc7/Presidents-Cup-2026-Award-Ceremony_286.jpg"
-                                data-pc-alt="President's Cup 7 competition photo"
+                                data-pc-alt="President&#x27;s Cup 7: Two competitors in uniform hold award cups beside the large trophy."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -477,7 +484,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc7/Presidents-Cup-2026_058.jpg"
-                                data-pc-alt="President's Cup 7 competition photo"
+                                data-pc-alt="President&#x27;s Cup 7: A speaker addresses seated attendees in a meeting room."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -486,7 +493,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc7/Presidents-Cup-2026_1050.jpg"
-                                data-pc-alt="President's Cup 7 competition photo"
+                                data-pc-alt="President&#x27;s Cup 7: Competitors work on laptops around a conference table."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -495,7 +502,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc7/Presidents-Cup-2026_1208.jpg"
-                                data-pc-alt="President's Cup 7 competition photo"
+                                data-pc-alt="President&#x27;s Cup 7: The competition trophy displayed under a spotlight."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -504,7 +511,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc7/Presidents-Cup-2026_1348.jpg"
-                                data-pc-alt="President's Cup 7 competition photo"
+                                data-pc-alt="President&#x27;s Cup 7: Four competitors pose with their individual awards."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -513,7 +520,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc7/Presidents-Cup-2026_153.jpg"
-                                data-pc-alt="President's Cup 7 competition photo"
+                                data-pc-alt="President&#x27;s Cup 7: A competitor viewed from behind studies code on a monitor."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -522,7 +529,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc7/Presidents-Cup-2026_294.jpg"
-                                data-pc-alt="President's Cup 7 competition photo"
+                                data-pc-alt="President&#x27;s Cup 7: A competitor looks across a row of monitors."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -531,7 +538,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc7/Presidents-Cup-2026_521.jpg"
-                                data-pc-alt="President's Cup 7 competition photo"
+                                data-pc-alt="President&#x27;s Cup 7: An attendee walks through a lobby beside a competition sign."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -540,7 +547,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc7/Presidents-Cup-2026_665.jpg"
-                                data-pc-alt="President's Cup 7 competition photo"
+                                data-pc-alt="President&#x27;s Cup 7: Audience members listen during a presentation."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -549,7 +556,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc7/Presidents-Cup-2026_704.jpg"
-                                data-pc-alt="President's Cup 7 competition photo"
+                                data-pc-alt="President&#x27;s Cup 7: Close-up of a participant typing on a keyboard."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -558,7 +565,7 @@
                                 class="pc-photo-carousel__slide"
                                 type="button"
                                 data-pc-photo="pc7/pc7-awards-ceremony.jpg"
-                                data-pc-alt="President's Cup 7 competition photo"
+                                data-pc-alt="President&#x27;s Cup 7: A group poses with officials at the awards ceremony."
                             >
                                 <img alt="" loading="lazy" decoding="async">
                             </button>
@@ -728,10 +735,12 @@
                 }
 
                 function getSlideWidth() {
-                    return viewport.clientWidth / visibleCount;
+                    return viewport.getBoundingClientRect().width / visibleCount;
                 }
 
                 function setPosition(animate = true) {
+                    animate = animate && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                    if (!animate) isAnimating = false;
                     track.style.transition = animate
                         ? 'transform 450ms ease'
                         : 'none';
@@ -739,6 +748,20 @@
                     track.style.transform =
                         `translate3d(-${physicalIndex * getSlideWidth()}px, 0, 0)`;
                 }
+
+                track.addEventListener('focusin', event => {
+                    const slide = event.target.closest('.pc-photo-carousel__slide');
+                    if (!slide || slide.dataset.pcClone) return;
+                    viewport.scrollLeft = 0;
+                    const bounds = slide.getBoundingClientRect();
+                    const frame = viewport.getBoundingClientRect();
+                    if (bounds.left < frame.left - 1 || bounds.right > frame.right + 1) {
+                        logicalIndex = Number(slide.dataset.pcIndex);
+                        physicalIndex = originalSlides.length + logicalIndex;
+                        setPosition(false);
+                    }
+                    viewport.scrollLeft = 0;
+                });
 
                 function createClone(slide) {
                     const clone = slide.cloneNode(true);
@@ -888,8 +911,6 @@
                 const lightboxCounter = section.querySelector('.pc-photo-lightbox__counter');
 
                 let lightboxIndex = 0;
-                let previouslyFocusedElement = null;
-                let previousBodyOverflow = '';
 
                 function updateLightbox() {
                     const slide = originalSlides[lightboxIndex];
@@ -907,35 +928,11 @@
                 function openLightbox(index) {
                     lightboxIndex = index;
                     updateLightbox();
-
-                    previouslyFocusedElement = document.activeElement;
-                    previousBodyOverflow = document.body.style.overflow;
-                    document.body.style.overflow = 'hidden';
-
-                    lightbox.hidden = false;
-                    lightbox.setAttribute('aria-hidden', 'false');
-
-                    stopAutoplay();
-                    lightboxClose.focus();
+                    accessibility.openLightbox();
                 }
 
                 function closeLightbox() {
-                    if (lightbox.hidden) {
-                        return;
-                    }
-
-                    lightbox.hidden = true;
-                    lightbox.setAttribute('aria-hidden', 'true');
-                    document.body.style.overflow = previousBodyOverflow;
-
-                    if (
-                        previouslyFocusedElement &&
-                        typeof previouslyFocusedElement.focus === 'function'
-                    ) {
-                        previouslyFocusedElement.focus();
-                    }
-
-                    startAutoplay();
+                    accessibility.closeLightbox();
                 }
 
                 function changeLightbox(direction) {
@@ -991,10 +988,13 @@
                     }
 
                     if (event.key === 'Escape') {
+                        event.preventDefault();
                         closeLightbox();
                     } else if (event.key === 'ArrowLeft') {
+                        event.preventDefault();
                         changeLightbox(-1);
                     } else if (event.key === 'ArrowRight') {
+                        event.preventDefault();
                         changeLightbox(1);
                     }
                 });
@@ -1003,72 +1003,10 @@
                 Autoplay
                 ============================================== */
 
-                const autoplayDelay = Math.max(
-                    2500,
-                    parseInt(section.dataset.autoplayDelay, 10) || 4000
-                );
-
-                const reducedMotion = window.matchMedia(
-                    '(prefers-reduced-motion: reduce)'
-                );
-
-                let autoplayTimer = null;
-                let pointerInside = false;
-                let focusInside = false;
-
-                function stopAutoplay() {
-                    if (autoplayTimer) {
-                        clearInterval(autoplayTimer);
-                        autoplayTimer = null;
-                    }
-                }
-
-                function startAutoplay() {
-                    stopAutoplay();
-
-                    if (
-                        reducedMotion.matches ||
-                        document.hidden ||
-                        pointerInside ||
-                        focusInside ||
-                        !lightbox.hidden
-                    ) {
-                        return;
-                    }
-
-                    autoplayTimer = setInterval(() => {
-                        moveCarousel(1);
-                    }, autoplayDelay);
-                }
-
-                section.addEventListener('mouseenter', () => {
-                    pointerInside = true;
-                    stopAutoplay();
-                });
-
-                section.addEventListener('mouseleave', () => {
-                    pointerInside = false;
-                    startAutoplay();
-                });
-
-                section.addEventListener('focusin', () => {
-                    focusInside = true;
-                    stopAutoplay();
-                });
-
-                section.addEventListener('focusout', () => {
-                    setTimeout(() => {
-                        focusInside = section.contains(document.activeElement);
-                        startAutoplay();
-                    }, 0);
-                });
-
-                document.addEventListener('visibilitychange', () => {
-                    if (document.hidden) {
-                        stopAutoplay();
-                    } else {
-                        startAutoplay();
-                    }
+                const accessibility = window.PCPhotoGalleryAccessibility({
+                    section,
+                    lightbox,
+                    advance: () => moveCarousel(1)
                 });
 
                 /* ==============================================
@@ -1090,7 +1028,6 @@
                 ============================================== */
 
                 rebuildCarousel();
-                startAutoplay();
             })();
             </script>
         </section>
@@ -1106,10 +1043,10 @@
             <div class="container py-5 my-5">
                 <div class="row py-5 justify-content-center align-items-center">
                     <div class="col-lg-7 text-center">
-                        <h3 class="display-3 fw-bold">Hone Your Skills</h3>
-                        <div class="mt-4">
-                            <a class="btn btn-light mt-3 px-4 py-2 mx-2 shadow-light" href="https://presidentscup.cisa.gov/ctf/practice" target="_blank" rel="noopener noreferrer">PRACTICE AREA</a>
-                            <a class="btn btn-outline-light mt-3 px-4 py-2 mx-2 shadow-light" href="https://github.com/cisagov/prescup-challenges" target="_blank" rel="noopener noreferrer">GITHUB</a>
+                        <h2 class="h3 heading-standard display-3 fw-bold">Hone Your Skills</h2>
+                        <div class="home-action-pair mt-4">
+                            <a class="btn btn-register shadow-light" href="https://presidentscup.cisa.gov/ctf/practice" target="_blank" rel="noopener noreferrer">PRACTICE AREA</a>
+                            <a class="btn btn-practice shadow-light" href="https://github.com/cisagov/prescup-challenges" target="_blank" rel="noopener noreferrer">GITHUB</a>
                         </div>
                     </div>
                 </div>
@@ -1127,14 +1064,14 @@
                 <div class="mb-4 mb-md-0">
                     <div class="footer-briefed px-2">
                         <a href="https://www.cisa.gov/prescup" target="_blank" rel="noopener noreferrer">
-                            <img src="img/footer-cisa.png" loading="eager" data-cf-lazy="never" alt="CISA Link">
+                            <img src="img/footer-cisa.png" loading="eager" data-cf-lazy="never" alt="President’s Cup Cybersecurity Competition @ CISA.gov">
                         </a>
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
                     <div class="footer-logo">
                         <a href="https://www.cisa.gov" target="_blank" rel="noopener noreferrer">
-                            <img src="img/footer-logo-cisa.png" loading="eager" data-cf-lazy="never" alt="CISA Logo"> 
+                            <img src="img/footer-logo-cisa.png" loading="eager" data-cf-lazy="never" alt="CISA.gov Homepage">
                         </a>                  
                     </div>
                 </div>

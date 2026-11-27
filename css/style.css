@@ -508,9 +508,9 @@ header {
 }
 
 .btn-register:active, .btn-register:focus-visible {
+    color: #fff;
     background-color: rgba(14, 26, 37, 1) !important;
     border-color: rgba(14, 26, 37, 1) !important;
-    box-shadow: none !important;
 }
 
 .btn-practice {
@@ -526,9 +526,27 @@ header {
     z-index: 1;
 }
 
+.btn-practice:focus-visible {
+    color: #000;
+    background-color: #fff;
+    border-color: #4C0F16;
+}
+
 .btn-practice:hover {
     background: #16385a;
     color: white;
+}
+
+.home-action-pair {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.home-action-pair .btn {
+    margin: 0 !important;
 }
 
 
@@ -558,7 +576,7 @@ header {
     margin-top: 2rem;
     margin-bottom: 2rem;
     width: 60px;
-    animation: gentle-bounce 2s ease-in-out infinite;
+    animation: gentle-bounce 2.5s ease-in-out 2;
 }
 
 @keyframes gentle-bounce {
@@ -790,28 +808,22 @@ header {
     width: 100%;
 }
 
+#timeline .pc8-intro-heading {
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 2rem);
+}
+
 #timeline .pc8-intro-logo {
     display: block;
-    width: 100%;
-    max-width: 495px;
+    flex: 0 0 auto;
+    width: clamp(95px, 25vw, 240px);
     height: auto;
 }
 
-@media (min-width: 768px) {
-    #timeline .pc8-intro-graphic {
-        width: 37.5%;
-    }
-
-    #timeline .pc8-intro-copy {
-        width: 62.5%;
-    }
-}
-
-@media (max-width: 767.98px) {
-    #timeline .pc8-intro-logo {
-        max-width: 360px;
-        margin: 0 auto 0.5rem;
-    }
+#timeline .pc8-intro-heading h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    text-align: left;
 }
 
 @media (max-width: 575.98px) {
@@ -1063,11 +1075,13 @@ footer {
     }
 }
 
-@media (min-width: 769px) {
+@media (width > 992px) {
     .mobile-tablet-only {
         display: none;
     }
-    
+}
+
+@media (min-width: 769px) {
     .col-md-1-of-7 {
         flex: 0 0 auto;
         width: 14.2857%;
@@ -1387,7 +1401,7 @@ footer {
         overflow-x: hidden;
     }    
 
-    #upcoming-mission h1, #timeline h1 {
+    #upcoming-mission h1, #timeline h2 {
         text-align: center;
     }
 }
@@ -1550,12 +1564,6 @@ footer {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
 }
 
-.pc-photo-carousel__slide:focus-visible {
-    outline: 3px solid currentColor;
-    outline-offset: 3px;
-    border-radius: 6px;
-}
-
 /*--------------------------------------------------
   Tablet - 3 Photos Wide
 --------------------------------------------------*/
@@ -1592,12 +1600,11 @@ footer {
     }
 
     /*
-     * Extend the full carousel approximately 50px
-     * beyond the container on each side.
+     * Extend into the available outer space on wide screens,
+     * keeping both controls inside the viewport at narrower widths.
      */
     .pc-photo-carousel__shell {
-        margin-left: -50px;
-        margin-right: -50px;
+        margin-inline: clamp(-50px, calc((1200px - 100vw) / 2), 0px);
     }
 }
 
@@ -1681,13 +1688,17 @@ footer {
 ==================================================*/
 
 .pc-photo-lightbox {
+    --pc-lightbox-nav-size: 52px;
+    --pc-lightbox-nav-edge: 18px;
+    --pc-lightbox-nav-gap: 16px;
+    --pc-lightbox-gutter: calc(var(--pc-lightbox-nav-edge) + var(--pc-lightbox-nav-size) + var(--pc-lightbox-nav-gap));
     position: fixed;
     inset: 0;
     z-index: 1080;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3rem 4.5rem;
+    padding: 3rem var(--pc-lightbox-gutter);
     background: rgba(0, 0, 0, 0.88);
     cursor: zoom-out;
 }
@@ -1711,7 +1722,7 @@ footer {
     display: block;
     width: auto;
     height: auto;
-    max-width: min(1200px, 86vw);
+    max-width: min(1200px, calc(100vw - var(--pc-lightbox-gutter) - var(--pc-lightbox-gutter)));
     max-height: 86vh;
     object-fit: contain;
     border-radius: 4px;
@@ -1763,8 +1774,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 52px;
-    height: 52px;
+    width: var(--pc-lightbox-nav-size);
+    height: var(--pc-lightbox-nav-size);
     padding: 0;
     border: 0;
     background: transparent;
@@ -1793,7 +1804,7 @@ footer {
 }
 
 .pc-photo-lightbox__nav--prev {
-    left: 18px;
+    left: var(--pc-lightbox-nav-edge);
 }
 
 .pc-photo-lightbox__nav--prev img {
@@ -1801,7 +1812,7 @@ footer {
 }
 
 .pc-photo-lightbox__nav--next {
-    right: 18px;
+    right: var(--pc-lightbox-nav-edge);
 }
 
 .pc-photo-lightbox__nav--next img {
@@ -1829,25 +1840,13 @@ footer {
 
 @media (max-width: 575.98px) {
     .pc-photo-lightbox {
-        padding: 3rem 2.8rem;
+        --pc-lightbox-nav-size: 38px;
+        --pc-lightbox-nav-edge: 5px;
+        --pc-lightbox-nav-gap: 12px;
     }
 
     .pc-photo-lightbox__image {
-        max-width: 90vw;
         max-height: 82vh;
-    }
-
-    .pc-photo-lightbox__nav {
-        width: 38px;
-        height: 38px;
-    }
-
-    .pc-photo-lightbox__nav--prev {
-        left: 5px;
-    }
-
-    .pc-photo-lightbox__nav--next {
-        right: 5px;
     }
 
     .pc-photo-lightbox__close {
@@ -1977,7 +1976,7 @@ footer {
     padding-bottom: 5px !important;
 }
 
-#intelligence-tabs button.nav-link h5 {
+#intelligence-tabs button.nav-link .media-tab-label {
     text-transform: none;
     margin-bottom: 0px !important;
 }
@@ -2034,7 +2033,7 @@ footer {
         padding-bottom: 2px !important;
     }
 
-    #intelligence-tabs button.nav-link h5 {
+    #intelligence-tabs button.nav-link .media-tab-label {
         font-size: 16px;
     }
 
@@ -2044,13 +2043,13 @@ footer {
 }
 
 @media (max-width: 576px) {
-    #intelligence-tabs button.nav-link h5 {
+    #intelligence-tabs button.nav-link .media-tab-label {
         font-size: 0.9rem;
     }
 }
 
 @media (max-width: 390px) {
-    #intelligence-tabs button.nav-link h5 {
+    #intelligence-tabs button.nav-link .media-tab-label {
         font-size: 0.8rem;
     }
 }
@@ -2105,16 +2104,21 @@ footer {
     max-width: 500px;
 }
 
+.tab-content-media-left .list-unstyled a {
+    display: inline-block;
+    min-height: 24px;
+}
+
 .tab-content-media .tab-content-media-left img {
-    max-width: 300px;
+    max-width: min(300px, 100%);
 }
 
 .pc1-logo, .pc3-logo, .pc4-logo {
-    max-width: 225px !important;    
+    max-width: min(225px, 100%) !important;
 }
 
 .pc2-logo, .pc5-logo, .pc6-logo {
-    max-width: 270px !important;    
+    max-width: min(270px, 100%) !important;
 }
 
 @media (max-width: 768px) {
@@ -2262,7 +2266,7 @@ a.video-thumbnail:hover:after {
     border-top: 4px solid #d93a4a;
 }
 
-#workshops-hero h2 {
+#workshops-hero h2:not(.heading-standard) {
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
@@ -2305,7 +2309,7 @@ a.video-thumbnail:hover:after {
     */
 }
 
-#workshops-request h2 {
+#workshops-request h2:not(.heading-standard) {
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
@@ -2343,7 +2347,7 @@ a.video-thumbnail:hover:after {
     }
     
     #workshop-details img {
-        max-width: 172px;
+        max-width: min(172px, 100%);
         margin-bottom: 20px;
     }
     
@@ -2484,6 +2488,12 @@ a.video-thumbnail:hover:after {
     text-decoration: none;
 }
 
+.gom-social-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
+}
+
 #gom-game {
     background: #f8f8fa;
 }
@@ -2504,6 +2514,11 @@ a.video-thumbnail:hover:after {
 .gom-game-card img {
     width: 550px;
     max-width: 100%;
+}
+
+.gom-game-card > a:has(> img) {
+    display: block;
+    width: fit-content;
 }
 
 #gom-practice .btn {
@@ -2650,13 +2665,12 @@ a.video-thumbnail:hover:after {
     border-bottom: none;
 }
 
-#hof-spotlight h3 {
+#hof-spotlight h2 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #hof-spotlight .spotlight-caption {
-    height: 110px;
-    overflow: hidden;
+    min-height: 110px;
 }
 
 #spotlight-caption-details {
@@ -2839,12 +2853,6 @@ a.video-thumbnail:hover:after {
     }
 }
 
-.pc8-page a:focus-visible,
-.pc8-page button:focus-visible {
-    outline: 2px solid var(--pc8-blue);
-    outline-offset: 2px;
-}
-
 /* Grey placeholder boxes -- swap for real images later */
 .pc8-placeholder {
     display: flex;
@@ -2929,7 +2937,7 @@ a.video-thumbnail:hover:after {
 }
 
 .pc8-side-link.active::before {
-    border-left-color: var(--pc8-red);
+    border-left-color: #ff777f;
 }
 
 
@@ -3171,13 +3179,24 @@ a.video-thumbnail:hover:after {
 }
 
 .pc8-sections {
+    --pc8-blue: #87c9ff;
     color: var(--light-text);
+}
+
+@media (max-width: 991.98px) {
+    .pc8-page #intelligence-tabs > .container {
+        padding-inline: 1.5rem;
+    }
 }
 
 .pc8-section {
     position: relative;
     padding: 1.25rem 0 2.75rem;
     /* keeps anchored headings clear of the sticky mobile bar */
+    scroll-margin-top: 4.25rem;
+}
+
+#competition-schedule {
     scroll-margin-top: 4.25rem;
 }
 
@@ -3193,9 +3212,15 @@ a.video-thumbnail:hover:after {
     line-height: 1.1;
 }
 
-/* h5 font-family/weight is set in the page's inline style block,
+@media (max-width: 575.98px) {
+    .pc8-sections h2 {
+        font-size: clamp(1.5rem, 7.5vw, 2rem);
+    }
+}
+
+/* h3 font-family/weight is set in the page's inline style block,
    alongside the matching h2 rule */
-.pc8-sections h5 {
+.pc8-sections h3 {
     color: var(--pc8-blue);
     font-size: 1rem;
 }
@@ -3206,7 +3231,7 @@ a.video-thumbnail:hover:after {
 
 .pc8-sections a:hover,
 .pc8-sections a:focus {
-    color: #6cb9ff;
+    color: #a9d7ff;
 }
 
 /* Absolutely-positioned flourish-art placeholders from the mockup
@@ -3307,4 +3332,79 @@ a.video-thumbnail:hover:after {
     text-transform: uppercase;
     letter-spacing: 0.08em;
     vertical-align: middle;
+}
+
+/* Accessibility: preserve the original appearance when correcting heading levels. */
+.heading-standard {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: none;
+    font-weight: 700;
+}
+.pc8-sections h3 { text-transform: uppercase; }
+.media-tab-label { display: block; font-size: 1.25rem; line-height: 1.2; }
+.skip-link {
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 20000;
+    padding: 0.75rem 1rem;
+    color: #111;
+    background: #fff;
+    border: 2px solid #111;
+    transform: translateY(-200%);
+}
+.skip-link:focus { transform: translateY(0); color: #111; }
+body :is(a, button, [tabindex]):focus-visible,
+body a:focus-visible > img:only-child {
+    outline: 3px solid #005fcc;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 6px #fff;
+}
+/* An inline link's text box can cross the artwork. Outline the image itself. */
+body a:focus-visible:has(> img:only-child) {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Keep the focus ring legible against the dark PC8 artwork and section menu. */
+.pc8-page main :is(a, button):focus-visible,
+#pc8MobileBar :is(a, button):focus-visible {
+    outline-color: #87c9ff;
+}
+
+/* Keep the ring inside each slide so the carousel viewport cannot clip it. */
+body .pc-photo-carousel__slide:focus-visible {
+    outline-offset: -4px;
+    box-shadow: none;
+    border-radius: 6px;
+}
+#main-content { scroll-margin-top: 4.5rem; }
+#gom-game a { color: #0756bf; text-decoration: underline; }
+#gom-game a:hover, #gom-game a:focus-visible { color: #003c8f; }
+#gom-game a:visited { color: #633794; }
+.features-list { margin-bottom: 1rem; }
+.spotlight-thumbnail { display: block; width: 100%; background: transparent; }
+.spotlight-thumbnail img { display: block; width: 100%; border-radius: 3px; }
+.pc-photo-carousel__playback { text-align: center; margin-bottom: 1rem; }
+.pc-photo-carousel__rotation {
+    padding: 0.6rem 1rem;
+    border: 2px solid #4c1017;
+    border-radius: 0.25rem;
+    color: #fff;
+    background: #4c1017;
+    font: inherit;
+    font-weight: 700;
+}
+.pc-photo-carousel__rotation:hover { background: #291018; }
+@media (prefers-reduced-motion: reduce) {
+    .scroll-arrow { animation: none; }
+}
+
+/* The arrow images retain their colors when the browser swaps the canvas. */
+@media (forced-colors: active) and (prefers-color-scheme: light) {
+    .pc-photo-lightbox__nav img { filter: none; }
+}
+
+@media (forced-colors: active) and (prefers-color-scheme: dark) {
+    .pc-photo-carousel__control img { filter: invert(1); }
 }

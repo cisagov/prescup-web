@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../css/style.css?ver=8.1.7">
+    <link rel="stylesheet" href="../css/style.css?ver=8.1.8b.6">
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVR9SKL9J6"></script>
@@ -45,10 +45,11 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- Header Navigation -->
     <header>
-        <div class="container">
+        <nav class="container" aria-label="Main Menu">
             <ul class="nav nav-tabs-std">
                 <li class="nav-item">
                     <a class="nav-link" href="../"><span>Home</span></a>
@@ -63,22 +64,23 @@
                     <a class="nav-link active" aria-current="page" href="./"><span>Workshops</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-minimized" href="../game-of-the-month/"><span>GoM</span></a>
+                    <a class="nav-link nav-minimized" href="../game-of-the-month/" aria-label="GoM (Game of the Month)"><span>GoM</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-minimized" href="../hack-of-fame/"><span>HoF</span></a>
+                    <a class="nav-link nav-minimized" href="../hack-of-fame/" aria-label="HoF (Hack of Fame)"><span>HoF</span></a>
                 </li>
             </ul>
-        </div>
+        </nav>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
+        <h1 class="visually-hidden">Workshops</h1>
         <!-- Executive Order Evergreen -->
         <section id="executive-order" class="executive-icon ps-4 pb-3 pt-5 pe-5 text-black">
             <div class="container">
                 <div class="row">
                     <div class="logo-cisa pt-4">
-                        <img src="../img/logo-cisa.png" loading="eager" data-cf-lazy="never" alt="President's Cup Media">
+                        <img src="../img/logo-cisa.png" loading="eager" data-cf-lazy="never" alt="President's Cup Cybersecurity Competition">
                     </div>
                 </div>
             </div>
@@ -88,7 +90,7 @@
         <section class="mt-4">
              <div class="container position-relative">
                 <div class="workshops-hero-title">
-                    <img src="../img/workshops-title.svg" class="img-fluid" loading="eager" data-cf-lazy="never" alt="Workshops Logo">
+                    <img src="../img/workshops-title.svg" class="img-fluid" loading="eager" data-cf-lazy="never" alt="">
                 </div>
             </div>
         </section>
@@ -99,7 +101,7 @@
                 <div class="row align-items-center">
                     <!-- Left Column: Title and Description -->
                     <div class="col-lg-7 col-md-12">
-                        <h3>Expand Your Cybersecurity Skills <br>with Hands-On Training</h3>
+                        <h2 class="h3 heading-standard">Expand Your Cybersecurity Skills <br>with Hands-On Training</h2>
                         <p>The President's Cup Cybersecurity Workshops provide an interactive and immersive experience for participants to refine their cybersecurity expertise. Whether you're looking to enhance existing skills, gain practical experience, or collaborate with peers, these workshops offer a unique opportunity to engage with customized challenges tailored to your objectives.</p>
                         <p>Workshops are open to federal employees, students, and professionals seeking to enhance their cybersecurity skills.</p>
                     </div>
@@ -108,9 +110,9 @@
                     <div class="col-lg-5 col-md-12">
                         <div class="py-3 text-center">
                             <div class="workshop-icon">
-                                <img src="../img/icon-workshop.svg" class="img-fluid" alt="Workshop Icon" loading="eager" data-cf-lazy="never">
+                                <img src="../img/icon-workshop.svg" class="img-fluid" alt="" loading="eager" data-cf-lazy="never">
                             </div>
-                            <h3 class="pt-3 pb-1" style="display: none;">Workshop Title #</h3>
+                            <h2 class="h3 heading-standard pt-3 pb-1" style="display: none;">Workshop Title #</h2>
                             <p style="display: none;">Workshop details and specific information</p>
                             <p class="py-3">To request a workshop, please review the details below and contact the <a class="link-light"  href="mailto:presidentscup@cisa.dhs.gov" target="_blank" rel="noopener noreferrer">President's Cup team</a>.</p>
                         </div>
@@ -122,15 +124,15 @@
         <!-- Workshop Details -->
         <section id="workshop-details" class="py-5 bg-white text-dark">
             <div class="container px-4">
-                <h3 class="fs-2 mb-5">Workshop Details</h3>
+                <h2 class="h3 heading-standard fs-2 mb-5">Workshop Details</h2>
 
                 <!-- Why Participate? -->
                 <div class="row workshop-item mb-5">
                     <div class="col-md-2 p-3 text-center">
-                        <img src="../img/icon-why.png" class="img-fluid" alt="Why Icon" loading="eager" data-cf-lazy="never">
+                        <img src="../img/icon-why.png" class="img-fluid" alt="" loading="eager" data-cf-lazy="never">
                     </div>
                     <div class="col-md-10">
-                        <h4>Why Participate in a Workshop?</h4>
+                        <h3 class="h4 heading-standard">Why Participate in a Workshop?</h3>
                             <ul>
                                 <li class="mb-2">
                                     <div><strong>Interactive Learning:</strong> Participate in challenges adapted from President's Cup components that are tailored to your team's specific goals and objectives.</div>
@@ -157,22 +159,22 @@
                 <!-- Workshop Formats -->
                 <div class="row workshop-item mb-5">
                     <div class="col-md-2 p-3 text-center">
-                        <img src="../img/icon-workshop-format.svg" class="img-fluid" alt="Format Icon" loading="eager" data-cf-lazy="never">
+                        <img src="../img/icon-workshop-format.svg" class="img-fluid" alt="" loading="eager" data-cf-lazy="never">
                     </div>
                     <div class="col-md-10">
-                        <h4>Workshop Formats</h4>
-                            <h6>Customized Challenge Debrief & Walkthrough</h6>
+                        <h3 class="h4 heading-standard">Workshop Formats</h3>
+                            <h4 class="h6 heading-standard">Customized Challenge Debrief & Walkthrough</h4>
                             <ul>
                                 <li>Participants attempt tailored challenges independently over a set period.</li>
                                 <li>Facilitators are available to host <em>an optional</em> debrief session to review solutions, share insights, and answer questions.</li>
                             </ul>
 
-                            <h6 class="d-none">Guided Customized Challenge Walkthrough</h6>
+                            <h4 class="h6 heading-standard d-none">Guided Customized Challenge Walkthrough</h4>
                             <ul class="d-none">
                                 <li>Facilitators walk participants through a specific challenge from start to finish, providing step-by-step guidance and explanations.</li>
                             </ul>
 
-                            <h6>Mini-Competitions</h6>
+                            <h4 class="h6 heading-standard">Mini-Competitions</h4>
                             <ul>
                                 <li>Facilitators host mini-competitions in which participants compete individually or in small teams to solve curated and customized challenges within a set timeframe.</li>
                                 <li>Facilitators oversee the competition, provide real-time support, and conclude with a debrief to review solutions and announce top performers.</li>
@@ -184,10 +186,10 @@
                 <!-- What Makes Our Workshops Unique? -->
                 <div class="row workshop-item mb-5">
                     <div class="col-md-2 p-3 text-center">
-                         <img src="../img/icon-unique.png" class="img-fluid" alt="Unique Icon" loading="eager" data-cf-lazy="never">
+                         <img src="../img/icon-unique.png" class="img-fluid" alt="" loading="eager" data-cf-lazy="never">
                     </div>
                     <div class="col-md-10">
-                        <h4>What Makes Our Workshops Unique?</h4>
+                        <h3 class="h4 heading-standard">What Makes Our Workshops Unique?</h3>
                             <ul>
                                 <li class="mb-2">
                                     <div><strong>Tailored Content:</strong> Challenges are customized to align with your team’s skill levels, objectives, and areas of focus, ensuring a relevant and impactful experience.</div>
@@ -208,10 +210,10 @@
                 <!-- Challenges -->
                 <div class="row workshop-item mb-5" style="display: none;">
                     <div class="col-md-2 p-3 text-center">
-                         <img src="../img/icon-puzzle.svg" class="img-fluid" alt="Challenges Icon" loading="eager" data-cf-lazy="never">
+                         <img src="../img/icon-puzzle.svg" class="img-fluid" alt="" loading="eager" data-cf-lazy="never">
                     </div>
                     <div class="col-md-10">
-                        <h4>Challenges</h4>
+                        <h3 class="h4 heading-standard">Challenges</h3>
                         <p>With over 290 challenges to choose from the Practice Area*, both Individuals (with defensive and offensive tracks) and Teams challenges are available with various levels of difficulty.</p>
                         <p>All challenges are aligned to work roles from the NICE Framework. These include:</p>
                         <div class="row">
@@ -252,10 +254,10 @@
                 <!-- How to Request a Workshop -->
                 <div class="row workshop-item mb-5">
                     <div class="col-md-2 p-3 text-center">
-                         <img src="../img/icon-request.png" class="img-fluid" alt="Request Icon" loading="eager" data-cf-lazy="never">
+                         <img src="../img/icon-request.png" class="img-fluid" alt="" loading="eager" data-cf-lazy="never">
                     </div>
                     <div class="col-md-10">
-                        <h4>How to Request a Workshop</h4>
+                        <h3 class="h4 heading-standard">How to Request a Workshop</h3>
                             <p>For challenge walkthroughs or explanations from our developers, you can request a workshop by:</p>
                             <ul>
                                 <li class="mb-2"><strong><a class="link-dark" href="https://cisasurvey.gov1.qualtrics.com/jfe/form/SV_87e3LOZKD9wc4hE" target="_blank" rel="noopener noreferrer">Completing the Workshop Request Form</a>:</strong> The form allows you to specify your objectives, preferred format, and other details to help us tailor the workshop to your needs. <a class="link-dark" href="https://cisasurvey.gov1.qualtrics.com/jfe/form/SV_87e3LOZKD9wc4hE" target="_blank" rel="noopener noreferrer">Complete the form here.</a>
@@ -274,10 +276,10 @@
                 <!-- Spread the Word -->
                 <div class="row workshop-item mb-5">
                     <div class="col-md-2 p-3 text-center">
-                         <img src="../img/icon-people.svg" class="img-fluid" alt="Participation Icon" loading="eager" data-cf-lazy="never">
+                         <img src="../img/icon-people.svg" class="img-fluid" alt="" loading="eager" data-cf-lazy="never">
                     </div>
                     <div class="col-md-10">
-                        <h4>Spread the Word</h4>
+                        <h3 class="h4 heading-standard">Spread the Word</h3>
                         <ul>
                             <li class="mb-2">
                                 <div><strong>Internal Communication:</strong> Share information about the workshops within your organization or agency to encourage participation and skill-building among teams.</div>
@@ -291,7 +293,7 @@
                         </ul>
                         
                         <div class="mt-5 text-center bg-light p-4 rounded">
-                            <h3 class="mb-3">Make Cyber Training Memorable</h3>
+                            <h2 class="h3 heading-standard mb-3">Make Cyber Training Memorable</h2>
                             <p class="lead mb-0">President's Cup Workshops go beyond self-paced learning by offering interactive, guided experiences that foster collaboration, skill-building, and professional growth. Contact the <a class="link-dark"  href="mailto:presidentscup@cisa.dhs.gov" target="_blank" rel="noopener noreferrer">Presidents Cup team</a> to get started or for more information.</p>
                         </div>
                     </div>
@@ -306,21 +308,25 @@
         <section id="workshops-request" class="px-3 py-5 gradient-section">
              <div class="container pt-3 pb-5 position-relative">
                 <div class="row">
-                    <h3 class="mb-3">Testimonials</h3>
+                    <h2 class="h3 heading-standard mb-3">Testimonials</h2>
                     <!-- Left Column: Title and Description -->
                     <div class="workshops-request-left col-lg-6 col-md-12 mt-3">
-                            <blockquote class="blockquote">
-                                <p>"The subject of the training and the VMs were right on point with the material I wanted [our soldiers] to learn, and I strongly anticipate that we will continue to use the platform going forward as long as we are welcome. Overall, as an instructor and using this platform to augment a learning environment, my experience was overwhelmingly positive.”</p>
-                                <p><b>Virginia Defense Force Workshop Participant</b></p>
-                            </blockquote>
+                            <figure>
+                                <blockquote class="blockquote">
+                                    <p>"The subject of the training and the VMs were right on point with the material I wanted [our soldiers] to learn, and I strongly anticipate that we will continue to use the platform going forward as long as we are welcome. Overall, as an instructor and using this platform to augment a learning environment, my experience was overwhelmingly positive.”</p>
+                                </blockquote>
+                                <figcaption><b>Virginia Defense Force Workshop Participant</b></figcaption>
+                            </figure>
                     </div>
     
                     <!-- Right Column: Detail -->
                     <div class="col-lg-6 col-md-12 mt-3">
-                            <blockquote class="blockquote">
-                                <p>“The interactive environment that the CISA Gameboard provided greatly enhanced the training. I sincerely hope we will have more opportunities to complete other trainings in this environment. Additionally, this has motivated our operations and training program to accelerate our plans for creating a multi-track education program designed to cater towards the differences in experience and education within our battalion.”</p>
-                                <p><b>Virginia Defense Force Alpha Company Commander</b></p>
-                            </blockquote>
+                            <figure>
+                                <blockquote class="blockquote">
+                                    <p>“The interactive environment that the CISA Gameboard provided greatly enhanced the training. I sincerely hope we will have more opportunities to complete other trainings in this environment. Additionally, this has motivated our operations and training program to accelerate our plans for creating a multi-track education program designed to cater towards the differences in experience and education within our battalion.”</p>
+                                </blockquote>
+                                <figcaption><b>Virginia Defense Force Alpha Company Commander</b></figcaption>
+                            </figure>
                     </div>
                 </div>
             </div>
@@ -335,14 +341,14 @@
                 <div class="mb-4 mb-md-0">
                     <div class="footer-briefed px-2">
                         <a href="https://www.cisa.gov/prescup" target="_blank" rel="noopener noreferrer">
-                            <img src="../img/footer-cisa.png" loading="eager" data-cf-lazy="never" alt="CISA Link">
+                            <img src="../img/footer-cisa.png" loading="eager" data-cf-lazy="never" alt="President’s Cup Cybersecurity Competition @ CISA.gov">
                         </a>
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
                     <div class="footer-logo">
                         <a href="https://www.cisa.gov" target="_blank" rel="noopener noreferrer">
-                            <img src="../img/footer-logo-cisa.png" loading="eager" data-cf-lazy="never" alt="CISA Logo"> 
+                            <img src="../img/footer-logo-cisa.png" loading="eager" data-cf-lazy="never" alt="CISA.gov Homepage">
                         </a>                  
                     </div>
                 </div>
